@@ -1,0 +1,187 @@
+{
+  "siteTitle": "Naches Learning Hub",
+  "lastUpdated": "2026-10-19",
+  "activities": [
+    {
+      "id": "mystery-detectives",
+      "title": "Mystery Detectives",
+      "category": "ela",
+      "categoryLabel": "ELA · Reading & Reasoning",
+      "description": "Investigate original mysteries, question witnesses, collect evidence, and defend your final theory.",
+      "skills": [
+        "Comprehension",
+        "Inference",
+        "Text evidence"
+      ],
+      "gradeLabel": "Grades 1–8",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "1–4 players · Shared Chromebook",
+      "linkText": "Open mysteries",
+      "url": "https://jkramer-cloud.github.io/mystery-detectives/",
+      "icon": "detective",
+      "featured": true,
+      "status": "available",
+      "type": "game"
+    },
+    {
+      "id": "addition-subtraction-battleship",
+      "title": "Addition & Subtraction Battleship",
+      "category": "math",
+      "categoryLabel": "Math · Number Sense",
+      "description": "Solve addition and subtraction problems to fire at enemy ships. Choose your board, math mode, and opponent.",
+      "skills": [
+        "Addition",
+        "Subtraction",
+        "Fact fluency"
+      ],
+      "gradeLabel": "Grades 1–5",
+      "gradeGroups": [
+        "1-2",
+        "3-5"
+      ],
+      "mode": "Solo vs. computer · 2 players",
+      "linkText": "Play battleship",
+      "url": "https://jkramer-cloud.github.io/addition-subtraction-battleship/",
+      "icon": "addsub",
+      "featured": false,
+      "status": "available",
+      "type": "game"
+    },
+    {
+      "id": "multiplication-battleship",
+      "title": "Multiplication Battleship",
+      "category": "math",
+      "categoryLabel": "Math · Multiplication",
+      "description": "Practice multiplication facts while hunting hidden ships. Play together or challenge a computer captain.",
+      "skills": [
+        "Multiplication",
+        "Recall",
+        "Strategy"
+      ],
+      "gradeLabel": "Multiplication practice",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo vs. computer · 2 players",
+      "linkText": "Play battleship",
+      "url": "https://jkramer-cloud.github.io/multiplication-battleship/",
+      "icon": "multiply",
+      "featured": false,
+      "status": "available",
+      "type": "game"
+    },
+    {
+      "id": "ascendant-reader",
+      "title": "A.S.C.E.N.D.A.N.T. Reader",
+      "category": "reading",
+      "categoryLabel": "Reading Tool · Fluency",
+      "description": "Use adjustable reading speed, words-per-view, and checkpoints to practice focused reading.",
+      "skills": [
+        "Reading fluency",
+        "Pacing",
+        "Self-monitoring"
+      ],
+      "gradeLabel": "Adjustable reading support",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Individual practice",
+      "linkText": "Open reader",
+      "url": "https://jkramer-cloud.github.io/ASCENDANT-Cognitive-Reading-System/",
+      "icon": "reader",
+      "featured": false,
+      "status": "available",
+      "type": "tool"
+    },
+    {
+      "id": "science-investigation-lab",
+      "title": "Science Investigation Lab",
+      "category": "science",
+      "categoryLabel": "Science · Inquiry & Experiments",
+      "type": "game",
+      "description": "A future inquiry-based investigation with evidence, experiments, and scientific explanations.",
+      "skills": [
+        "Scientific method",
+        "Evidence",
+        "Hypotheses"
+      ],
+      "gradeLabel": "Proposed: Grades 3–8",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "In development",
+      "icon": "science",
+      "status": "planned"
+    },
+    {
+      "id": "ecosystem-explorer",
+      "title": "Ecosystem Explorer",
+      "category": "science",
+      "categoryLabel": "Science · Ecosystems",
+      "type": "simulation",
+      "description": "A planned interactive simulation for food webs, habitats, and environmental changes.",
+      "skills": [
+        "Ecosystems",
+        "Cause & effect",
+        "Systems thinking"
+      ],
+      "gradeLabel": "Proposed: Grades 3–8",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Concept · Not yet playable",
+      "icon": "ecosystem",
+      "status": "planned"
+    },
+    {
+      "id": "photoshop-skills-studio",
+      "title": "Photoshop Skills Studio",
+      "category": "design",
+      "categoryLabel": "Design & Technology · Photoshop",
+      "type": "tutorial",
+      "description": "Future step-by-step photo-editing lessons with visual examples and practice checkpoints.",
+      "skills": [
+        "Selections",
+        "Compositing",
+        "Retouching"
+      ],
+      "gradeLabel": "Proposed: Grades 6–8",
+      "gradeGroups": [
+        "6-8"
+      ],
+      "mode": "In development",
+      "icon": "photoshop",
+      "status": "planned"
+    },
+    {
+      "id": "illustrator-design-lab",
+      "title": "Illustrator Design Lab",
+      "category": "design",
+      "categoryLabel": "Design & Technology · Illustrator",
+      "type": "tutorial",
+      "description": "Future guided vector-design lessons for shapes, paths, typography, and layout.",
+      "skills": [
+        "Vector tools",
+        "Typography",
+        "Design"
+      ],
+      "gradeLabel": "Proposed: Grades 5–8",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "In development",
+      "icon": "illustrator",
+      "status": "planned"
+    }
+  ]
+}

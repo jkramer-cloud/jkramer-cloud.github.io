@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0d1c30">
   <meta name="description" content="Naches Learning Hub: games, interactive lessons, science simulations, and reading tools for students.">
-  <title>Naches Learning Hub | Games, Lessons & Tools</title>
+  <title>Naches Learning Arcade | Games, Lessons & Tools</title>
   <style>
     :root { --ink:#f4f8ff; --muted:#aec3dc; --dark:#0b1728; --navy:#132c48; --blue:#18476a; --gold:#f2bf4c; --gold2:#ffd985; --line:rgba(194,213,235,.18); --card:#152e49; --shadow:0 18px 45px rgba(1,10,24,.24); }
     * { box-sizing:border-box; }
@@ -95,6 +95,90 @@
     .upcoming-note {color:#c5d6e7;margin:0 0 20px;max-width:720px;font-size:.92rem;}
     #planned-section {margin-bottom:25px;}
     @media(max-width:700px){.type-filter{width:100%}}
+
+/* ---- NACHES ARCADE VISUAL REFRESH: no external assets required ---- */
+:root{--ink:#f6fbff;--muted:#bcd5e8;--gold:#ffd27e;--gold2:#ffe5a8;--shadow:0 20px 50px #010c2090}
+body{background:#08152a;background-image:radial-gradient(ellipse 850px 580px at 0% 0%,#1a5774aa,transparent 78%),radial-gradient(ellipse 900px 500px at 96% 0%,#353a7a88,transparent 70%),linear-gradient(165deg,#08152a 0%,#0b2238 44%,#0c1c35 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(circle,#d7e7ff4f 1px,transparent 1.4px),radial-gradient(circle,#fedfa44c 1px,transparent 1.5px);background-size:81px 81px,149px 149px;background-position:4px 16px,40px 34px;opacity:.52}
+body:after{content:"";position:fixed;z-index:-1;pointer-events:none;left:0;right:0;bottom:0;height:240px;background:linear-gradient(transparent,#0a263c77),repeating-linear-gradient(90deg,#19475a22 0 2px,transparent 2px 53px);mask-image:linear-gradient(to top,#000,transparent)}
+.wrap{width:min(1240px,calc(100% - 44px))}
+.top{padding:24px 0 21px}
+.brandmark{background:linear-gradient(145deg,#fff0b2,#e9a83c);box-shadow:0 5px 0 #935b1c,0 0 25px #f8c2594d;transform:rotate(-4deg)}
+.brandtitle{font-size:1.25rem;letter-spacing:.018em}
+.brandsub{color:#c0d9e9}
+.toplink{background:#122d49d6;border:1px solid #447293;padding:11px 16px;font-weight:750;transition:background .2s,transform .2s}
+.toplink:hover{background:#265b7a;transform:translateY(-2px)}
+.hero{min-height:360px;border:1px solid #699bb391;border-radius:29px;background:#0d3455;isolation:isolate;padding:clamp(24px,5vw,54px);box-shadow:0 26px 70px #030b2088,inset 0 1px 0 #bce7fa44}
+.hero-landscape{position:absolute;inset:0;width:100%;height:100%;z-index:-3}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#0b243fe9 0%,#0c2d4adf 42%,#102f488c 70%,#102f4840 100%)}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:repeating-linear-gradient(0deg,transparent 0 5px,#a6d5fd0b 5px 6px);opacity:.65}
+.hero-content{max-width:790px}
+.hero h1{max-width:700px;font-size:clamp(2.55rem,5.5vw,5.1rem);line-height:1.06;letter-spacing:-.06em;margin:16px 0}
+.hero h1 em{background:linear-gradient(90deg,#ffe1a0,#ffbb62);color:transparent;background-clip:text}
+.hero p{max-width:610px;font-size:clamp(1rem,1.6vw,1.14rem);color:#e3eff8}
+.eyebrow{font-size:.74rem;color:#ffe09b;letter-spacing:.18em;display:flex;align-items:center;gap:10px}
+.pulse-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#64f7bc;box-shadow:0 0 0 5px #64f7bc22,0 0 17px #64f7bc}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin:28px 0 17px}
+.hero-cta,.surprise{border:0;border-radius:12px;min-height:49px;display:inline-flex;align-items:center;justify-content:center;gap:16px;font-weight:900;font-size:.92rem;padding:13px 18px;text-decoration:none;transition:transform .2s,filter .2s,box-shadow .2s}
+.hero-cta{background:linear-gradient(140deg,#fff3be,#ffc45f);color:#172641;box-shadow:0 4px 0 #b67e29,0 7px 18px #0d0f24a1}
+.surprise{border:1px solid #acd7ee80;color:#f3faff;background:#1b5475ba;cursor:pointer}
+.hero-cta:hover,.surprise:hover{transform:translateY(-3px);filter:brightness(1.06)}
+.hero-bottom{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:20px;font-size:.79rem;color:#dbedf7;font-weight:700}
+.hero-status:before{content:"● ";color:#6ffdc4}
+.hero-floating{position:absolute;right:35px;bottom:26px;width:205px;min-height:145px;padding:14px;border-radius:19px;border:1px solid #c5e7ff60;background:linear-gradient(130deg,#082a45cf,#0c3d62b5);box-shadow:0 16px 38px #09203b88;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(7deg);gap:6px;animation:arcade-float 5s ease-in-out infinite;pointer-events:none}
+.floating-icon{font-size:32px;color:#ffd78c;text-shadow:0 0 20px #ffc46f}.floating-title{font-size:.71rem;letter-spacing:.12em;font-weight:950;color:#fff}.floating-motto{font-size:.63rem;color:#d4edf8;font-weight:700}.floating-stars{letter-spacing:.5em;color:#ffd278;font-size:17px}
+@keyframes arcade-float{50%{transform:translateY(-9px) rotate(5deg)}}
+#activities{scroll-margin-top:18px}
+.section-header{margin:40px 0 19px}.section-header h2{font-size:clamp(1.45rem,2.6vw,2rem);font-weight:950}.section-header p{color:#b8d3e9}
+.count{background:#152e48;border:1px solid #476b85;border-radius:50px;padding:6px 12px}
+.controls{margin-bottom:15px}.search,.grade,.type-filter{background:#122c45e8;border:1px solid #466f8e;box-shadow:inset 0 1px 0 #b7e4ff15}.search:focus-within{border-color:#fbd585}
+.filters{gap:9px;margin-bottom:23px}
+.filter{border-radius:99px;background:#15344f;border:1px solid #456d85;padding:10px 15px;color:#d4e9f6}
+.filter:hover{background:#255b7b;border-color:#89c6e8}
+.filter[aria-pressed="true"]{background:linear-gradient(145deg,#ffeab5,#ffc76a);border-color:#ffe09d;color:#182941;box-shadow:0 3px 0 #a87529}
+.cards{gap:22px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{position:relative;border:1px solid #517c97a8;background:linear-gradient(168deg,#183f5e,#102942 70%,#112d48);border-radius:23px;box-shadow:0 14px 30px #010e2066,0 1px 0 #c6e5f71a inset;transition:transform .22s ease,box-shadow .22s,border-color .22s;isolation:isolate}
+.card:hover{transform:translateY(-6px);border-color:#ffda8a;box-shadow:0 22px 45px #010917a8,0 0 0 1px #ffd88555}
+.card:focus-within{border-color:#ffda8a;box-shadow:0 0 0 3px #ffda8a55}
+.card:after{content:"";position:absolute;pointer-events:none;inset:0;border-radius:23px;box-shadow:inset 0 1px 0 #ffffff30}
+.card-art{height:205px;isolation:isolate;border-bottom:1px solid #6fa5bb55;background:radial-gradient(ellipse at 63% 18%,#648db477,transparent 49%),linear-gradient(135deg,#1c6789,#102b54)}
+.card-art[data-category="ela"]{background:radial-gradient(circle at 50% 8%,#d0a76577,transparent 55%),linear-gradient(135deg,#796045,#183453)}
+.card-art[data-category="math"]{background:radial-gradient(circle at 80% 9%,#f3dca24c,transparent 44%),linear-gradient(135deg,#1b638a,#1b365a)}
+.card-art[data-category="science"]{background:radial-gradient(circle at 80% 9%,#b4fbba55,transparent 44%),linear-gradient(135deg,#145b66,#153a55)}
+.card-art[data-category="reading"]{background:radial-gradient(circle at 80% 9%,#bac7ff5e,transparent 44%),linear-gradient(135deg,#305b80,#27345b)}
+.card-art[data-category="design"]{background:radial-gradient(circle at 80% 9%,#e6b1f673,transparent 44%),linear-gradient(135deg,#63427b,#2a385c)}
+.card-art:before{opacity:.38;background-image:linear-gradient(#b3d8e512 1px,transparent 1px),linear-gradient(90deg,#b3d8e512 1px,transparent 1px);background-size:24px 24px}
+.card-art:after{content:"";position:absolute;inset:auto 0 0;height:33%;background:linear-gradient(transparent,#0823416b);pointer-events:none}
+.scene-holder{position:relative;height:100%;width:100%;z-index:1;display:grid;place-items:center;transition:transform .36s ease;filter:drop-shadow(0 12px 10px #07122488)}
+.scene-svg{width:min(100%,460px);height:100%;padding:8px 16px;overflow:visible}
+.card:hover .scene-holder{transform:translateY(-4px) scale(1.055)}
+.card-number{position:absolute;bottom:12px;left:14px;font-size:12px;font-weight:950;letter-spacing:.13em;color:#ffdf9e;z-index:2;background:#051d34aa;padding:5px 9px;border-radius:8px}
+.card-flag{top:13px;right:13px;left:auto;background:#071f35e8;border:1px solid #82bbd7a6;border-radius:50px;padding:7px 12px;color:#ffe4ab;font-size:.67rem;letter-spacing:.08em;box-shadow:0 4px 15px #01091777}
+.art-jump{position:absolute;inset:0;z-index:3}
+.art-jump:focus-visible{outline:4px solid #ffe08b;outline-offset:-5px;border-radius:19px}
+.card-body{padding:21px 24px 24px}
+.subject{font-size:.7rem;letter-spacing:.14em;color:#ffd480}
+.card h3{font-size:1.4rem;margin:8px 0 10px}
+.desc{min-height:55px;font-size:.92rem;color:#d9e7f3}
+.tags{margin:14px 0 14px}.tag{background:#0b2941;border-color:#66869c7a;color:#d8ecf7;border-radius:7px}
+.meta{font-size:.76rem;color:#adcadd;margin-bottom:18px}
+.launch{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:57px;text-align:left;padding:10px 12px 10px 18px;border:1px solid #ffe4a8;color:#122d47;background:linear-gradient(120deg,#ffeab2,#f3bf50);box-shadow:0 5px 0 #9a6423,0 12px 22px #060c1c80;transition:transform .15s,filter .15s,box-shadow .15s}
+.launch-label{font-size:.98rem;letter-spacing:.005em}.launch-arrow{display:grid;place-items:center;width:37px;height:37px;flex-shrink:0;background:#183752;color:#ffdf95;font-size:1.5rem;border-radius:9px;transition:transform .15s,background .15s}
+.launch:hover,.launch:focus-visible{filter:brightness(1.05);transform:translateY(-3px);box-shadow:0 8px 0 #9a6423,0 15px 28px #060c1caa}
+.launch:hover .launch-arrow{transform:translate(2px,-2px);background:#0d2842}
+.launch:active{transform:translateY(4px);box-shadow:0 1px 0 #9a6423}
+.card[data-status="planned"]{opacity:.78;box-shadow:0 8px 22px #06152b55;border-style:solid;filter:saturate(.82)}
+.card[data-status="planned"]:hover{transform:none;border-color:#527c97a8;box-shadow:0 8px 22px #06152b55}
+.card[data-status="planned"] .scene-holder{opacity:.72}
+.planned-label{border-radius:12px;background:#1e4057;color:#cce1eb;border:1px solid #69849b}
+.upcoming-note{color:#bfd5e7}
+.helper{background:#122a43b3;border:1px solid #476c88}
+.footer{color:#b1c9dc}
+@media (min-width:1180px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.card-art{height:180px}.card-body{padding:20px}.card h3{font-size:1.28rem}.desc{min-height:78px}}
+@media (max-width:950px){.hero-floating{opacity:.4;right:-35px;bottom:12px;transform:scale(.85) rotate(7deg)}.hero-content{max-width:94%}}
+@media (max-width:700px){.wrap{width:calc(100% - 26px)}.hero{min-height:345px;padding:25px 22px}.hero-floating{display:none}.hero:before{background:linear-gradient(90deg,#0a233eea,#0a2a47ba)}.hero h1{font-size:clamp(2.4rem,9vw,3.9rem)}.cards{grid-template-columns:1fr;gap:17px}.card-art{height:172px}.card-body{padding:20px}.desc{min-height:auto}.toplink{display:none}.hero-actions{gap:9px}.hero-cta,.surprise{font-size:.85rem}.hero-bottom{font-size:.72rem}.section-header{align-items:flex-start}}
+@media (prefers-reduced-motion:reduce){.hero-floating{animation:none}.scene-holder,.card,.hero-cta,.surprise{transition:none!important}}
+
   </style>
 </head>
 <body>
@@ -108,16 +192,31 @@
     </header>
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="orbit" aria-hidden="true"></div>
+        <svg class="hero-landscape" viewBox="0 0 1200 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="heroSky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#155a88"/><stop offset=".52" stop-color="#17628b"/><stop offset="1" stop-color="#102e56"/></linearGradient><linearGradient id="heroMountain" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#679bb0"/><stop offset="1" stop-color="#20506e"/></linearGradient></defs>
+          <rect width="1200" height="450" fill="url(#heroSky)"/>
+          <circle cx="995" cy="132" r="95" fill="#ffe8a1" opacity=".08"/><circle cx="995" cy="132" r="65" fill="#ffda80" opacity=".23"/><circle cx="995" cy="132" r="43" fill="#fff1b7"/>
+          <g fill="#b1dcf1" opacity=".24"><ellipse cx="930" cy="73" rx="115" ry="18"/><ellipse cx="1085" cy="110" rx="96" ry="16"/><ellipse cx="650" cy="76" rx="120" ry="13"/></g>
+          <path d="M410 305 570 127 628 204 720 94 840 259 927 171 1034 269 1102 215 1230 333 1220 450 0 450Z" fill="#73a5b6" opacity=".62"/>
+          <path d="M340 351 540 180 598 249 720 106 788 194 847 152 1000 329 1101 226 1200 337 1200 450 0 450Z" fill="url(#heroMountain)"/>
+          <path d="m670 155 50-49 44 69-29-14-15-24-19 27zM540 180l44 45-33-10-9-19-20 18zM847 152l36 49-28-14-8-16-16 19z" fill="#d6edec" opacity=".93"/>
+          <path d="M0 362Q150 335 260 381t250-13q156-63 320-15t380-20v117H0Z" fill="#215171"/>
+          <path d="M0 391Q175 360 320 397t280-6q175-55 340-1t290-19v80H0Z" fill="#153650"/>
+          <g fill="#0b293f"><path d="m782 400 19-49 19 49zm38-2 27-81 28 81zm55 4 16-51 20 51zm40 0 31-95 28 95zm75 0 24-64 27 64zm60 0 30-77 30 77zm58 0 23-57 25 57z"/><path d="M0 411 50 327l50 84 19-46 26 46 23-70 38 70 30-53 29 53v39H0Z"/></g>
+          <g opacity=".7" fill="#94dce1"><circle cx="1112" cy="53" r="3"/><circle cx="1129" cy="79" r="2"/><circle cx="776" cy="52" r="2"/><circle cx="710" cy="68" r="3"/></g>
+          <path d="M660 450 935 355h55l210 95" fill="none" stroke="#ffe19d" stroke-width="8" opacity=".38"/><path d="M835 450 970 369h15l88 81" fill="none" stroke="#e1f9ff" stroke-width="3" stroke-dasharray="20 20" opacity=".48"/>
+        </svg>
         <div class="hero-content">
-          <div class="eyebrow">Welcome, learners</div>
-          <h1 id="hero-title">Choose a mission. <em>Build a skill.</em></h1>
-          <p>Educational games, reading practice, interactive lessons, and future science simulations—all in one place. Choose an activity to begin.</p>
-          <div class="quickline"><span class="pill">Made for classroom use</span><span class="pill">Solo and partner activities</span><span class="pill">Chromebook friendly</span><span class="pill">New lessons coming soon</span></div>
+          <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> THE NACHES LEARNING ARCADE</div>
+          <h1 id="hero-title">Pick your next <em>adventure.</em></h1>
+          <p>Battle ships. Race through math. Crack a mystery. Explore science. Every mission builds a new skill.</p>
+          <div class="hero-actions"><a class="hero-cta" href="#activities">Explore the arcade <span aria-hidden="true">↓</span></a><button class="surprise" type="button" id="random-game">Surprise me <span aria-hidden="true">✦</span></button></div>
+          <div class="hero-bottom"><span class="hero-status" id="hero-live-count">Loading games…</span><span class="hero-fact">No sign-ins · Chromebook friendly</span></div>
         </div>
+        <div class="hero-floating" aria-hidden="true"><span class="floating-icon">✦</span><span class="floating-title">YOUR NEXT MISSION</span><span class="floating-motto">PLAY • LEARN • LEVEL UP</span><span class="floating-stars">★ ★ ★</span></div>
       </section>
-      <section aria-label="Learning activities">
-        <div class="section-header"><div><h2>Explore activities</h2><p>Find an activity by subject, grade level, or learning format.</p></div><div class="count" id="activity-count" aria-live="polite">4 ready · 4 planned</div></div>
+      <section id="activities" aria-label="Learning activities">
+        <div class="section-header"><div><h2>Choose your game</h2><p>Pick a card to launch, or filter for the perfect challenge.</p></div><div class="count" id="activity-count" aria-live="polite">4 ready · 4 planned</div></div>
         <div class="controls">
           <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search activities</span><input id="search" type="search" autocomplete="off" placeholder="Find a game, topic, or skill…" aria-label="Search activities"></label>
           <select id="grade-filter" class="grade" aria-label="Filter by suggested grade band"><option value="all">All grade levels</option><option value="1-2">Grades 1–2</option><option value="3-5">Grades 3–5</option><option value="6-8">Grades 6–8</option></select>
@@ -138,7 +237,7 @@
   </div>
   <script>
   'use strict';
-  const fallbackCatalog = {"siteTitle":"Naches Learning Hub","lastUpdated":"2026-10-19","activities":[{"id":"mystery-detectives","title":"Mystery Detectives","category":"ela","categoryLabel":"ELA · Reading & Reasoning","description":"Investigate original mysteries, question witnesses, collect evidence, and defend your final theory.","skills":["Comprehension","Inference","Text evidence"],"gradeLabel":"Grades 1–8","gradeGroups":["1-2","3-5","6-8"],"mode":"1–4 players · Shared Chromebook","linkText":"Open mysteries","url":"https://jkramer-cloud.github.io/mystery-detectives/","icon":"detective","featured":true,"status":"available","type":"game"},{"id":"addition-subtraction-battleship","title":"Addition & Subtraction Battleship","category":"math","categoryLabel":"Math · Number Sense","description":"Solve addition and subtraction problems to fire at enemy ships. Choose your board, math mode, and opponent.","skills":["Addition","Subtraction","Fact fluency"],"gradeLabel":"Grades 1–5","gradeGroups":["1-2","3-5"],"mode":"Solo vs. computer · 2 players","linkText":"Play battleship","url":"https://jkramer-cloud.github.io/addition-subtraction-battleship/","icon":"addsub","featured":false,"status":"available","type":"game"},{"id":"multiplication-battleship","title":"Multiplication Battleship","category":"math","categoryLabel":"Math · Multiplication","description":"Practice multiplication facts while hunting hidden ships. Play together or challenge a computer captain.","skills":["Multiplication","Recall","Strategy"],"gradeLabel":"Multiplication practice","gradeGroups":["3-5","6-8"],"mode":"Solo vs. computer · 2 players","linkText":"Play battleship","url":"https://jkramer-cloud.github.io/multiplication-battleship/","icon":"multiply","featured":false,"status":"available","type":"game"},{"id":"ascendant-reader","title":"A.S.C.E.N.D.A.N.T. Reader","category":"reading","categoryLabel":"Reading Tool · Fluency","description":"Use adjustable reading speed, words-per-view, and checkpoints to practice focused reading.","skills":["Reading fluency","Pacing","Self-monitoring"],"gradeLabel":"Adjustable reading support","gradeGroups":["1-2","3-5","6-8"],"mode":"Individual practice","linkText":"Open reader","url":"https://jkramer-cloud.github.io/ASCENDANT-Cognitive-Reading-System/","icon":"reader","featured":false,"status":"available","type":"tool"},{"id":"science-investigation-lab","title":"Science Investigation Lab","category":"science","categoryLabel":"Science · Inquiry & Experiments","type":"game","description":"A future inquiry-based investigation with evidence, experiments, and scientific explanations.","skills":["Scientific method","Evidence","Hypotheses"],"gradeLabel":"Proposed: Grades 3–8","gradeGroups":["3-5","6-8"],"mode":"In development","icon":"science","status":"planned"},{"id":"ecosystem-explorer","title":"Ecosystem Explorer","category":"science","categoryLabel":"Science · Ecosystems","type":"simulation","description":"A planned interactive simulation for food webs, habitats, and environmental changes.","skills":["Ecosystems","Cause & effect","Systems thinking"],"gradeLabel":"Proposed: Grades 3–8","gradeGroups":["3-5","6-8"],"mode":"Concept · Not yet playable","icon":"ecosystem","status":"planned"},{"id":"photoshop-skills-studio","title":"Photoshop Skills Studio","category":"design","categoryLabel":"Design & Technology · Photoshop","type":"tutorial","description":"Future step-by-step photo-editing lessons with visual examples and practice checkpoints.","skills":["Selections","Compositing","Retouching"],"gradeLabel":"Proposed: Grades 6–8","gradeGroups":["6-8"],"mode":"In development","icon":"photoshop","status":"planned"},{"id":"illustrator-design-lab","title":"Illustrator Design Lab","category":"design","categoryLabel":"Design & Technology · Illustrator","type":"tutorial","description":"Future guided vector-design lessons for shapes, paths, typography, and layout.","skills":["Vector tools","Typography","Design"],"gradeLabel":"Proposed: Grades 5–8","gradeGroups":["3-5","6-8"],"mode":"In development","icon":"illustrator","status":"planned"}]};
+  const fallbackCatalog = {"siteTitle":"Naches Learning Hub","lastUpdated":"2026-10-20","activities":[{"id":"mystery-detectives","title":"Mystery Detectives","category":"ela","categoryLabel":"ELA · Reading & Reasoning","description":"Investigate original mysteries, question witnesses, collect evidence, and defend your final theory.","skills":["Comprehension","Inference","Text evidence"],"gradeLabel":"Grades 1–8","gradeGroups":["1-2","3-5","6-8"],"mode":"1–4 players · Shared Chromebook","linkText":"Open mysteries","url":"https://jkramer-cloud.github.io/mystery-detectives/","icon":"detective","featured":true,"status":"available","type":"game"},{"id":"addition-subtraction-battleship","title":"Addition & Subtraction Battleship","category":"math","categoryLabel":"Math · Number Sense","description":"Solve addition and subtraction problems to fire at enemy ships. Choose your board, math mode, and opponent.","skills":["Addition","Subtraction","Fact fluency"],"gradeLabel":"Grades 1–5","gradeGroups":["1-2","3-5"],"mode":"Solo vs. computer · 2 players","linkText":"Play battleship","url":"https://jkramer-cloud.github.io/addition-subtraction-battleship/","icon":"addsub","featured":false,"status":"available","type":"game"},{"id":"multiplication-battleship","title":"Multiplication Battleship","category":"math","categoryLabel":"Math · Multiplication","description":"Practice multiplication facts while hunting hidden ships. Play together or challenge a computer captain.","skills":["Multiplication","Recall","Strategy"],"gradeLabel":"Multiplication practice","gradeGroups":["3-5","6-8"],"mode":"Solo vs. computer · 2 players","linkText":"Play battleship","url":"https://jkramer-cloud.github.io/multiplication-battleship/","icon":"multiply","featured":false,"status":"available","type":"game"},{"id":"periodic-table-battleship","title":"Periodic Table Battleship","category":"science","categoryLabel":"Science · Chemistry & Periodic Table","type":"game","description":"Find hidden fleets on a real periodic table. Choose elements, solve chemistry challenges, and identify clues. Explore all 118 elements from elementary through high school.","skills":["Elements","Chemical symbols","Atomic number","Periodic trends"],"gradeLabel":"Grades 3–12 · Adjustable","gradeGroups":["3-5","6-8"],"mode":"Solo vs computer · 2 players","icon":"science","status":"available","url":"https://jkramer-cloud.github.io/periodic-table-battleship/","linkText":"Play chemistry battleship","featured":true},{"id":"learning-highway","title":"Learning Highway","category":"math","categoryLabel":"Math · Arcade Racing","type":"game","description":"Drive a retro arcade highway, steer through correct math answers, earn coins, and unlock vehicles and paint colors as your skills grow.","skills":["Multiplication","Division","Fractions","Integers"],"gradeLabel":"Grades 3–12 · Adjustable","gradeGroups":["3-5","6-8"],"mode":"Solo · Keyboard or touchscreen","icon":"multiply","status":"available","url":"https://jkramer-cloud.github.io/learning-highway/","linkText":"Start racing","featured":true},{"id":"ascendant-reader","title":"A.S.C.E.N.D.A.N.T. Reader","category":"reading","categoryLabel":"Reading Tool · Fluency","description":"Use adjustable reading speed, words-per-view, and checkpoints to practice focused reading.","skills":["Reading fluency","Pacing","Self-monitoring"],"gradeLabel":"Adjustable reading support","gradeGroups":["1-2","3-5","6-8"],"mode":"Individual practice","linkText":"Open reader","url":"https://jkramer-cloud.github.io/ASCENDANT-Cognitive-Reading-System/","icon":"reader","featured":false,"status":"available","type":"tool"},{"id":"science-investigation-lab","title":"Science Investigation Lab","category":"science","categoryLabel":"Science · Inquiry & Experiments","type":"game","description":"A future inquiry-based investigation with evidence, experiments, and scientific explanations.","skills":["Scientific method","Evidence","Hypotheses"],"gradeLabel":"Proposed: Grades 3–8","gradeGroups":["3-5","6-8"],"mode":"In development","icon":"science","status":"planned"},{"id":"ecosystem-explorer","title":"Ecosystem Explorer","category":"science","categoryLabel":"Science · Ecosystems","type":"simulation","description":"A planned interactive simulation for food webs, habitats, and environmental changes.","skills":["Ecosystems","Cause & effect","Systems thinking"],"gradeLabel":"Proposed: Grades 3–8","gradeGroups":["3-5","6-8"],"mode":"Concept · Not yet playable","icon":"ecosystem","status":"planned"},{"id":"photoshop-skills-studio","title":"Photoshop Skills Studio","category":"design","categoryLabel":"Design & Technology · Photoshop","type":"tutorial","description":"Future step-by-step photo-editing lessons with visual examples and practice checkpoints.","skills":["Selections","Compositing","Retouching"],"gradeLabel":"Proposed: Grades 6–8","gradeGroups":["6-8"],"mode":"In development","icon":"photoshop","status":"planned"},{"id":"illustrator-design-lab","title":"Illustrator Design Lab","category":"design","categoryLabel":"Design & Technology · Illustrator","type":"tutorial","description":"Future guided vector-design lessons for shapes, paths, typography, and layout.","skills":["Vector tools","Typography","Design"],"gradeLabel":"Proposed: Grades 5–8","gradeGroups":["3-5","6-8"],"mode":"In development","icon":"illustrator","status":"planned"}]};
   const iconSvg = {
     detective: '<circle cx="10" cy="10" r="6"/><path d="m14.5 14.5 6.5 6.5M6 10h8M10 6v8"/>',
     addsub: '<path d="M3 7h7M6.5 3.5v7M14 6h7M14 10h7M3 17h7M6.5 13.5v7M14 17h7"/>',
@@ -155,20 +254,40 @@
   const state={activities:fallbackCatalog.activities,category:'all',grade:'all',type:'all',term:''};
   function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
   function svgIcon(code){const wrap=el('div','art-symbol');const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.8');svg.setAttribute('stroke-linecap','round');svg.setAttribute('stroke-linejoin','round');svg.innerHTML=iconSvg[code]||iconSvg.reader;wrap.appendChild(svg);return wrap;}
-  function createCard(item){
+  const artScenes = {
+    'mystery-detectives': `<g transform="translate(80 18)"><path d="M60 45 248 16l62 37-5 126-200 12-50-48Z" fill="#26374b" stroke="#f2bd75" stroke-width="5"/><path d="M104 68h140M104 92h130M104 118h83" stroke="#b2d3d8" stroke-width="8" stroke-linecap="round"/><circle cx="211" cy="127" r="58" fill="#142c49" stroke="#f8dc8c" stroke-width="15"/><circle cx="211" cy="127" r="37" fill="#76acc5" fill-opacity=".32"/><path d="m251 172 58 59" stroke="#f3d5a1" stroke-width="22" stroke-linecap="round"/><path d="M56 31 88 14l26 27" fill="#e9c07e"/><path d="M108 28 165 50l20-16" stroke="#fa7475" stroke-width="4"/><circle cx="166" cy="51" r="6" fill="#f7b659"/></g>`,
+    'addition-subtraction-battleship': `<g transform="translate(70 10)"><path d="M0 140Q90 96 200 143t180-8v145H0Z" fill="#146d9c"/><path d="M0 180Q90 144 200 184t180-11v100H0Z" fill="#105077"/><g fill="none" stroke="#6be3ff" stroke-width="4" opacity=".35"><path d="M12 207h344M12 247h344M35 145v130M95 135v140M155 130v140M215 132v140M275 138v140M335 144v128"/></g><path d="m63 113 20 37 181-1 32-38z" fill="#20354e" stroke="#a9cce0" stroke-width="4"/><path d="M152 112V64h60v48" fill="#324d6c"/><path d="m182 64 0-33" stroke="#fff1b7" stroke-width="6"/><g font-size="56" font-weight="900" fill="#ffe49e"><text x="10" y="85">+</text><text x="302" y="80">−</text></g></g>`,
+    'multiplication-battleship': `<g transform="translate(70 9)"><g opacity=".68"><rect x="6" y="5" width="368" height="242" rx="15" fill="#113b65" stroke="#69b7e2" stroke-width="4"/><g stroke="#78cce8" stroke-width="3" opacity=".48"><path d="M68 5v242M130 5v242M192 5v242M254 5v242M316 5v242M6 64h368M6 125h368M6 186h368"/></g></g><path d="m54 161 29 50h191l35-50Z" fill="#35465b" stroke="#e8e7c9" stroke-width="6"/><path d="M134 160v-50h62v50" fill="#405876"/><path d="M160 110V83h80v14" fill="none" stroke="#d0dcf7" stroke-width="8"/><circle cx="300" cy="70" r="49" fill="#ffd77c" opacity=".16"/><circle cx="300" cy="70" r="37" fill="none" stroke="#ffe5aa" stroke-width="7"/><path d="M300 12v116M242 70h116" stroke="#ffe5aa" stroke-width="6"/><circle cx="300" cy="70" r="11" fill="#ffda77"/></g>`,
+    'periodic-table-battleship': `<g transform="translate(63 22)"><rect x="0" y="0" width="376" height="219" rx="16" fill="#0c4045" stroke="#4ee2be" stroke-opacity=".8" stroke-width="4"/><g font-weight="900" text-anchor="middle"><rect x="20" y="18" width="84" height="82" rx="10" fill="#d8f0a4"/><text x="62" y="53" font-size="13" fill="#2c4d4d">1</text><text x="62" y="84" font-size="36" fill="#1b5144">H</text><rect x="269" y="18" width="84" height="82" rx="10" fill="#b5d9f5"/><text x="311" y="51" font-size="13" fill="#224368">2</text><text x="311" y="82" font-size="35" fill="#224368">He</text><rect x="20" y="116" width="84" height="82" rx="10" fill="#e1c0f9"/><text x="62" y="149" font-size="13" fill="#6a3676">3</text><text x="62" y="181" font-size="36" fill="#6a3676">Li</text><rect x="120" y="116" width="84" height="82" rx="10" fill="#ffe49c"/><text x="162" y="149" font-size="13" fill="#6b4b20">4</text><text x="162" y="181" font-size="36" fill="#6b4b20">Be</text><rect x="220" y="116" width="132" height="82" rx="10" fill="#78d4d0"/><text x="286" y="149" font-size="13" fill="#174b59">6</text><text x="286" y="181" font-size="36" fill="#174b59">C</text></g></g>`,
+    'learning-highway': `<g><circle cx="395" cy="65" r="53" fill="#ffd983"/><path d="M0 156 92 78l71 70 108-103 88 111 62-45 79 57v103H0Z" fill="#4d6e96"/><path d="M0 188 110 139l86 41 138-84 166 99v75H0Z" fill="#274a73"/><path d="M191 142h116l153 129H41Z" fill="#15263f"/><path d="m242 148-84 123M256 148l84 123" stroke="#f6e7b8" stroke-width="6" stroke-dasharray="14 15"/><path d="M177 210 206 185h91l30 25v37H177Z" fill="#fc6458" stroke="#ffd6aa" stroke-width="4"/><path d="m212 185 11-24h58l12 24" fill="#8ee5ff" stroke="#ffccac" stroke-width="4"/><rect x="186" y="224" width="39" height="13" rx="5" fill="#ffe38a"/><rect x="279" y="224" width="39" height="13" rx="5" fill="#ffe38a"/><path d="M138 140h230M144 140v44m224-44v44" stroke="#fff1cb" stroke-width="7"/><g fill="#184c4a" stroke="#9af7d2" stroke-width="3"><rect x="156" y="105" width="56" height="36" rx="5"/><rect x="225" y="105" width="56" height="36" rx="5"/><rect x="294" y="105" width="56" height="36" rx="5"/></g><g fill="#fff" font-size="22" font-weight="900" text-anchor="middle"><text x="184" y="131">48</text><text x="253" y="131">56</text><text x="322" y="131">64</text></g></g>`,
+    'ascendant-reader': `<g transform="translate(63 28)"><path d="M172 215c-53-28-103-26-145-9V28c51-17 98-16 145 9 47-25 94-26 145-9v178c-42-17-92-19-145 9Z" fill="#f5deb2" stroke="#f2ae5b" stroke-width="7"/><path d="M172 37v176" stroke="#8d5e58" stroke-width="6"/><g stroke="#6398a9" stroke-width="7" stroke-linecap="round"><path d="M52 75h84M52 101h93M52 127h77M52 153h101M206 75h84M206 101h89M206 127h93M206 153h73"/></g><path d="M192 10l89 13-12 37-29-22-28 10Z" fill="#ffbc5f"/><path d="m3 127 18-18-18-18M343 92l20 17-20 18" stroke="#9ce9f8" stroke-width="8" fill="none" stroke-linecap="round"/></g>`,
+    'science-investigation-lab': `<g transform="translate(110 10)"><path d="M115 16h68m-48 0v85l-70 124h167l-68-124V16" fill="#0d6274" fill-opacity=".75" stroke="#a5f7e7" stroke-width="10" stroke-linejoin="round"/><path d="M95 171h110l24 45H68Z" fill="#75e6c3"/><circle cx="145" cy="183" r="10" fill="#e7ffda"/><circle cx="171" cy="196" r="8" fill="#e7ffda"/><circle cx="210" cy="70" r="10" fill="#ffd68d"/><circle cx="55" cy="66" r="8" fill="#ffd68d"/></g>`,
+    'ecosystem-explorer': `<g transform="translate(100 6)"><path d="M168 241V90" stroke="#6bdf91" stroke-width="16"/><path d="M162 148Q65 135 49 30q104 5 113 118ZM178 154Q283 135 304 28q-121 14-126 126" fill="#2cae87" stroke="#a3f5b7" stroke-width="6"/><path d="M158 144 83 71M181 151l76-74" fill="none" stroke="#dafeda" stroke-width="6"/><path d="M101 237h143" stroke="#e6c37a" stroke-width="12" stroke-linecap="round"/></g>`,
+    'photoshop-skills-studio': `<g transform="translate(108 11)"><rect width="275" height="232" x="0" y="0" rx="18" fill="#0b2642" stroke="#76ceff" stroke-width="8"/><rect x="19" y="27" width="235" height="173" fill="#1a6682"/><path d="M20 182 103 105l43 42 53-78 56 82v49H20Z" fill="#41a8a1"/><circle cx="70" cy="82" r="20" fill="#ffd489"/><path d="M97 43v140m-70-70h240" stroke="#e2f1ff" stroke-width="3" stroke-dasharray="10 8"/></g>`,
+    'illustrator-design-lab': `<g transform="translate(115 5)"><path d="m135 10 127 119-127 123L13 129Z" fill="#432971" stroke="#e9b5fa" stroke-width="9"/><path d="m135 10 0 242M13 129h249" stroke="#caa2f4" stroke-width="5"/><circle cx="135" cy="10" r="12" fill="#ffda8c"/><circle cx="13" cy="129" r="12" fill="#ffda8c"/><circle cx="262" cy="129" r="12" fill="#ffda8c"/><circle cx="135" cy="252" r="12" fill="#ffda8c"/></g>`
+  };
+  const sceneSvg = item => `<svg class="scene-svg" viewBox="0 0 500 265" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${artScenes[item.id]||artScenes['science-investigation-lab']}</svg>`;
+  function createCard(item,index){
     const planned=item.status!=='available';
-    const article=el('article','card');article.dataset.status=planned?'planned':'available';
+    const article=el('article','card');article.dataset.status=planned?'planned':'available';article.dataset.activity=item.id;
     const art=el('div','card-art');art.dataset.category=item.category||'reading';art.setAttribute('aria-hidden','true');
-    art.appendChild(svgIcon(item.icon));
-    const pair=symbols[item.icon]||['✦','?'];art.appendChild(el('span','art-float one',pair[0]));art.appendChild(el('span','art-float two',pair[1]));
-    art.appendChild(el('span','card-flag',planned?'Coming soon':(typeLabels[item.type]||'Activity')));
+    const artGraphic=el('div','scene-holder');artGraphic.innerHTML=sceneSvg(item);art.appendChild(artGraphic);
+    art.appendChild(el('span','card-number',String(index+1).padStart(2,'0')));
+    art.appendChild(el('span','card-flag',planned?'UPCOMING':(item.featured?'★ FEATURED':(typeLabels[item.type]||'Activity').toUpperCase())));
+    if(!planned && /^https:\/\//i.test(item.url||'')){
+       const jump=el('a','art-jump');jump.href=item.url;jump.target='_blank';jump.rel='noopener noreferrer';jump.setAttribute('aria-label',`Launch ${item.title}`);art.appendChild(jump);
+    }
     article.appendChild(art);
     const body=el('div','card-body');body.appendChild(el('div','subject',item.categoryLabel||'Learning activity'));
     body.appendChild(el('h3','',item.title));body.appendChild(el('p','desc',item.description));
-    const tags=el('div','tags');(item.skills||[]).slice(0,4).forEach(s=>tags.appendChild(el('span','tag',s)));body.appendChild(tags);
+    const tags=el('div','tags');(item.skills||[]).slice(0,3).forEach(s=>tags.appendChild(el('span','tag',s)));body.appendChild(tags);
     const meta=el('div','meta');meta.appendChild(el('span','',item.gradeLabel||'Flexible'));meta.appendChild(el('span','',item.mode||'Open in browser'));body.appendChild(meta);
-    if(planned)body.appendChild(el('div','planned-label','In development · Not playable yet'));
-    else{const a=el('a','launch');a.href=item.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=(item.linkText||'Open activity')+' ↗';a.setAttribute('aria-label',`Open ${item.title} in a new tab`);body.appendChild(a);}
+    if(planned)body.appendChild(el('div','planned-label','COMING SOON  ·  NOT PLAYABLE'));
+    else{
+      const a=el('a','launch');a.href=item.url;a.target='_blank';a.rel='noopener noreferrer';
+      const label=el('span','launch-label',item.linkText||'Open activity');a.appendChild(label);a.appendChild(el('span','launch-arrow','↗'));
+      a.setAttribute('aria-label',`Launch ${item.title} in a new tab`);body.appendChild(a);
+    }
     article.appendChild(body);return article;
   }
   function render(){
@@ -184,13 +303,14 @@
     byId('cards').replaceChildren(...ready.map(createCard));
     byId('planned-cards').replaceChildren(...planned.map(createCard));
     byId('planned-section').hidden=planned.length===0;
-    byId('activity-count').textContent=`${ready.length} ready · ${planned.length} planned`;
+    byId('activity-count').textContent=`${ready.length} ready · ${planned.length} planned`;byId('hero-live-count').textContent=`${state.activities.filter(g=>g.status==='available').length} activities ready to explore`;
     byId('no-results').hidden=ready.length+planned.length!==0;
   }
   document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{state.category=b.dataset.filter;document.querySelectorAll('.filter').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render();}));
   byId('grade-filter').addEventListener('change',e=>{state.grade=e.target.value;render();});
   byId('type-filter').addEventListener('change',e=>{state.type=e.target.value;render();});
   byId('search').addEventListener('input',e=>{state.term=e.target.value.trim().toLocaleLowerCase();render();});
+  byId('random-game').addEventListener('click',()=>{const pool=state.activities.filter(g=>g.status==='available'&&typeof g.url==='string'&&g.url.startsWith('https://'));if(pool.length)window.open(pool[Math.floor(Math.random()*pool.length)].url,'_blank','noopener,noreferrer');});
   render();
   fetch('./activities.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json();}).then(data=>{
     if(!data||!Array.isArray(data.activities))throw Error('Catalog has no activities');

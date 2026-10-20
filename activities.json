@@ -101,6 +101,31 @@
       "featured": true
     },
     {
+      "id": "learning-highway",
+      "title": "Learning Highway",
+      "category": "math",
+      "categoryLabel": "Math · Arcade Racing",
+      "type": "game",
+      "description": "Drive a retro arcade highway, steer through correct math answers, earn coins, and unlock vehicles and paint colors as your skills grow.",
+      "skills": [
+        "Multiplication",
+        "Division",
+        "Fractions",
+        "Integers"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Keyboard or touchscreen",
+      "icon": "multiply",
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/learning-highway/",
+      "linkText": "Start racing",
+      "featured": true
+    },
+    {
       "id": "ascendant-reader",
       "title": "A.S.C.E.N.D.A.N.T. Reader",
       "category": "reading",

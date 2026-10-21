@@ -126,6 +126,31 @@
       "featured": true
     },
     {
+      "id": "mathjong-tile-quest",
+      "title": "Mathjong: Tile Quest",
+      "category": "math",
+      "categoryLabel": "Math · Matching, Memory & Strategy",
+      "description": "Flip and match fantasy tiles, solve a new math challenge to collect each pair, and earn coins to unlock colorful decks, backgrounds, and effects.",
+      "skills": [
+        "Math fluency",
+        "Memory",
+        "Strategy"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Chromebook or touchscreen",
+      "linkText": "Play Mathjong",
+      "url": "https://jkramer-cloud.github.io/mathjong-tile-quest/",
+      "icon": "puzzle",
+      "featured": true,
+      "status": "available",
+      "type": "game"
+    },
+    {
       "id": "ascendant-reader",
       "title": "A.S.C.E.N.D.A.N.T. Reader",
       "category": "reading",

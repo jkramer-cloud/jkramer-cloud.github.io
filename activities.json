@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-10-20",
+  "lastUpdated": "2026-10-21",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -172,6 +172,30 @@
       "url": "https://jkramer-cloud.github.io/ASCENDANT-Cognitive-Reading-System/",
       "icon": "reader",
       "featured": false,
+      "status": "available",
+      "type": "tool"
+    },
+    {
+      "id": "keyquest-typing",
+      "title": "KeyQuest: Typing Evolution",
+      "category": "ela",
+      "categoryLabel": "ELA · Keyboarding & Digital Literacy",
+      "description": "Build keyboarding fluency with timed tests, grade-level nonfiction facts, accuracy feedback, and companions that evolve as you practice.",
+      "skills": [
+        "Typing speed",
+        "Accuracy",
+        "Keyboarding"
+      ],
+      "gradeLabel": "Grades 5–8",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Timed tests & page practice",
+      "linkText": "Start typing",
+      "url": "https://jkramer-cloud.github.io/keyquest-typing/",
+      "icon": "keyboard",
+      "featured": true,
       "status": "available",
       "type": "tool"
     },

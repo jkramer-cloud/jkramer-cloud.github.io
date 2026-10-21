@@ -200,6 +200,56 @@
       "type": "tool"
     },
     {
+      "id": "grizzly-rapids",
+      "title": "Grizzly Rapids",
+      "category": "ela",
+      "categoryLabel": "ELA · Keyboarding & Vocabulary",
+      "description": "Help Naches-inspired grizzlies catch food in six rushing rivers. Switch bears to match vocabulary categories, type approaching words, and improve accuracy as the currents grow faster.",
+      "skills": [
+        "Typing accuracy",
+        "Vocabulary",
+        "Word recognition"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Physical keyboard",
+      "linkText": "Play Grizzly Rapids",
+      "url": "https://jkramer-cloud.github.io/grizzly-rapids/",
+      "icon": "grizzly",
+      "featured": true,
+      "status": "available",
+      "type": "game"
+    },
+    {
+      "id": "space-type-defender",
+      "title": "Space Type Defender",
+      "category": "ela",
+      "categoryLabel": "ELA · Arcade Typing & Vocabulary",
+      "description": "Defend your space station from approaching word-carrying meteors. Complete six increasingly fast missions while practicing grade-adjusted vocabulary, typing speed, and accuracy.",
+      "skills": [
+        "Typing fluency",
+        "Accuracy",
+        "Vocabulary"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Physical keyboard",
+      "linkText": "Defend the station",
+      "url": "https://jkramer-cloud.github.io/space-type-defender/",
+      "icon": "meteor",
+      "featured": true,
+      "status": "available",
+      "type": "game"
+    },
+    {
       "id": "science-investigation-lab",
       "title": "Science Investigation Lab",
       "category": "science",

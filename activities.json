@@ -181,6 +181,34 @@
       "linkText": "Play MathDrop Four"
     },
     {
+      "id": "math-maze-adventures",
+      "title": "Math Maze Adventures",
+      "category": "math",
+      "categoryLabel": "Math · Puzzles & Problem Solving",
+      "type": "game",
+      "description": "Help a bee, rover, or explorer reach the goal by solving each math room and choosing the correctly labeled corridor. Explore or race through dynamically generated mazes.",
+      "skills": [
+        "Addition",
+        "Subtraction",
+        "Fractions",
+        "Algebra",
+        "Problem solving"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Maze puzzles · Saved progress",
+      "linkText": "Enter the maze",
+      "url": "https://jkramer-cloud.github.io/math-maze-adventures/",
+      "icon": "maze",
+      "featured": true,
+      "status": "available"
+    },
+    {
       "id": "naches-knowledge-showdown",
       "title": "Naches Knowledge Showdown",
       "category": "general",

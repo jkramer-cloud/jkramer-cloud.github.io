@@ -91,7 +91,8 @@
       "gradeLabel": "Grades 3–12 · Adjustable",
       "gradeGroups": [
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Solo vs computer · 2 players",
       "icon": "science",
@@ -116,7 +117,8 @@
       "gradeLabel": "Grades 3–12 · Adjustable",
       "gradeGroups": [
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Solo · Keyboard or touchscreen",
       "icon": "multiply",
@@ -140,7 +142,8 @@
       "gradeGroups": [
         "1-2",
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Solo · Chromebook or touchscreen",
       "linkText": "Play Mathjong",
@@ -167,7 +170,8 @@
       "gradeGroups": [
         "1-2",
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Two players · Shared Chromebook",
       "icon": "connect4",
@@ -240,7 +244,8 @@
       "gradeGroups": [
         "1-2",
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Solo · Physical keyboard",
       "linkText": "Play Grizzly Rapids",
@@ -265,7 +270,8 @@
       "gradeGroups": [
         "1-2",
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Solo · Physical keyboard",
       "linkText": "Defend the station",
@@ -292,7 +298,8 @@
       "gradeLabel": "Grades 5–12 · Adjustable",
       "gradeGroups": [
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Solo or small group · Eight investigations",
       "icon": "science",
@@ -318,7 +325,8 @@
       "gradeLabel": "Grades 5–12 · Adjustable",
       "gradeGroups": [
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
       "mode": "Solo or small group · Five 20–30-minute cases",
       "icon": "csi",
@@ -388,6 +396,233 @@
       "mode": "In development",
       "icon": "illustrator",
       "status": "planned"
+    },
+    {
+      "id": "nachesopoly",
+      "title": "Nachesopoly: Valley Ventures",
+      "category": "social",
+      "categoryLabel": "Life Skills · Economics & Local Community",
+      "type": "game",
+      "description": "A future local-inspired property and business strategy board game. Practice budgeting, earning, investing, and negotiating while discovering the Yakima Valley.",
+      "skills": [
+        "Budgeting",
+        "Money decisions",
+        "Local economics"
+      ],
+      "gradeLabel": "Planned: Grades 5–12",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "2–4 players · Tabletop strategy",
+      "icon": "town",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "spelling-sprint",
+      "title": "Spelling Sprint",
+      "category": "ela",
+      "categoryLabel": "ELA · Spelling & Word Patterns",
+      "type": "game",
+      "description": "Race through vocabulary checkpoints using spelling patterns, roots, prefixes, suffixes, and grade-adjusted word challenges.",
+      "skills": [
+        "Spelling",
+        "Word parts",
+        "Vocabulary"
+      ],
+      "gradeLabel": "Planned: Grades 3–8",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Arcade challenge",
+      "icon": "spelling",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "science-circuit-raceway",
+      "title": "Science Circuit Raceway",
+      "category": "science",
+      "categoryLabel": "Science · Applied Concepts & Racing",
+      "type": "game",
+      "description": "Power an arcade racer by interpreting forces, circuits, matter, and energy concepts. Change science topics as new tracks unlock.",
+      "skills": [
+        "Physics",
+        "Electricity",
+        "Reasoning"
+      ],
+      "gradeLabel": "Planned: Grades 5–10",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Science racer",
+      "icon": "circuit",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "fitness-quest",
+      "title": "Fitness Quest: Move & Learn",
+      "category": "pe",
+      "categoryLabel": "PE & Wellness · Movement & Fitness",
+      "type": "game",
+      "description": "Complete instructor-guided activity challenges, warm-up decisions, recovery checks, and movement-skill quests through an adventure map.",
+      "skills": [
+        "Movement skills",
+        "Fitness concepts",
+        "Goal setting"
+      ],
+      "gradeLabel": "Planned: Grades 5–12",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or class · Teacher guided",
+      "icon": "fitness",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "strength-lab",
+      "title": "Strength Lab: Technique Academy",
+      "category": "pe",
+      "categoryLabel": "PE & Wellness · Strength Education",
+      "type": "tool",
+      "description": "Learn weight-room vocabulary, equipment identification, movement technique, spotting principles, and training logs in a coach-supervised program.",
+      "skills": [
+        "Weight-room safety",
+        "Technique",
+        "Training logs"
+      ],
+      "gradeLabel": "Planned: Grades 7–12",
+      "gradeGroups": [
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Training tool · Coach supervised",
+      "icon": "strength",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "playbook-tactics",
+      "title": "Playbook Tactics",
+      "category": "pe",
+      "categoryLabel": "PE & Wellness · Sports Strategy",
+      "type": "simulation",
+      "description": "Move players on interactive courts and fields, evaluate passing options, plan team tactics, and practice communication decisions.",
+      "skills": [
+        "Team strategy",
+        "Spatial reasoning",
+        "Sportsmanship"
+      ],
+      "gradeLabel": "Planned: Grades 5–12",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or teams · Strategy lab",
+      "icon": "playbook",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "body-systems-explorer",
+      "title": "Body Systems Explorer",
+      "category": "science",
+      "categoryLabel": "Science · Human Biology",
+      "type": "simulation",
+      "description": "Explore how the skeletal, muscular, respiratory, and circulatory systems interact using adjustable animated models and evidence questions.",
+      "skills": [
+        "Anatomy",
+        "Systems thinking",
+        "Scientific models"
+      ],
+      "gradeLabel": "Planned: Grades 5–12",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Interactive anatomy",
+      "icon": "body",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "yakima-weather-watch",
+      "title": "Yakima Weather Watch",
+      "category": "science",
+      "categoryLabel": "Science · Weather & Climate",
+      "type": "simulation",
+      "description": "Investigate local weather patterns, compare forecast models, read station data, and predict how temperature, wind, and precipitation may change.",
+      "skills": [
+        "Weather data",
+        "Graphs",
+        "Prediction"
+      ],
+      "gradeLabel": "Planned: Grades 5–12",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Forecast investigation",
+      "icon": "weather",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "bridge-builder-challenge",
+      "title": "Bridge Builder Challenge",
+      "category": "science",
+      "categoryLabel": "Science · Engineering Design",
+      "type": "simulation",
+      "description": "Build and test virtual bridges using limited materials, compare load paths, estimate forces, and redesign structures after failures.",
+      "skills": [
+        "Engineering",
+        "Forces",
+        "Iteration"
+      ],
+      "gradeLabel": "Planned: Grades 5–12",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or teams · Design challenge",
+      "icon": "bridge",
+      "status": "planned",
+      "featured": false
+    },
+    {
+      "id": "budget-builder-market",
+      "title": "Budget Builder Market",
+      "category": "social",
+      "categoryLabel": "Life Skills · Personal Finance",
+      "type": "game",
+      "description": "Make simulated spending, saving, tax, and opportunity-cost decisions while trying to meet a monthly budget and long-term goals.",
+      "skills": [
+        "Budgeting",
+        "Financial literacy",
+        "Tradeoffs"
+      ],
+      "gradeLabel": "Planned: Grades 6–12",
+      "gradeGroups": [
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Decision game",
+      "icon": "budget",
+      "status": "planned",
+      "featured": false
     }
   ]
 }

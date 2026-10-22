@@ -253,22 +253,27 @@
       "id": "science-investigation-lab",
       "title": "Science Investigation Lab",
       "category": "science",
-      "categoryLabel": "Science · Inquiry & Experiments",
+      "categoryLabel": "Science · Investigations & Virtual Experiments",
       "type": "game",
-      "description": "A future inquiry-based investigation with evidence, experiments, and scientific explanations.",
+      "description": "Explore eight science investigations. Make predictions, run virtual experiments, analyze measurements and graphs, solve calculations, and defend conclusions with evidence.",
       "skills": [
-        "Scientific method",
-        "Evidence",
-        "Hypotheses"
+        "Scientific inquiry",
+        "Experiment design",
+        "Data analysis",
+        "Math & modeling",
+        "Claim–Evidence–Reasoning"
       ],
-      "gradeLabel": "Proposed: Grades 3–8",
+      "gradeLabel": "Grades 5–12 · Adjustable",
       "gradeGroups": [
         "3-5",
         "6-8"
       ],
-      "mode": "In development",
+      "mode": "Solo or small group · Eight investigations",
       "icon": "science",
-      "status": "planned"
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/science-investigation-lab/",
+      "linkText": "Enter the science lab"
     },
     {
       "id": "ecosystem-explorer",

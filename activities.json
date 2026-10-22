@@ -209,6 +209,33 @@
       "type": "game"
     },
     {
+      "id": "valley-geography-quest",
+      "title": "Valley Geography Quest",
+      "category": "socialstudies",
+      "categoryLabel": "Social Studies · Geography & Maps",
+      "description": "Find all 50 states, name capitals, match state flags, race the map timer, and explore cities, rivers, and mountains around the Pacific Northwest.",
+      "skills": [
+        "State locations",
+        "Capitals",
+        "Map skills",
+        "Pacific Northwest geography",
+        "Geographic reasoning"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Eight geography challenges",
+      "linkText": "Explore the atlas",
+      "url": "https://jkramer-cloud.github.io/valley-geography-quest/",
+      "icon": "map",
+      "featured": true,
+      "status": "available",
+      "type": "game"
+    },
+    {
       "id": "ascendant-reader",
       "title": "A.S.C.E.N.D.A.N.T. Reader",
       "category": "reading",
@@ -651,6 +678,31 @@
       "icon": "budget",
       "status": "planned",
       "featured": false
+    },
+    {
+      "id": "world-atlas-expedition",
+      "title": "World Atlas Expedition",
+      "category": "socialstudies",
+      "categoryLabel": "Social Studies · World Geography",
+      "description": "Future world-map expansion with countries, capitals, flags, continents, and country-identification challenges.",
+      "skills": [
+        "Countries",
+        "Continents",
+        "Capitals",
+        "Flags",
+        "Global geography"
+      ],
+      "gradeLabel": "Proposed: Grades 5–12",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "In development",
+      "icon": "globe",
+      "featured": false,
+      "status": "planned",
+      "type": "game"
     }
   ]
 }

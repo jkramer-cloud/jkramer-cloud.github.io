@@ -215,12 +215,12 @@ body:after{content:"";position:fixed;z-index:-1;pointer-events:none;left:0;right
           <h1 id="hero-title">Pick your next <em>adventure.</em></h1>
           <p>Battle ships. Race through math. Crack a mystery. Explore science. Every mission builds a new skill.</p>
           <div class="hero-actions"><a class="hero-cta" href="#activities">Explore the arcade <span aria-hidden="true">↓</span></a><button class="surprise" type="button" id="random-game">Surprise me <span aria-hidden="true">✦</span></button></div>
-          <div class="hero-bottom"><span class="hero-status" id="hero-live-count">Loading games…</span><span class="hero-fact">No sign-ins · Chromebook friendly</span></div>
+          <div class="hero-bottom"><span class="hero-status" id="hero-live-count">15 activities ready to explore</span><span class="hero-fact">No sign-ins · Chromebook friendly</span></div>
         </div>
         <div class="hero-floating" aria-hidden="true"><span class="floating-icon">✦</span><span class="floating-title">YOUR NEXT MISSION</span><span class="floating-motto">PLAY • LEARN • LEVEL UP</span><span class="floating-stars">★ ★ ★</span></div>
       </section>
       <section id="activities" aria-label="Learning activities">
-        <div class="section-header"><div><h2>Choose your game</h2><p>Pick a card to launch, or filter for the perfect challenge.</p></div><div class="count" id="activity-count" aria-live="polite">7 ready · 4 planned</div></div>
+        <div class="section-header"><div><h2>Choose your game</h2><p>Pick a card to launch, or filter for the perfect challenge.</p></div><div class="count" id="activity-count" aria-live="polite">15 ready · 14 planned</div></div>
         <div class="controls">
           <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search activities</span><input id="search" type="search" autocomplete="off" placeholder="Find a game, topic, or skill…" aria-label="Search activities"></label>
           <select id="grade-filter" class="grade" aria-label="Filter by suggested grade band"><option value="all">All grade levels</option><option value="1-2">Grades 1–2</option><option value="3-5">Grades 3–5</option><option value="6-8">Grades 6–8</option><option value="9-12">Grades 9–12</option></select>
@@ -237,7 +237,7 @@ body:after{content:"";position:fixed;z-index:-1;pointer-events:none;left:0;right
       </section>
       <details class="helper"><summary>For teachers: using and updating this hub</summary><p>Each activity opens its own existing website. The hub does not change those games or their saved progress. The grade filters are suggestions, not restrictions. To add a game, tutorial, simulation, or tool later, edit <code>activities.json</code> in this hub's GitHub repository. Use <code>status: planned</code> until the activity is ready, then change to <code>available</code> and add its live URL. This site is a directory, not an account system or assignment tracker.</p><p>School filtering may require your tech department to allow each destination URL, not just this hub's address.</p></details>
     </main>
-    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory</span></footer>
+    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v29</strong> · 15 playable, 14 planned</span></footer>
   </div>
   <script>
   'use strict';
@@ -715,21 +715,9 @@ body:after{content:"";position:fixed;z-index:-1;pointer-events:none;left:0;right
   byId('search').addEventListener('input',e=>{state.term=e.target.value.trim().toLocaleLowerCase();render();});
   byId('random-game').addEventListener('click',()=>{const pool=state.activities.filter(g=>g.status==='available'&&typeof g.url==='string'&&g.url.startsWith('https://'));if(pool.length)window.open(pool[Math.floor(Math.random()*pool.length)].url,'_blank','noopener,noreferrer');});
   render();
-  fetch('./activities.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Catalog unavailable');return r.json();}).then(data=>{
-    if(!data||!Array.isArray(data.activities))throw Error('Catalog has no activities');
-    // Do not silently discard new subject categories added to activities.json.
-    // Earlier builds allowed only seven categories and removed Quiz & Review and
-    // Geography cards immediately after the external catalog loaded.
-    const ok=data.activities.filter(g=>g&&typeof g.id==='string'&&typeof g.title==='string'&&typeof g.category==='string'&&g.category.trim()&&['available','planned'].includes(g.status)&&(g.status==='planned'||(typeof g.url==='string'&&/^https:\/\//i.test(g.url))));
-    if(ok.length){
-      // Keep newer cards from the built-in catalog if an older activities.json
-      // was accidentally uploaded; external records override matching IDs.
-      const combined=new Map(fallbackCatalog.activities.map(g=>[g.id,g]));
-      ok.forEach(g=>combined.set(g.id,g));
-      state.activities=[...combined.values()];
-      render();
-    }
-  }).catch(()=>{/* Standalone HTML preview uses built-in catalog. */});
+  // Catalog v29: single authoritative list embedded above.
+  // No async activities.json fetch can replace, remove, or reorder game tiles.
+
   </script>
 </body>
 </html>

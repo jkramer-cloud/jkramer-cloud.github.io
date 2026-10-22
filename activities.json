@@ -151,6 +151,32 @@
       "type": "game"
     },
     {
+      "id": "mathdrop-four",
+      "title": "MathDrop Four: Connect to Conquer",
+      "category": "math",
+      "categoryLabel": "Math · Strategy & Fluency",
+      "type": "game",
+      "description": "Play a two-player Connect Four challenge where each move must be earned by solving a math problem. Choose grades and math topics individually, customize boards and pieces, and unlock effects as you improve.",
+      "skills": [
+        "Math fluency",
+        "Problem solving",
+        "Strategy",
+        "Mental math"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Two players · Shared Chromebook",
+      "icon": "connect4",
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/mathdrop-four/",
+      "linkText": "Play MathDrop Four"
+    },
+    {
       "id": "ascendant-reader",
       "title": "A.S.C.E.N.D.A.N.T. Reader",
       "category": "reading",

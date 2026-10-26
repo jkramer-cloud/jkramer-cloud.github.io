@@ -25,7 +25,8 @@
       "icon": "detective",
       "featured": true,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 1
     },
     {
       "id": "addition-subtraction-battleship",
@@ -49,7 +50,8 @@
       "icon": "addsub",
       "featured": false,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 2
     },
     {
       "id": "multiplication-battleship",
@@ -73,7 +75,8 @@
       "icon": "multiply",
       "featured": false,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 3
     },
     {
       "id": "periodic-table-battleship",
@@ -99,7 +102,8 @@
       "status": "available",
       "url": "https://jkramer-cloud.github.io/periodic-table-battleship/",
       "linkText": "Play chemistry battleship",
-      "featured": true
+      "featured": true,
+      "releaseOrder": 4
     },
     {
       "id": "learning-highway",
@@ -125,7 +129,8 @@
       "status": "available",
       "url": "https://jkramer-cloud.github.io/learning-highway/",
       "linkText": "Start racing",
-      "featured": true
+      "featured": true,
+      "releaseOrder": 5
     },
     {
       "id": "mathjong-tile-quest",
@@ -151,7 +156,8 @@
       "icon": "puzzle",
       "featured": true,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 6
     },
     {
       "id": "mathdrop-four",
@@ -178,7 +184,8 @@
       "status": "available",
       "featured": true,
       "url": "https://jkramer-cloud.github.io/mathdrop-four/",
-      "linkText": "Play MathDrop Four"
+      "linkText": "Play MathDrop Four",
+      "releaseOrder": 13
     },
     {
       "id": "math-maze-adventures",
@@ -206,7 +213,8 @@
       "url": "https://jkramer-cloud.github.io/math-maze-adventures/",
       "icon": "maze",
       "featured": true,
-      "status": "available"
+      "status": "available",
+      "releaseOrder": 16
     },
     {
       "id": "naches-knowledge-showdown",
@@ -234,7 +242,8 @@
       "icon": "quiz",
       "featured": true,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 14
     },
     {
       "id": "valley-geography-quest",
@@ -261,7 +270,8 @@
       "icon": "map",
       "featured": true,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 15
     },
     {
       "id": "ascendant-reader",
@@ -286,7 +296,8 @@
       "icon": "reader",
       "featured": false,
       "status": "available",
-      "type": "tool"
+      "type": "tool",
+      "releaseOrder": 7
     },
     {
       "id": "keyquest-typing",
@@ -310,7 +321,8 @@
       "icon": "keyboard",
       "featured": true,
       "status": "available",
-      "type": "tool"
+      "type": "tool",
+      "releaseOrder": 8
     },
     {
       "id": "grizzly-rapids",
@@ -336,7 +348,8 @@
       "icon": "grizzly",
       "featured": true,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 9
     },
     {
       "id": "space-type-defender",
@@ -362,7 +375,8 @@
       "icon": "meteor",
       "featured": true,
       "status": "available",
-      "type": "game"
+      "type": "game",
+      "releaseOrder": 10
     },
     {
       "id": "science-investigation-lab",
@@ -389,7 +403,8 @@
       "status": "available",
       "featured": true,
       "url": "https://jkramer-cloud.github.io/science-investigation-lab/",
-      "linkText": "Enter the science lab"
+      "linkText": "Enter the science lab",
+      "releaseOrder": 11
     },
     {
       "id": "csi-naches",
@@ -416,7 +431,8 @@
       "status": "available",
       "featured": true,
       "url": "https://jkramer-cloud.github.io/csi-naches/",
-      "linkText": "Open CSI: Naches"
+      "linkText": "Open CSI: Naches",
+      "releaseOrder": 12
     },
     {
       "id": "ecosystem-explorer",
@@ -486,7 +502,7 @@
       "category": "social",
       "categoryLabel": "Life Skills · Economics & Local Community",
       "type": "game",
-      "description": "A future local-inspired property and business strategy board game. Practice budgeting, earning, investing, and negotiating while discovering the Yakima Valley.",
+      "description": "An upcoming Naches Valley property-trading game featuring local businesses, purchasing, upgrades, rent, auctions, event cards, and financial decisions. The Naches Edition is in final testing before its student release.",
       "skills": [
         "Budgeting",
         "Money decisions",
@@ -498,7 +514,7 @@
         "6-8",
         "9-12"
       ],
-      "mode": "2–4 players · Tabletop strategy",
+      "mode": "2–4 players · Humans and computer opponents",
       "icon": "town",
       "status": "planned",
       "featured": false

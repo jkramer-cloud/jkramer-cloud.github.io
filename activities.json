@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-10-22",
+  "lastUpdated": "2026-10-26",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -502,22 +502,25 @@
       "category": "social",
       "categoryLabel": "Life Skills · Economics & Local Community",
       "type": "game",
-      "description": "An upcoming Naches Valley property-trading game featuring local businesses, purchasing, upgrades, rent, auctions, event cards, and financial decisions. The Naches Edition is in final testing before its student release.",
+      "description": "Play a Naches Valley property-trading board game with local businesses, rent, improvements, auctions, trades, computer opponents, and 48 community and opportunity cards. Learn money management and strategy while exploring the valley.",
       "skills": [
         "Budgeting",
         "Money decisions",
         "Local economics"
       ],
-      "gradeLabel": "Planned: Grades 5–12",
+      "gradeLabel": "Grades 5–12 · Financial literacy",
       "gradeGroups": [
         "3-5",
         "6-8",
         "9-12"
       ],
-      "mode": "2–4 players · Humans and computer opponents",
+      "mode": "2–4 players · Human and computer opponents",
       "icon": "town",
-      "status": "planned",
-      "featured": false
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/nachesopoly/",
+      "linkText": "Play Nachesopoly",
+      "releaseOrder": 17
     },
     {
       "id": "spelling-sprint",

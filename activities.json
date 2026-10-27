@@ -614,49 +614,30 @@
     },
     {
       "id": "playbook-tactics",
-      "title": "Playbook Tactics",
+      "title": "Playbook Tactics — Basketball",
       "category": "pe",
-      "categoryLabel": "PE & Wellness · Sports Strategy",
+      "categoryLabel": "PE & Wellness · Basketball Strategy",
       "type": "simulation",
-      "description": "Move players on interactive courts and fields, evaluate passing options, plan team tactics, and practice communication decisions.",
+      "description": "Learn basketball strategy through 12 coaching challenges, then position players and animate custom plays in a five-on-five play designer.",
       "skills": [
-        "Team strategy",
-        "Spatial reasoning",
-        "Sportsmanship"
+        "Court spacing",
+        "Team tactics",
+        "Play design"
       ],
-      "gradeLabel": "Planned: Grades 5–12",
+      "gradeLabel": "Grades 5–12 · Beginner-friendly",
       "gradeGroups": [
         "3-5",
         "6-8",
         "9-12"
       ],
-      "mode": "Solo or teams · Strategy lab",
+      "mode": "Solo or teams · Basketball strategy",
       "icon": "playbook",
-      "status": "planned",
-      "featured": false
-    },
-    {
-      "id": "body-systems-explorer",
-      "title": "Body Systems Explorer",
-      "category": "science",
-      "categoryLabel": "Science · Human Biology",
-      "type": "simulation",
-      "description": "Explore how the skeletal, muscular, respiratory, and circulatory systems interact using adjustable animated models and evidence questions.",
-      "skills": [
-        "Anatomy",
-        "Systems thinking",
-        "Scientific models"
-      ],
-      "gradeLabel": "Planned: Grades 5–12",
-      "gradeGroups": [
-        "3-5",
-        "6-8",
-        "9-12"
-      ],
-      "mode": "Solo · Interactive anatomy",
-      "icon": "body",
-      "status": "planned",
-      "featured": false
+      "status": "available",
+      "featured": false,
+      "url": "https://jkramer-cloud.github.io/playbook-tactics/",
+      "linkText": "Open basketball playbook",
+      "releaseOrder": 19,
+      "audience": "students"
     },
     {
       "id": "yakima-weather-watch",
@@ -687,22 +668,26 @@
       "category": "science",
       "categoryLabel": "Science · Engineering Design",
       "type": "simulation",
-      "description": "Build and test virtual bridges using limited materials, compare load paths, estimate forces, and redesign structures after failures.",
+      "description": "Construct and test virtual bridges over 12 challenges with wood, steel, and cables. Work within a budget, test vehicle crossings, and redesign for greater stability.",
       "skills": [
-        "Engineering",
-        "Forces",
-        "Iteration"
+        "Engineering design",
+        "Forces & structures",
+        "Problem-solving"
       ],
-      "gradeLabel": "Planned: Grades 5–12",
+      "gradeLabel": "Grades 5–12 · Flexible",
       "gradeGroups": [
         "3-5",
         "6-8",
         "9-12"
       ],
-      "mode": "Solo or teams · Design challenge",
+      "mode": "Solo · Build, test & redesign",
       "icon": "bridge",
-      "status": "planned",
-      "featured": false
+      "status": "available",
+      "featured": false,
+      "url": "https://jkramer-cloud.github.io/bridge-builder-challenge/",
+      "linkText": "Build a bridge",
+      "releaseOrder": 18,
+      "audience": "students"
     },
     {
       "id": "budget-builder-market",
@@ -750,6 +735,32 @@
       "featured": false,
       "status": "planned",
       "type": "game"
+    },
+    {
+      "id": "team-scorekeeper",
+      "title": "Team Scorekeeper — Basketball",
+      "category": "pe",
+      "categoryLabel": "PE & Wellness · Coaching Resources",
+      "description": "Coach/staff tool for tracking basketball rosters, A/B/C squads, game scores, player statistics, squad transfers, and CSV/JSON exports. Data stays in the current browser.",
+      "skills": [
+        "Roster management",
+        "Game statistics",
+        "Data exports"
+      ],
+      "gradeLabel": "Coach / Staff Resource",
+      "gradeGroups": [
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Coach/staff resource · Local browser data",
+      "linkText": "Open team scorekeeper",
+      "url": "https://jkramer-cloud.github.io/team-scorekeeper/",
+      "icon": "scorekeeper",
+      "status": "available",
+      "type": "tool",
+      "releaseOrder": 20,
+      "audience": "staff",
+      "featured": false
     }
   ]
 }

@@ -788,6 +788,33 @@
       "releaseOrder": 20,
       "audience": "staff",
       "featured": false
+    },
+    {
+      "id": "valley-life-journey",
+      "title": "Valley Life Journey",
+      "category": "social",
+      "categoryLabel": "Life Skills · Career & Money Choices",
+      "type": "game",
+      "description": "Spin along a winding life-path board, choose a career, manage paychecks and surprises, and build a balanced future through saving, learning, wellbeing, and community.",
+      "skills": [
+        "Life decisions",
+        "Financial literacy",
+        "Career exploration"
+      ],
+      "gradeLabel": "Grades 5–12 · Life skills",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "1–4 players · Local turn-based board game",
+      "icon": "lifejourney",
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/valley-life-journey/",
+      "linkText": "Play Valley Life Journey",
+      "releaseOrder": 22,
+      "audience": "students"
     }
   ]
 }

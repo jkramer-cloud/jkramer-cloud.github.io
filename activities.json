@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-10-26",
+  "lastUpdated": "2026-10-27",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -687,6 +687,33 @@
       "url": "https://jkramer-cloud.github.io/bridge-builder-challenge/",
       "linkText": "Build a bridge",
       "releaseOrder": 18,
+      "audience": "students"
+    },
+    {
+      "id": "budget-bites",
+      "title": "Budget Bites",
+      "category": "social",
+      "categoryLabel": "Life Skills · Cooking & Nutrition",
+      "type": "simulation",
+      "description": "Build a household, plan meals, shop within a grocery budget, and learn safe cooking with 68 recipes. Compare planned and served nutrition with interactive graphs.",
+      "skills": [
+        "Meal planning",
+        "Grocery budgeting",
+        "Nutrition & cooking"
+      ],
+      "gradeLabel": "Grades 5–12 · Life skills",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Plan, shop & cook",
+      "icon": "recipe",
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/budget-bites/",
+      "linkText": "Play Budget Bites",
+      "releaseOrder": 21,
       "audience": "students"
     },
     {

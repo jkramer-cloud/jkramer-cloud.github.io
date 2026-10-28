@@ -4,13 +4,36 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.11 — Weather Scene Studio & Activity Card Refresh**  
+**Current Hub release: v31.12 — Festive Valley & Social Studies Catalog Refresh**  
 **Updated:** October 28, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
 
-## What's new in v31.11
+## What's new in v31.12
+
+### Expanded holiday scenes
+
+The **Customize Scene → Special-day decorations** selector now drives animated scenes in the Hub banner:
+
+- **New Year:** multicolored rockets, sparkling fireworks, festival pennants (Dec 31–Jan 1 automatically).
+- **Independence Day:** red, white and blue fireworks, flags/bunting, stars (July 3–4).
+- **Halloween:** friendly flying ghosts, bats, marching skeletons, glowing pumpkins and moonlight (Oct 25–31).
+- **Winter celebrations:** twinkling string lights, snowflakes and a snowman.
+- **Valentine's Day:** drifting hearts in the orchard.
+- **Earth Day and spring:** butterflies and leaves; Earth Day globe.
+- **Back to school:** pencils, pennants and stars.
+- **Thanksgiving:** warm-colored leaves, pumpkins and turkeys.
+- **Memorial Day and Veterans Day:** understated, respectful remembrance motifs.
+- **St. Patrick's Day and Juneteenth:** themed colors and decorations.
+
+The effects are **purely decorative**, appear behind readable Hub content, and do not need any image assets or subscriptions. Set *Motion Off* or use your operating system's *Reduce Motion* setting to stop animation. The thunderstorm mode now draws **occasional localized lightning bolts** rather than full-screen flashes.
+
+### Knowledge Showdown subject refresh
+
+The Knowledge Showdown card now describes the game's expanded **670-question bank**, including dedicated Social Studies choices for grades 5–8. Install **Knowledge Showdown v1.3 separately** in its own GitHub repository; changing the Hub card does not update that game.
+
+## Previous release: v31.11
 
 ### Live Naches weather and animated scenery
 
@@ -144,6 +167,8 @@ The Hub also contains an **embedded backup copy of the activity catalog** inside
 
 | Hub version | Highlight |
 | --- | --- |
+| **v31.12** | Holiday scene animations, lightning bolts, and expanded Knowledge Showdown listing |
+| **v31.12** | Holiday scene animations, lightning bolts, and expanded Knowledge Showdown listing |
 | **v31.11** | Live Naches weather, Scene Studio, polished activity cards, favorites and sorting |
 | **v31.10** | Crossy Words activity-card refresh |
 | **v31.9** | Added Crossy Words to the Hub |

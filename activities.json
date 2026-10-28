@@ -221,16 +221,16 @@
       "title": "Naches Knowledge Showdown",
       "category": "general",
       "categoryLabel": "Quiz & Review · Cross-Curricular Knowledge",
-      "description": "Challenge two or three classmates in a fast-paced quiz showdown with middle-school or high-school questions, bonus wagers, a summit finale, and local question-memory tracking.",
+      "description": "Compete in timed quiz-show rounds with 670 questions, including grade-specific Social Studies boards for grades 5–8. Choose your history and civics subtopics, buzz in, wager, and tackle the finale.",
       "skills": [
-        "Subject knowledge",
+        "History & civics",
+        "Social Studies",
         "Reasoning",
         "Math",
         "Science",
-        "History",
         "Media literacy"
       ],
-      "gradeLabel": "Grades 5–12 · Middle/High banks",
+      "gradeLabel": "Grades 5–12 · Social Studies grades 5–8",
       "gradeGroups": [
         "3-5",
         "6-8",

@@ -380,7 +380,7 @@ body[data-motion="off"] .particle,body[data-motion="off"] .cloud,body[data-motio
 @media(prefers-reduced-motion:reduce){.card,.customize-trigger,.scene-holder{animation:none!important;transition:none!important}}
 
 
-/* v31.12 — accessible animated holiday stage (canvas is decorative only). */
+/* v31.13 — responsive full-page and hero celebration stages (canvas is decorative only). */
 .hero{overflow:hidden}
 .hero .festival-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.97}
 .hero .hero-content,.hero .hero-floating{z-index:2;position:relative}
@@ -402,6 +402,16 @@ body[data-holiday="thanksgiving"] .card{--card-accent:#e8ac69}
 body[data-holiday="school"] .card{--card-accent:#e7d37f}
 .holiday-caption{background:rgba(12,32,53,.91);border:1px solid #ffe5a6;box-shadow:0 0 16px #f3c57b22}
 @media(prefers-reduced-motion:reduce){.festival-canvas{transition:none!important}}
+
+/* v31.13 — separate full-screen scene and hero preview, behind all interactive cards. */
+.festival-page-canvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:1;pointer-events:none;opacity:.89;}
+.wrap{position:relative;z-index:2}
+body[data-holiday="halloween"] .valley-backdrop .valley-svg{filter:brightness(.55) saturate(.8) hue-rotate(26deg)}
+body[data-holiday="newyear"] .valley-backdrop .valley-svg{filter:brightness(.55) saturate(1.1) hue-rotate(28deg)}
+body[data-holiday="independence"] .valley-backdrop .valley-svg{filter:brightness(.75) saturate(1.15)}
+body[data-holiday="winter"] .valley-backdrop .valley-svg{filter:brightness(.75) saturate(.75)}
+body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.83) saturate(1.0) hue-rotate(325deg)}
+@media(prefers-reduced-motion:reduce){.festival-page-canvas{transition:none!important}}
   </style>
 </head>
 <body data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
@@ -441,7 +451,8 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
     <g class="holiday-art holiday-thanks" transform="translate(1140 753)" fill="#e9b356"><path d="M0-24l19 24-19 24-19-24Z"/><path d="M0-33V27M-29 0H29" stroke="#ffe6a6" stroke-width="3"/></g>
     <g class="holiday-art holiday-veterans" transform="translate(1200 639)" fill="#fff7db"><path d="M0-18 5-5 19-5 8 4 13 17 0 9-13 17-8 4-19-5-5-5Z"/></g>
     </svg></div>
-  <div class="wrap">
+  <canvas id="festival-page-canvas" class="festival-page-canvas" aria-hidden="true"></canvas>
+<div class="wrap">
     <header class="top">
       <a class="brand" href="#top" aria-label="Naches Learning Hub home">
         <div class="brandmark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7 12 3l9 4-9 4-9-4Z"/><path d="M7 10v5c3 2 7 2 10 0v-5"/><path d="M21 7v7"/></svg></div>
@@ -1478,7 +1489,7 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
   }catch{}
   for(const [key,id] of [['season','valley-season'],['sky','valley-sky'],['wildlife','valley-wildlife'],['holiday','valley-holiday'],['time','valley-time'],['intensity','valley-intensity']]){
     const select=byId(id);select.value=[...select.options].some(option=>option.value===valleyPrefs[key])?valleyPrefs[key]:'auto';
-    select.addEventListener('change',()=>{valleyPrefs[key]=select.value;persistValley();updateValley()});
+    select.addEventListener('change',()=>{valleyPrefs[key]=select.value;if(['season','sky','time'].includes(key)){valleyPrefs.holiday='none';byId('valley-holiday').value='none';}persistValley();updateValley()});
   }
   const motionToggle=byId('valley-motion');motionToggle.checked=!!valleyPrefs.motion;
   motionToggle.addEventListener('change',()=>{valleyPrefs.motion=motionToggle.checked;persistValley();updateValley()});
@@ -1515,8 +1526,10 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
    no user inputs, data uploads, sound, or third-party dependencies. */
 (()=>{
  'use strict';
- const canvas=document.getElementById('festival-canvas');if(!canvas)return;
- const hero=canvas.closest('.hero'),ctx=canvas.getContext('2d',{alpha:true});if(!ctx)return;
+ const stageSync=[];
+ for(const canvas of ['festival-canvas','festival-page-canvas'].map(id=>document.getElementById(id)).filter(Boolean)){
+ const isPage=canvas.id==='festival-page-canvas';
+ const hero=canvas.closest('.hero')||canvas,ctx=canvas.getContext('2d',{alpha:true});if(!ctx)continue;
  const motionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
  let width=1,height=1,holiday='',sky='',intensity='normal',motion=false;
  let tick=0,last=0,lastFire=0,lightningUntil=0,nextLightning=0,shoots=[],sparks=[];
@@ -1525,9 +1538,9 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
  const colors={newyear:['#ffdc62','#f18fc8','#8de2fa','#b9f28c','#e8abff','#ffffff'],independence:['#ed4c66','#ffffff','#638eff','#c7d5ff'],juneteenth:['#f5c353','#d9474b','#2c9a69','#1d293a']};
  const palette=['#f9ce77','#f3e2a6','#d0e8f8'];
  function resize(){const r=hero.getBoundingClientRect();width=Math.max(1,r.width);height=Math.max(1,r.height);const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw(performance.now(),true)}
- function enabled(){return document.body.dataset.motion!=='off'&&!motionQuery.matches}
- function sync(){const ds=document.body.dataset;let prior=holiday;holiday=ds.holiday||'none';sky=ds.sky||'partly';intensity=ds.intensity||'normal';motion=enabled();if(prior!==holiday){shoots=[];sparks=[];tick=0;lastFire=0;}if(!motion){ctx.clearRect(0,0,width,height);draw(performance.now(),true)}else if(!active){active=true;requestAnimationFrame(loop)}}
- window.__festivalSync=sync;
+ function enabled(){return document.body.dataset.motion!=='off'&&!motionQuery.matches&&(holiday!=='none'||sky==='storm')}
+ function sync(){const ds=document.body.dataset;let prior=holiday;holiday=ds.holiday||'none';sky=ds.sky||'partly';intensity=ds.intensity||'normal';motion=enabled();if(prior!==holiday){shoots=[];sparks=[];tick=0;lastFire=0;if(enabled()&&(holiday==='newyear'||holiday==='independence')){for(let k=0;k<(isPage?3:2);k++)fireworkBurst(width*(.22+k*.27),height*(.20+(k%2)*.14));}}ctx.clearRect(0,0,width,height);draw(performance.now(),!motion);if(motion&&!active){active=true;requestAnimationFrame(loop)}}
+ stageSync.push(sync);
  const strength=()=>intensity==='subtle'?.48:intensity==='lively'?1.48:1;
  const circ=(x,y,r,color)=>{ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=color;ctx.fill()};
  function line(pts,color,w=2,close=false){ctx.beginPath();ctx.moveTo(...pts[0]);for(const pt of pts.slice(1))ctx.lineTo(...pt);if(close)ctx.closePath();ctx.strokeStyle=color;ctx.lineWidth=w;ctx.lineCap='round';ctx.lineJoin='round';ctx.stroke()}
@@ -1536,7 +1549,7 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
  function leaf(x,y,s,angle,color){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.scale(s,s);ctx.beginPath();ctx.moveTo(-12,0);ctx.quadraticCurveTo(-2,-18,15,-2);ctx.quadraticCurveTo(3,15,-12,0);ctx.fillStyle=color;ctx.fill();line([[-10,0],[12,-1]],'#f8eac080',.8);ctx.restore()}
  function snowflake(x,y,r,col){for(let k=0;k<3;k++){let a=k*Math.PI/3;line([[x-Math.cos(a)*r,y-Math.sin(a)*r],[x+Math.cos(a)*r,y+Math.sin(a)*r]],col,1.7)}}
  function fireworkBurst(x,y){const paletteSet=colors[holiday]||colors.newyear;const n=Math.round(rnd(23,38)*strength());for(let i=0;i<n;i++){let a=i/n*Math.PI*2+rnd(-.10,.10),speed=rnd(.75,2.8);sparks.push({x,y,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,life:rnd(38,67),max:65,col:paletteSet[i%paletteSet.length],size:rnd(1,3)})}if(sparks.length>430)sparks.splice(0,sparks.length-430)}
- function fireworks(dt,now){if(motion && now-lastFire>rnd(500,800)/strength()){lastFire=now;shoots.push({x:rnd(width*.47,width*.95),y:height*rnd(.8,.98),target:height*rnd(.10,.49),vy:rnd(3.6,5.9),col:colors[holiday][Math.floor(Math.random()*colors[holiday].length)]})}
+ function fireworks(dt,now){if(motion && now-lastFire>rnd(500,800)/strength()){lastFire=now;shoots.push({x:rnd(width*(isPage?.08:.47),width*.95),y:height*rnd(.8,.98),target:height*rnd(.10,.49),vy:rnd(3.6,5.9),col:colors[holiday][Math.floor(Math.random()*colors[holiday].length)]})}
   shoots=shoots.filter(r=>{line([[r.x,r.y+13],[r.x,r.y]],r.col,2.2);r.y-=r.vy*dt;if(r.y<=r.target){fireworkBurst(r.x,r.y);return false}return true});
   sparks=sparks.filter(p=>p.life>0);for(let p of sparks){let alpha=Math.min(1,p.life/15);ctx.globalAlpha=alpha;circ(p.x,p.y,p.size,p.col);line([[p.x-p.vx*2,p.y-p.vy*2],[p.x,p.y]],p.col,1);ctx.globalAlpha=1;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=.022*dt;p.life-=dt}}
  function pennants(y,arr){line([[width*.45,y],[width*.98,y+5]],'#e8dbc6b3',2);for(let i=0;i<10;i++){let x=width*(.47+i*.05);ctx.beginPath();ctx.moveTo(x,y+2);ctx.lineTo(x+12,y+2);ctx.lineTo(x+6,y+23);ctx.closePath();ctx.fillStyle=arr[i%arr.length];ctx.fill()}}
@@ -1551,7 +1564,58 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
  function snowman(x,y,s){ctx.save();ctx.translate(x,y);ctx.scale(s,s);circ(0,5,22,'#e7f6ff');circ(0,-24,16,'#f7fcff');ctx.fillStyle='#2f4560';ctx.fillRect(-15,-42,30,6);ctx.fillRect(-10,-57,20,17);circ(-5,-26,2,'#233449');circ(5,-26,2,'#233449');ctx.fillStyle='#f39d4b';ctx.beginPath();ctx.moveTo(0,-22);ctx.lineTo(17,-18);ctx.lineTo(0,-17);ctx.fill();for(let k=0;k<3;k++)circ(0,-4+k*9,2,'#40566e');ctx.restore()}
  function treeLights(){const start=width*.52,end=width*.98;line([[start,16],[end,30]],'#ffe8ad',2);for(let i=0;i<18;i++){let x=start+(end-start)*i/17,y=16+14*i/17+4*Math.sin(i*.6),c=['#f5b1a8','#fbe583','#a9e5ee','#c4f0b1'][i%4];ctx.save();ctx.shadowColor=c;ctx.shadowBlur=9+4*Math.sin(tick*.025+i);circ(x,y+8,3.5,c);ctx.restore()}}
  function glyph(x,y,type){ctx.save();ctx.translate(x,y);ctx.font=`900 ${Math.max(15,Math.min(width*.03,25))}px system-ui`;ctx.fillStyle='#f1e8d6';ctx.textAlign='center';ctx.fillText(type,0,0);ctx.restore()}
- function holidayScene(staticMode){if(holiday==='none')return;const s=strength(),t=staticMode?0:tick;const W=width,H=height;const breeze=(offset,speed)=>Math.sin(t*speed+offset);
+ function pageHolidayScene(staticMode){
+  const W=width,H=height,s=strength(),t=staticMode?0:tick;
+  const sway=(i,n)=>Math.sin(t*n+i)*11;
+  if(holiday==='newyear'||holiday==='independence'){
+    const paletteSet=colors[holiday];
+    for(let i=0;i<17;i++)star(W*(.04+(i*37%91)/100),H*(.07+(i*13%57)/100),2+(i%3),paletteSet[i%paletteSet.length]);
+    if(staticMode){for(let j=0;j<8;j++){const x=W*(.08+j*.118),y=H*(.15+(j%3)*.12);for(let k=0;k<16;k++){let a=k*Math.PI/8;line([[x+Math.cos(a)*12,y+Math.sin(a)*12],[x+Math.cos(a)*33,y+Math.sin(a)*33]],paletteSet[k%paletteSet.length],2)}}}
+    else fireworks(1,performance.now());
+    if(holiday==='independence'){
+      for(let i=0;i<3;i++){const x=W*(.05+i*.43),y=H*(.91-(i%2)*.13);line([[x,y],[x,y-70]],'#eae9dd',3);ctx.fillStyle='#fff';ctx.fillRect(x+3,y-70,44,27);for(let b=0;b<6;b++){ctx.fillStyle='#df5364';ctx.fillRect(x+3,y-70+b*4.5,44,2.4)}ctx.fillStyle='#3b62a2';ctx.fillRect(x+3,y-70,17,15)}
+    }
+    return;
+  }
+  if(holiday==='halloween'){
+    for(let i=0;i<9;i++)bat(W*(.04+i*.112)+sway(i,.006)*3,H*(.11+(i%4)*.13)+sway(i,.02),.85+(i%3)*.25);
+    ghost(W*.15+Math.sin(t*.003)*W*.085,H*.33,1.23,1);
+    ghost(W*.82+Math.sin(t*.004+1)*W*.12,H*.25,1.04,2);
+    ghost(W*.52+Math.sin(t*.005+3)*W*.05,H*.63,.70,3);
+    for(let i=0;i<4;i++)skeleton(W*(.11+i*.255)+sway(i,.006)*2,H*(.96-(i%2)*.10),.9+(i%2)*.2,i);
+    for(let i=0;i<7;i++)pumpkin(W*(.055+i*.15),H*(.985-(i%3)*.015),.62+(i%2)*.14);
+    return;
+  }
+  if(holiday==='valentine'){
+    for(let i=0;i<22*s;i++){const x=W*(.04+(i*37%93)/100)+sway(i,.01),y=H*((i*17%95)/100)-((t*.08*(i%3+1))%H);heart(x,y,.35+(i%5)*.14,['#fba6bd','#ffd4e8','#ffd4a0'][i%3],.45+.2*Math.sin(t*.014+i))}
+    return;
+  }
+  if(holiday==='winter'){
+    for(let i=0;i<45*s;i++){const x=W*(.02+(i*31%96)/100)+sway(i,.01),y=(H*((i*13%96)/100)+t*.07*(i%3+1))%H;snowflake(x,y,3+(i%4)*1.8,['#e0f5ff','#b8dfff','#ffffff'][i%3])}
+    snowman(W*.12,H*.89,1.07);snowman(W*.88,H*.93,.83);
+    for(let i=0;i<15;i++){let x=W*(.04+i*.065),y=H*.04+Math.sin(t*.01+i)*2;ctx.save();ctx.shadowColor=['#ffd487','#acf4e1','#f3a1b5'][i%3];ctx.shadowBlur=10;circ(x,y,3,['#ffd487','#acf4e1','#f3a1b5'][i%3]);ctx.restore()}
+    return;
+  }
+  if(holiday==='thanksgiving'){
+    for(let i=0;i<32*s;i++){let x=W*(.03+(i*37%94)/100)+sway(i,.012),y=(H*(i*29%100/100)+t*.13*(i%3+1))%H;leaf(x,y,.4+(i%4)*.15,t*.018+i,['#f4cc70','#d9784a','#b8934b'][i%3])}
+    turkey(W*.12,H*.92,1);turkey(W*.86,H*.94,.88);return;
+  }
+  if(holiday==='earth'||holiday==='spring'||holiday==='stpat'){
+    for(let i=0;i<32*s;i++){const x=W*(.04+(i*37%92)/100)+sway(i,.01),y=(H*(i*13%96/100)+t*.08*(i%3+1))%H;leaf(x,y,.3+(i%4)*.15,t*.012+i,['#b9e19e','#72d39d','#e1d87d'][i%3]);if(i%4===0)butterfly(x,y,.8)}
+    if(holiday==='earth')globe(W*.14,H*.18,36);
+    if(holiday==='stpat')for(let i=0;i<5;i++)glyph(W*(.12+i*.19),H*(.83+(i%2)*.05),'♣');return;
+  }
+  if(holiday==='school'){
+    for(let i=0;i<12;i++)school(W*(.08+(i*23%83)/100)+sway(i,.006),H*(.10+(i*19%70)/100),.7+(i%3)*.1);
+    for(let i=0;i<16;i++)star(W*(.07+(i*31%88)/100),H*(.08+(i*17%75)/100),3,['#f7d575','#91d2e8','#fa9f9b'][i%3]);return;
+  }
+  if(['veterans','memorial','juneteenth'].includes(holiday)){
+    const cols=holiday==='juneteenth'?['#d64e4c','#4baf73','#f4d37b']:['#e1a2a8','#f1e7cf','#eac65b'];
+    for(let i=0;i<30*s;i++){let x=W*(.05+(i*37%91)/100)+sway(i,.004),y=H*(.12+(i*23%75)/100);if(holiday==='juneteenth')star(x,y,5,cols[i%3]);else{circ(x,y,3.6,cols[i%3]);circ(x,y,1.1,'#30364f')}}return;
+  }
+ }
+
+ function holidayScene(staticMode){if(holiday==='none')return;if(isPage)return pageHolidayScene(staticMode);const s=strength(),t=staticMode?0:tick;const W=width,H=height;const breeze=(offset,speed)=>Math.sin(t*speed+offset);
   if(holiday==='newyear'||holiday==='independence'){
     pennants(10,holiday==='independence'?['#e84f62','#ffffff','#6086e9']:['#ffe17a','#f4a7d4','#9bdeff','#c9f99c']);
     if(holiday==='independence') {for(let i=0;i<6;i++)star(width*(.53+i*.075),height*.75,6,'#fff2bd');for(let k=0;k<2;k++){let x=W*(.67+k*.22),y=H*.87;line([[x,y],[x,y-61]],'#e3dfd7',3);ctx.fillStyle='#fff';ctx.fillRect(x+2,y-60,35,22);for(let v=0;v<5;v++){ctx.fillStyle='#dc5362';ctx.fillRect(x+2,y-60+v*4.4,35,2.3)}ctx.fillStyle='#3e68ad';ctx.fillRect(x+2,y-60,14,12);for(let v=0;v<3;v++)star(x+5+(v%2)*5,y-58+v*4,1.5,'#fff')}}else{for(let i=0;i<14;i++)star(W*(.47+(i*11%53)/100),H*(.17+(i*17%49)/100),3,['#ffdc8e','#e2c9ff','#aff3ff'][i%3])}
@@ -1610,11 +1674,13 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
   }
   ctx.restore();
  }
- function loop(now){if(!enabled()){active=false;sync();return}tick+=Math.min(2.2,Math.max(.2,(now-last)/16.7||1));draw(now);last=now;requestAnimationFrame(loop)}
- if('ResizeObserver'in window)new ResizeObserver(resize).observe(hero);else window.addEventListener('resize',resize,{passive:true});
+ function loop(now){if(!enabled()){active=false;sync();return}if(now-last>=33){tick+=Math.min(2.2,Math.max(.2,(now-last)/16.7||1));draw(now);last=now}requestAnimationFrame(loop)}
+ if(!isPage&&'ResizeObserver'in window)new ResizeObserver(resize).observe(hero);else window.addEventListener('resize',resize,{passive:true});
  document.addEventListener('visibilitychange',()=>{if(!document.hidden){last=0;sync()}});
  motionQuery.addEventListener?.('change',sync);
  resize();sync();
+ }
+ window.__festivalSync=()=>stageSync.forEach(sync=>sync());
 })();
 
   </script>

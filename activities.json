@@ -668,11 +668,11 @@
       "category": "science",
       "categoryLabel": "Science · Engineering Design",
       "type": "simulation",
-      "description": "Construct and test virtual bridges over 12 challenges with wood, steel, and cables. Work within a budget, test vehicle crossings, and redesign for greater stability.",
+      "description": "Design and test bridges across 48 engineering missions using wood, steel, cable, and concrete. Reinforce upper and lower trusses, predict outcomes, and solve short engineering challenges.",
       "skills": [
         "Engineering design",
-        "Forces & structures",
-        "Problem-solving"
+        "Loads & forces",
+        "Materials & budgets"
       ],
       "gradeLabel": "Grades 5–12 · Flexible",
       "gradeGroups": [
@@ -680,7 +680,7 @@
         "6-8",
         "9-12"
       ],
-      "mode": "Solo · Build, test & redesign",
+      "mode": "Solo · 48 missions · Engineering lab",
       "icon": "bridge",
       "status": "available",
       "featured": false,
@@ -875,19 +875,20 @@
       "category": "ela",
       "categoryLabel": "ELA · Grammar & Language",
       "type": "game",
-      "description": "Hop through a changing voxel-style world, dodge cars and occasional trains, time moving word platforms, and solve grammar challenges. Explore day/night maps, earn coins, and collect 360 colorful characters.",
+      "description": "Hop across lively voxel worlds, avoid traffic and trains, and solve grammar challenges from grades 3–12. Choose your arcade difficulty, unlock 576 character variations, and earn world achievements.",
       "skills": [
         "Grammar",
-        "Homophones",
+        "Word choice",
         "Sentence structure",
-        "Parts of speech"
+        "Language conventions"
       ],
-      "gradeLabel": "Grades 5–8 · Two skill levels",
+      "gradeLabel": "Grades 3–12 · Five grade bands",
       "gradeGroups": [
         "3-5",
-        "6-8"
+        "6-8",
+        "9-12"
       ],
-      "mode": "Solo · Arcade & Practice · Voxel worlds & collectibles",
+      "mode": "Solo · Arcade & Practice · 16 worlds",
       "icon": "crossy",
       "status": "available",
       "featured": true,

@@ -412,9 +412,104 @@ body[data-holiday="independence"] .valley-backdrop .valley-svg{filter:brightness
 body[data-holiday="winter"] .valley-backdrop .valley-svg{filter:brightness(.75) saturate(.75)}
 body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.83) saturate(1.0) hue-rotate(325deg)}
 @media(prefers-reduced-motion:reduce){.festival-page-canvas{transition:none!important}}
+
+/* v31.15 COMPACT DASHBOARD EDITION — layout only, preserving activity art and seasonal effects */
+/* The separate Scene Studio summary was redundant with the header button. Hide it until opened. */
+.valley-settings:not([open]){display:none!important}
+.valley-settings[open]{display:block;margin:0 0 12px}
+
+.top{padding:13px 0 12px;gap:10px}
+.brandmark{width:41px;height:41px;border-radius:12px}
+.brandmark svg{width:26px;height:26px}
+.hero{min-height:115px!important;padding:15px 23px!important;border-radius:19px;margin-bottom:12px;align-items:center}
+.hero:before{background:linear-gradient(90deg,#0a223ced 0%,#0a2c48e7 53%,#08314a76 100%)}
+.hero-content{max-width:none!important;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"eyebrow action" "title action" "bottom action";align-items:center;column-gap:16px;row-gap:0}
+.hero-content .eyebrow{grid-area:eyebrow;font-size:.62rem;letter-spacing:.15em;margin-bottom:2px}
+.hero-content h1{grid-area:title;font-size:clamp(1.5rem,2.5vw,2.2rem)!important;line-height:1.15;margin:0!important;letter-spacing:-.045em}
+.hero-content .hero-tagline{display:none}
+.hero-actions{grid-area:action;margin:0!important;align-items:center}
+.hero .surprise{min-height:39px;padding:8px 15px;border-radius:10px;font-size:.82rem;white-space:nowrap}
+.hero-bottom{grid-area:bottom;margin:4px 0 0!important;gap:7px 16px;font-size:.68rem!important;line-height:1.4;align-items:center}
+.hero-status:before{font-size:.8rem}
+.hero .hero-floating{display:none!important}
+.hero-landscape{opacity:.90}
+.hero .festival-canvas{opacity:.7}
+#activities{scroll-margin-top:10px}
+.compact-controls{margin:0 0 9px;gap:9px;align-items:stretch;position:relative;z-index:5}
+.compact-controls .search{flex:1 1 300px;min-width:205px;min-height:45px;border-radius:12px}
+.compact-controls .search input{min-height:44px}
+.quick-favorites,.more-filters>summary,.reset-filters{display:flex;align-items:center;justify-content:center;cursor:pointer;min-height:45px;border-radius:12px;background:#153650;border:1px solid #6286a0;color:#e4f0fa;font-size:.84rem;font-weight:800;padding:0 15px;white-space:nowrap}
+.quick-favorites:hover,.more-filters>summary:hover{background:#245271}
+.quick-favorites[aria-pressed="true"]{border-color:#f8d38a;color:#182b43;background:linear-gradient(135deg,#ffebae,#fac86f)}
+.more-filters{position:relative;flex:0 0 auto;z-index:10}
+.more-filters>summary{list-style:none;gap:7px}
+.more-filters>summary::-webkit-details-marker{display:none}
+.more-filters[open]>summary{border-color:#f8d38a;background:#214b68}
+.advanced-controls{position:absolute;top:calc(100% + 8px);right:0;z-index:20;min-width:min(440px,calc(100vw - 34px));display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px;border-radius:17px;background:#112b43;border:1px solid #6a9ab3;box-shadow:0 18px 45px #010b1dda}
+.advanced-controls select{width:100%;max-width:100%;min-width:0;min-height:43px}
+.advanced-controls .sort-control{grid-column:1/-1;width:100%;max-width:none}
+.advanced-controls .sort-control select{max-width:none}
+.advanced-controls .reset-filters{grid-column:1/-1;min-height:41px}
+.category-shell{display:grid;grid-template-columns:31px minmax(0,1fr) 31px;align-items:center;gap:5px;min-width:0;margin-bottom:10px}
+.category-shell .filters{margin:0;display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth;overscroll-behavior-inline:contain;gap:7px;padding:1px 1px 6px;min-width:0}
+.category-shell .filters::-webkit-scrollbar{display:none}
+.category-shell .filter{flex:0 0 auto;padding:7px 12px;font-size:.76rem;min-height:35px;white-space:nowrap}
+.scroll-subject{width:30px;height:35px;border-radius:9px;border:1px solid #4e7793;background:#14334d;color:#e0f1ff;font-size:1.5rem;line-height:1;cursor:pointer}
+.scroll-subject:hover{background:#245775}
+.discovery-tabs{display:flex;gap:7px;margin:5px 0 7px;align-items:center}
+.discovery-tabs button{border:1px solid #385f7a;border-radius:9px;background:#102e47;color:#bfdbed;padding:7px 12px;font-size:.78rem;font-weight:800;cursor:pointer}
+.discovery-tabs button[aria-pressed="true"]{background:#254e69;border-color:#f4c46a;color:#fff1d3}
+body[data-rail-view="new"] #recentShelf,body[data-rail-view="recent"] #newShelf{display:none!important}
+.discovery-shelf{margin:0 0 10px}
+.discovery-shelf .shelf-header{display:none}
+.shelf-rail{gap:9px;padding:1px 1px 8px}
+.shelf-link{flex:0 0 205px;display:grid;grid-template-columns:66px minmax(0,1fr);min-height:72px;border-radius:12px;box-shadow:0 5px 13px #010d1c66}
+.shelf-art{height:100%;min-height:70px}
+.shelf-info{min-width:0;padding:8px 9px 7px;gap:3px;align-content:center}
+.shelf-title{font-size:.83rem;line-height:1.15;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.shelf-meta{font-size:.61rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shelf-badge{font-size:.59rem}
+.compact-section-header{margin:10px 0 10px;align-items:center}
+.compact-section-header h2{font-size:1.18rem}
+.compact-section-header p{font-size:.77rem;margin:2px 0 0}
+.library-tools{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+.library-tools .count{font-size:.7rem;padding:5px 9px}
+.view-switch{display:inline-flex;gap:2px;padding:3px;border:1px solid #4d7793;border-radius:11px;background:#09243c}
+.view-switch button{border:0;background:transparent;color:#c5daeb;border-radius:7px;padding:6px 9px;cursor:pointer;font-size:.75rem;font-weight:800}
+.view-switch button[aria-pressed="true"]{background:#fed78b;color:#1a3048}
+/* Compact is the new default. Gallery is one click away and keeps the previous large artwork. */
+body[data-card-view="compact"] .cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+body[data-card-view="compact"] .card{border-radius:16px}
+body[data-card-view="compact"] .card-art{height:112px}
+body[data-card-view="compact"] .card-body,body[data-card-view="compact"] .card .card-body{padding:12px 13px 15px}
+body[data-card-view="compact"] .card-kicker{min-height:25px;gap:5px}
+body[data-card-view="compact"] .subject{font-size:.59rem;letter-spacing:.08em;padding-top:4px}
+body[data-card-view="compact"] .grade-badge{font-size:.58rem;padding:4px 6px;max-width:54%}
+body[data-card-view="compact"] .card h3{font-size:1rem;line-height:1.25;margin:5px 0 7px}
+body[data-card-view="compact"] .desc{font-size:.76rem;line-height:1.45;min-height:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:8px}
+body[data-card-view="compact"] .tags{margin:1px 0 9px;gap:5px}
+body[data-card-view="compact"] .tag{font-size:.59rem;padding:3px 6px}
+body[data-card-view="compact"] .tags .tag:nth-child(n+3){display:none}
+body[data-card-view="compact"] .meta{display:none}
+body[data-card-view="compact"] .launch{min-height:39px;padding:5px 6px 5px 11px;border-radius:9px}
+body[data-card-view="compact"] .launch-label{font-size:.74rem}
+body[data-card-view="compact"] .launch-arrow{width:27px;height:27px;font-size:1.05rem}
+body[data-card-view="compact"] .card-favorite{min-width:32px;height:31px;top:8px;left:8px;font-size:20px}
+body[data-card-view="compact"] .card-flag{top:8px;right:8px;font-size:.54rem;padding:4px 7px}
+body[data-card-view="compact"] .card-number{font-size:.55rem;padding:3px 5px}
+body[data-card-view="gallery"] .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+body[data-card-view="gallery"] .card-art{height:185px}
+body[data-card-view="gallery"] .card-body{padding:19px}
+/* Keep planned cards and accessibility settings functional in both card sizes. */
+@media(max-width:1120px){body[data-card-view="compact"] .cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){body[data-card-view="compact"] .cards,body[data-card-view="gallery"] .cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.hero{min-height:112px!important;padding:13px 16px!important}.hero-content h1{font-size:1.5rem!important}.hero-bottom .hero-fact{display:none}.hero .surprise{padding:8px 10px;font-size:.73rem}.compact-controls .search{flex-basis:100%}.compact-controls .quick-favorites{flex:1 1 auto}.compact-controls .more-filters{flex:1 1 auto}.more-filters>summary{width:100%}.advanced-controls{right:0}.compact-section-header{align-items:flex-start;gap:8px}.library-tools{justify-content:flex-start}.category-shell{margin-bottom:8px}.scroll-subject{min-height:34px}}
+@media(max-width:540px){.hero{min-height:104px!important}.hero-content{grid-template-columns:minmax(0,1fr) auto;column-gap:8px}.hero-content .eyebrow{font-size:.49rem}.hero-content h1{font-size:1.18rem!important}.hero-bottom{font-size:.6rem!important}.hero .surprise{font-size:.68rem;min-height:37px;padding:6px 8px}.compact-section-header{flex-direction:column;align-items:stretch}.library-tools{justify-content:space-between}.advanced-controls{grid-template-columns:1fr}.advanced-controls .sort-control{grid-column:1}.advanced-controls .reset-filters{grid-column:1}body[data-card-view="compact"] .cards,body[data-card-view="gallery"] .cards{grid-template-columns:1fr}body[data-card-view="compact"] .card{display:grid;grid-template-columns:minmax(0,125px) minmax(0,1fr)}body[data-card-view="compact"] .card-art{height:100%;min-height:151px}body[data-card-view="compact"] .card-body{min-width:0;padding:12px!important}body[data-card-view="compact"] .desc{-webkit-line-clamp:2}body[data-card-view="compact"] .card-kicker{display:block}body[data-card-view="compact"] .grade-badge{display:none}body[data-card-view="compact"] .card h3{font-size:.92rem}body[data-card-view="compact"] .tags{display:none}body[data-card-view="compact"] .card-flag{display:none}body[data-card-view="compact"] .card-number{display:none}.shelf-link{flex-basis:192px}}
+@media(prefers-reduced-motion:reduce){.category-shell .filters{scroll-behavior:auto!important}}
+
   </style>
 </head>
-<body data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
+<body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
 <div class="valley-backdrop" aria-hidden="true"><svg class="valley-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
       <defs><linearGradient id="sky-back" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--sky-top)"/><stop offset="1" stop-color="var(--sky-bottom)"/></linearGradient><linearGradient id="ridge-back" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--ridge-high)"/><stop offset="1" stop-color="var(--ridge-low)"/></linearGradient><linearGradient id="meadow-back" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--field-high)"/><stop offset="1" stop-color="var(--field-low)"/></linearGradient></defs>
       <rect width="1440" height="860" fill="url(#sky-back)"/>
@@ -535,27 +630,35 @@ body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.8
     </svg></div>
         <div class="hero-content">
           <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> THE NACHES LEARNING ARCADE</div>
-          <h1 id="hero-title">Pick your next <em>adventure.</em></h1>
-          <p>Battle ships. Race through math. Crack a mystery. Explore science. Every mission builds a new skill.</p>
-          <div class="hero-actions"><a class="hero-cta" href="#activities">Explore the arcade <span aria-hidden="true">↓</span></a><button class="surprise" type="button" id="random-game">Surprise me <span aria-hidden="true">✦</span></button></div>
-          <div class="hero-bottom"><span class="hero-status" id="hero-live-count">15 activities ready to explore</span><span class="hero-fact">No sign-ins · Chromebook friendly</span><span class="holiday-caption" id="valley-holiday-caption" hidden></span></div>
+          <h1 id="hero-title">Find your next <em>favorite.</em></h1>
+          <p class="hero-tagline">Games, projects, and challenges that make learning fun.</p>
+          <div class="hero-actions"><button class="surprise" type="button" id="random-game" title="Open a surprise activity in a new tab">Surprise me <span aria-hidden="true">✦</span></button></div>
+          <div class="hero-bottom"><span class="hero-status" id="hero-live-count">Learning activities ready to explore</span><span class="hero-fact">No sign-ins · Chromebook friendly</span><span class="holiday-caption" id="valley-holiday-caption" hidden></span></div>
         </div>
-        <div class="hero-floating" aria-hidden="true"><span class="floating-icon">✦</span><span class="floating-title">YOUR NEXT MISSION</span><span class="floating-motto">PLAY • LEARN • LEVEL UP</span><span class="floating-stars">★ ★ ★</span></div>
+
       </section>
       <section id="activities" aria-label="Learning activities">
-        <div class="section-header"><div><h2>Choose your activity</h2><p>Newest activities appear first. Search, filter, or scroll through the featured rows.</p></div><div class="count" id="activity-count" aria-live="polite">16 ready · 14 planned</div></div>
-        <div class="controls">
+        <div class="controls compact-controls">
           <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search activities</span><input id="search" type="search" autocomplete="off" placeholder="Find a game, topic, or skill…" aria-label="Search activities"></label>
-          <select id="grade-filter" class="grade" aria-label="Filter by suggested grade band"><option value="all">All grade levels</option><option value="1-2">Grades 1–2</option><option value="3-5">Grades 3–5</option><option value="6-8">Grades 6–8</option><option value="9-12">Grades 9–12</option></select>
-          <select id="type-filter" class="type-filter" aria-label="Filter by activity type"><option value="all">All activity types</option><option value="game">Games</option><option value="tutorial">Tutorials</option><option value="simulation">Simulations</option><option value="tool">Learning tools</option></select>
-          <label class="sort-control">Order by
+          <button type="button" class="quick-favorites" id="favorites-only" aria-pressed="false" aria-label="Show only my favorite activities">☆ Favorites</button>
+          <details class="more-filters" id="more-filters">
+            <summary>More filters <span aria-hidden="true">⌄</span></summary>
+            <div class="advanced-controls"><select id="grade-filter" class="grade" aria-label="Filter by suggested grade band"><option value="all">All grade levels</option><option value="1-2">Grades 1–2</option><option value="3-5">Grades 3–5</option><option value="6-8">Grades 6–8</option><option value="9-12">Grades 9–12</option></select><select id="type-filter" class="type-filter" aria-label="Filter by activity type"><option value="all">All activity types</option><option value="game">Games</option><option value="tutorial">Tutorials</option><option value="simulation">Simulations</option><option value="tool">Learning tools</option></select><label class="sort-control">Order by
             <select id="sort-filter" aria-label="Sort games">
               <option value="newest">Newest games first</option><option value="recent">Recently opened</option>
               <option value="favorites">My favorites first</option><option value="az">Name A–Z</option><option value="oldest">Oldest first</option>
             </select>
-          </label>
+          </label><button type="button" id="reset-filters" class="reset-filters">Clear filters</button></div>
+          </details>
         </div>
-        <nav class="filters" aria-label="Filter activities by subject"><button type="button" class="filter" data-filter="all" aria-pressed="true">All subjects</button><button type="button" class="filter" data-filter="general" aria-pressed="false">Quiz &amp; Review</button><button type="button" class="filter" data-filter="strategy" aria-pressed="false">Strategy &amp; Logic</button><button type="button" class="filter" data-filter="math" aria-pressed="false">Math</button><button type="button" class="filter" data-filter="ela" aria-pressed="false">ELA</button><button type="button" class="filter" data-filter="reading" aria-pressed="false">Reading</button><button type="button" class="filter" data-filter="science" aria-pressed="false">Science</button><button type="button" class="filter" data-filter="socialstudies" aria-pressed="false">Social Studies &amp; Geography</button><button type="button" class="filter" data-filter="design" aria-pressed="false">Design &amp; Technology</button><button type="button" class="filter" data-filter="pe" aria-pressed="false">PE &amp; Fitness</button><button type="button" class="filter" data-filter="social" aria-pressed="false">Life Skills</button></nav>
+        <div class="category-shell"><button type="button" class="scroll-subject" id="subject-prev" aria-label="Scroll subjects left">‹</button>
+          <nav class="filters" aria-label="Filter activities by subject"><button type="button" class="filter" data-filter="all" aria-pressed="true">All subjects</button><button type="button" class="filter" data-filter="general" aria-pressed="false">Quiz &amp; Review</button><button type="button" class="filter" data-filter="strategy" aria-pressed="false">Strategy &amp; Logic</button><button type="button" class="filter" data-filter="math" aria-pressed="false">Math</button><button type="button" class="filter" data-filter="ela" aria-pressed="false">ELA</button><button type="button" class="filter" data-filter="reading" aria-pressed="false">Reading</button><button type="button" class="filter" data-filter="science" aria-pressed="false">Science</button><button type="button" class="filter" data-filter="socialstudies" aria-pressed="false">Social Studies &amp; Geography</button><button type="button" class="filter" data-filter="design" aria-pressed="false">Design &amp; Technology</button><button type="button" class="filter" data-filter="pe" aria-pressed="false">PE &amp; Fitness</button><button type="button" class="filter" data-filter="social" aria-pressed="false">Life Skills</button></nav>
+          <button type="button" class="scroll-subject" id="subject-next" aria-label="Scroll subjects right">›</button>
+        </div>
+        <div class="discovery-tabs" role="group" aria-label="Choose a discovery shelf">
+          <button type="button" id="tab-new" aria-pressed="true">✦ New to the Hub</button>
+          <button type="button" id="tab-recent" aria-pressed="false">↺ Recently opened</button>
+        </div>
         <section class="discovery-shelf" id="recentShelf" aria-label="Recently opened games" hidden>
           <div class="shelf-header"><div><h3>Recently opened</h3><p>Your last launches from this browser's Hub</p></div><div class="shelf-arrows"><button type="button" data-shelf="recentRail" data-dir="-1" aria-label="Scroll recently opened games left">‹</button><button type="button" data-shelf="recentRail" data-dir="1" aria-label="Scroll recently opened games right">›</button></div></div>
           <div class="shelf-rail" id="recentRail"></div>
@@ -564,6 +667,7 @@ body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.8
           <div class="shelf-header"><div><h3>New to the Hub</h3><p>Scroll sideways to discover new activities</p></div><div class="shelf-arrows"><button type="button" data-shelf="newRail" data-dir="-1" aria-label="Scroll new games left">‹</button><button type="button" data-shelf="newRail" data-dir="1" aria-label="Scroll new games right">›</button></div></div>
           <div class="shelf-rail" id="newRail"></div>
         </section>
+        <div class="section-header compact-section-header"><div><h2>All activities</h2><p>Pick a game or tool to open in a new tab.</p></div><div class="library-tools"><div class="count" id="activity-count" aria-live="polite">Loading activities</div><div class="view-switch" role="group" aria-label="Card layout"><button id="layout-compact" type="button" aria-pressed="true" title="Show more games on screen">▦ Compact</button><button id="layout-gallery" type="button" aria-pressed="false" title="Show larger game artwork">▣ Gallery</button></div></div></div>
         <div class="cards" id="cards" aria-live="polite"></div>
         <section id="planned-section" aria-label="Future activities">
           <div class="section-header"><div><h2>In development</h2><p>A growing roadmap of games, simulations, and classroom tools for Naches.</p></div></div>
@@ -574,7 +678,7 @@ body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.8
       </section>
       <details class="helper"><summary>For teachers: using and updating this hub</summary><p>Each activity opens its own existing website. The hub does not change those games or their saved progress. The grade filters are suggestions, not restrictions. To add a game, tutorial, simulation, or tool later, edit <code>activities.json</code> in this hub's GitHub repository. Use <code>status: planned</code> until the activity is ready, then change to <code>available</code> and add its live URL. This site is a directory, not an account system or assignment tracker.</p><p>School filtering may require your tech department to allow each destination URL, not just this hub's address.</p></details>
     </main>
-    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.11</strong> · Seasonal Learning Arcade</span></footer>
+    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.15</strong> · Seasonal Learning Arcade</span></footer>
   </div>
   <script>
   'use strict';
@@ -639,7 +743,7 @@ body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.8
     button.setAttribute('aria-pressed',String(favorites.has(id)));
     button.setAttribute('aria-label',(favorites.has(id)?'Remove ':'Save ')+id+' '+(favorites.has(id)?'from':'to')+' favorites');
     button.textContent=favorites.has(id)?'★':'☆';
-    if(state.sort==='favorites')render();
+    if(state.sort==='favorites'||favoritesOnly)render();
   }
   function orderCards(items){return [...items].sort((a,b)=>{
     if(state.sort==='favorites'){
@@ -672,6 +776,8 @@ body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.8
     byId('newRail').replaceChildren(...newItems.map((a,i)=>shelfCard(a,i<3?'New release':'Discover')));
     const recentItems=launchHistory.map(h=>studentGames.find(a=>a.id===h.id)).filter(Boolean).slice(0,12);
     byId('recentShelf').hidden=recentItems.length===0;
+    byId('tab-recent').disabled=recentItems.length===0;
+    if(recentItems.length===0&&document.body.dataset.railView==='recent')setRail('new');
     byId('recentRail').replaceChildren(...recentItems.map(a=>shelfCard(a,'Played from Hub')));
   }
 
@@ -1297,6 +1403,7 @@ body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.8
       .sort((a,b)=>(Number(b.releaseOrder)||1e6)-(Number(a.releaseOrder)||1e6))
       .slice(0,3).forEach(a=>featuredIds.add(a.id));
     const matched=state.activities.filter(g=>{
+      if(favoritesOnly&&!favorites.has(g.id))return false;
       if(state.category!=='all'&&state.category!==g.category)return false;
       if(state.grade!=='all'&&!(g.gradeGroups||[]).includes(state.grade))return false;
       if(state.type!=='all'&&state.type!==(g.type||'game'))return false;
@@ -1328,6 +1435,42 @@ body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.8
     rail.scrollBy({left:Number(b.dataset.dir)*(rail.clientWidth*.82),behavior:'smooth'});
   }));
   byId('random-game').addEventListener('click',()=>{const pool=state.activities.filter(g=>g.audience!=='staff'&&g.status==='available'&&typeof g.url==='string'&&g.url.startsWith('https://'));if(pool.length){const chosen=pool[Math.floor(Math.random()*pool.length)];rememberLaunch(chosen.id);window.open(chosen.url,'_blank','noopener,noreferrer');}});
+  // v31.15: persistent display preference and lightweight discovery controls.
+  const VIEW_KEY='naches-hub-card-view-v1';
+  const readCardView=()=>{try{const v=localStorage.getItem(VIEW_KEY);return v==='gallery'?'gallery':'compact'}catch{return 'compact'}};
+  function setCardView(view){
+    document.body.dataset.cardView=view;
+    byId('layout-compact').setAttribute('aria-pressed',String(view==='compact'));
+    byId('layout-gallery').setAttribute('aria-pressed',String(view==='gallery'));
+    try{localStorage.setItem(VIEW_KEY,view)}catch{}
+  }
+  setCardView(readCardView());
+  byId('layout-compact').addEventListener('click',()=>setCardView('compact'));
+  byId('layout-gallery').addEventListener('click',()=>setCardView('gallery'));
+  function setRail(view){
+    document.body.dataset.railView=view;
+    byId('tab-new').setAttribute('aria-pressed',String(view==='new'));
+    byId('tab-recent').setAttribute('aria-pressed',String(view==='recent'));
+  }
+  byId('tab-new').addEventListener('click',()=>setRail('new'));
+  byId('tab-recent').addEventListener('click',()=>setRail('recent'));
+  byId('subject-prev').addEventListener('click',()=>document.querySelector('.category-shell .filters').scrollBy({left:-320,behavior:'smooth'}));
+  byId('subject-next').addEventListener('click',()=>document.querySelector('.category-shell .filters').scrollBy({left:320,behavior:'smooth'}));
+  let favoritesOnly=false;
+  byId('favorites-only').addEventListener('click',()=>{
+    favoritesOnly=!favoritesOnly;
+    byId('favorites-only').setAttribute('aria-pressed',String(favoritesOnly));
+    byId('favorites-only').textContent=favoritesOnly?'★ Favorites only':'☆ Favorites';
+    render();
+  });
+  byId('reset-filters').addEventListener('click',()=>{
+    state.category='all';state.grade='all';state.type='all';state.term='';state.sort='newest';favoritesOnly=false;
+    byId('search').value='';byId('grade-filter').value='all';byId('type-filter').value='all';byId('sort-filter').value='newest';
+    byId('favorites-only').setAttribute('aria-pressed','false');byId('favorites-only').textContent='☆ Favorites';
+    document.querySelectorAll('.filter').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter==='all')));
+    byId('more-filters').open=false;
+    render();
+  });
   render();
 
   // Match the two-file Learning Hub deployment while keeping all embedded

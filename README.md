@@ -4,13 +4,38 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.14 — Stackline Activity Added**  
+**Current Hub release: v31.15 — Compact Dashboard Edition**  
 **Updated:** October 28, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
 
-## What's new in v31.14 — October 28, 2026
+## What's new in v31.15 — Compact Dashboard Edition (October 28, 2026)
+
+The main Hub is now easier to browse on school Chromebooks, without removing the weather effects, holiday decorations, or game artwork.
+
+- **Smaller welcome strip:** Replaces the oversized “Pick your next adventure” banner with a short, seasonal welcome ribbon. The *Surprise me* button remains.
+- **Games first:** Search and subject choices appear immediately below the ribbon; the separate closed Scene Studio status strip is removed to save space. **Customize Scene** in the header still opens every weather, seasonal, and holiday control.
+- **Compact/Gallery switch:** Compact is the default and shows up to four cards per row on wide screens. Gallery restores larger game-card artwork. The preference is saved in the browser.
+- **Quick favorites:** A Favorites-only button appears next to search; individual game stars and the existing favorite sorting option still work.
+- **Expandable filters:** Grade, activity type, and sort settings now live in **More filters**, with a Clear filters button.
+- **Scrollable subjects:** The subject row stays on one line, with left/right scroll buttons, rather than pushing activities down by multiple rows.
+- **Discover rail:** *New to the Hub* and *Recently opened* share one compact rail controlled by tabs. Recently opened is disabled until an activity has been launched from that browser.
+- **Catalog preserved:** 36 entries (26 available, 10 planned), all published activity links, the embedded fallback catalog, local saved favorites, the weather system, and animated holiday scenes are retained.
+
+### Change the size of game cards
+
+Above the main game grid, choose **Compact** to see more options or **Gallery** to show larger illustrations. On a phone, compact cards arrange the artwork beside the title for easier scrolling.
+
+### Customize the environment
+
+Click **Customize Scene** in the header. The Scene Studio now stays hidden when closed to reclaim vertical space, but all original weather, seasons, special-day animations, and settings remain. Preferences are saved on the device.
+
+### Install
+
+Replace `index.html` and `activities.json` in your main `jkramer-cloud.github.io` repository with the files from the v31.15 ZIP. Optionally replace `README.md`, `CHANGELOG.md`, and the installation instructions. You **do not** need to re-upload any games.
+
+## Previous release: v31.14 — October 28, 2026
 
 - **Stackline: Dimensional Tic Tac Toe** added to **Strategy** with a new illustrated activity card, grade filters, and a GitHub Pages launch link.
 - Students can play Classic, four-layer Stacked, or 25-board Hyper modes, against friends or a locally running computer opponent.

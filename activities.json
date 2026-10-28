@@ -842,6 +842,32 @@
       "linkText": "Play Snail Chess",
       "releaseOrder": 23,
       "audience": "students"
+    },
+    {
+      "id": "ela-writing-workshop",
+      "title": "ELA Writing Workshop",
+      "category": "ela",
+      "categoryLabel": "ELA · Writing & Text Evidence",
+      "type": "tool",
+      "description": "Build stronger reading responses with guided RACES (grades 5–6) or RACECES (grades 7–8). Practice with original genre stories, collect evidence, revise with writing checklists, and export your paragraph.",
+      "skills": [
+        "RACES & RACECES",
+        "Text evidence",
+        "Writing & revision"
+      ],
+      "gradeLabel": "Grades 5–8 · Grade-adjusted",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Guided writing · No AI",
+      "linkText": "Open Writing Workshop",
+      "url": "https://jkramer-cloud.github.io/ela-writing-workshop/",
+      "icon": "writing",
+      "status": "available",
+      "featured": true,
+      "releaseOrder": 24,
+      "audience": "students"
     }
   ]
 }

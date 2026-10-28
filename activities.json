@@ -868,6 +868,33 @@
       "featured": true,
       "releaseOrder": 24,
       "audience": "students"
+    },
+    {
+      "id": "crossy-words",
+      "title": "Crossy Words",
+      "category": "ela",
+      "categoryLabel": "ELA · Grammar & Language",
+      "type": "game",
+      "description": "Hop through a changing voxel-style world, dodge cars and occasional trains, time moving word platforms, and solve grammar challenges. Explore day/night maps, earn coins, and collect 360 colorful characters.",
+      "skills": [
+        "Grammar",
+        "Homophones",
+        "Sentence structure",
+        "Parts of speech"
+      ],
+      "gradeLabel": "Grades 5–8 · Two skill levels",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Arcade & Practice · Voxel worlds & collectibles",
+      "icon": "crossy",
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/crossy-words/",
+      "linkText": "Play Crossy Words",
+      "releaseOrder": 25,
+      "audience": "students"
     }
   ]
 }

@@ -4,20 +4,28 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.13 — Full-Page Scene Fix**  
+**Current Hub release: v31.14 — Stackline Activity Added**  
 **Updated:** October 28, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
 
-## What's fixed in v31.13 — October 28, 2026
+## What's new in v31.14 — October 28, 2026
+
+- **Stackline: Dimensional Tic Tac Toe** added to **Strategy** with a new illustrated activity card, grade filters, and a GitHub Pages launch link.
+- Students can play Classic, four-layer Stacked, or 25-board Hyper modes, against friends or a locally running computer opponent.
+- The game also contains a separate **Spatial Reasoning Lab** with geometric puzzles, hints, and saved practice totals.
+- **Catalog:** 36 activities total — 26 available and 10 planned. All existing 35 entries and weather/holiday customizations are preserved.
+- **Install the game separately:** This Hub package adds the card, but does not contain the Stackline game itself. Publish Stackline v2.0 first.
+
+## Previous release: v31.13 — Full-Page Scene Fix
 
 - **Full-page decorations:** Special-day scenes now render in the full-window background **and** inside the banner preview. Previously the more elaborate animations appeared only in the banner.
 - **No leftover Halloween art:** Changing weather, season, or time of day now automatically sets the special-day decoration to **None**, clearing pumpkins, ghosts, and other holiday props. You can explicitly choose a holiday again afterward if you want to combine it with a chosen weather scene.
 - **Instant holiday switching:** Switching from Halloween to New Year, winter, or any other holiday clears the previous artwork immediately and displays the newly selected scene across the background.
 - **Background theme:** Several major holidays now also adjust the color treatment of the valley scenery, not just the banner.
 - **Performance and accessibility:** Full-page effects sit behind the actual activity controls. The full-page and banner artwork run at approximately 30 render frames per second; turning animation off or using reduced-motion settings stops moving effects.
-- **Existing content preserved:** All 35 activity entries, custom cards, live weather fallback, saved preferences, and games remain as before.
+- **Existing content preserved:** All prior 35 activity entries, custom cards, live weather fallback, saved preferences, and games remain as before.
 
 **To try the fix:** Open **Customize Scene → Special-day decoration**, select Halloween or New Year, then click **Done** to see the full-page effects. Switch **Weather scene** to Rainy Day or Snowy Day to clear the holiday decorations automatically. To keep a selected holiday while changing other details, choose the weather first and the holiday last.
 

@@ -896,6 +896,35 @@
       "linkText": "Play Crossy Words",
       "releaseOrder": 25,
       "audience": "students"
+    },
+    {
+      "id": "stackline-dimensional-tic-tac-toe",
+      "title": "Stackline: Dimensional Tic Tac Toe",
+      "category": "strategy",
+      "categoryLabel": "Strategy · Spatial Reasoning & Geometry",
+      "description": "Rotate transparent 3D-style boards, connect 3, 4, or 5 pieces across layers and towers, challenge computer opponents, and solve spatial reasoning puzzles.",
+      "skills": [
+        "Spatial reasoning",
+        "Coordinates",
+        "3D and 4D geometry",
+        "Strategy",
+        "Patterns"
+      ],
+      "gradeLabel": "Grades 5–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo vs computer · 2–5 players · Reasoning Lab",
+      "icon": "stackline",
+      "status": "available",
+      "type": "game",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/stackline-dimensional-tic-tac-toe/",
+      "linkText": "Play Stackline",
+      "releaseOrder": 26,
+      "audience": "students"
     }
   ]
 }

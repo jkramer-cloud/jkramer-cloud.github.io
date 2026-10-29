@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-10-28",
+  "lastUpdated": "2026-10-29",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -818,28 +818,28 @@
     },
     {
       "id": "immortal-snail-chess-3d",
-      "title": "Immortal Snail Chess 3D",
+      "title": "Chess Academy",
       "category": "strategy",
-      "categoryLabel": "Strategy & Logic · Chess",
+      "categoryLabel": "Strategy & Logic · Chess Academy",
       "type": "game",
-      "description": "Play chess in a 3D arena while two unstoppable snails pursue the kings! Plan ahead, watch the danger squares, and survive animated snail attacks.",
+      "description": "Start with beginner-friendly chess, then try immortal snails, speed-changing hungry snails, and floating tri-level boards. Optional guided lessons.",
       "skills": [
-        "Strategic planning",
-        "Spatial reasoning",
-        "Decision-making"
+        "Chess fundamentals",
+        "Strategic thinking",
+        "Spatial reasoning"
       ],
-      "gradeLabel": "Grades 5–12 · Strategy",
+      "gradeLabel": "Grades 4–12 · All levels",
       "gradeGroups": [
         "3-5",
         "6-8",
         "9-12"
       ],
-      "mode": "Solo vs computer · 2 local players",
+      "mode": "Guided lessons · Solo & local multiplayer",
       "icon": "snailchess",
       "status": "available",
       "featured": true,
       "url": "https://jkramer-cloud.github.io/immortal-snail-chess-3d/",
-      "linkText": "Play Snail Chess",
+      "linkText": "Enter Chess Academy",
       "releaseOrder": 23,
       "audience": "students"
     },

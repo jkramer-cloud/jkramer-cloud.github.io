@@ -1,5 +1,14 @@
 # Naches Learning Hub — Changelog
 
+## v31.19 — Chess Academy Activity Card Refresh (October 29, 2026)
+
+- Renamed the Immortal Snail Chess 3D card to **Chess Academy** while retaining its activity ID, original launch order and GitHub Pages URL.
+- Updated card description, skills and grade display to introduce Classic Chess, Immortal Snail, Hungry Snails, and Tri-Level Chess with optional guided lessons.
+- Replaced the snail-only artwork with original embedded SVG art depicting chess, snails and floating boards; no new assets or network dependencies.
+- Highlighted Chess Academy in the discovery rail as **Updated** and marked it **Featured** without changing other release order numbers.
+- Synchronized the main `activities.json` and fallback catalog within `index.html`. Retained 36 activities (26 available, 10 planned), the v31.18 astronomy, holiday scenery and existing settings.
+- Render-tested the updated card in compact desktop/mobile layouts and checked activity link, filters and fallback rendering without script errors.
+
 ## v31.18 — Natural Sun/Moon Landscape Layering (October 29, 2026)
 
 - Fixed celestial depth: Sun, Moon, glow, and sunrays are now correctly hidden behind mountain silhouettes and partially occluded by drifting clouds, rather than painted over the landscape.

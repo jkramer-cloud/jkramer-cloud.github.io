@@ -4,13 +4,30 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.18 — Natural Sky Layering & Game Day Celebrations**  
+**Current Hub release: v31.19 — Chess Academy Card Refresh**  
 **Updated:** October 29, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
 
-## What's new in v31.18 — Sun and Moon behind mountains and clouds (October 29, 2026)
+## What's new in v31.19 — Chess Academy card refresh (October 29, 2026)
+
+The former **Immortal Snail Chess 3D** card is now **Chess Academy**, reflecting the expanded four-mode chess game. The refreshed card makes beginner-friendly chess and optional guided lessons more discoverable.
+
+- **New name and description:** Chess Academy; students can choose Classic Chess, Immortal Snail, Hungry Snails, and Tri-Level Chess. The card highlights optional lessons, chess fundamentals, strategy, and spatial reasoning.
+- **Original card artwork:** A locally rendered SVG triptych with chess pieces, a snail, and floating chess platforms, designed for both compact and gallery layouts. No externally hosted picture or image dependency.
+- **Better discovery:** The existing Strategy & Logic category is retained, the refreshed card is marked Featured, and it appears as **Updated** at the front of the discovery rail. The original activity release number remains unchanged.
+- **No broken favorites or links:** The catalog ID remains `immortal-snail-chess-3d` and the game URL remains `https://jkramer-cloud.github.io/immortal-snail-chess-3d/`. The existing local favorites and recent-activity references remain valid.
+- **Synchronized catalogs:** The updated metadata is in both `activities.json` and the embedded fallback catalog inside `index.html`, including when the external JSON cannot be loaded.
+- **Preserves v31.18:** All Sun/Moon mountain and cloud masking, six gaming holidays, compact dashboard, Scene Studio, weather handling, and all 36 activity entries remain.
+
+**Deployment:** Replace `index.html` **and** `activities.json` in the **main Hub** repository. This changes the Hub's card only and does not install the Chess Academy game itself. The separate game repository must already have its v2.0 game files deployed for all four modes to work on the live site.
+
+---
+
+## Previous release: v31.18 — Natural Sky Layering & Game Day Celebrations
+
+### Sun and Moon behind mountains and clouds (October 29, 2026)
 
 - The **Sun and Moon now sit visually behind both Naches mountain ridges and the drifting cloud layer**, rather than drawing on top of the scenery. Their full disks and soft outer glows are clipped naturally wherever a mountain crosses the sky.
 - Clouds partly obscure the Sun and Moon, instead of allowing celestial objects to appear in front of them. The occlusion masks follow the existing cloud animations, and still work when scenery animation is switched off.

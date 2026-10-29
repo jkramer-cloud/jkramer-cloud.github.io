@@ -1,4 +1,17 @@
-# Learning Hub Changelog
+# Naches Learning Hub — Changelog
+
+## v31.18 — Natural Sun/Moon Landscape Layering (October 29, 2026)
+
+- Fixed celestial depth: Sun, Moon, glow, and sunrays are now correctly hidden behind mountain silhouettes and partially occluded by drifting clouds, rather than painted over the landscape.
+- Added matching SVG masks to the full-page Naches backdrop and welcome banner; retained bright night Moon glow through the existing separate celestial rendering layer.
+- Kept all 36 activity cards, holiday effects, Scene Studio controls, astronomy calculations, weather integration, animation preferences, and embedded fallback catalog unchanged.
+- Tested mask occlusion by comparing pixels in open sky vs. mountains and clouds; tested desktop/mobile rendering, activity count, and holiday switching without JavaScript errors.
+
+## v31.17 — Full-background holiday visibility and MAR10 fix
+
+- Repaired the MAR10 animation error that could interrupt the scene.
+- Added edge-of-valley decorative activities for all six gaming celebrations, making the scenes visible beyond the compact hero banner.
+- Full-page effects remain behind all interactive content and respect reduced-motion settings.
 
 ## v31.16 — Living Sky & Game Day Celebrations (October 29, 2026)
 

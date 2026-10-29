@@ -4,13 +4,27 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.16 — Living Sky & Game Day Celebrations**  
+**Current Hub release: v31.18 — Natural Sky Layering & Game Day Celebrations**  
 **Updated:** October 29, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
 
-## What's new in v31.16 — Living Sky & Game Day Celebrations (October 29, 2026)
+## What's new in v31.18 — Sun and Moon behind mountains and clouds (October 29, 2026)
+
+- The **Sun and Moon now sit visually behind both Naches mountain ridges and the drifting cloud layer**, rather than drawing on top of the scenery. Their full disks and soft outer glows are clipped naturally wherever a mountain crosses the sky.
+- Clouds partly obscure the Sun and Moon, instead of allowing celestial objects to appear in front of them. The occlusion masks follow the existing cloud animations, and still work when scenery animation is switched off.
+- Preserves the **location-based Sun path, Moon phases, day/night visibility, moon glow, horizon-orange color, and calendar blue-moon identification** from v31.16.
+- Preserves the v31.17 full-background gaming celebrations, corrected MAR10 animation, compact controls, and all 36 activity entries.
+- The Hub remains a simple static GitHub Pages site with no new permissions, assets, dependencies, or astronomical network requests.
+
+**Technical detail:** The sky uses two independent SVG layers (full-page background and welcome banner) with local masks matching the existing mountain paths and cloud shapes. The brighter celestial layer remains separate from nighttime dimming, so moonlight is still visible while landscape features stay in front.
+
+## Previous release: v31.17 — Full-Background Game Days
+
+The original v31.16 gaming scenes are now visible in the valley backdrop as well as the compact welcome banner. The scenes have subtle animated details along the left and right edges, without drawing over game cards. The MAR10 scene error is fixed, so foes, adventurers, portals, and coins can continue animating.
+
+## Previously added in v31.16 — Living Sky & Game Day Celebrations (October 29, 2026)
 
 This is a **drop-in update to the Hub only**, based on v31.15. All 36 activity entries (26 available and 10 planned), favorite settings, compact layout, search, weather service, and existing public and school holiday scenes remain intact.
 
@@ -40,10 +54,10 @@ The artwork is drawn locally with original Canvas2D shapes; **no licensed game a
 
 ### Deployment and testing
 
-1. Download and extract `Naches_Learning_Hub_v31_16_Living_Sky_Game_Days_GitHub.zip`.
+1. Download and extract `Naches_Learning_Hub_v31_18_Natural_Sky_Layering_GitHub.zip`.
 2. Upload **`index.html` and `activities.json`** to the root of the main `jkramer-cloud.github.io` GitHub Pages repository, replacing the existing copies. (`activities.json` has not changed, but is included for convenience.)
 3. Optionally upload `README.md`, `CHANGELOG.md` and `UPLOAD_INSTRUCTIONS.md`; commit. No individual game repositories need updating.
-4. In the browser, hard-refresh with **Ctrl + Shift + R**, select **Customize Scene**, and preview MAR10 Day, Star Wars Day, and any other theme. Try **Night sky (moon if visible)** and read the phase note.
+4. In the browser, hard-refresh with **Ctrl + Shift + R**, select **Customize Scene**, and preview MAR10 Day, Star Wars Day, and any other theme. The Sun/Moon naturally move behind the cloud and mountain silhouettes whenever they cross those shapes. Try **Night sky (moon if visible)** and read the Moon-phase note.
 
 **Known limitations:** The astronomy approximates orbital positions and uses a flat horizon; it does not predict a lunar eclipse or guarantee visible colors, cloud-free skies or exact rise/set moments. A “blue moon” is a calendar name, not a promise of a naturally blue Moon. Weather may be blocked by a school firewall without affecting the astronomy or holiday artwork. The live website is not changed until you publish the new files.
 
@@ -274,3 +288,7 @@ See `CHANGELOG.md` in the latest update packet for the release-specific summary.
 **Naches Learning Hub** — an evolving collection of classroom learning games and resources.
 
 *Weather data: [Open-Meteo](https://open-meteo.com/). The weather display is informational and decorative; consult official forecasts and alerts for safety decisions.*
+
+### v31.17 holiday scenery repair
+
+Gaming holiday scenes now draw along both exposed sides of the full-page valley as well as across the sky and in the small hero preview. These background illustrations stay below interactive game cards and controls. MAR10 background characters and enemies are fixed.

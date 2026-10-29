@@ -508,7 +508,7 @@ body[data-card-view="gallery"] .card-body{padding:19px}
 @media(prefers-reduced-motion:reduce){.category-shell .filters{scroll-behavior:auto!important}}
 
   
-/* v31.16 · Sun/Moon overlays sit above darkened valley art but below UI. */
+/* v31.18 · Celestial glows are clipped by moving clouds and both mountain ridges; the landscape remains in front. */
 .valley-backdrop,.hero-landscape{isolation:isolate}
 .astronomy-svg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:2;pointer-events:none;overflow:hidden}
 .valley-backdrop::after{z-index:1}
@@ -558,7 +558,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     <g class="holiday-art holiday-earth" transform="translate(1150 736)" fill="#8bca95"><path d="M0 0q-15-37 12-53q13 30-12 53q-35-7-37-28q23-7 37 28"/></g>
     <g class="holiday-art holiday-thanks" transform="translate(1140 753)" fill="#e9b356"><path d="M0-24l19 24-19 24-19-24Z"/><path d="M0-33V27M-29 0H29" stroke="#ffe6a6" stroke-width="3"/></g>
     <g class="holiday-art holiday-veterans" transform="translate(1200 639)" fill="#fff7db"><path d="M0-18 5-5 19-5 8 4 13 17 0 9-13 17-8 4-19-5-5-5Z"/></g>
-    </svg><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"></svg></div>
+    </svg><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><mask id="astro-sky-occlusion-0" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" mask-type="luminance" x="0" y="0" width="1440" height="860"><rect width="1440" height="860" fill="#fff"/><path d="M0 546L94 451 181 489 292 306 386 421 494 250 617 434 718 160 852 407 956 245 1099 403 1186 283 1320 446 1440 348V860H0Z" fill="#000"/><path d="M0 600 105 494 205 549 300 322 391 463 486 269 607 459 716 186 839 421 957 276 1100 457 1185 304 1325 492 1440 376V860H0Z" fill="#000"/><g class="cloudscape astro-cloud-mask"><g class="cloud c1" fill="#000" opacity=".92" transform="translate(250 158) scale(1.04)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c2" fill="#000" opacity=".92" transform="translate(1000 112) scale(1.28)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c3" fill="#000" opacity=".92" transform="translate(1230 244) scale(0.83)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g></g></mask></defs><g class="astronomy-glyphs" mask="url(#astro-sky-occlusion-0)"></g></svg></div>
   <canvas id="festival-page-canvas" class="festival-page-canvas" aria-hidden="true"></canvas>
 <div class="wrap">
     <header class="top">
@@ -641,7 +641,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     <g class="holiday-art holiday-earth" transform="translate(1150 736)" fill="#8bca95"><path d="M0 0q-15-37 12-53q13 30-12 53q-35-7-37-28q23-7 37 28"/></g>
     <g class="holiday-art holiday-thanks" transform="translate(1140 753)" fill="#e9b356"><path d="M0-24l19 24-19 24-19-24Z"/><path d="M0-33V27M-29 0H29" stroke="#ffe6a6" stroke-width="3"/></g>
     <g class="holiday-art holiday-veterans" transform="translate(1200 639)" fill="#fff7db"><path d="M0-18 5-5 19-5 8 4 13 17 0 9-13 17-8 4-19-5-5-5Z"/></g>
-    </svg><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"></svg></div>
+    </svg><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><mask id="astro-sky-occlusion-1" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" mask-type="luminance" x="0" y="0" width="1440" height="860"><rect width="1440" height="860" fill="#fff"/><path d="M0 546L94 451 181 489 292 306 386 421 494 250 617 434 718 160 852 407 956 245 1099 403 1186 283 1320 446 1440 348V860H0Z" fill="#000"/><path d="M0 600 105 494 205 549 300 322 391 463 486 269 607 459 716 186 839 421 957 276 1100 457 1185 304 1325 492 1440 376V860H0Z" fill="#000"/><g class="cloudscape astro-cloud-mask"><g class="cloud c1" fill="#000" opacity=".92" transform="translate(250 158) scale(1.04)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c2" fill="#000" opacity=".92" transform="translate(1000 112) scale(1.28)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c3" fill="#000" opacity=".92" transform="translate(1230 244) scale(0.83)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g></g></mask></defs><g class="astronomy-glyphs" mask="url(#astro-sky-occlusion-1)"></g></svg></div>
         <div class="hero-content">
           <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> THE NACHES LEARNING ARCADE</div>
           <h1 id="hero-title">Find your next <em>favorite.</em></h1>
@@ -692,7 +692,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
       </section>
       <details class="helper"><summary>For teachers: using and updating this hub</summary><p>Each activity opens its own existing website. The hub does not change those games or their saved progress. The grade filters are suggestions, not restrictions. To add a game, tutorial, simulation, or tool later, edit <code>activities.json</code> in this hub's GitHub repository. Use <code>status: planned</code> until the activity is ready, then change to <code>available</code> and add its live URL. This site is a directory, not an account system or assignment tracker.</p><p>School filtering may require your tech department to allow each destination URL, not just this hub's address.</p></details>
     </main>
-    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.16</strong> · Seasonal Learning Arcade</span></footer>
+    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.18</strong> · Seasonal Learning Arcade</span></footer>
   </div>
   <script>
   'use strict';
@@ -1598,7 +1598,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     return skyPosition(astroCoords(new Date()).sun,new Date()).alt>-.833;
   }
 
-  /* v31.16 Naches astronomical scenery (fixed approximate public location).
+  /* v31.18 Naches astronomical scenery (fixed approximate public location).
      Calculations use simplified solar/lunar orbital equations. They are scenic,
      not predictions of eclipses, exact rise/set times or terrain obstructions. */
   const SKY_LAT=46.73,SKY_LON=-120.70, RAD=Math.PI/180, TAU=Math.PI*2;
@@ -1664,7 +1664,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     }
     return false;
   }
-  const celestialSvg=Array.from(document.querySelectorAll('.astronomy-svg'));
+  const celestialLayers=Array.from(document.querySelectorAll('.astronomy-svg .astronomy-glyphs'));
   function bodyGlyph(kind,position,r,phase,night,blue){
     // Projection: East on left, West on right; actual altitude sets seasonal height.
     if(position.alt<1.2)return '';
@@ -1693,7 +1693,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     const sunMarkup=bodyGlyph('sun',sunPosition,54,phase,night,blue);
     const moonMarkup=bodyGlyph('moon',moonPosition,39,phase,night,blue);
     const markup=`<g opacity="${thinCloud?.43:1}">${!night?sunMarkup:''}${moonMarkup}</g>`;
-    celestialSvg.forEach(svg=>{svg.innerHTML=markup;});
+    celestialLayers.forEach(layer=>{layer.innerHTML=markup;});
     const moonAbove=moonPosition.alt>1.2;
     const moonMessage=moonAbove?`above the horizon ${night?'tonight':'in daylight'}`:'below the horizon right now';
     const moonColor=moonAbove&&moonPosition.alt<11?' · warm orange near the horizon':'';
@@ -1846,6 +1846,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
  function glyph(x,y,type){ctx.save();ctx.translate(x,y);ctx.font=`900 ${Math.max(15,Math.min(width*.03,25))}px system-ui`;ctx.fillStyle='#f1e8d6';ctx.textAlign='center';ctx.fillText(type,0,0);ctx.restore()}
 
  /* Original vector holiday homages: self-drawn primitives, no external sprites/assets. */
+ const TAU=Math.PI*2;
  function gameDayScene(t,W,H,full){
   const base=full?W*.10:W*.57,span=full?W*.80:W*.38,ground=full?H*.88:H*.82;
   const bounce=(i,f=0.025)=>Math.abs(Math.sin(t*f+i))*22;
@@ -1857,43 +1858,101 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
   const droid=(x,y,sc)=>{ctx.save();ctx.translate(x,y);ctx.scale(sc,sc);ctx.fillStyle='#e1e9e9';ctx.fillRect(-13,-20,26,26);ctx.fillStyle='#6e8cad';ctx.fillRect(-15,-23,30,8);circ(-5,-9,3,'#7acbf8');circ(6,-9,3,'#a0e0fa');ctx.fillStyle='#9db3bc';ctx.fillRect(-18,4,7,16);ctx.fillRect(11,4,7,16);ctx.restore()};
   const duelist=(x,y,i)=>{const sway=Math.sin(t*.06+i)*.5;ctx.save();ctx.translate(x,y);ctx.fillStyle=i?'#bca0cf':'#e1e3ce';circ(0,-30,8,'#e4d5bc');ctx.fillRect(-8,-21,16,24);line([[0,3],[-7,19]],'#abb8c0',5);line([[0,3],[8,19]],'#abb8c0',5);line([[6,-14],[14,-8]],'#e0d6c2',4);ctx.rotate(sway);ctx.shadowColor=i?'#ff7d83':'#72ffcf';ctx.shadowBlur=15;line([[14,-8],[23,-40]],i?'#ff7d83':'#78ffe2',5);ctx.restore()};
   const tetromino=(x,y,idx,size=13)=>{const tiles=[[[0,0],[1,0],[0,1],[1,1]],[[0,0],[1,0],[2,0],[1,1]],[[0,0],[0,1],[0,2],[1,2]],[[0,1],[1,1],[1,0],[2,0]],[[0,0],[0,1],[1,1],[2,1]]],palette=['#ffc75f','#b6a0f7','#72c9f1','#84dcba','#f29fb1'];ctx.fillStyle=palette[idx%palette.length];for(const [dx,dy] of tiles[idx%tiles.length]){ctx.fillRect(x+dx*size,y+dy*size,size-1,size-1);ctx.strokeStyle='#ffffff99';ctx.lineWidth=1;ctx.strokeRect(x+dx*size+1,y+dy*size+1,size-3,size-3)}};
+ function gameDayBackground(t,W,H){
+  const left=Math.min(39,Math.max(18,W*.025)),right=W-left;
+  const drift=(phase,rate=.02)=>Math.sin(t*rate+phase);
+  const miniCoin=(x,y,i)=>{ctx.save();ctx.translate(x,y);ctx.scale(.72+.25*Math.abs(drift(i,.035)),1);ctx.shadowColor='#ffdb78';ctx.shadowBlur=9;circ(0,0,6,'#ffdc73');ctx.restore()};
+  if(holiday==='mario'){
+   // Portals and collectible coins peek out from the two valley edges.
+   portal(left,H*.43,.51);portal(right,H*.60,.51);
+   for(let i=0;i<8;i++){
+    const side=i%2?right:left;
+    const y=H*(.16+(i*.096))-(t*(.13+i*.015)%(H*.18));
+    if(Math.floor(t*.07+i)%9!==5)miniCoin(side+drift(i,.021)*8,y,i);
+   }
+   plumber(left+drift(1,.015)*7,H*.62-Math.abs(drift(2,.046))*17,.56,0);
+   plumber(right+drift(2,.013)*7,H*.72-Math.abs(drift(3,.04))*16,.52,1);
+   foe(left+drift(3,.025)*9,H*.82,.60);
+   foe(right+drift(4,.025)*9,H*.86,.57);
+  }
+  else if(holiday==='starwars'){
+   // Ships pass across the distant sky; a tiny droid patrol is at the margins.
+   for(let i=0;i<3;i++){
+    const x=(t*(.26+i*.07)+i*W*.43)%(W+100)-50;
+    spacecraft(x,H*(.33+(i%2)*.13),.53+i*.07,i%2?-1:1);
+   }
+   for(let i=0;i<12;i++)star(i%2?right+drift(i)*10:left+drift(i)*10,H*(.08+i*.075),1.8,['#e2f1ff','#f6dda0'][i%2]);
+   ctx.save();ctx.translate(left,H*.77);ctx.scale(.68,.68);duelist(0,0,0);ctx.restore();
+   ctx.save();ctx.translate(right,H*.77);ctx.scale(.68,.68);duelist(0,0,1);ctx.restore();
+   droid(right-4,H*.92,.55);
+  }
+  else if(holiday==='pokemon'){
+   for(let i=0;i<6;i++){
+    const x=(i%2?right:left)+drift(i,.03)*7,y=H*(.16+i*.13)+drift(i,.017)*10;
+    circ(x,y,8,['#9ddbb3','#ffc583','#b5c6ee'][i%3]);
+    circ(x-3,y-2,1.8,'#24384e');circ(x+3,y-2,1.8,'#24384e');
+   }
+  }
+  else if(holiday==='pacman'){
+   for(let i=0;i<17;i++)circ(i%2?right:left,H*(.12+i*.048),2.5,'#ffe6a0');
+   ghost(left,H*.57,.37,1);ghost(right,H*.75,.38,3);
+  }
+  else if(holiday==='tetris'){
+   for(let i=0;i<8;i++){
+    const x=(i%2?right-14:left-15),y=(H*(i*.17)+t*(.45+i*.02))%(H+70)-35;
+    tetromino(x,y,i,8);
+   }
+  }
+  else if(holiday==='sonic'){
+   for(let i=0;i<10;i++){
+    const x=i%2?right:left,y=H*(.12+i*.077);
+    ctx.strokeStyle='#ffdc7c';ctx.lineWidth=2.7;ctx.beginPath();ctx.ellipse(x,y,5.5,8,0,0,TAU);ctx.stroke();
+   }
+   for(let i=0;i<5;i++){
+    const y=H*(.2+i*.17)+(t*.23)%21;
+    line([[left-17,y],[left+12,y]],'#9de6ff',2);
+    line([[right-13,y],[right+17,y]],'#9de6ff',2);
+   }
+  }
+ }
   if(holiday==='mario'){
     portal(base+span*.12,ground-44,.8);portal(base+span*.93,ground-47,.8);
     for(let i=0;i<6;i++){const x=base+span*(.18+i*.13),y=ground-90-(i%2)*22;if((Math.floor(t*.09+i)%9)!==5)coin(x,y,i)}
     for(let i=0;i<3;i++)foe(base+span*(.36+i*.20)+(Math.sin(t*.022+i)*18),ground+5,.66+(i%2)*.13);
     plumber(base+span*(.28+.12*Math.sin(t*.007)),ground-bounce(1),.90,0);
     plumber(base+span*(.65+.11*Math.sin(t*.006+2)),ground-bounce(2),.78,1);
-    return true;
+    if(full)gameDayBackground(t,W,H);return true;
   }
   if(holiday==='starwars'){
     for(let i=0;i<4;i++){const x=base+(t*(.6+i*.19)+i*span*.29)%(span+100)-50;spacecraft(x, H*(.15+(i%3)*.13),.7+(i%2)*.27,i%2?-1:1)}
     for(let i=0;i<14;i++)star(base+(i*73%100)/100*span,H*(.12+(i*19%53)/100),2,['#edf5ff','#a8deff','#ffe9ab'][i%3]);
     duelist(base+span*.62,ground-6,0);duelist(base+span*.74,ground-6,1);droid(base+span*.85,ground-5,.75);
-    return true;
+    if(full)gameDayBackground(t,W,H);return true;
   }
   if(holiday==='pokemon'){
     for(let i=0;i<3;i++){let x=base+span*(.23+i*.26),y=ground-bounce(i,.011);ctx.save();ctx.translate(x,y);ctx.fillStyle=['#9ddbb3','#ffc583','#b5c6ee'][i];circ(0,-16,20,ctx.fillStyle);ctx.fillStyle='#f6e8c8';ctx.beginPath();ctx.moveTo(-14,-29);ctx.lineTo(-13,-50);ctx.lineTo(-1,-31);ctx.lineTo(10,-47);ctx.lineTo(15,-29);ctx.fill();circ(-6,-18,3,'#24384e');circ(7,-18,3,'#24384e');ctx.restore();}
     for(let i=0;i<5;i++){let x=base+span*(.11+i*.19),y=ground-85-Math.sin(t*.02+i)*11;circ(x,y,7,'#fff4cf');ctx.fillStyle=i%2?'#83cbf0':'#e68a8c';ctx.fillRect(x-7,y-7,14,7);line([[x-7,y],[x+7,y]],'#455068',1.5);circ(x,y,2,'#ffffff');}
-    return true;
+    if(full)gameDayBackground(t,W,H);return true;
   }
   if(holiday==='pacman'){
     const y=ground-80,x=base+span*(.1+(.75*((t*.002)%1)));for(let i=0;i<14;i++)circ(base+span*(.12+i*.055),y,3,'#ffe9af');
     ctx.beginPath();ctx.moveTo(x,y);ctx.arc(x,y,19,.26*Math.abs(Math.sin(t*.06)),Math.PI*2-.26*Math.abs(Math.sin(t*.06)));ctx.closePath();ctx.fillStyle='#ffdc5b';ctx.fill();
     for(let i=0;i<3;i++)ghost(base+span*(.68+i*.1),ground-72,.42,i);
-    return true;
+    if(full)gameDayBackground(t,W,H);return true;
   }
   if(holiday==='tetris'){
     for(let i=0;i<9;i++){const size=full?14:11;const x=base+span*(.06+(i%5)*.19),y=H*.1+((t*(.21+i*.016)+i*115)%(ground-H*.07));tetromino(x,y,i,size)}
-    return true;
+    if(full)gameDayBackground(t,W,H);return true;
   }
   if(holiday==='sonic'){
     for(let i=0;i<11;i++){const x=base+span*(.10+i*.08),y=ground-75-(i%3)*16;ctx.save();ctx.translate(x,y);ctx.shadowColor='#ffde83';ctx.shadowBlur=6;ctx.strokeStyle='#ffde83';ctx.lineWidth=4;ctx.beginPath();ctx.ellipse(0,0,8,13,0,0,Math.PI*2);ctx.stroke();ctx.restore()}
     for(let i=0;i<5;i++){const x=base+span*(.03+((t*.003+i*.27)%1)),y=ground-25-i*9;line([[x-42,y],[x-10,y]],'#84d8ff',2+i%2)}
-    const x=base+span*(.08+(t*.003)% .84);ctx.save();ctx.translate(x,ground-bounce(2,.08));circ(0,-18,16,'#56b4ef');ctx.fillStyle='#387ec9';ctx.beginPath();ctx.moveTo(-12,-29);ctx.lineTo(-30,-34);ctx.lineTo(-14,-13);ctx.lineTo(-28,-12);ctx.lineTo(-8,-3);ctx.fill();circ(6,-20,3,'#f6f4ef');ctx.fillStyle='#e75c60';ctx.fillRect(-14,-2,15,6);ctx.fillRect(1,-2,15,6);ctx.restore();return true;
+    const x=base+span*(.08+(t*.003)% .84);ctx.save();ctx.translate(x,ground-bounce(2,.08));circ(0,-18,16,'#56b4ef');ctx.fillStyle='#387ec9';ctx.beginPath();ctx.moveTo(-12,-29);ctx.lineTo(-30,-34);ctx.lineTo(-14,-13);ctx.lineTo(-28,-12);ctx.lineTo(-8,-3);ctx.fill();circ(6,-20,3,'#f6f4ef');ctx.fillStyle='#e75c60';ctx.fillRect(-14,-2,15,6);ctx.fillRect(1,-2,15,6);ctx.restore();if(full)gameDayBackground(t,W,H);return true;
   }
   return false;
  }
 
+ /* Keep holiday action visible in the actual valley BACKGROUND, not just the banner. */
  function pageHolidayScene(staticMode){
   const W=width,H=height,s=strength(),t=staticMode?0:tick;
   const sway=(i,n)=>Math.sin(t*n+i)*11;

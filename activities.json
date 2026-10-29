@@ -925,6 +925,33 @@
       "linkText": "Play Stackline",
       "releaseOrder": 26,
       "audience": "students"
+    },
+    {
+      "id": "math-rush-endless-run",
+      "title": "Math Rush: Endless Run",
+      "category": "math",
+      "categoryLabel": "Math · Arcade Challenge",
+      "type": "game",
+      "description": "Run, jump, slide, and dodge obstacles in an endless arcade adventure! Solve math problems by choosing the correct lane, collect coins, and unlock new characters. How far can you go?",
+      "skills": [
+        "Math fluency",
+        "Mental math",
+        "Decision-making",
+        "Reaction time"
+      ],
+      "gradeLabel": "Grades 5–8 · Two math levels",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Keyboard or touchscreen",
+      "icon": "mathrush",
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/math-rush-endless-run/",
+      "linkText": "Play Math Rush",
+      "releaseOrder": 27,
+      "audience": "students"
     }
   ]
 }

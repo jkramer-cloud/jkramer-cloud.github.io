@@ -4,11 +4,24 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.20 — Daylight & Weather Scene Synchronization**  
+**Current Hub release: v31.21 — Math Rush: Endless Run**  
 **Updated:** October 29, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
+
+## What's new in v31.21 — Math Rush: Endless Run (October 29, 2026)
+
+Adds an original student-inspired educational endless runner to the Math arcade without removing the v31.20 daylight/weather fixes or any previously available activities.
+
+- **New game:** Math Rush: Endless Run. Three lanes, increasingly fast running, obstacle avoidance, collectible coins, 10 cosmetic characters, and math answer checkpoints with guided hints.
+- **Grades 5–8:** Two difficulty pools for grades 5–6 and grades 7–8. Students can use keyboard or touchscreen controls.
+- **New Hub artwork:** Original SVG runner, train, coins and answer signs. Available in the gallery, compact cards and New to the Hub rail.
+- **Featured discovery:** Math Rush is the newest game (releaseOrder 27). Chess Academy still appears immediately afterward with its Updated label.
+- **Catalog synchronized:** `activities.json` and the embedded offline fallback catalog both contain the new game; **37 total activities (27 available, 10 planned)**. Existing activity IDs, saved favorites, history, URLs and all existing holiday/weather animations remain unchanged.
+- **Requires its own repository:** Publish the new game's `index.html` separately as `jkramer-cloud/math-rush-endless-run` before updating the Hub. The Hub card links to `https://jkramer-cloud.github.io/math-rush-endless-run/`.
+
+**Deployment:** Once the new game is live, replace **both** `index.html` and `activities.json` in `jkramer-cloud.github.io`; optionally update this README, the changelog, and upload instructions.
 
 ## What's new in v31.20 — Daylight and live weather scene fix
 

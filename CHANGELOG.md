@@ -1,5 +1,14 @@
 # Naches Learning Hub — Changelog
 
+## v31.21 — Math Rush: Endless Run (October 29, 2026)
+
+- Added an original student-inspired endless runner to the Math category, with three lanes, increasing speed, train/crate/barrier obstacles, math checkpoints, coins and cosmetic characters.
+- New game card and original SVG artwork, listed first in New to the Hub as **New game**; Chess Academy remains second and **Updated**.
+- Synced the external and embedded fallback catalogs: **37 activities total, 27 available and 10 planned**. Newest launch order is 27.
+- Preserved the existing 36 activities, saved favorites, recent activity history, live weather/daylight scene fixes, astronomical sky, holiday decorations, and other Hub features.
+- The new game lives in its own repository and must be published before this Hub update.
+
+
 ## v31.20 — Daylight & Weather Scene Synchronization (October 29, 2026)
 
 - **Fixed the October 25–31 Halloween dimming issue:** the Halloween dark-landscape filter now activates at night, not in sunny daytime. Decorations remain visible during the day. The New Year and winter nighttime dark filters follow the same rule.

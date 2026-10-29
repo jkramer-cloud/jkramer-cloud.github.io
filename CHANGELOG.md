@@ -1,5 +1,12 @@
 # Naches Learning Hub — Changelog
 
+## v31.22 — Budget Bites v3 (October 29, 2026)
+
+- Refreshed the Budget Bites card to highlight the new Recipe Box, 12-step interactive cooking simulation, and reset controls.
+- Promoted Budget Bites to newest updated activity while retaining all existing catalog entries.
+- Preserved Math Rush, 31.20 weather/daylight changes, other games, and current theme settings.
+
+
 ## v31.21 — Math Rush: Endless Run (October 29, 2026)
 
 - Added an original student-inspired endless runner to the Math category, with three lanes, increasing speed, train/crate/barrier obstacles, math checkpoints, coins and cosmetic characters.

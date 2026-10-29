@@ -695,11 +695,11 @@
       "category": "social",
       "categoryLabel": "Life Skills · Cooking & Nutrition",
       "type": "simulation",
-      "description": "Build a household, plan meals, shop within a grocery budget, and learn safe cooking with 68 recipes. Compare planned and served nutrition with interactive graphs.",
+      "description": "Plan meals, shop on a budget, and explore a new interactive Recipe Box! Practice washing, measuring, chopping, stirring, stove safety and serving through a 12-step kitchen lesson, with reset and nutrition reports.",
       "skills": [
         "Meal planning",
         "Grocery budgeting",
-        "Nutrition & cooking"
+        "Interactive kitchen & safety"
       ],
       "gradeLabel": "Grades 5–12 · Life skills",
       "gradeGroups": [
@@ -713,7 +713,7 @@
       "featured": true,
       "url": "https://jkramer-cloud.github.io/budget-bites/",
       "linkText": "Play Budget Bites",
-      "releaseOrder": 21,
+      "releaseOrder": 28,
       "audience": "students"
     },
     {

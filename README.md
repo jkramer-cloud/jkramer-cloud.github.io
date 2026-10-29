@@ -333,3 +333,8 @@ See `CHANGELOG.md` in the latest update packet for the release-specific summary.
 ### v31.17 holiday scenery repair
 
 Gaming holiday scenes now draw along both exposed sides of the full-page valley as well as across the sky and in the small hero preview. These background illustrations stay below interactive game cards and controls. MAR10 background characters and enemies are fixed.
+
+
+## v31.22 — Budget Bites Interactive Kitchen
+
+Budget Bites now links to version 3 in the same `budget-bites` repository, with Recipe Box, 12-step interactive Banana Cinnamon Oats lesson, a visible reset, and expandable kitchen recipe metadata. Prior v31.21 Math Rush update and weather/daylight features are preserved.

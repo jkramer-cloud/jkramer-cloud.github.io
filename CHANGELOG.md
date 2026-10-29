@@ -1,5 +1,17 @@
 # Naches Learning Hub — Changelog
 
+## v31.20 — Daylight & Weather Scene Synchronization (October 29, 2026)
+
+- **Fixed the October 25–31 Halloween dimming issue:** the Halloween dark-landscape filter now activates at night, not in sunny daytime. Decorations remain visible during the day. The New Year and winter nighttime dark filters follow the same rule.
+- Greatly reduced the permanent dark-blue overlay that previously made daytime landscapes appear overcast, including when the live chip reported Sunny. Cloudy, rainy, foggy and stormy conditions still receive progressively darker atmospheres.
+- Brightened sunny and partly cloudy daytime palettes while retaining card/text contrast and night/Sun/Moon layering.
+- Connected the drifting cloud and celestial cloud-mask opacity to the live cloud-cover percentage in automatic weather mode; manual weather previews use representative amounts.
+- Reconciled Open-Meteo cloud-cover observations with WMO clear/partly/overcast codes, so a contradictory low-cloud weather code does not always force a Sunny scene. Rain and other significant-weather codes continue to take priority.
+- The live weather chip now marks **Scene preview** when a manual sky or time override is active; Scene Studio describes how to restore synchronization.
+- Kept all 36 activities, Chess Academy card, holiday animations and weather/astronomy features unchanged otherwise.
+- Static verification: JavaScript and CSS parse correctly; nine weather classification cases and catalog consistency tests passed. Full browser screenshot testing was blocked by the execution environment.
+
+
 ## v31.19 — Chess Academy Activity Card Refresh (October 29, 2026)
 
 - Renamed the Immortal Snail Chess 3D card to **Chess Academy** while retaining its activity ID, original launch order and GitHub Pages URL.

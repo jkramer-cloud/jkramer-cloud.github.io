@@ -406,10 +406,10 @@ body[data-holiday="school"] .card{--card-accent:#e7d37f}
 /* v31.14 — separate full-screen scene and hero preview, behind all interactive cards. */
 .festival-page-canvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:1;pointer-events:none;opacity:.89;}
 .wrap{position:relative;z-index:2}
-body[data-holiday="halloween"] .valley-backdrop .valley-svg{filter:brightness(.55) saturate(.8) hue-rotate(26deg)}
-body[data-holiday="newyear"] .valley-backdrop .valley-svg{filter:brightness(.55) saturate(1.1) hue-rotate(28deg)}
+body[data-holiday="halloween"][data-time="night"] .valley-backdrop .valley-svg{filter:brightness(.55) saturate(.8) hue-rotate(26deg)}
+body[data-holiday="newyear"][data-time="night"] .valley-backdrop .valley-svg{filter:brightness(.55) saturate(1.1) hue-rotate(28deg)}
 body[data-holiday="independence"] .valley-backdrop .valley-svg{filter:brightness(.75) saturate(1.15)}
-body[data-holiday="winter"] .valley-backdrop .valley-svg{filter:brightness(.75) saturate(.75)}
+body[data-holiday="winter"][data-time="night"] .valley-backdrop .valley-svg{filter:brightness(.75) saturate(.75)}
 body[data-holiday="valentine"] .valley-backdrop .valley-svg{filter:brightness(.83) saturate(1.0) hue-rotate(325deg)}
 @media(prefers-reduced-motion:reduce){.festival-page-canvas{transition:none!important}}
 
@@ -520,6 +520,26 @@ body[data-holiday="starwars"] .hero{border-color:#a5d2fc}
 body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-holiday="sonic"] .hero{border-color:#ead071}
 /* Decorative overlay never blocks buttons or classroom content. */
 @media(prefers-reduced-motion:reduce){.astronomy-svg *{animation:none!important;transition:none!important}}
+
+/* v31.20 · Daylight/weather visual synchronization.
+   The old full-screen navy filter made even clear midday skies look overcast.
+   Cards keep their opaque contrast; the landscape receives actual daylight. */
+body[data-time="day"] .valley-backdrop::after{background:linear-gradient(180deg,#06213a08 0%,#0927430c 38%,#061a302d 74%,#06172c65 100%)}
+body[data-time="day"][data-sky="partly"] .valley-backdrop::after{background:linear-gradient(180deg,#06213a0e 0%,#09274319 38%,#061a303a 74%,#06172c72 100%)}
+body[data-time="day"][data-sky="cloudy"] .valley-backdrop::after,
+body[data-time="day"][data-sky="snow"] .valley-backdrop::after{background:linear-gradient(180deg,#10253827 0%,#10294336 45%,#081c3250 76%,#07172c7e 100%)}
+body[data-time="day"][data-sky="rain"] .valley-backdrop::after,
+body[data-time="day"][data-sky="fog"] .valley-backdrop::after,
+body[data-time="day"][data-sky="storm"] .valley-backdrop::after{background:linear-gradient(180deg,#0e253c33 0%,#142e454d 45%,#081c3262 76%,#07172c87 100%)}
+body[data-time="day"][data-sky="sunny"]{--sky-top:#56b7e6;--sky-bottom:#d0eef7;--cloud:#fffefa;--sun:#ffefb1}
+body[data-time="day"][data-sky="partly"]{--sky-top:#72b9df;--sky-bottom:#d4e9f2}
+body[data-time="day"][data-sky="sunny"] .valley-svg{filter:brightness(1.07) saturate(1.08)}
+body[data-time="day"][data-sky="partly"] .valley-svg{filter:brightness(1.035) saturate(1.03)}
+/* Cloud amount (from Open-Meteo when available) also affects Moon/Sun occlusion masks. */
+.valley-svg .cloud,.astronomy-svg .cloud{opacity:var(--scene-cloud-opacity,.72)}
+/* Stronger light in the short hero while preserving readable foreground headings. */
+body[data-time="day"] .hero-landscape{opacity:1}
+body[data-time="day"] .hero::before{background:linear-gradient(90deg,#0a223ccf 0%,#0a2c48b9 49%,#08314a25 100%)}
 </style>
 </head>
 <body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
@@ -692,7 +712,7 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
       </section>
       <details class="helper"><summary>For teachers: using and updating this hub</summary><p>Each activity opens its own existing website. The hub does not change those games or their saved progress. The grade filters are suggestions, not restrictions. To add a game, tutorial, simulation, or tool later, edit <code>activities.json</code> in this hub's GitHub repository. Use <code>status: planned</code> until the activity is ready, then change to <code>available</code> and add its live URL. This site is a directory, not an account system or assignment tracker.</p><p>School filtering may require your tech department to allow each destination URL, not just this hub's address.</p></details>
     </main>
-    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.19</strong> · Seasonal Learning Arcade</span></footer>
+    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.20</strong> · Seasonal Learning Arcade</span></footer>
   </div>
   <script>
   'use strict';
@@ -1626,10 +1646,16 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     if([71,73,75,77,85,86].includes(code))return 'snow';
     if([45,48].includes(code))return 'fog';
     if([51,53,55,56,57,61,63,65,66,67,80,81,82].includes(code))return 'rain';
-    if(code===0)return 'sunny';
-    if(code===1||code===2)return 'partly';
-    if(code===3)return 'cloudy';
-    if(Number.isFinite(clouds))return clouds>80?'cloudy':clouds>35?'partly':'sunny';
+    // Match the illustration to observed cloud coverage as well as the WMO code.
+    // Current weather codes can briefly disagree with the separate cloud-cover reading.
+    if([0,1,2,3].includes(code)){
+      if(Number.isFinite(clouds)){
+        if(clouds>=78)return 'cloudy';
+        if(clouds>=32)return 'partly';
+      }
+      return code===3?'cloudy':code===2?'partly':'sunny';
+    }
+    if(Number.isFinite(clouds))return clouds>=78?'cloudy':clouds>=32?'partly':'sunny';
     return 'partly';
   }
   function localDaylight(localDate){
@@ -1758,10 +1784,13 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     const sky=liveWeather?weatherClass(liveWeather.current.weather_code,liveWeather.current.cloud_cover):'partly';
     byId('weather-chip-icon').textContent=weatherIcon(sky,night);
     byId('weather-chip-title').textContent=liveWeather?'Naches · '+Math.round(liveWeather.current.temperature_2m)+'°F':'Naches Valley';
-    byId('weather-chip-sub').textContent=liveWeather?`${SKY_LABEL[sky]} · ${weatherSource==='live'?'Live': 'Saved forecast'}`:'Seasonal scene · Weather offline';
+    const previewActive=valleyPrefs.sky!=='auto'||valleyPrefs.time!=='auto';
+    const sourceLabel=weatherSource==='live'?'Live':'Saved forecast';
+    byId('weather-chip-sub').textContent=liveWeather?`${SKY_LABEL[sky]} · ${sourceLabel}${previewActive?' · Scene preview':''}`:'Seasonal scene · Weather offline';
     const status=liveWeather?(weatherSource==='live'?'Live conditions':'Previously saved weather'):'Weather unavailable';
     const age=liveWeather?' · updated '+Math.max(0,Math.round((Date.now()-weatherFetchedAt)/60000))+' minutes ago':'';
-    byId('weather-note').textContent=`${status}${age}. Automatic scenery follows the Naches, WA area. You can override any setting above.`;
+    const previewNote=previewActive?' A manual sky or time preview is active; choose “Back to live weather” to synchronize the scenery.':' Sunlight and cloud opacity reflect the selected sky and Naches daylight.';
+    byId('weather-note').textContent=`${status}${age}. Automatic scenery follows the Naches, WA area.${previewNote}`;
     byId('scene-last-updated').textContent=liveWeather?`Weather ${weatherSource==='live'?'retrieved':'cached'} ${new Date(weatherFetchedAt).toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}.`:'';
   }
   function updateValley(now=nachesNow()){
@@ -1783,6 +1812,14 @@ body[data-holiday="pacman"] .hero,body[data-holiday="tetris"] .hero,body[data-ho
     document.body.dataset.intensity=valleyPrefs.intensity;
     document.body.dataset.motion=valleyPrefs.motion?'on':'off';
     document.documentElement.style.setProperty('--weather-wind',liveWeather?.current?.wind_speed_10m>13?'1.6':'1');
+    // Use the live percentage for cloud density only in automatic mode.
+    // Manual previews deliberately use a representative density for the selected scene.
+    const cloudPercent=valleyPrefs.sky==='auto'&&Number.isFinite(liveWeather?.current?.cloud_cover)
+      ?Math.max(0,Math.min(100,liveWeather.current.cloud_cover))
+      :({sunny:5,partly:44,cloudy:90,rain:94,snow:87,fog:91,storm:97}[sky]??42);
+    document.documentElement.style.setProperty('--scene-cloud-opacity',(0.04+cloudPercent*.0089).toFixed(3));
+    document.body.dataset.weatherSource=liveWeather?(weatherSource==='live'?'live':'saved'):'seasonal';
+    document.body.dataset.weatherPreview=(valleyPrefs.sky!=='auto'||valleyPrefs.time!=='auto')?'yes':'no';
     updateAstronomy(new Date());
     byId('valley-scene-summary').textContent=`${SEASON_LABEL[season]} · ${SKY_LABEL[sky]} · ${night?'Night':'Day'}`;
     const holidayEl=byId('valley-holiday-caption');holidayEl.hidden=holiday==='none';holidayEl.textContent=holidayText;

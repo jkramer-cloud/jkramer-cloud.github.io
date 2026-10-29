@@ -4,11 +4,22 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.19 — Chess Academy Card Refresh**  
+**Current Hub release: v31.20 — Daylight & Weather Scene Synchronization**  
 **Updated:** October 29, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
+
+## What's new in v31.20 — Daylight and live weather scene fix
+
+The previous site darkened the entire background during Halloween week (October 25–31), even in bright daytime. That caused scenes to look overcast while the weather chip correctly showed Sunny. Halloween art is now visible in full daylight, reserving the haunted dark tint for after sunset.
+
+- Daytime scenes are noticeably brighter; cloudy, rainy and stormy skies still look appropriately dimmer.
+- Live cloud cover controls drifting cloud opacity (including the masking that places the Sun and Moon behind clouds). The Sun/Moon still appear behind mountains.
+- Observed cloud cover is considered alongside WMO weather conditions. The weather chip differentiates live and saved weather, and reports when a manual scene preview is selected.
+- To restore automatic syncing, open **Customize Scene** and choose **Back to live weather**, then **Refresh weather**. Weather is informational artwork, not a live camera or safety alert.
+
+**Installation:** Replace `index.html` in the `jkramer-cloud.github.io` repository. The included `activities.json` is unchanged from v31.19. No game repos need updating.
 
 ## What's new in v31.19 — Chess Academy card refresh (October 29, 2026)
 

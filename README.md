@@ -1,3 +1,7 @@
+# v31.23: Math Rush Style Studio Card Update
+
+Adds the v1.1 gameplay / cosmetic description to Math Rush. For actual bug fixes, publish the Math Rush game repository first. Other Hub pages and features are retained.
+
 # Naches Learning Hub
 
 **Games, interactive lessons, and creative learning tools for students.**
@@ -335,6 +339,6 @@ See `CHANGELOG.md` in the latest update packet for the release-specific summary.
 Gaming holiday scenes now draw along both exposed sides of the full-page valley as well as across the sky and in the small hero preview. These background illustrations stay below interactive game cards and controls. MAR10 background characters and enemies are fixed.
 
 
-## v31.22 — Budget Bites Interactive Kitchen
+## v31.23 — Budget Bites Interactive Kitchen
 
 Budget Bites now links to version 3 in the same `budget-bites` repository, with Recipe Box, 12-step interactive Banana Cinnamon Oats lesson, a visible reset, and expandable kitchen recipe metadata. Prior v31.21 Math Rush update and weather/daylight features are preserved.

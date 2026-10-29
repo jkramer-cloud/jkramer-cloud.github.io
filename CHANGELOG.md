@@ -1,3 +1,9 @@
+## Hub v31.23 — 2026-10-29: Math Rush v1.1 Gameplay & Style Studio
+
+- Updated Math Rush card, skills and mode to describe fixed collisions, five themed zones and cosmetic Style Studio.
+- Uses the same live Math Rush repository URL, so **publish the game repository first**.
+- Preserves v31.22 Budget Bites v3 Interactive Kitchen, Math Rush placement, all 37 activities, weather/daylight, seasonal scenes and previous content.
+
 # Naches Learning Hub — Changelog
 
 ## v31.22 — Budget Bites v3 (October 29, 2026)

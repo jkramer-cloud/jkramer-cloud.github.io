@@ -932,11 +932,11 @@
       "category": "math",
       "categoryLabel": "Math · Arcade Challenge",
       "type": "game",
-      "description": "Run, jump, slide, and dodge obstacles in an endless arcade adventure! Solve math problems by choosing the correct lane, collect coins, and unlock new characters. How far can you go?",
+      "description": "Dash through five changing worlds! Collect coins, jump crates, slide under barriers, dodge trains, and choose the correct math-answer lane. Unlock runners, outfits, hats, props, boards, and trails in the Style Studio. How far can you go?",
       "skills": [
         "Math fluency",
         "Mental math",
-        "Decision-making",
+        "Spatial reasoning",
         "Reaction time"
       ],
       "gradeLabel": "Grades 5–8 · Two math levels",
@@ -944,13 +944,13 @@
         "3-5",
         "6-8"
       ],
-      "mode": "Solo · Keyboard or touchscreen",
+      "mode": "Solo · Endless runner & Style Studio",
       "icon": "mathrush",
       "status": "available",
       "featured": true,
       "url": "https://jkramer-cloud.github.io/math-rush-endless-run/",
       "linkText": "Play Math Rush",
-      "releaseOrder": 27,
+      "releaseOrder": 29,
       "audience": "students"
     }
   ]

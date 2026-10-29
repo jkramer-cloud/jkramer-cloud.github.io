@@ -4,13 +4,57 @@
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.15 — Compact Dashboard Edition**  
-**Updated:** October 28, 2026  
+**Current Hub release: v31.16 — Living Sky & Game Day Celebrations**  
+**Updated:** October 29, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.
 
-## What's new in v31.15 — Compact Dashboard Edition (October 28, 2026)
+## What's new in v31.16 — Living Sky & Game Day Celebrations (October 29, 2026)
+
+This is a **drop-in update to the Hub only**, based on v31.15. All 36 activity entries (26 available and 10 planned), favorite settings, compact layout, search, weather service, and existing public and school holiday scenes remain intact.
+
+### A dynamic, location-aware Sun and Moon
+
+- The background now projects the **Sun and Moon for the approximate Naches Valley location** (46.73°N, 120.70°W), using the viewer's device clock and the Naches time zone. No individual location permission, API key, astronomical service, or new library is required.
+- The **Sun rises, climbs, and sets**, appearing substantially higher in summer than winter. The day/night background uses calculated solar altitude when live weather sunrise/sunset data is unavailable.
+- The **Moon appears during day or night only when it is approximately above the local horizon**. Its visible shape changes from new through waxing crescent, quarter, gibbous, full, waning gibbous, quarter, and crescent. A new Moon is essentially invisible.
+- A **soft lunar halo** becomes more prominent at night. A **warm orange Moon** is drawn when low on the horizon (an artistic approximation of atmospheric color). A **calendar blue moon** — the second astronomical full Moon in a local calendar month — receives a cooler blue halo and a text label, **not** an incorrectly blue Moon surface.
+- **Customize Scene** includes a compact moon-phase/visibility note. Sky positions refresh automatically approximately every 5 minutes while the Hub is open, even if the weather service is offline. Positions and rise/set visibility are approximations; exact local terrain, smoke and clouds can obscure real objects.
+- Manually choosing Day/Night previews **changes lighting**, not the calculated sky date. Thus a moon below the horizon will remain hidden in a nighttime preview.
+
+### Six new game and pop-culture celebration days
+
+Each day starts **automatically on its exact Naches-local calendar date**. Try it any time in **Customize Scene → Special-day decoration**; manual selection does not change the actual clock or astronomical sky.
+
+| Date | Theme | Animated background details |
+| --- | --- | --- |
+| **February 27** | Pokémon Day | Original fantasy creatures bouncing around with collectible orbs |
+| **March 10** | MAR10 Day | Glowing green portals, running/jumping platform adventurers, wandering mushroom-like foes and disappearing coins |
+| **May 4** | Star Wars Day | Fast-moving starfighters, trails and stars; tiny dueling figures with glowing energy blades alongside a droid |
+| **May 22** | PAC-MAN Birthday | A chomping arcade circle, dotted maze path and playful ghosts |
+| **June 6** | World Tetris Day | Falling colorful four-square puzzle pieces |
+| **June 23** | Sonic's Birthday | A blue speedster silhouette, golden rings and racing motion trails |
+
+The artwork is drawn locally with original Canvas2D shapes; **no licensed game art, character sprites, recordings or fonts are bundled**. Themes are unofficial fan homages, not affiliations or endorsements. All six scenes support static rendering through **Animate scenery off** or **Reduced Motion**, and automatically disappear when the corresponding date ends. These dates join, rather than replace, the existing holiday calendar.
+
+### Deployment and testing
+
+1. Download and extract `Naches_Learning_Hub_v31_16_Living_Sky_Game_Days_GitHub.zip`.
+2. Upload **`index.html` and `activities.json`** to the root of the main `jkramer-cloud.github.io` GitHub Pages repository, replacing the existing copies. (`activities.json` has not changed, but is included for convenience.)
+3. Optionally upload `README.md`, `CHANGELOG.md` and `UPLOAD_INSTRUCTIONS.md`; commit. No individual game repositories need updating.
+4. In the browser, hard-refresh with **Ctrl + Shift + R**, select **Customize Scene**, and preview MAR10 Day, Star Wars Day, and any other theme. Try **Night sky (moon if visible)** and read the phase note.
+
+**Known limitations:** The astronomy approximates orbital positions and uses a flat horizon; it does not predict a lunar eclipse or guarantee visible colors, cloud-free skies or exact rise/set moments. A “blue moon” is a calendar name, not a promise of a naturally blue Moon. Weather may be blocked by a school firewall without affecting the astronomy or holiday artwork. The live website is not changed until you publish the new files.
+
+### Calendar and franchise references
+
+- [Pokémon Day](https://press.pokemon.com/en/POKEMON-DAY-CELEBRATES-20-YEARS-OF-ICONIC-BRAND-13675) · [MAR10 Day](https://www.nintendo.com/us/whatsnew/nintendo-powers-up-mar10-day/) · [Star Wars Day](https://www.starwars.com/star-wars-day)
+- [PAC-MAN history](https://www.pacman.com/en/history/) · [World Tetris Day](https://play.tetris.com/news/the-tetris-company-celebrates-world-tetris-day) · [Sonic birthday](https://asia.sega.com/sonic-birthday2024/en/)
+
+---
+
+## Previous release: What's new in v31.15 — Compact Dashboard Edition (October 28, 2026)
 
 The main Hub is now easier to browse on school Chromebooks, without removing the weather effects, holiday decorations, or game artwork.
 

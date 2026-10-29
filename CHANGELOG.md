@@ -1,5 +1,16 @@
 # Learning Hub Changelog
 
+## v31.16 — Living Sky & Game Day Celebrations (October 29, 2026)
+
+- Added location-aware animated Sun and Moon with approximate sky positions for Naches, Washington; all moon phases, daylight lunar appearances, night glow and warm-horizon tint.
+- Detects second-full-Moon-in-a-month calendar blue moons without falsely depicting the actual surface blue. Shows a compact astronomy note in Scene Studio; computes offline and updates every 5 minutes.
+- Added six new manually previewable and automatically dated game celebrations: Pokémon Day (Feb 27), MAR10 (Mar 10), Star Wars Day (May 4), PAC-MAN Birthday (May 22), World Tetris Day (June 6), Sonic Birthday (June 23).
+- Added original self-rendered Canvas2D art for portals, coins, jumpers, foes, spacecraft, energy-blade duelists, droid, creatures, maze pellets, tetrominoes and speed/ring effects.
+- Preserved compact dashboard, all 36 activities and links, local settings, live weather/offline fallback, public-holiday scenes, animation controls and reduced-motion settings.
+- Browser smoke-tested desktop and mobile viewport scene switching with no page JavaScript errors; verified solar seasonal altitude and a known blue moon.
+
+
+
 ## v31.15 — Compact Dashboard Edition (October 28, 2026)
 
 - Shortened the hero to a compact illustrated welcome ribbon and kept Surprise Me.

@@ -1,3 +1,7 @@
+# Naches Learning Hub v31.24 — Valley Geography Quest Update
+
+Update from v31.23. This package changes the Geography Quest Hub catalog and its embedded backup description while preserving all other activities, content and seasonal settings. Publish the game repository update first.
+
 # v31.23: Math Rush Style Studio Card Update
 
 Adds the v1.1 gameplay / cosmetic description to Math Rush. For actual bug fixes, publish the Math Rush game repository first. Other Hub pages and features are retained.

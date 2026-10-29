@@ -1,3 +1,11 @@
+## Hub v31.24 — 2026-10-29: Valley Geography Quest v4
+
+- Updated Valley Geography Quest activity catalog and embedded fallback description.
+- Added regional quizzes, East Coast zoom, stopwatch races, and personal run history to the Hub card details.
+- Promoted geography to New to the Hub (existing 37 activities all retained).
+- Updated from v31.23, including all Math Rush v1.1, Budget Bites v3.0, holiday and weather changes.
+- Publish the geography game repository update first; the live URL stays the same.
+
 ## Hub v31.23 — 2026-10-29: Math Rush v1.1 Gameplay & Style Studio
 
 - Updated Math Rush card, skills and mode to describe fixed collisions, five themed zones and cosmetic Style Studio.

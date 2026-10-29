@@ -250,13 +250,13 @@
       "title": "Valley Geography Quest",
       "category": "socialstudies",
       "categoryLabel": "Social Studies · Geography & Maps",
-      "description": "Find all 50 states, name capitals, match state flags, race the map timer, and explore cities, rivers, and mountains around the Pacific Northwest.",
+      "description": "Explore all 50 states and capitals, choose a corner or half-country region, zoom in on tiny East Coast states, and race the stopwatch to beat your personal best. Includes PNW geography.",
       "skills": [
         "State locations",
+        "U.S. regions and map scales",
         "Capitals",
-        "Map skills",
-        "Pacific Northwest geography",
-        "Geographic reasoning"
+        "Speed, accuracy & personal improvement",
+        "Pacific Northwest geography"
       ],
       "gradeLabel": "Grades 3–12 · Adjustable",
       "gradeGroups": [
@@ -264,14 +264,14 @@
         "6-8",
         "9-12"
       ],
-      "mode": "Solo · Eight geography challenges",
+      "mode": "Solo · Regional quizzes, map zoom & timed trials",
       "linkText": "Explore the atlas",
       "url": "https://jkramer-cloud.github.io/valley-geography-quest/",
       "icon": "map",
       "featured": true,
       "status": "available",
       "type": "game",
-      "releaseOrder": 15
+      "releaseOrder": 30
     },
     {
       "id": "ascendant-reader",

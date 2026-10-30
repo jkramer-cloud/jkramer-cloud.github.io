@@ -1,3 +1,20 @@
+# Naches Learning Hub v31.26 — Card Clarity & Moon Refresh
+
+**October 30, 2026**
+
+This updates the existing v31.25 Learning Hub without removing activities.
+
+### What's new
+- Card controls (favorites, item numbers, and featured/status labels) now live in a dedicated header above the artwork, not on top of it.
+- Larger compact-mode artwork and more readable compact titles, categories, descriptions, and tags.
+- Mobile layout keeps the full-width card control header while retaining the thumbnail/text split.
+- Moon and Sun astronomical positions refresh every minute (previously every five minutes) while weather refresh remains on its prior schedule.
+- Astronomical approximation still uses Naches coordinates: the display is a scenic directional representation, not a precise real-world sky chart.
+- All 38 activities and existing links, categories, filters, and favorites are preserved.
+
+### Install
+Upload `index.html` from this package to the root of `jkramer-cloud/jkramer-cloud.github.io`, replacing the old `index.html`. `activities.json` is unchanged but included for completeness. Keep the other files as they are.
+
 # Naches Learning Hub v31.25 — Valley Word Quest
 
 **October 30, 2026**

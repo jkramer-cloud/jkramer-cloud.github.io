@@ -1,3 +1,10 @@
+## v31.26 — October 30, 2026
+- Moved favorite star, featured/status badge, and item number out of game-card artwork into a dedicated control header.
+- Improved compact thumbnail height, headings, labels and descriptions.
+- Ensured mobile compact card layout retains controls in its own header.
+- Increased astronomy refresh cadence from 5 minutes to 1 minute (moon and sun positions).
+- Kept the existing approximate Naches astronomical model and all 38 game links.
+
 ## v31.25 — October 30, 2026
 - Added Valley Word Quest: Daily Dash for grades 3–12 under ELA.
 - Added custom illustrated daily word puzzle with calendar and streak motifs for its Hub card.

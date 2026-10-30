@@ -1,8 +1,9 @@
-# Naches Learning Hub v31.25 — GitHub deployment
+# Naches Learning Hub v31.26 — GitHub deployment
 
-1. Publish the **Valley Word Quest** game separately in the repository `jkramer-cloud/valley-word-quest`. Confirm its GitHub Pages address is `https://jkramer-cloud.github.io/valley-word-quest/`.
-2. Open the **Learning Hub repository** `jkramer-cloud/jkramer-cloud.github.io`. Upload **both** files from this package: `index.html` and `activities.json`, replacing the existing versions in the repository root.
-3. Commit the changes. If GitHub Pages is already set up for the Hub, no other deployment settings need changing.
-4. Hard-refresh the Hub and search for **Valley Word Quest**. Confirm its illustrated ELA card launches the separate game in a new tab.
+1. Open your `jkramer-cloud/jkramer-cloud.github.io` repository.
+2. Extract the ZIP file and upload `index.html` to the repository root, replacing the existing `index.html`.
+3. `activities.json` is included and unchanged from v31.25; it may be uploaded as well but is not required if that version is already installed.
+4. Commit the changes, then hard-refresh the Hub (Ctrl+Shift+R).
+5. Verify that the favorite stars and status badges now appear above the game art, and that mobile cards remain readable.
 
-The files `README.md`, `CHANGELOG.md`, and `UPLOAD_INSTRUCTIONS.md` are optional reference documents. **Do not replace the Word Quest game's files with the Hub's `index.html`**; they belong in different repositories.
+No separate game repositories need to be changed.

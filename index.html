@@ -541,6 +541,23 @@ body[data-time="day"][data-sky="partly"] .valley-svg{filter:brightness(1.035) sa
 body[data-time="day"] .hero-landscape{opacity:1}
 body[data-time="day"] .hero::before{background:linear-gradient(90deg,#0a223ccf 0%,#0a2c48b9 49%,#08314a25 100%)}
 
+
+/* v31.27: local Naches golden hour / dawn color wash, placed behind cards. */
+.valley-backdrop .solar-tint,.hero-landscape .solar-tint{
+ position:absolute;inset:0;z-index:1;pointer-events:none;
+ opacity:var(--solar-opacity,0);transition:opacity 58s linear;
+ background:linear-gradient(180deg,#46528d 0%,#9164a2 26%,#f6a36d 48%,#ffdc8f 61%,transparent 82%);
+ mix-blend-mode:screen;
+}
+body[data-solar="dawn"] .solar-tint{background:linear-gradient(180deg,#40518f 0%,#8d78ae 25%,#faad7a 49%,#ffe3a0 64%,transparent 82%)}
+body[data-solar="dusk"] .solar-tint{background:linear-gradient(180deg,#3e4789 0%,#b76a93 27%,#ff9464 48%,#ffce86 64%,transparent 83%)}
+body[data-solar="dawn"] .valley-backdrop .valley-svg,body[data-solar="dusk"] .valley-backdrop .valley-svg{filter:brightness(var(--twilight-brightness,.9)) saturate(1.12)}
+body[data-solar="dawn"] .hero-landscape .valley-svg,body[data-solar="dusk"] .hero-landscape .valley-svg{filter:brightness(var(--twilight-brightness,.9)) saturate(1.08)}
+body[data-solar="dawn"] .valley-backdrop::before,body[data-solar="dusk"] .valley-backdrop::before{opacity:.20}
+body[data-solar="dawn"] .valley-backdrop::after,body[data-solar="dusk"] .valley-backdrop::after{background:linear-gradient(180deg,#1c224942 0%,#47263c1c 39%,#3f2d341d 68%,#06172c8c 100%)}
+@media(prefers-reduced-motion:reduce){.solar-tint{transition:none!important}}
+body[data-motion="off"] .solar-tint{transition:none!important}
+
 /* v31.26 — clear, readable cards with illustrations free of floating controls */
 .card-utility{
   display:flex;align-items:center;justify-content:space-between;gap:8px;
@@ -628,7 +645,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     <g class="holiday-art holiday-earth" transform="translate(1150 736)" fill="#8bca95"><path d="M0 0q-15-37 12-53q13 30-12 53q-35-7-37-28q23-7 37 28"/></g>
     <g class="holiday-art holiday-thanks" transform="translate(1140 753)" fill="#e9b356"><path d="M0-24l19 24-19 24-19-24Z"/><path d="M0-33V27M-29 0H29" stroke="#ffe6a6" stroke-width="3"/></g>
     <g class="holiday-art holiday-veterans" transform="translate(1200 639)" fill="#fff7db"><path d="M0-18 5-5 19-5 8 4 13 17 0 9-13 17-8 4-19-5-5-5Z"/></g>
-    </svg><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><mask id="astro-sky-occlusion-0" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" mask-type="luminance" x="0" y="0" width="1440" height="860"><rect width="1440" height="860" fill="#fff"/><path d="M0 546L94 451 181 489 292 306 386 421 494 250 617 434 718 160 852 407 956 245 1099 403 1186 283 1320 446 1440 348V860H0Z" fill="#000"/><path d="M0 600 105 494 205 549 300 322 391 463 486 269 607 459 716 186 839 421 957 276 1100 457 1185 304 1325 492 1440 376V860H0Z" fill="#000"/><g class="cloudscape astro-cloud-mask"><g class="cloud c1" fill="#000" opacity=".92" transform="translate(250 158) scale(1.04)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c2" fill="#000" opacity=".92" transform="translate(1000 112) scale(1.28)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c3" fill="#000" opacity=".92" transform="translate(1230 244) scale(0.83)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g></g></mask></defs><g class="astronomy-glyphs" mask="url(#astro-sky-occlusion-0)"></g></svg></div>
+    </svg><div class="solar-tint" aria-hidden="true"></div><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><mask id="astro-sky-occlusion-0" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" mask-type="luminance" x="0" y="0" width="1440" height="860"><rect width="1440" height="860" fill="#fff"/><path d="M0 546L94 451 181 489 292 306 386 421 494 250 617 434 718 160 852 407 956 245 1099 403 1186 283 1320 446 1440 348V860H0Z" fill="#000"/><path d="M0 600 105 494 205 549 300 322 391 463 486 269 607 459 716 186 839 421 957 276 1100 457 1185 304 1325 492 1440 376V860H0Z" fill="#000"/><g class="cloudscape astro-cloud-mask"><g class="cloud c1" fill="#000" opacity=".92" transform="translate(250 158) scale(1.04)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c2" fill="#000" opacity=".92" transform="translate(1000 112) scale(1.28)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c3" fill="#000" opacity=".92" transform="translate(1230 244) scale(0.83)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g></g></mask></defs><g class="astronomy-glyphs" mask="url(#astro-sky-occlusion-0)"></g></svg></div>
   <canvas id="festival-page-canvas" class="festival-page-canvas" aria-hidden="true"></canvas>
 <div class="wrap">
     <header class="top">
@@ -665,7 +682,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
           <select id="valley-wildlife" aria-label="Wildlife visitor"><option value="auto">Occasional visitor</option><option value="none">None</option><option value="squirrel">Squirrel</option><option value="deer">Deer</option><option value="elk">Elk</option><option value="coyote">Coyote</option><option value="rabbit">Rabbit</option><option value="fox">Fox</option><option value="owl">Owl</option><option value="raccoon">Raccoon</option><option value="bear">Bear</option></select>
         </label>
         <label>Special-day decoration
-          <select id="valley-holiday" aria-label="Special-day decoration"><option value="auto">Automatic · calendar</option><option value="none">None</option><option value="newyear">New Year</option><option value="stpat">St. Patrick’s Day</option><option value="pokemon">Pokémon Day · Feb 27</option><option value="mario">MAR10 Day · Mar 10</option><option value="starwars">Star Wars Day · May 4</option><option value="pacman">PAC-MAN Birthday · May 22</option><option value="tetris">World Tetris Day · June 6</option><option value="sonic">Sonic Birthday · June 23</option><option value="spring">Spring Celebration</option><option value="memorial">Memorial Day</option><option value="juneteenth">Juneteenth</option><option value="valentine">Valentine's Day</option><option value="earth">Earth Day</option><option value="veterans">Remembrance</option><option value="independence">Independence Day</option><option value="school">Back to School</option><option value="halloween">Halloween</option><option value="thanksgiving">Thanksgiving</option><option value="winter">Winter celebrations</option></select>
+          <select id="valley-holiday" aria-label="Special-day decoration"><option value="auto">Automatic · calendar</option><option value="none">None</option><option value="newyear">New Year</option><option value="stpat">St. Patrick’s Day</option><option value="pokemon">Pokémon Day · Feb 27</option><option value="mario">MAR10 Day · Mar 10</option><option value="starwars">Star Wars Day · May 4</option><option value="pacman">PAC-MAN Birthday · May 22</option><option value="tetris">World Tetris Day · June 6</option><option value="sonic">Sonic Birthday · June 23</option><option value="spring">Spring Celebration</option><option value="memorial">Memorial Day</option><option value="flagday">Flag Day · June 14</option><option value="juneteenth">Juneteenth</option><option value="valentine">Valentine's Day</option><option value="earth">Earth Day</option><option value="veterans">Remembrance</option><option value="independence">Independence Day</option><option value="school">Back to School</option><option value="halloween">Halloween</option><option value="thanksgiving">Thanksgiving</option><option value="winter">Winter celebrations</option></select>
         </label>
         <label class="scene-check"><input type="checkbox" id="valley-motion" checked> Animate scenery</label>
         <div class="studio-actions"><button type="button" class="studio-primary" id="scene-surprise">✦ Surprise me</button><button type="button" id="scene-reset">↺ Back to live weather</button><button type="button" id="weather-refresh">↻ Refresh weather</button><button type="button" id="scene-done">Done ✓</button></div>
@@ -711,7 +728,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     <g class="holiday-art holiday-earth" transform="translate(1150 736)" fill="#8bca95"><path d="M0 0q-15-37 12-53q13 30-12 53q-35-7-37-28q23-7 37 28"/></g>
     <g class="holiday-art holiday-thanks" transform="translate(1140 753)" fill="#e9b356"><path d="M0-24l19 24-19 24-19-24Z"/><path d="M0-33V27M-29 0H29" stroke="#ffe6a6" stroke-width="3"/></g>
     <g class="holiday-art holiday-veterans" transform="translate(1200 639)" fill="#fff7db"><path d="M0-18 5-5 19-5 8 4 13 17 0 9-13 17-8 4-19-5-5-5Z"/></g>
-    </svg><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><mask id="astro-sky-occlusion-1" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" mask-type="luminance" x="0" y="0" width="1440" height="860"><rect width="1440" height="860" fill="#fff"/><path d="M0 546L94 451 181 489 292 306 386 421 494 250 617 434 718 160 852 407 956 245 1099 403 1186 283 1320 446 1440 348V860H0Z" fill="#000"/><path d="M0 600 105 494 205 549 300 322 391 463 486 269 607 459 716 186 839 421 957 276 1100 457 1185 304 1325 492 1440 376V860H0Z" fill="#000"/><g class="cloudscape astro-cloud-mask"><g class="cloud c1" fill="#000" opacity=".92" transform="translate(250 158) scale(1.04)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c2" fill="#000" opacity=".92" transform="translate(1000 112) scale(1.28)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c3" fill="#000" opacity=".92" transform="translate(1230 244) scale(0.83)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g></g></mask></defs><g class="astronomy-glyphs" mask="url(#astro-sky-occlusion-1)"></g></svg></div>
+    </svg><div class="solar-tint" aria-hidden="true"></div><svg class="astronomy-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><mask id="astro-sky-occlusion-1" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse" mask-type="luminance" x="0" y="0" width="1440" height="860"><rect width="1440" height="860" fill="#fff"/><path d="M0 546L94 451 181 489 292 306 386 421 494 250 617 434 718 160 852 407 956 245 1099 403 1186 283 1320 446 1440 348V860H0Z" fill="#000"/><path d="M0 600 105 494 205 549 300 322 391 463 486 269 607 459 716 186 839 421 957 276 1100 457 1185 304 1325 492 1440 376V860H0Z" fill="#000"/><g class="cloudscape astro-cloud-mask"><g class="cloud c1" fill="#000" opacity=".92" transform="translate(250 158) scale(1.04)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c2" fill="#000" opacity=".92" transform="translate(1000 112) scale(1.28)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g><g class="cloud c3" fill="#000" opacity=".92" transform="translate(1230 244) scale(0.83)"><ellipse cx="0" cy="12" rx="79" ry="20"></ellipse><ellipse cx="-36" cy="0" rx="44" ry="27"></ellipse><ellipse cx="15" cy="-7" rx="51" ry="29"></ellipse><ellipse cx="57" cy="4" rx="40" ry="24"></ellipse></g></g></mask></defs><g class="astronomy-glyphs" mask="url(#astro-sky-occlusion-1)"></g></svg></div>
         <div class="hero-content">
           <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> THE NACHES LEARNING ARCADE</div>
           <h1 id="hero-title">Find your next <em>favorite.</em></h1>
@@ -1688,6 +1705,22 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
   if(!['subtle','normal','lively'].includes(valleyPrefs.intensity))valleyPrefs.intensity='normal';
   if(!['auto','day','night'].includes(valleyPrefs.time))valleyPrefs.time='auto';
   let liveWeather=null, weatherFetchedAt=0, weatherSource='offline',lastAttempt=0;
+  const RAINBOW_OBS_KEY='naches-hub-last-observed-sky-v1';
+  const RAINBOW_END_KEY='naches-hub-rainbow-until-v1';
+  let rainbowUntil=0;
+  try{const n=Number(localStorage.getItem(RAINBOW_END_KEY));rainbowUntil=Number.isFinite(n)&&n>Date.now()&&n<Date.now()+10*60000?n:0}catch{}
+  function registerObservedWeather(data,when=Date.now()){
+    // Only fresh API observations, never a saved forecast or manual scene preview.
+    const next=weatherClass(data.current.weather_code,data.current.cloud_cover);
+    let previous=null;
+    try{previous=JSON.parse(localStorage.getItem(RAINBOW_OBS_KEY)||'null')}catch{}
+    if(previous?.sky==='rain' && next==='sunny' && when>previous.at && when-previous.at<=2*60*60*1000){
+      const minutes=5+(stableHash(String(when))%6); // five to ten minutes, deterministic
+      rainbowUntil=when+minutes*60000;
+      try{localStorage.setItem(RAINBOW_END_KEY,String(rainbowUntil))}catch{}
+    }
+    try{localStorage.setItem(RAINBOW_OBS_KEY,JSON.stringify({sky:next,at:when}))}catch{}
+  }
   const WEATHER_TTL=45*60*1000;
   const CACHE_TTL=6*60*60*1000;
   function persistValley(){try{localStorage.setItem(VALLEY_PREF_KEY,JSON.stringify(valleyPrefs))}catch{}}
@@ -1707,7 +1740,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     if(m===2&&d===14)return ['valentine','Valentine’s Day · hearts in the orchard'];
     if(m===2&&d===27)return ['pokemon','Pokémon Day · creature collecting adventure'];
     if(m===3&&d===10)return ['mario','MAR10 Day · portals, coins and platform heroes'];
-    if(m===3&&d===17)return ['stpat','St. Patrick’s Day · green valley'];
+    if(m===3&&d===17)return ['stpat','St. Patrick’s Day · rainbow and pot of gold'];
     if(m===3&&d===20)return ['spring','Spring celebration · blooming valley'];
     if(m===4&&d===22)return ['earth','Earth Day · celebrate nature'];
     if(m===5&&d===4)return ['starwars','Star Wars Day · faraway galaxy visitors'];
@@ -1715,6 +1748,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     if(m===6&&d===6)return ['tetris','World Tetris Day · falling block puzzle'];
     if(m===6&&d===23)return ['sonic','Sonic Birthday · rings and speed trails'];
     if(m===5&&d===lastWeekday(y,4,1))return ['memorial','Memorial Day · remembrance'];
+    if(m===6&&d===14)return ['flagday','Flag Day · waving American flags'];
     if(m===6&&d===19)return ['juneteenth','Juneteenth · freedom and history'];
     if(m===7&&d>=3&&d<=4)return ['independence','Independence Day · red, white, and blue'];
     if((m===8&&d>=25)||(m===9&&d<=10))return ['school','Welcome back to school'];
@@ -1764,6 +1798,28 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     }
     if(Number.isFinite(clouds))return clouds>=78?'cloudy':clouds>=32?'partly':'sunny';
     return 'partly';
+  }
+  // Calculate real local solar elevation and direction from existing astronomical
+  // functions. The angular transition is based on the season and latitude, not
+  // fixed 6 AM / 6 PM times, and works when the weather service is unavailable.
+  function solarScene(now=new Date()){
+    const altitude=at=>skyPosition(astroCoords(at).sun,at).alt;
+    const h=altitude(now),before=altitude(new Date(now.getTime()-10*60000));
+    const after=altitude(new Date(now.getTime()+10*60000));
+    const rising=after>=before;
+    // Civil twilight (-6 degrees) through the low sun (+11 degrees).
+    const t=Math.max(0,Math.min(1,(h+6)/17));
+    const peak=Math.max(0,1-Math.abs(t-.35)/.65);
+    const inWindow=h>=-6&&h<=11;
+    return {phase:inWindow?(rising?'dawn':'dusk'):'none',opacity:inWindow?.18+.64*peak:0,
+      brightness:.67+.42*t,altitude:h};
+  }
+  function updateSolarScene(){
+    const sol=solarScene(new Date());
+    const manual=valleyPrefs.time!=='auto';
+    document.body.dataset.solar=manual?'none':sol.phase;
+    document.documentElement.style.setProperty('--solar-opacity',manual?'0':sol.opacity.toFixed(3));
+    document.documentElement.style.setProperty('--twilight-brightness',sol.brightness.toFixed(3));
   }
   function localDaylight(localDate){
     const minutes=localDate.getHours()*60+localDate.getMinutes();
@@ -1908,7 +1964,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     const wildlife=valleyPrefs.wildlife==='auto'?autoWildlife(stableHash('animal'+key)):valleyPrefs.wildlife;
     const [dateHoliday,dateHolidayText]=valleyHoliday(now);
     const holiday=valleyPrefs.holiday==='auto'?dateHoliday:valleyPrefs.holiday;
-    const names={none:'',newyear:'New Year · fireworks',pokemon:'Pokémon Day · creature parade',mario:'MAR10 Day · portal adventure',starwars:'Star Wars Day · galactic scene',pacman:'PAC-MAN Birthday · retro arcade',tetris:'World Tetris Day · block stacking',sonic:'Sonic Birthday · speed and rings',stpat:'St. Patrick’s Day · green valley',spring:'Spring · blossom celebration',memorial:'Memorial Day · remembrance',juneteenth:'Juneteenth · freedom and history',valentine:'Valentine’s Day · hearts in the orchard',earth:'Earth Day · celebrate nature',veterans:'Remembrance · gratitude',independence:'Independence Day · valley celebration',school:'Back to school',halloween:'Halloween · orchard lanterns',thanksgiving:'Thanksgiving · harvest season',winter:'Winter celebrations · orchard lights'};
+    const names={none:'',newyear:'New Year · fireworks',pokemon:'Pokémon Day · creature parade',mario:'MAR10 Day · portal adventure',starwars:'Star Wars Day · galactic scene',pacman:'PAC-MAN Birthday · retro arcade',tetris:'World Tetris Day · block stacking',sonic:'Sonic Birthday · speed and rings',stpat:'St. Patrick’s Day · rainbow and pot of gold',spring:'Spring · blossom celebration',memorial:'Memorial Day · remembrance',flagday:'Flag Day · waving flags',juneteenth:'Juneteenth · freedom and history',valentine:'Valentine’s Day · hearts in the orchard',earth:'Earth Day · celebrate nature',veterans:'Remembrance · gratitude',independence:'Independence Day · valley celebration',school:'Back to school',halloween:'Halloween · orchard lanterns',thanksgiving:'Thanksgiving · harvest season',winter:'Winter celebrations · orchard lights'};
     const holidayText=valleyPrefs.holiday==='auto'?dateHolidayText:(names[holiday]||'');
     const night=valleyPrefs.time==='auto'?!localDaylight(now):valleyPrefs.time==='night';
     document.body.dataset.season=season;
@@ -1918,6 +1974,16 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     document.body.dataset.holiday=holiday;
     document.body.dataset.intensity=valleyPrefs.intensity;
     document.body.dataset.motion=valleyPrefs.motion?'on':'off';
+    updateSolarScene();
+    const m=now.getMonth()+1,d=now.getDate();
+    const previewHoliday=valleyPrefs.holiday!=='auto' && valleyPrefs.holiday!=='none';
+    const timedRainbow=rainbowUntil>Date.now()&&rainbowUntil<=Date.now()+10*60*1000
+      &&sky==='sunny'&&valleyPrefs.sky==='auto'&&valleyPrefs.time==='auto'&&!night;
+    document.body.dataset.rainbow=holiday==='stpat'?'gold':(timedRainbow?'weather':'none');
+    document.body.dataset.pumpkin=((m===10&&d>=15)||(m===11&&d<=5)||previewHoliday&&holiday==='halloween')?'yes':'no';
+    document.body.dataset.jet=(m===7&&d>=1&&d<=6||previewHoliday&&holiday==='independence')?'yes':'no';
+    document.body.dataset.santa=((m===12&&d>=10&&d<=26)||previewHoliday&&holiday==='winter')?'yes':'no';
+    document.body.dataset.flags=([ 'independence','memorial','veterans','flagday'].includes(holiday)||m===7&&d>=1&&d<=6)?'yes':'no';
     document.documentElement.style.setProperty('--weather-wind',liveWeather?.current?.wind_speed_10m>13?'1.6':'1');
     // Use the live percentage for cloud density only in automatic mode.
     // Manual previews deliberately use a representative density for the selected scene.
@@ -1942,6 +2008,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
       if(!response.ok)throw new Error('Weather service returned '+response.status);
       const data=await response.json();
       if(!data?.current || !Number.isFinite(data.current.temperature_2m)||!Number.isFinite(data.current.weather_code))throw new Error('Weather response incomplete');
+      registerObservedWeather(data);
       liveWeather=data;weatherFetchedAt=Date.now();weatherSource='live';
       try{localStorage.setItem(WEATHER_CACHE_KEY,JSON.stringify({at:weatherFetchedAt,data}))}catch{}
     }catch(error){
@@ -1983,7 +2050,8 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
   updateValley();fetchWeather();
   // Refresh celestial placement every minute; Earth rotation moves the Moon
   // across the local sky about 15 degrees per hour. Weather remains slower.
-  setInterval(()=>{updateAstronomy(new Date());},60*1000);
+  setInterval(()=>{updateAstronomy(new Date());updateSolarScene();updateDynamicEvents();},60*1000);
+  function updateDynamicEvents(){updateValley();}
   setInterval(()=>{updateValley();},5*60*1000);
   setInterval(()=>{updateValley();fetchWeather();},15*60*1000);
 
@@ -2002,15 +2070,15 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
  const isPage=canvas.id==='festival-page-canvas';
  const hero=canvas.closest('.hero')||canvas,ctx=canvas.getContext('2d',{alpha:true});if(!ctx)continue;
  const motionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
- let width=1,height=1,holiday='',sky='',intensity='normal',motion=false;
+ let width=1,height=1,holiday='',sky='',intensity='normal',motion=false,rainbow='none',pumpkinEvent=false,jetEvent=false,santaEvent=false,flagsEvent=false;
  let tick=0,last=0,lastFire=0,lightningUntil=0,nextLightning=0,shoots=[],sparks=[];
  const rnd=(min,max)=>min+Math.random()*(max-min);
  const pos=(x,y)=>[width*x,height*y];
  const colors={newyear:['#ffdc62','#f18fc8','#8de2fa','#b9f28c','#e8abff','#ffffff'],independence:['#ed4c66','#ffffff','#638eff','#c7d5ff'],juneteenth:['#f5c353','#d9474b','#2c9a69','#1d293a']};
  const palette=['#f9ce77','#f3e2a6','#d0e8f8'];
  function resize(){const r=hero.getBoundingClientRect();width=Math.max(1,r.width);height=Math.max(1,r.height);const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw(performance.now(),true)}
- function enabled(){return document.body.dataset.motion!=='off'&&!motionQuery.matches&&(holiday!=='none'||sky==='storm')}
- function sync(){const ds=document.body.dataset;let prior=holiday;holiday=ds.holiday||'none';sky=ds.sky||'partly';intensity=ds.intensity||'normal';motion=enabled();if(prior!==holiday){shoots=[];sparks=[];tick=0;lastFire=0;if(enabled()&&(holiday==='newyear'||holiday==='independence')){for(let k=0;k<(isPage?3:2);k++)fireworkBurst(width*(.22+k*.27),height*(.20+(k%2)*.14));}}ctx.clearRect(0,0,width,height);draw(performance.now(),!motion);if(motion&&!active){active=true;requestAnimationFrame(loop)}}
+ function enabled(){return document.body.dataset.motion!=='off'&&!motionQuery.matches&&(holiday!=='none'||sky==='storm'||rainbow!=='none'||pumpkinEvent||jetEvent||santaEvent||flagsEvent)}
+ function sync(){const ds=document.body.dataset;let prior=holiday;holiday=ds.holiday||'none';sky=ds.sky||'partly';intensity=ds.intensity||'normal';rainbow=ds.rainbow||'none';pumpkinEvent=ds.pumpkin==='yes';jetEvent=ds.jet==='yes';santaEvent=ds.santa==='yes';flagsEvent=ds.flags==='yes';motion=enabled();if(prior!==holiday){shoots=[];sparks=[];tick=0;lastFire=0;if(enabled()&&(holiday==='newyear'||holiday==='independence')){for(let k=0;k<(isPage?3:2);k++)fireworkBurst(width*(.22+k*.27),height*(.20+(k%2)*.14));}}ctx.clearRect(0,0,width,height);draw(performance.now(),!motion);if(motion&&!active){active=true;requestAnimationFrame(loop)}}
  stageSync.push(sync);
  const strength=()=>intensity==='subtle'?.48:intensity==='lively'?1.48:1;
  const circ=(x,y,r,color)=>{ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=color;ctx.fill()};
@@ -2246,8 +2314,84 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
   }
  }
  let active=false;
- function draw(now,staticMode=false){ctx.clearRect(0,0,width,height);if(holiday==='none'&&sky!=='storm')return;
+
+ /* v31.27: original animated seasonal artwork. All effects sit BEHIND the
+    interactive catalog; no sound, pointer interception, or external assets. */
+ function seasonalEffects(staticMode){
+  if(!isPage)return;
+  const W=width,H=height,t=staticMode?0:performance.now()/1000;
+  const ease=(a,b,x)=>Math.max(0,Math.min(1,(x-a)/(b-a)));
+  if(rainbow!=='none'){
+   const r=Math.min(W*.455,H*.68),cx=W*.50,cy=H*.81;
+   const cols=['#ef6b6b','#f7aa4a','#f6dc67','#7bd288','#65bde8','#8187d9','#b28cdc'];
+   ctx.save();ctx.globalAlpha=rainbow==='gold'?.48:.36;
+   for(let j=0;j<7;j++){ctx.strokeStyle=cols[j];ctx.lineWidth=Math.max(4,Math.min(10,r*.018));ctx.beginPath();ctx.ellipse(cx,cy,r-j*ctx.lineWidth,r*.68-j*ctx.lineWidth,0,Math.PI,2*Math.PI);ctx.stroke();}
+   ctx.restore();
+   if(rainbow==='gold'){
+    const x=W*.945,y=H*.82;
+    ctx.save();ctx.translate(x,y);ctx.scale(Math.max(.7,Math.min(1.2,W/1220)),Math.max(.7,Math.min(1.2,W/1220)));
+    ctx.fillStyle='#3b2920';ctx.beginPath();ctx.moveTo(-30,-12);ctx.lineTo(28,-12);ctx.lineTo(20,23);ctx.quadraticCurveTo(0,35,-22,23);ctx.closePath();ctx.fill();
+    ctx.fillStyle='#ffcf47';for(let k=0;k<8;k++)circ(-22+k*6,-15-(k%3)*6,6,'#ffd763');
+    ctx.strokeStyle='#7b5639';ctx.lineWidth=6;ctx.beginPath();ctx.ellipse(0,-12,31,8,0,0,Math.PI*2);ctx.stroke();ctx.restore();
+   }
+  }
+  if(flagsEvent){
+   for(const [x,y,scale] of [[W*.027,H*.88,1],[W*.955,H*.87,-1]]){
+    const h=Math.min(136,H*.24),w=Math.min(102,W*.12);
+    line([[x,y],[x,y-h]],'#e1e8e3',4);circ(x,y-h,5,'#f6db86');
+    ctx.save();ctx.translate(x,y-h+9);ctx.scale(scale,1);
+    const wave=staticMode?0:Math.sin(t*3.4);
+    ctx.beginPath();ctx.moveTo(0,0);ctx.bezierCurveTo(w*.34,-7+wave*4,w*.75,5-wave*5,w,0);ctx.lineTo(w,57);ctx.bezierCurveTo(w*.66,63-wave*5,w*.28,47+wave*5,0,57);ctx.closePath();ctx.fillStyle='#f6f3ea';ctx.fill();
+    ctx.save();ctx.clip();for(let i=0;i<7;i++){ctx.fillStyle='#d34b57';ctx.fillRect(0,i*(57/7)*1.16,w,4.35)}
+    ctx.fillStyle='#32578b';ctx.fillRect(0,0,w*.42,30);
+    for(let i=0;i<18;i++)circ(4+(i%6)*w*.062,4+Math.floor(i/6)*9,1.2,'#fff');
+    ctx.restore();ctx.restore();
+   }
+  }
+  if(pumpkinEvent){
+   const ox=W*.047,oy=H*.89,sc=Math.max(.65,Math.min(1.1,W/1150));
+   ctx.save();ctx.translate(ox,oy);ctx.scale(sc,sc);
+   line([[-46,0],[43,0]],'#ad8359',9);line([[-28,0],[-6,-65]],'#b5895f',7);
+   line([[26,0],[-6,-65]],'#b5895f',7);circ(-6,-65,6,'#e4c78b');
+   const arm=staticMode?.36:Math.sin(Math.min(1,(t%22)/1.4)*Math.PI*.6)*.55;
+   ctx.save();ctx.translate(-6,-65);ctx.rotate(arm);
+   line([[0,21],[0,-67]],'#a97647',8);
+   circ(0,-73,11,'#e88a39');line([[0,-84],[4,-94]],'#527142',3);ctx.restore();ctx.restore();
+   const phase=staticMode?5:(t%22);
+   if(phase>1.3&&phase<12){const u=(phase-1.3)/10.7;
+    const px=W*.055+(W*.85)*u,py=H*.79-4*u-(Math.sin(Math.PI*u)*H*.52);
+    const kind=Math.floor(t/22)%3,size=[11,15,9][kind],color=['#ec923e','#f5e8c9','#dfb741'][kind];
+    ctx.save();ctx.translate(px,py);ctx.rotate(u*6);circ(0,0,size,color);
+    for(const xx of [-5,2,7])line([[xx,-size*.75],[xx-2,size*.75]],kind===1?'#b3a58e':'#ad632f',1.8);line([[0,-size],[4,-size-7]],'#598151',3);ctx.restore();
+   }
+  }
+  if(jetEvent){
+   const period=29,part=t%period;
+   if(part<12||staticMode){
+    const u=staticMode?.46:part/12,x=-135+u*(W+270),y=H*.20+Math.sin(u*Math.PI)*H*.035;
+    for(const [o,col] of [[-7,'#d6505e'],[0,'#f5f5f5'],[7,'#4675bc']]){
+     ctx.beginPath();ctx.strokeStyle=col;ctx.lineWidth=5;ctx.globalAlpha=.66;
+     for(let k=0;k<38;k++){let xx=x-k*8,yy=y+o+Math.sin((k*.42)+u*8)*3.5;if(k===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)}ctx.stroke();
+    }
+    ctx.globalAlpha=1;ctx.save();ctx.translate(x,y);ctx.fillStyle='#d5e7f0';ctx.beginPath();ctx.moveTo(44,0);ctx.lineTo(5,-7);ctx.lineTo(-16,-34);ctx.lineTo(-25,-34);ctx.lineTo(-15,-8);ctx.lineTo(-43,-5);ctx.lineTo(-46,6);ctx.lineTo(-15,8);ctx.lineTo(-25,30);ctx.lineTo(-17,31);ctx.lineTo(5,8);ctx.closePath();ctx.fill();circ(16,0,4,'#487eaa');ctx.restore();
+   }
+  }
+  if(santaEvent){
+   const period=39,part=t%period;
+   if(part<19||staticMode){
+    const u=staticMode?.48:part/19,x=W+170-u*(W+350),y=H*.13+Math.sin(u*Math.PI*2)*H*.022;
+    ctx.save();ctx.translate(x,y);ctx.scale(.95,.95);
+    line([[5,4],[88,5]],'#f1d2a0',1.8);
+    for(let i=0;i<5;i++){const dx=83+i*32,dy=(i%2)*-9;ctx.save();ctx.translate(dx,dy);ctx.fillStyle='#a2714d';ctx.beginPath();ctx.ellipse(0,0,12,8,0,0,2*Math.PI);ctx.fill();line([[8,0],[18,-9]],'#b08162',4);line([[-5,6],[-7,15]],'#e8cb9c',2);line([[5,6],[7,15]],'#e8cb9c',2);line([[17,-9],[20,-20]],'#c99d72',2);ctx.restore()}
+    ctx.fillStyle='#b62e3b';ctx.beginPath();ctx.moveTo(-59,-13);ctx.lineTo(10,-13);ctx.lineTo(-2,16);ctx.lineTo(-50,16);ctx.closePath();ctx.fill();
+    line([[-54,19],[10,18]],'#ecbd6a',5);circ(-16,-24,13,'#d83b48');circ(-19,-27,8,'#f4d9c3');ctx.fillStyle='#f4eadb';ctx.fillRect(-32,-38,29,6);circ(-4,-38,5,'#f4eadb');ctx.restore();
+   }
+  }
+ }
+
+ function draw(now,staticMode=false){ctx.clearRect(0,0,width,height);if(holiday==='none'&&sky!=='storm'&&rainbow==='none'&&!pumpkinEvent&&!jetEvent&&!santaEvent&&!flagsEvent)return;
   ctx.save();const scale=motion?1:0.7;ctx.globalAlpha=scale;
+  seasonalEffects(staticMode);
   if(holiday!=='none')holidayScene(staticMode);
   // Real storm mode: short, localized lightning rather than full-screen flashes.
   if(sky==='storm'&&holiday!=='newyear'&&holiday!=='independence'){

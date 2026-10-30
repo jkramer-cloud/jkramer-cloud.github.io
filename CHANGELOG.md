@@ -1,3 +1,10 @@
+## v31.27 — October 30, 2026
+- Added sunrise/golden-hour/sunset color blending based on Naches solar position; updates every minute, with daylight and seasonal behavior preserved.
+- Added background trebuchet with rotating pumpkin varieties (Oct 15–Nov 5).
+- Added jet flybys trailing patriotic smoke (Jul 1–6), Santa sleigh flybys (Dec 10–26), and waving American flags on patriotic dates.
+- Added St. Patrick’s Day rainbow with pot of gold; non-holiday rain-to-sun rainbows have **no** gold pot and expire after 5–10 minutes. Rain-to-cloudy does not trigger.
+- Retained 38 activities and v31.26 readability improvements.
+
 ## v31.26 — October 30, 2026
 - Moved favorite star, featured/status badge, and item number out of game-card artwork into a dedicated control header.
 - Improved compact thumbnail height, headings, labels and descriptions.

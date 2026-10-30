@@ -1,9 +1,9 @@
-# Naches Learning Hub v31.26 — GitHub deployment
+# Naches Learning Hub v31.27 — GitHub deployment
 
 1. Open your `jkramer-cloud/jkramer-cloud.github.io` repository.
-2. Extract the ZIP file and upload `index.html` to the repository root, replacing the existing `index.html`.
-3. `activities.json` is included and unchanged from v31.25; it may be uploaded as well but is not required if that version is already installed.
-4. Commit the changes, then hard-refresh the Hub (Ctrl+Shift+R).
-5. Verify that the favorite stars and status badges now appear above the game art, and that mobile cards remain readable.
+2. Extract the ZIP and upload `index.html` to the repository root, replacing the existing file.
+3. `activities.json` has not changed; it is included only for convenience.
+4. Commit changes, then hard-refresh the published Learning Hub (Ctrl+Shift+R).
+5. Check the current autumn trebuchet background. To preview St. Patrick’s Day, July 4th, and Winter effects, open **Customize Scene** and choose the appropriate holiday. Sunrise and sunset are automatic based on the configured Naches area.
 
-No separate game repositories need to be changed.
+No game repositories need to be updated.

@@ -1,3 +1,28 @@
+# Naches Learning Hub v31.27 — Seasonal Sky & Special Events
+
+**October 30, 2026**
+
+New seasonal background effects built on v31.26; all existing 38 activities, card readability fixes, favorites and links remain.
+
+### Seasonal effects
+- **Oct 15–Nov 5:** animated trebuchet hurls three different pumpkins periodically across the valley background.
+- **Mar 17:** festive seven-color rainbow **with** a pot of gold, plus existing shamrock decorations. The pot is shown only for St. Patrick’s Day.
+- **After observed rain becomes sunshine:** a normal rainbow (no pot) appears for 5–10 minutes. A rain-to-cloudy observation does **not** trigger it. Real weather checks depend on Open-Meteo observations; it cannot detect every brief change between updates. Neither a manually selected sky nor a cached forecast can create a new event.
+- **Jul 1–6:** jet flyby with red, white and blue smoke trailing behind.
+- **Dec 10–26:** occasional Santa sleigh and reindeer crossing the sky.
+- **Memorial Day, Flag Day, Independence Day period, Veterans Day:** larger illustrated American flags waving near the edges.
+- **Every day:** dawn / sunset color transition derived from approximate solar elevation at Naches (46.73, -120.70). It adjusts continuously around the actual solar horizon rather than fixed hours, and works when live weather is offline.
+
+The existing Scene Studio holiday selector previews holiday graphics. Effects render in the decorative background layer, never blocking game cards or buttons. Reduced-motion and the Animate Scenery toggle disable movement.
+
+### Install
+Replace the existing root `index.html` in `jkramer-cloud/jkramer-cloud.github.io` with the file from this ZIP; `activities.json` is included unchanged for convenience. Commit the change and hard-refresh the published page. No game repositories need modification.
+
+### Practical limitations
+The weather-triggered rainbow is based on weather **observations sampled when the Hub refreshes** (usually about every 45 minutes), not direct rainfall sensors. A transition between fetches may be missed. Solar phase and sky colors are attractive approximations; the actual mountains, clouds, and local weather can affect what sunset looks like. All animations are original illustrative art.
+
+---
+
 # Naches Learning Hub v31.26 — Card Clarity & Moon Refresh
 
 **October 30, 2026**

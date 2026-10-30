@@ -1976,14 +1976,23 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     document.body.dataset.motion=valleyPrefs.motion?'on':'off';
     updateSolarScene();
     const m=now.getMonth()+1,d=now.getDate();
-    const previewHoliday=valleyPrefs.holiday!=='auto' && valleyPrefs.holiday!=='none';
+    // Date-based background events are only automatic while both the season and
+    // special-day scene are on Automatic. Otherwise a manually chosen scene
+    // must not inherit an event from the real calendar (e.g. pumpkins in winter).
+    const calendarEvents=valleyPrefs.season==='auto'&&valleyPrefs.holiday==='auto';
+    // Explicit special-day selections are intentional previews, even off-season.
+    const previewHoliday=valleyPrefs.holiday!=='auto'&&valleyPrefs.holiday!=='none';
     const timedRainbow=rainbowUntil>Date.now()&&rainbowUntil<=Date.now()+10*60*1000
       &&sky==='sunny'&&valleyPrefs.sky==='auto'&&valleyPrefs.time==='auto'&&!night;
     document.body.dataset.rainbow=holiday==='stpat'?'gold':(timedRainbow?'weather':'none');
-    document.body.dataset.pumpkin=((m===10&&d>=15)||(m===11&&d<=5)||previewHoliday&&holiday==='halloween')?'yes':'no';
-    document.body.dataset.jet=(m===7&&d>=1&&d<=6||previewHoliday&&holiday==='independence')?'yes':'no';
-    document.body.dataset.santa=((m===12&&d>=10&&d<=26)||previewHoliday&&holiday==='winter')?'yes':'no';
-    document.body.dataset.flags=([ 'independence','memorial','veterans','flagday'].includes(holiday)||m===7&&d>=1&&d<=6)?'yes':'no';
+    const pumpkinSeason=(m===10&&d>=15)||(m===11&&d<=5);
+    const julyFlyby=m===7&&d>=1&&d<=6;
+    const santaSeason=m===12&&d>=10&&d<=26;
+    const patrioticHoliday=['independence','memorial','veterans','flagday'].includes(holiday);
+    document.body.dataset.pumpkin=(calendarEvents&&pumpkinSeason || previewHoliday&&holiday==='halloween')?'yes':'no';
+    document.body.dataset.jet=(calendarEvents&&julyFlyby || previewHoliday&&holiday==='independence')?'yes':'no';
+    document.body.dataset.santa=(calendarEvents&&santaSeason || previewHoliday&&holiday==='winter')?'yes':'no';
+    document.body.dataset.flags=(calendarEvents&&(patrioticHoliday||julyFlyby) || previewHoliday&&patrioticHoliday)?'yes':'no';
     document.documentElement.style.setProperty('--weather-wind',liveWeather?.current?.wind_speed_10m>13?'1.6':'1');
     // Use the live percentage for cloud density only in automatic mode.
     // Manual previews deliberately use a representative density for the selected scene.
@@ -2078,7 +2087,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
  const palette=['#f9ce77','#f3e2a6','#d0e8f8'];
  function resize(){const r=hero.getBoundingClientRect();width=Math.max(1,r.width);height=Math.max(1,r.height);const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw(performance.now(),true)}
  function enabled(){return document.body.dataset.motion!=='off'&&!motionQuery.matches&&(holiday!=='none'||sky==='storm'||rainbow!=='none'||pumpkinEvent||jetEvent||santaEvent||flagsEvent)}
- function sync(){const ds=document.body.dataset;let prior=holiday;holiday=ds.holiday||'none';sky=ds.sky||'partly';intensity=ds.intensity||'normal';rainbow=ds.rainbow||'none';pumpkinEvent=ds.pumpkin==='yes';jetEvent=ds.jet==='yes';santaEvent=ds.santa==='yes';flagsEvent=ds.flags==='yes';motion=enabled();if(prior!==holiday){shoots=[];sparks=[];tick=0;lastFire=0;if(enabled()&&(holiday==='newyear'||holiday==='independence')){for(let k=0;k<(isPage?3:2);k++)fireworkBurst(width*(.22+k*.27),height*(.20+(k%2)*.14));}}ctx.clearRect(0,0,width,height);draw(performance.now(),!motion);if(motion&&!active){active=true;requestAnimationFrame(loop)}}
+ function sync(){const ds=document.body.dataset;let prior=holiday,priorEvents=[pumpkinEvent,jetEvent,santaEvent,flagsEvent].join(',');holiday=ds.holiday||'none';sky=ds.sky||'partly';intensity=ds.intensity||'normal';rainbow=ds.rainbow||'none';pumpkinEvent=ds.pumpkin==='yes';jetEvent=ds.jet==='yes';santaEvent=ds.santa==='yes';flagsEvent=ds.flags==='yes';motion=enabled();if(prior!==holiday||priorEvents!==[pumpkinEvent,jetEvent,santaEvent,flagsEvent].join(',')){shoots=[];sparks=[];tick=0;lastFire=0;if(enabled()&&(holiday==='newyear'||holiday==='independence')){for(let k=0;k<(isPage?3:2);k++)fireworkBurst(width*(.22+k*.27),height*(.20+(k%2)*.14));}}ctx.clearRect(0,0,width,height);draw(performance.now(),!motion);if(motion&&!active){active=true;requestAnimationFrame(loop)}}
  stageSync.push(sync);
  const strength=()=>intensity==='subtle'?.48:intensity==='lively'?1.48:1;
  const circ=(x,y,r,color)=>{ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fillStyle=color;ctx.fill()};

@@ -1,9 +1,5 @@
-# Naches Learning Hub v31.27 — GitHub deployment
-
-1. Open your `jkramer-cloud/jkramer-cloud.github.io` repository.
-2. Extract the ZIP and upload `index.html` to the repository root, replacing the existing file.
-3. `activities.json` has not changed; it is included only for convenience.
-4. Commit changes, then hard-refresh the published Learning Hub (Ctrl+Shift+R).
-5. Check the current autumn trebuchet background. To preview St. Patrick’s Day, July 4th, and Winter effects, open **Customize Scene** and choose the appropriate holiday. Sunrise and sunset are automatic based on the configured Naches area.
-
-No game repositories need to be updated.
+1. Open https://github.com/jkramer-cloud/jkramer-cloud.github.io
+2. Replace `index.html` in the repository root with this package's `index.html`.
+3. Commit changes and open the Learning Hub.
+4. Hard-refresh (Ctrl+Shift+R).
+5. In Customize Scene, select **Winter** and check that the pumpkin trebuchet disappears. Select **Automatic** again to restore the calendar-driven event.

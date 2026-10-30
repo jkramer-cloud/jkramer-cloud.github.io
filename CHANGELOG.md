@@ -1,3 +1,9 @@
+## v31.25 — October 30, 2026
+- Added Valley Word Quest: Daily Dash for grades 3–12 under ELA.
+- Added custom illustrated daily word puzzle with calendar and streak motifs for its Hub card.
+- Synchronized external activities catalog and embedded fallback (38 activities).
+- Preserved previous 37 entries, URLs, and Hub features.
+
 ## Hub v31.24 — 2026-10-29: Valley Geography Quest v4
 
 - Updated Valley Geography Quest activity catalog and embedded fallback description.

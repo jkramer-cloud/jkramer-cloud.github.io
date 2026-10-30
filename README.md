@@ -1,3 +1,21 @@
+# Naches Learning Hub v31.25 — Valley Word Quest
+
+**October 30, 2026**
+
+Adds **Valley Word Quest: Daily Dash** (grades 3–12) to the ELA activities. Students can play a daily word puzzle, track streaks and fastest times, and browse the seasonal quest calendar. Its card has original illustrated word-grid/calendar art and is included in featured/new-game discovery.
+
+- New catalog entry: `valley-word-quest` (`releaseOrder: 30`)
+- GitHub Pages link: https://jkramer-cloud.github.io/valley-word-quest/
+- Updates both `activities.json` and the full in-page fallback catalog
+- Existing activity IDs and URLs unchanged; prior seasonal, weather, browsing, favorites, and recent-launch behavior preserved
+- **38 activities total** (previously 37)
+
+**Publish the separate Word Quest repository first.** The Hub is a launcher; this package does not include or host the Word Quest game. If the Word Quest GitHub Pages deployment is not enabled or ready, its Hub link will not open a playable game.
+
+**Hub installation:** Upload the updated `index.html` and `activities.json` to the root of the `jkramer-cloud.github.io` repository. Do not upload this ZIP as a single file. The remaining documents are optional.
+
+---
+
 # Naches Learning Hub v31.24 — Valley Geography Quest Update
 
 Update from v31.23. This package changes the Geography Quest Hub catalog and its embedded backup description while preserving all other activities, content and seasonal settings. Publish the game repository update first.
@@ -12,8 +30,8 @@ Adds the v1.1 gameplay / cosmetic description to Math Rush. For actual bug fixes
 
 The Naches Learning Hub brings educational games, skill-building activities, and classroom tools into one easy-to-browse website. Students can explore math, English language arts, reading, science, social studies, technology, and other topics from a single place.
 
-**Current Hub release: v31.21 — Math Rush: Endless Run**  
-**Updated:** October 29, 2026  
+**Current Hub release: v31.25 — Valley Word Quest: Daily Dash**  
+**Updated:** October 30, 2026  
 **Website:** [jkramer-cloud.github.io](https://jkramer-cloud.github.io/)
 
 > The Learning Hub is a *launcher and discovery site*. Most activities are hosted in their own GitHub Pages repositories and open through links in the Hub. Updating the Hub does not automatically update those games.

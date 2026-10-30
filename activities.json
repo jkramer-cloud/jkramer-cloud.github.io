@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-10-29",
+  "lastUpdated": "2026-10-30",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -951,6 +951,33 @@
       "url": "https://jkramer-cloud.github.io/math-rush-endless-run/",
       "linkText": "Play Math Rush",
       "releaseOrder": 29,
+      "audience": "students"
+    },
+    {
+      "id": "valley-word-quest",
+      "title": "Valley Word Quest: Daily Dash",
+      "category": "ela",
+      "categoryLabel": "ELA · Vocabulary & Word Games",
+      "type": "game",
+      "description": "A new word puzzle every day for each grade, with seasonal themes, timed word challenges, daily calendar, win streaks, achievements, and a celebratory finish. Build vocabulary with gradually longer words from grades 3–12.",
+      "skills": [
+        "Vocabulary",
+        "Spelling",
+        "Deduction"
+      ],
+      "gradeLabel": "Grades 3–12 · Daily challenge",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · One puzzle per grade each day",
+      "icon": "wordquest",
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/valley-word-quest/",
+      "linkText": "Play today’s word puzzle",
+      "releaseOrder": 30,
       "audience": "students"
     }
   ]

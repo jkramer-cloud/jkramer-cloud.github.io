@@ -1,5 +1,7 @@
-1. Open https://github.com/jkramer-cloud/jkramer-cloud.github.io
-2. Replace `index.html` in the repository root with this package's `index.html`.
-3. Commit changes and open the Learning Hub.
-4. Hard-refresh (Ctrl+Shift+R).
-5. In Customize Scene, select **Winter** and check that the pumpkin trebuchet disappears. Select **Automatic** again to restore the calendar-driven event.
+# GitHub Pages update — v31.29
+
+Replace `index.html` at the **root** of the existing `jkramer-cloud.github.io` GitHub repository. The ZIP also contains `activities.json` unchanged and optional documentation files. Do not put the files into an extra folder unless the repository is already configured that way.
+
+Commit the changes, then hard-refresh the public website using **Ctrl+Shift+R** (or use a private window to rule out cached files).
+
+Test **Customize Scene → Weather location**. Default is Naches; **Use computer location** requests browser permission. Test **Time of day → Sunrise** and **Sunset**; verify **Live weather** and an NWS alert-status message appear separately. A blocked NWS connection should display an alert-service error, not a false all-clear.

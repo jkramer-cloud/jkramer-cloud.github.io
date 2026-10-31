@@ -607,6 +607,34 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
   body[data-card-view="compact"] .card-utility .card-number,
   body[data-card-view="compact"] .card-utility .card-flag{display:inline-flex!important}
 }
+
+/* v31.29 — location, clearer night descriptions, sunrise/sunset and hazard scenes */
+.scene-sun-times{grid-column:1/-1;font-size:.79rem;color:#e8d7a4;margin:3px 0 0}
+.scene-location-button{display:block;width:max-content;max-width:100%;margin-top:7px;background:#1a506c;color:#f0fcff;border:1px solid #6cbad1;border-radius:8px;padding:7px 10px;font-size:.77rem;cursor:pointer}
+.scene-location-button:hover{background:#216785}
+.scene-location-status{display:block;margin-top:5px;font-size:.72rem;color:#b7dbe8;line-height:1.35}
+.weather-alert-panel{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:5px 12px;border:1px solid #7f9bad66;background:#122f47d6;padding:10px 12px;border-radius:10px;font-size:.78rem;color:#dfedf6}
+.weather-alert-panel strong{color:#ffda98}
+.weather-alert-panel a{color:#a1ddff;text-underline-offset:3px}
+.weather-alert-panel[data-alert="active"]{border-color:#edb55ba8;background:#41331ecd}
+.weather-alert-panel[data-alert="unavailable"]{border-color:#a9b5c164}
+#weather-alert-mini{color:#ffe1a3;font-weight:800}
+.weather-hail,.weather-ice{display:none}
+body[data-sky="hail"] .weather-hail,body[data-sky="hail"] .weather-rain{display:block}
+body[data-sky="sleet"] .weather-snow,body[data-sky="sleet"] .weather-rain{display:block}
+body[data-sky="freezing"] .weather-rain,body[data-sky="freezing"] .weather-ice,body[data-sky="frost"] .weather-ice,body[data-frost="yes"] .weather-ice{display:block}
+body[data-sky="drizzle"] .weather-rain{display:block;opacity:.30}
+body[data-sky="wind"] .weather-leaves{display:block}
+body[data-sky="hail"],body[data-sky="freezing"],body[data-sky="sleet"]{--cloud:#9dabb6;--sky-top:#526a80;--sky-bottom:#9bb2c3;--sun:#dce5ed}
+body[data-sky="frost"]{--cloud:#e4f7ff;--sky-top:#668aa7;--sky-bottom:#c3d8e5}
+body[data-sky="drizzle"]{--cloud:#d5e2e6;--sky-top:#8ea6b9;--sky-bottom:#c0d4d7}
+body[data-sky="wind"]{--cloud:#dae7f2;--sky-top:#79aaca;--sky-bottom:#d2e3ef}
+body[data-wind="strong"] .cloud{animation-duration:12s}
+body[data-wind="strong"] .weather-leaves{display:block;opacity:.5}
+body[data-intensity="subtle"] .weather-hail,body[data-intensity="subtle"] .weather-ice{opacity:.25}
+body[data-intensity="lively"] .weather-hail,body[data-intensity="lively"] .weather-ice{opacity:1}
+body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{animation:none!important}
+@media(prefers-reduced-motion:reduce){.weather-hail *,.weather-ice *{animation:none!important}}
 </style>
 </head>
 <body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
@@ -635,7 +663,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
       <g class="wildlife animal-bear" transform="translate(1110 762) scale(1.05)" fill="#533b31"><ellipse cx="0" cy="-19" rx="56" ry="34"/><circle cx="44" cy="-39" r="27"/><circle cx="27" cy="-62" r="10"/><circle cx="59" cy="-62" r="10"/><ellipse cx="57" cy="-27" rx="15" ry="10" fill="#95755c"/><circle cx="66" cy="-31" r="4" fill="#1d1513"/><circle cx="49" cy="-44" r="3" fill="#efe1c5"/><path d="M-38 2v24M-8 7v27M28 0v23" stroke="#473127" stroke-width="17" stroke-linecap="round"/></g></g>
       <g class="bird-flight" fill="none" stroke="var(--bird)" stroke-width="4" stroke-linecap="round"><path d="M0 5q11-14 23 0q11-14 23 0" transform="translate(50 33) scale(0.9)"/><path d="M0 5q11-14 23 0q11-14 23 0" transform="translate(90 65) scale(0.7)"/><path d="M0 5q11-14 23 0q11-14 23 0" transform="translate(118 29) scale(0.55)"/></g>
       <g class="weather-snow" fill="#eff8ff" opacity=".76"><circle class="particle snowflake p0" cx="41" cy="17" r="2"/><circle class="particle snowflake p1" cx="124" cy="70" r="3"/><circle class="particle snowflake p2" cx="207" cy="123" r="4"/><circle class="particle snowflake p3" cx="290" cy="176" r="2"/><circle class="particle snowflake p4" cx="373" cy="229" r="3"/><circle class="particle snowflake p0" cx="456" cy="282" r="4"/><circle class="particle snowflake p1" cx="539" cy="335" r="2"/><circle class="particle snowflake p2" cx="622" cy="388" r="3"/><circle class="particle snowflake p3" cx="705" cy="441" r="4"/><circle class="particle snowflake p4" cx="788" cy="494" r="2"/><circle class="particle snowflake p0" cx="871" cy="547" r="3"/><circle class="particle snowflake p1" cx="954" cy="600" r="4"/><circle class="particle snowflake p2" cx="1037" cy="653" r="2"/><circle class="particle snowflake p3" cx="1120" cy="706" r="3"/><circle class="particle snowflake p4" cx="1203" cy="759" r="4"/><circle class="particle snowflake p0" cx="1286" cy="812" r="2"/><circle class="particle snowflake p1" cx="1369" cy="45" r="3"/><circle class="particle snowflake p2" cx="12" cy="98" r="4"/><circle class="particle snowflake p3" cx="95" cy="151" r="2"/><circle class="particle snowflake p4" cx="178" cy="204" r="3"/><circle class="particle snowflake p0" cx="261" cy="257" r="4"/><circle class="particle snowflake p1" cx="344" cy="310" r="2"/><circle class="particle snowflake p2" cx="427" cy="363" r="3"/><circle class="particle snowflake p3" cx="510" cy="416" r="4"/><circle class="particle snowflake p4" cx="593" cy="469" r="2"/><circle class="particle snowflake p0" cx="676" cy="522" r="3"/><circle class="particle snowflake p1" cx="759" cy="575" r="4"/><circle class="particle snowflake p2" cx="842" cy="628" r="2"/><circle class="particle snowflake p3" cx="925" cy="681" r="3"/><circle class="particle snowflake p4" cx="1008" cy="734" r="4"/><circle class="particle snowflake p0" cx="1091" cy="787" r="2"/><circle class="particle snowflake p1" cx="1174" cy="20" r="3"/><circle class="particle snowflake p2" cx="1257" cy="73" r="4"/><circle class="particle snowflake p3" cx="1340" cy="126" r="2"/><circle class="particle snowflake p4" cx="1423" cy="179" r="3"/></g>
-      <g class="weather-rain" stroke="#a6d4f4" stroke-width="2.5" opacity=".55" stroke-linecap="round"><line class="particle raindrop p0" x1="32" y1="8" x2="25" y2="26"/><line class="particle raindrop p1" x1="103" y1="71" x2="96" y2="89"/><line class="particle raindrop p2" x1="174" y1="134" x2="167" y2="152"/><line class="particle raindrop p3" x1="245" y1="197" x2="238" y2="215"/><line class="particle raindrop p0" x1="316" y1="260" x2="309" y2="278"/><line class="particle raindrop p1" x1="387" y1="323" x2="380" y2="341"/><line class="particle raindrop p2" x1="458" y1="386" x2="451" y2="404"/><line class="particle raindrop p3" x1="529" y1="449" x2="522" y2="467"/><line class="particle raindrop p0" x1="600" y1="512" x2="593" y2="530"/><line class="particle raindrop p1" x1="671" y1="575" x2="664" y2="593"/><line class="particle raindrop p2" x1="742" y1="638" x2="735" y2="656"/><line class="particle raindrop p3" x1="813" y1="701" x2="806" y2="719"/><line class="particle raindrop p0" x1="884" y1="764" x2="877" y2="782"/><line class="particle raindrop p1" x1="955" y1="27" x2="948" y2="45"/><line class="particle raindrop p2" x1="1026" y1="90" x2="1019" y2="108"/><line class="particle raindrop p3" x1="1097" y1="153" x2="1090" y2="171"/><line class="particle raindrop p0" x1="1168" y1="216" x2="1161" y2="234"/><line class="particle raindrop p1" x1="1239" y1="279" x2="1232" y2="297"/><line class="particle raindrop p2" x1="1310" y1="342" x2="1303" y2="360"/><line class="particle raindrop p3" x1="1381" y1="405" x2="1374" y2="423"/><line class="particle raindrop p0" x1="12" y1="468" x2="5" y2="486"/><line class="particle raindrop p1" x1="83" y1="531" x2="76" y2="549"/><line class="particle raindrop p2" x1="154" y1="594" x2="147" y2="612"/><line class="particle raindrop p3" x1="225" y1="657" x2="218" y2="675"/><line class="particle raindrop p0" x1="296" y1="720" x2="289" y2="738"/><line class="particle raindrop p1" x1="367" y1="783" x2="360" y2="801"/><line class="particle raindrop p2" x1="438" y1="46" x2="431" y2="64"/><line class="particle raindrop p3" x1="509" y1="109" x2="502" y2="127"/><line class="particle raindrop p0" x1="580" y1="172" x2="573" y2="190"/><line class="particle raindrop p1" x1="651" y1="235" x2="644" y2="253"/><line class="particle raindrop p2" x1="722" y1="298" x2="715" y2="316"/><line class="particle raindrop p3" x1="793" y1="361" x2="786" y2="379"/><line class="particle raindrop p0" x1="864" y1="424" x2="857" y2="442"/><line class="particle raindrop p1" x1="935" y1="487" x2="928" y2="505"/><line class="particle raindrop p2" x1="1006" y1="550" x2="999" y2="568"/><line class="particle raindrop p3" x1="1077" y1="613" x2="1070" y2="631"/><line class="particle raindrop p0" x1="1148" y1="676" x2="1141" y2="694"/><line class="particle raindrop p1" x1="1219" y1="739" x2="1212" y2="757"/><line class="particle raindrop p2" x1="1290" y1="2" x2="1283" y2="20"/><line class="particle raindrop p3" x1="1361" y1="65" x2="1354" y2="83"/><line class="particle raindrop p0" x1="1432" y1="128" x2="1425" y2="146"/><line class="particle raindrop p1" x1="63" y1="191" x2="56" y2="209"/><line class="particle raindrop p2" x1="134" y1="254" x2="127" y2="272"/><line class="particle raindrop p3" x1="205" y1="317" x2="198" y2="335"/><line class="particle raindrop p0" x1="276" y1="380" x2="269" y2="398"/><line class="particle raindrop p1" x1="347" y1="443" x2="340" y2="461"/></g>
+      <g class="weather-rain" stroke="#a6d4f4" stroke-width="2.5" opacity=".55" stroke-linecap="round"><line class="particle raindrop p0" x1="32" y1="8" x2="25" y2="26"/><line class="particle raindrop p1" x1="103" y1="71" x2="96" y2="89"/><line class="particle raindrop p2" x1="174" y1="134" x2="167" y2="152"/><line class="particle raindrop p3" x1="245" y1="197" x2="238" y2="215"/><line class="particle raindrop p0" x1="316" y1="260" x2="309" y2="278"/><line class="particle raindrop p1" x1="387" y1="323" x2="380" y2="341"/><line class="particle raindrop p2" x1="458" y1="386" x2="451" y2="404"/><line class="particle raindrop p3" x1="529" y1="449" x2="522" y2="467"/><line class="particle raindrop p0" x1="600" y1="512" x2="593" y2="530"/><line class="particle raindrop p1" x1="671" y1="575" x2="664" y2="593"/><line class="particle raindrop p2" x1="742" y1="638" x2="735" y2="656"/><line class="particle raindrop p3" x1="813" y1="701" x2="806" y2="719"/><line class="particle raindrop p0" x1="884" y1="764" x2="877" y2="782"/><line class="particle raindrop p1" x1="955" y1="27" x2="948" y2="45"/><line class="particle raindrop p2" x1="1026" y1="90" x2="1019" y2="108"/><line class="particle raindrop p3" x1="1097" y1="153" x2="1090" y2="171"/><line class="particle raindrop p0" x1="1168" y1="216" x2="1161" y2="234"/><line class="particle raindrop p1" x1="1239" y1="279" x2="1232" y2="297"/><line class="particle raindrop p2" x1="1310" y1="342" x2="1303" y2="360"/><line class="particle raindrop p3" x1="1381" y1="405" x2="1374" y2="423"/><line class="particle raindrop p0" x1="12" y1="468" x2="5" y2="486"/><line class="particle raindrop p1" x1="83" y1="531" x2="76" y2="549"/><line class="particle raindrop p2" x1="154" y1="594" x2="147" y2="612"/><line class="particle raindrop p3" x1="225" y1="657" x2="218" y2="675"/><line class="particle raindrop p0" x1="296" y1="720" x2="289" y2="738"/><line class="particle raindrop p1" x1="367" y1="783" x2="360" y2="801"/><line class="particle raindrop p2" x1="438" y1="46" x2="431" y2="64"/><line class="particle raindrop p3" x1="509" y1="109" x2="502" y2="127"/><line class="particle raindrop p0" x1="580" y1="172" x2="573" y2="190"/><line class="particle raindrop p1" x1="651" y1="235" x2="644" y2="253"/><line class="particle raindrop p2" x1="722" y1="298" x2="715" y2="316"/><line class="particle raindrop p3" x1="793" y1="361" x2="786" y2="379"/><line class="particle raindrop p0" x1="864" y1="424" x2="857" y2="442"/><line class="particle raindrop p1" x1="935" y1="487" x2="928" y2="505"/><line class="particle raindrop p2" x1="1006" y1="550" x2="999" y2="568"/><line class="particle raindrop p3" x1="1077" y1="613" x2="1070" y2="631"/><line class="particle raindrop p0" x1="1148" y1="676" x2="1141" y2="694"/><line class="particle raindrop p1" x1="1219" y1="739" x2="1212" y2="757"/><line class="particle raindrop p2" x1="1290" y1="2" x2="1283" y2="20"/><line class="particle raindrop p3" x1="1361" y1="65" x2="1354" y2="83"/><line class="particle raindrop p0" x1="1432" y1="128" x2="1425" y2="146"/><line class="particle raindrop p1" x1="63" y1="191" x2="56" y2="209"/><line class="particle raindrop p2" x1="134" y1="254" x2="127" y2="272"/><line class="particle raindrop p3" x1="205" y1="317" x2="198" y2="335"/><line class="particle raindrop p0" x1="276" y1="380" x2="269" y2="398"/><line class="particle raindrop p1" x1="347" y1="443" x2="340" y2="461"/></g><g class="weather-hail" fill="#d8f1ff" stroke="#85a9c7" stroke-width="1.2" opacity=".82"><circle class="particle snowflake p0" cx="33" cy="42" r="2.6"/><circle class="particle snowflake p1" cx="106" cy="145" r="3.9"/><circle class="particle snowflake p2" cx="179" cy="248" r="5.2"/><circle class="particle snowflake p3" cx="252" cy="351" r="2.6"/><circle class="particle snowflake p4" cx="325" cy="454" r="3.9"/><circle class="particle snowflake p0" cx="398" cy="557" r="5.2"/><circle class="particle snowflake p1" cx="471" cy="660" r="2.6"/><circle class="particle snowflake p2" cx="544" cy="763" r="3.9"/><circle class="particle snowflake p3" cx="617" cy="26" r="5.2"/><circle class="particle snowflake p4" cx="690" cy="129" r="2.6"/><circle class="particle snowflake p0" cx="763" cy="232" r="3.9"/><circle class="particle snowflake p1" cx="836" cy="335" r="5.2"/><circle class="particle snowflake p2" cx="909" cy="438" r="2.6"/><circle class="particle snowflake p3" cx="982" cy="541" r="3.9"/><circle class="particle snowflake p4" cx="1055" cy="644" r="5.2"/><circle class="particle snowflake p0" cx="1128" cy="747" r="2.6"/><circle class="particle snowflake p1" cx="1201" cy="10" r="3.9"/><circle class="particle snowflake p2" cx="1274" cy="113" r="5.2"/><circle class="particle snowflake p3" cx="1347" cy="216" r="2.6"/><circle class="particle snowflake p4" cx="1420" cy="319" r="3.9"/><circle class="particle snowflake p0" cx="53" cy="422" r="5.2"/><circle class="particle snowflake p1" cx="126" cy="525" r="2.6"/><circle class="particle snowflake p2" cx="199" cy="628" r="3.9"/><circle class="particle snowflake p3" cx="272" cy="731" r="5.2"/><circle class="particle snowflake p4" cx="345" cy="834" r="2.6"/><circle class="particle snowflake p0" cx="418" cy="97" r="3.9"/><circle class="particle snowflake p1" cx="491" cy="200" r="5.2"/><circle class="particle snowflake p2" cx="564" cy="303" r="2.6"/><circle class="particle snowflake p3" cx="637" cy="406" r="3.9"/><circle class="particle snowflake p4" cx="710" cy="509" r="5.2"/><circle class="particle snowflake p0" cx="783" cy="612" r="2.6"/><circle class="particle snowflake p1" cx="856" cy="715" r="3.9"/><circle class="particle snowflake p2" cx="929" cy="818" r="5.2"/><circle class="particle snowflake p3" cx="1002" cy="81" r="2.6"/><circle class="particle snowflake p4" cx="1075" cy="184" r="3.9"/><circle class="particle snowflake p0" cx="1148" cy="287" r="5.2"/><circle class="particle snowflake p1" cx="1221" cy="390" r="2.6"/><circle class="particle snowflake p2" cx="1294" cy="493" r="3.9"/><circle class="particle snowflake p3" cx="1367" cy="596" r="5.2"/><circle class="particle snowflake p4" cx="0" cy="699" r="2.6"/><circle class="particle snowflake p0" cx="73" cy="802" r="3.9"/><circle class="particle snowflake p1" cx="146" cy="65" r="5.2"/></g><g class="weather-ice" fill="#bdeaff" opacity=".72"><path class="particle snowflake p0" d="M49 37 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M176 116 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M303 195 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M430 274 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M557 353 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M684 432 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M811 511 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M938 590 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M1065 669 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M1192 748 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M1319 827 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M6 76 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M133 155 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M260 234 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M387 313 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M514 392 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M641 471 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M768 550 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M895 629 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M1022 708 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M1149 787 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M1276 36 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M1403 115 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M90 194 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M217 273 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M344 352 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M471 431 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M598 510 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/></g><g class="weather-hail" fill="#d8f1ff" stroke="#85a9c7" stroke-width="1.2" opacity=".82"><circle class="particle snowflake p0" cx="33" cy="42" r="2.6"/><circle class="particle snowflake p1" cx="106" cy="145" r="3.9"/><circle class="particle snowflake p2" cx="179" cy="248" r="5.2"/><circle class="particle snowflake p3" cx="252" cy="351" r="2.6"/><circle class="particle snowflake p4" cx="325" cy="454" r="3.9"/><circle class="particle snowflake p0" cx="398" cy="557" r="5.2"/><circle class="particle snowflake p1" cx="471" cy="660" r="2.6"/><circle class="particle snowflake p2" cx="544" cy="763" r="3.9"/><circle class="particle snowflake p3" cx="617" cy="26" r="5.2"/><circle class="particle snowflake p4" cx="690" cy="129" r="2.6"/><circle class="particle snowflake p0" cx="763" cy="232" r="3.9"/><circle class="particle snowflake p1" cx="836" cy="335" r="5.2"/><circle class="particle snowflake p2" cx="909" cy="438" r="2.6"/><circle class="particle snowflake p3" cx="982" cy="541" r="3.9"/><circle class="particle snowflake p4" cx="1055" cy="644" r="5.2"/><circle class="particle snowflake p0" cx="1128" cy="747" r="2.6"/><circle class="particle snowflake p1" cx="1201" cy="10" r="3.9"/><circle class="particle snowflake p2" cx="1274" cy="113" r="5.2"/><circle class="particle snowflake p3" cx="1347" cy="216" r="2.6"/><circle class="particle snowflake p4" cx="1420" cy="319" r="3.9"/><circle class="particle snowflake p0" cx="53" cy="422" r="5.2"/><circle class="particle snowflake p1" cx="126" cy="525" r="2.6"/><circle class="particle snowflake p2" cx="199" cy="628" r="3.9"/><circle class="particle snowflake p3" cx="272" cy="731" r="5.2"/><circle class="particle snowflake p4" cx="345" cy="834" r="2.6"/><circle class="particle snowflake p0" cx="418" cy="97" r="3.9"/><circle class="particle snowflake p1" cx="491" cy="200" r="5.2"/><circle class="particle snowflake p2" cx="564" cy="303" r="2.6"/><circle class="particle snowflake p3" cx="637" cy="406" r="3.9"/><circle class="particle snowflake p4" cx="710" cy="509" r="5.2"/><circle class="particle snowflake p0" cx="783" cy="612" r="2.6"/><circle class="particle snowflake p1" cx="856" cy="715" r="3.9"/><circle class="particle snowflake p2" cx="929" cy="818" r="5.2"/><circle class="particle snowflake p3" cx="1002" cy="81" r="2.6"/><circle class="particle snowflake p4" cx="1075" cy="184" r="3.9"/><circle class="particle snowflake p0" cx="1148" cy="287" r="5.2"/><circle class="particle snowflake p1" cx="1221" cy="390" r="2.6"/><circle class="particle snowflake p2" cx="1294" cy="493" r="3.9"/><circle class="particle snowflake p3" cx="1367" cy="596" r="5.2"/><circle class="particle snowflake p4" cx="0" cy="699" r="2.6"/><circle class="particle snowflake p0" cx="73" cy="802" r="3.9"/><circle class="particle snowflake p1" cx="146" cy="65" r="5.2"/></g><g class="weather-ice" fill="#bdeaff" opacity=".72"><path class="particle snowflake p0" d="M49 37 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M176 116 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M303 195 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M430 274 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M557 353 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M684 432 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M811 511 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M938 590 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M1065 669 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M1192 748 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M1319 827 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M6 76 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M133 155 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M260 234 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M387 313 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M514 392 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M641 471 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M768 550 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M895 629 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M1022 708 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M1149 787 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M1276 36 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M1403 115 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p3" d="M90 194 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p4" d="M217 273 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p0" d="M344 352 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p1" d="M471 431 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/><path class="particle snowflake p2" d="M598 510 l-5 -7 m5 7 l5 -7 m-5 7 v-11" stroke="#d7fcff" stroke-width="2" stroke-linecap="round" fill="none"/></g>
       <g class="weather-leaves" fill="var(--leaf-alt)" opacity=".7"><path class="particle falling-leaf p0" d="M82 35q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p1" d="M233 94q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p2" d="M384 153q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p3" d="M535 212q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p0" d="M686 271q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p1" d="M837 330q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p2" d="M988 389q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p3" d="M1139 448q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p0" d="M1290 507q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p1" d="M1 566q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p2" d="M152 625q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p3" d="M303 684q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p0" d="M454 743q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p1" d="M605 52q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p2" d="M756 111q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p3" d="M907 170q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p0" d="M1058 229q13-6 15 3q-7 12-15-3"/><path class="particle falling-leaf p1" d="M1209 288q13-6 15 3q-7 12-15-3"/></g>
       <g class="weather-petals" fill="#fce0e6" opacity=".78"><ellipse class="particle drifting-petal p0" cx="27" cy="41" rx="3" ry="6"/><ellipse class="particle drifting-petal p1" cx="190" cy="112" rx="3" ry="6"/><ellipse class="particle drifting-petal p2" cx="353" cy="183" rx="3" ry="6"/><ellipse class="particle drifting-petal p3" cx="516" cy="254" rx="3" ry="6"/><ellipse class="particle drifting-petal p0" cx="679" cy="325" rx="3" ry="6"/><ellipse class="particle drifting-petal p1" cx="842" cy="396" rx="3" ry="6"/><ellipse class="particle drifting-petal p2" cx="1005" cy="467" rx="3" ry="6"/><ellipse class="particle drifting-petal p3" cx="1168" cy="538" rx="3" ry="6"/><ellipse class="particle drifting-petal p0" cx="1331" cy="609" rx="3" ry="6"/><ellipse class="particle drifting-petal p1" cx="54" cy="680" rx="3" ry="6"/><ellipse class="particle drifting-petal p2" cx="217" cy="751" rx="3" ry="6"/><ellipse class="particle drifting-petal p3" cx="380" cy="32" rx="3" ry="6"/><ellipse class="particle drifting-petal p0" cx="543" cy="103" rx="3" ry="6"/><ellipse class="particle drifting-petal p1" cx="706" cy="174" rx="3" ry="6"/><ellipse class="particle drifting-petal p2" cx="869" cy="245" rx="3" ry="6"/><ellipse class="particle drifting-petal p3" cx="1032" cy="316" rx="3" ry="6"/><ellipse class="particle drifting-petal p0" cx="1195" cy="387" rx="3" ry="6"/><ellipse class="particle drifting-petal p1" cx="1358" cy="458" rx="3" ry="6"/><ellipse class="particle drifting-petal p2" cx="81" cy="529" rx="3" ry="6"/></g>
       <g class="holiday-art holiday-halloween" transform="translate(1170 724)"><path d="M-22 8 Q-29-32 0-38Q34-35 30 6 Q6 33-22 8" fill="#e9852f"/><path d="M0-36l6-15" stroke="#3b6237" stroke-width="7"/><path d="M-16-6l8-10 8 10m9 0 9-10 8 10M-13 6Q2 20 18 6" stroke="#372321" stroke-width="4" fill="none"/></g>
@@ -654,9 +682,9 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
         <div><div class="brandtitle">NACHES LEARNING HUB</div><div class="brandsub">Games • Lessons • Tools</div></div>
       </a>
       <div class="header-actions">
-        <div class="weather-chip" id="weather-chip" role="status" aria-live="polite" title="Weather for Naches, Washington">
+        <div class="weather-chip" id="weather-chip" role="status" aria-live="polite" title="Weather for the selected location">
           <span class="weather-chip-icon" id="weather-chip-icon" aria-hidden="true">☁</span>
-          <span class="weather-chip-copy"><strong id="weather-chip-title">Naches weather</strong><small id="weather-chip-sub">Checking conditions…</small></span>
+          <span class="weather-chip-copy"><strong id="weather-chip-title">Naches weather</strong><small id="weather-chip-sub">Checking conditions…</small><small id="weather-alert-mini" hidden></small></span>
         </div>
         <button class="customize-trigger" type="button" id="scene-open" aria-controls="valley-settings" aria-expanded="false"><span aria-hidden="true">☀</span> Customize Scene <span aria-hidden="true">⚙</span></button>
         <a class="toplink" href="https://github.com/jkramer-cloud" target="_blank" rel="noopener noreferrer">Projects ↗</a>
@@ -666,14 +694,19 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
       <summary><span aria-hidden="true">✧</span> <span id="valley-scene-summary">Naches Valley · Seasonal scenery</span><span class="scene-control-hint">Scene Studio <span aria-hidden="true">▾</span></span></summary>
       <div class="studio-intro"><div class="studio-badge" aria-hidden="true">☀ ☁ ✦</div><div><strong>Make the valley yours</strong><p>Follow the real weather or choose any scene. Changes are saved to this browser.</p></div></div>
       <div class="valley-settings-inner">
+        <label>Weather location
+          <select id="weather-location" aria-label="Weather location"><option value="naches">Naches, Washington (default)</option><option value="device">This computer’s location (ask permission)</option></select>
+          <button type="button" class="scene-location-button" id="weather-location-request">Use computer location</button>
+          <span class="scene-location-status" id="weather-location-status" aria-live="polite">Naches weather is selected.</span>
+        </label>
         <label>Weather scene
-          <select id="valley-sky" aria-label="Weather scene"><option value="auto">Live Naches weather (automatic)</option><option value="sunny">Sunny skies</option><option value="partly">Partly cloudy</option><option value="cloudy">Overcast clouds</option><option value="rain">Rainy day</option><option value="snow">Snowfall</option><option value="fog">Misty and foggy</option><option value="storm">Thunderstorm</option></select>
+          <select id="valley-sky" aria-label="Weather scene"><option value="auto">Live weather (automatic)</option><option value="sunny">Clear skies / sunny</option><option value="partly">Partly cloudy</option><option value="cloudy">Overcast clouds</option><option value="drizzle">Drizzle</option><option value="rain">Rainfall</option><option value="snow">Snowfall</option><option value="sleet">Sleet / icy mix</option><option value="freezing">Freezing rain</option><option value="hail">Hailstorm</option><option value="fog">Misty and foggy</option><option value="wind">Windy</option><option value="frost">Frosty / below freezing</option><option value="storm">Thunderstorm</option></select>
         </label>
         <label>Seasonal decorations
           <select id="valley-season" aria-label="Seasonal decorations"><option value="auto">Automatic · current season</option><option value="winter">Winter snow</option><option value="thaw">Early spring</option><option value="blossom">Spring blossoms</option><option value="green">Summer valley</option><option value="harvest">Harvest orchard</option><option value="earlyfall">Autumn leaves</option><option value="latefall">Late autumn</option></select>
         </label>
         <label>Time of day
-          <select id="valley-time" aria-label="Time of day"><option value="auto">Automatic · Naches local time</option><option value="day">Daylight</option><option value="night">Night sky (moon if visible)</option></select>
+          <select id="valley-time" aria-label="Time of day"><option value="auto">Automatic · local sunrise/sunset</option><option value="dawn">Sunrise (preview)</option><option value="day">Daylight (preview)</option><option value="dusk">Sunset (preview)</option><option value="night">Night sky (preview)</option></select>
         </label>
         <label>Animation intensity
           <select id="valley-intensity" aria-label="Animation intensity"><option value="subtle">Subtle</option><option value="normal">Normal</option><option value="lively">Lively</option></select>
@@ -686,9 +719,11 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
         </label>
         <label class="scene-check"><input type="checkbox" id="valley-motion" checked> Animate scenery</label>
         <div class="studio-actions"><button type="button" class="studio-primary" id="scene-surprise">✦ Surprise me</button><button type="button" id="scene-reset">↺ Back to live weather</button><button type="button" id="weather-refresh">↻ Refresh weather</button><button type="button" id="scene-done">Done ✓</button></div>
-        <p class="astro-note" id="astro-note" aria-live="polite">Calculating Naches sky positions...</p>
-        <p class="weather-note" id="weather-note" aria-live="polite">Automatic weather uses the Naches, Washington area. If weather cannot be loaded, a seasonal illustration is used.</p>
-        <p class="scene-credit">Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. Approximate local conditions, not an official safety forecast. Wildlife and holiday decorations are illustrations, not live observations. <span id="scene-last-updated"></span></p>
+        <div class="weather-alert-panel" id="weather-alert-panel" aria-live="polite"><strong id="weather-alert-title">Official alerts</strong><span id="weather-alert-copy">Checking National Weather Service alerts…</span><a href="https://www.weather.gov/" id="weather-alert-link" target="_blank" rel="noopener noreferrer">View official weather information</a></div>
+        <p class="scene-sun-times" id="scene-sun-times" aria-live="polite">Sunrise and sunset times will appear when weather loads.</p>
+        <p class="astro-note" id="astro-note" aria-live="polite">Calculating local sky positions...</p>
+        <p class="weather-note" id="weather-note" aria-live="polite">Weather defaults to Naches; device location is optional and requires browser permission. If weather fails, seasonal scenery is used.</p>
+        <p class="scene-credit">Weather and sunrise/sunset data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. If you select device location, approximate coordinates are sent to Open-Meteo and NWS for requests; coordinates are not saved. Model-based conditions, not an official safety forecast. Alerts (when available) come separately from NWS. Never rely on this page for urgent weather decisions. Wildlife and holiday decorations are illustrations, not live observations. <span id="scene-last-updated"></span></p>
       </div>
     </details>
     <main id="top">
@@ -1695,15 +1730,38 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
 
   /* v31.11 Scene Studio: real Naches weather + offline seasonal fallback. */
   const VALLEY_PREF_KEY='naches-hub-valley-v31'; // keep existing saves compatible
-  const WEATHER_CACHE_KEY='naches-hub-weather-v1';
-  const WEATHER_URL='https://api.open-meteo.com/v1/forecast?latitude=46.73&longitude=-120.70&current=temperature_2m,weather_code,cloud_cover,wind_speed_10m,is_day&daily=sunrise,sunset,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FLos_Angeles&forecast_days=1';
+  const WEATHER_CACHE_KEY='naches-hub-weather-naches-v2';
+  const LOCATION_MODE_KEY='naches-hub-weather-location-v1';
+  const NACHES_LOCATION={latitude:46.73,longitude:-120.70,name:'Naches',timezone:'America/Los_Angeles'};
+  let weatherLocation={...NACHES_LOCATION};
+  let locationMode='naches';
+  try{locationMode=localStorage.getItem(LOCATION_MODE_KEY)==='device'?'device':'naches'}catch{}
+  let locationMessage='Naches weather is selected.';
+  let officialAlerts=[],officialAlertStatus='checking',alertsFetchedAt=0;
   const SEASON_LABEL={winter:'Winter',thaw:'Early spring',blossom:'Spring blossoms',green:'Summer valley',harvest:'Harvest orchard',earlyfall:'Autumn',latefall:'Late autumn'};
-  const SKY_LABEL={sunny:'Sunny',partly:'Partly cloudy',cloudy:'Cloudy',rain:'Rainy',snow:'Snowy',fog:'Misty',storm:'Stormy'};
+  const SKY_LABEL={sunny:'Clear',partly:'Partly cloudy',cloudy:'Overcast',drizzle:'Drizzle',rain:'Rain',snow:'Snow',sleet:'Icy mix',freezing:'Freezing rain',hail:'Hail',fog:'Fog',wind:'Windy',frost:'Frosty',storm:'Thunderstorms'};
+  function buildWeatherUrl(){const url=new URL('https://api.open-meteo.com/v1/forecast');
+    for(const [k,v] of Object.entries({latitude:weatherLocation.latitude,longitude:weatherLocation.longitude,current:'temperature_2m,apparent_temperature,weather_code,cloud_cover,wind_speed_10m,wind_gusts_10m,is_day',daily:'sunrise,sunset,temperature_2m_max,temperature_2m_min',temperature_unit:'fahrenheit',wind_speed_unit:'mph',timezone:'auto',forecast_days:'2'}))url.searchParams.set(k,String(v));
+    return url.toString();
+  }
+  function localClock(now=new Date(),tz=weatherLocation.timezone||NACHES_LOCATION.timezone){
+    try{const parts=new Intl.DateTimeFormat('en-US',{timeZone:tz,year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(now);
+      const o=Object.fromEntries(parts.filter(x=>x.type!=='literal').map(x=>[x.type,x.value]));
+      return new Date(+o.year,+o.month-1,+o.day,+o.hour,+o.minute);
+    }catch{return nachesNow(now)}
+  }
+  function weatherDisplay(sky,night){
+    if(sky==='sunny')return night?'Clear night':'Sunny';
+    if(sky==='partly')return night?'Partly cloudy night':'Partly cloudy';
+    if(sky==='cloudy')return night?'Cloudy night':'Overcast';
+    return SKY_LABEL[sky]||'Variable conditions';
+  }
+
   const readValleyPrefs=()=>{try{return JSON.parse(localStorage.getItem(VALLEY_PREF_KEY))||{}}catch{return {}}};
   const initialMotion=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const valleyPrefs=Object.assign({season:'auto',sky:'auto',wildlife:'auto',holiday:'auto',time:'auto',intensity:'normal',motion:initialMotion},readValleyPrefs());
   if(!['subtle','normal','lively'].includes(valleyPrefs.intensity))valleyPrefs.intensity='normal';
-  if(!['auto','day','night'].includes(valleyPrefs.time))valleyPrefs.time='auto';
+  if(!['auto','dawn','day','dusk','night'].includes(valleyPrefs.time))valleyPrefs.time='auto';
   let liveWeather=null, weatherFetchedAt=0, weatherSource='offline',lastAttempt=0;
   const RAINBOW_OBS_KEY='naches-hub-last-observed-sky-v1';
   const RAINBOW_END_KEY='naches-hub-rainbow-until-v1';
@@ -1783,12 +1841,14 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     return 'none';
   }
   function weatherClass(code,clouds){
-    if([95,96,99].includes(code))return 'storm';
+    // WMO definitions: code 96/99 explicitly indicate thunderstorms with hail.
+    if([96,99].includes(code))return 'hail';
+    if([95,97].includes(code))return 'storm';
+    if([56,57,66,67].includes(code))return 'freezing';
     if([71,73,75,77,85,86].includes(code))return 'snow';
     if([45,48].includes(code))return 'fog';
-    if([51,53,55,56,57,61,63,65,66,67,80,81,82].includes(code))return 'rain';
-    // Match the illustration to observed cloud coverage as well as the WMO code.
-    // Current weather codes can briefly disagree with the separate cloud-cover reading.
+    if([51,53,55].includes(code))return 'drizzle';
+    if([61,63,65,80,81,82].includes(code))return 'rain';
     if([0,1,2,3].includes(code)){
       if(Number.isFinite(clouds)){
         if(clouds>=78)return 'cloudy';
@@ -1814,27 +1874,47 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     return {phase:inWindow?(rising?'dawn':'dusk'):'none',opacity:inWindow?.18+.64*peak:0,
       brightness:.67+.42*t,altitude:h};
   }
-  function updateSolarScene(){
-    const sol=solarScene(new Date());
-    const manual=valleyPrefs.time!=='auto';
-    document.body.dataset.solar=manual?'none':sol.phase;
-    document.documentElement.style.setProperty('--solar-opacity',manual?'0':sol.opacity.toFixed(3));
-    document.documentElement.style.setProperty('--twilight-brightness',sol.brightness.toFixed(3));
+  function previewInstant(instant=new Date()){
+    const mode=valleyPrefs.time;
+    if(mode==='auto')return instant;
+    const clock=localClock(instant),minutes=clock.getHours()*60+clock.getMinutes();
+    const dateKey=`${clock.getFullYear()}-${String(clock.getMonth()+1).padStart(2,'0')}-${String(clock.getDate()).padStart(2,'0')}`;
+    const daily=liveWeather?.daily;
+    let match=(daily?.time||[]).indexOf(dateKey);
+    if(match<0)match=0;
+    const sunMinutes=value=>typeof value==='string'?Number(value.slice(11,13))*60+Number(value.slice(14,16)):NaN;
+    const rise=sunMinutes(daily?.sunrise?.[match]),set=sunMinutes(daily?.sunset?.[match]);
+    const target=mode==='dawn'?(Number.isFinite(rise)?rise+26:6*60+50)
+      :mode==='dusk'?(Number.isFinite(set)?set-26:18*60+20)
+      :mode==='day'?(Number.isFinite(rise)&&Number.isFinite(set)?Math.round((rise+set)/2):12*60)
+      :2*60;
+    return new Date(instant.getTime()+(target-minutes)*60000);
   }
-  function localDaylight(localDate){
-    const minutes=localDate.getHours()*60+localDate.getMinutes();
-    if(liveWeather?.daily?.sunrise?.[0]&&liveWeather?.daily?.sunset?.[0]){
-      const first=liveWeather.daily.sunrise[0],last=liveWeather.daily.sunset[0];
-      const toMin=x=>Number(x.slice(11,13))*60+Number(x.slice(14,16));
-      return minutes>=toMin(first)&&minutes<toMin(last);
+  function updateSolarScene(){
+    const manual=valleyPrefs.time;
+    const sol=solarScene(previewInstant(new Date()));
+    const phase=manual==='dawn'?'dawn':manual==='dusk'?'dusk':manual==='auto'?sol.phase:'none';
+    const opacity=(manual==='dawn'||manual==='dusk')?.80:(manual==='auto'?sol.opacity:0);
+    document.body.dataset.solar=phase;
+    document.documentElement.style.setProperty('--solar-opacity',opacity.toFixed(3));
+    document.documentElement.style.setProperty('--twilight-brightness',(manual==='dawn'||manual==='dusk'?.88:sol.brightness).toFixed(3));
+  }
+  function localDaylight(){
+    const instant=new Date(),local=localClock(instant);
+    const minutes=local.getHours()*60+local.getMinutes();
+    const key=`${local.getFullYear()}-${String(local.getMonth()+1).padStart(2,'0')}-${String(local.getDate()).padStart(2,'0')}`;
+    const idx=(liveWeather?.daily?.time||[]).indexOf(key);
+    if(idx>=0){
+      const first=liveWeather.daily.sunrise?.[idx],last=liveWeather.daily.sunset?.[idx];
+      if(first&&last){const toMin=x=>Number(x.slice(11,13))*60+Number(x.slice(14,16));return minutes>=toMin(first)&&minutes<toMin(last)}
     }
-    return skyPosition(astroCoords(new Date()).sun,new Date()).alt>-.833;
+    return skyPosition(astroCoords(instant).sun,instant).alt>-.833;
   }
 
   /* v31.18 Naches astronomical scenery (fixed approximate public location).
      Calculations use simplified solar/lunar orbital equations. They are scenic,
      not predictions of eclipses, exact rise/set times or terrain obstructions. */
-  const SKY_LAT=46.73,SKY_LON=-120.70, RAD=Math.PI/180, TAU=Math.PI*2;
+  let SKY_LAT=46.73,SKY_LON=-120.70; const RAD=Math.PI/180, TAU=Math.PI*2;
   const asinSafe=v=>Math.asin(Math.max(-1,Math.min(1,v)));
   function j2000Days(date){return date.getTime()/86400000+2440587.5-2451545}
   const eclipticObliquity=23.4397*RAD;
@@ -1922,7 +2002,7 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     const phaseName=moonPhaseName(phase),dateKey=moonDateKey(instant);
     if(astroBlueCache.day!==dateKey)astroBlueCache={day:dateKey,value:calendarBlueMoon(instant)};
     const blue=astroBlueCache.value;
-    const thinCloud= ['cloudy','rain','snow','fog','storm'].includes(document.body.dataset.sky);
+    const thinCloud= ['cloudy','rain','drizzle','snow','sleet','freezing','hail','fog','storm'].includes(document.body.dataset.sky);
     const sunMarkup=bodyGlyph('sun',sunPosition,54,phase,night,blue);
     const moonMarkup=bodyGlyph('moon',moonPosition,39,phase,night,blue);
     const markup=`<g opacity="${thinCloud?.43:1}">${!night?sunMarkup:''}${moonMarkup}</g>`;
@@ -1932,29 +2012,64 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     const moonColor=moonAbove&&moonPosition.alt<11?' · warm orange near the horizon':'';
     const special=blue?' · Calendar blue moon (a second full moon this month; not physically blue)':'';
     const skyNote=document.getElementById('astro-note');
-    if(skyNote)skyNote.textContent=`Naches sky · ${phaseName} (${Math.round((1-Math.cos(TAU*phase))/2*100)}% illuminated), ${moonMessage}${moonColor}${special}. Sun ${sunPosition.alt>0?'above':'below'} the horizon; its height changes through the seasons. Positions and visibility are approximate.`;
+    if(skyNote)skyNote.textContent=`${weatherLocation.name} sky · ${phaseName} (${Math.round((1-Math.cos(TAU*phase))/2*100)}% illuminated), ${moonMessage}${moonColor}${special}. Sun ${sunPosition.alt>0?'above':'below'} the horizon; its height changes through the seasons. Positions and visibility are approximate.`;
   }
 
   function weatherIcon(sky,night){
-    return ({sunny:night?'☾':'☀',partly:night?'☾':'⛅',cloudy:'☁',rain:'☂',snow:'❄',fog:'≋',storm:'ϟ'})[sky]||'☁';
+    return ({sunny:night?'☾':'☀',partly:night?'☾':'⛅',cloudy:'☁',drizzle:'☂',rain:'☂',snow:'❄',sleet:'❄',freezing:'❄',hail:'❅',fog:'≋',storm:'ϟ',wind:'≋',frost:'❄'})[sky]||'☁';
   }
   function describeWeather(){
     if(!liveWeather?.current || !Number.isFinite(liveWeather.current.temperature_2m))return 'Seasonal illustration';
-    return `${Math.round(liveWeather.current.temperature_2m)}°F · ${SKY_LABEL[weatherClass(liveWeather.current.weather_code,liveWeather.current.cloud_cover)]||'Cloudy'}`;
+    return `${Math.round(liveWeather.current.temperature_2m)}°F · ${weatherDisplay(weatherClass(liveWeather.current.weather_code,liveWeather.current.cloud_cover),!localDaylight())}`;
   }
   function updateWeatherChip(){
-    const now=nachesNow(),night=!localDaylight(now);
-    const sky=liveWeather?weatherClass(liveWeather.current.weather_code,liveWeather.current.cloud_cover):'partly';
+    const night=!localDaylight(),sky=liveWeather?weatherClass(liveWeather.current.weather_code,liveWeather.current.cloud_cover):'partly';
     byId('weather-chip-icon').textContent=weatherIcon(sky,night);
-    byId('weather-chip-title').textContent=liveWeather?'Naches · '+Math.round(liveWeather.current.temperature_2m)+'°F':'Naches Valley';
+    byId('weather-chip-title').textContent=liveWeather?weatherLocation.name+' · '+Math.round(liveWeather.current.temperature_2m)+'°F':weatherLocation.name+' weather';
     const previewActive=valleyPrefs.sky!=='auto'||valleyPrefs.time!=='auto';
-    const sourceLabel=weatherSource==='live'?'Live':'Saved forecast';
-    byId('weather-chip-sub').textContent=liveWeather?`${SKY_LABEL[sky]} · ${sourceLabel}${previewActive?' · Scene preview':''}`:'Seasonal scene · Weather offline';
-    const status=liveWeather?(weatherSource==='live'?'Live conditions':'Previously saved weather'):'Weather unavailable';
+    const sourceLabel=weatherSource==='live'?'Live':'Saved';
+    const wind=liveWeather?.current?.wind_speed_10m;
+    const windNote=Number.isFinite(wind)&&wind>=22?' · Windy':'';
+    const freezingNote=liveWeather?.current?.temperature_2m<=32?' · Freezing':'';
+    byId('weather-chip-sub').textContent=liveWeather?`${weatherDisplay(sky,night)}${windNote}${freezingNote} · ${sourceLabel}${previewActive?' · Preview':''}`:'Weather unavailable · Seasonal scene';
+    const status=liveWeather?(weatherSource==='live'?'Current forecast':'Previously saved forecast'):'Weather unavailable';
     const age=liveWeather?' · updated '+Math.max(0,Math.round((Date.now()-weatherFetchedAt)/60000))+' minutes ago':'';
-    const previewNote=previewActive?' A manual sky or time preview is active; choose “Back to live weather” to synchronize the scenery.':' Sunlight and cloud opacity reflect the selected sky and Naches daylight.';
-    byId('weather-note').textContent=`${status}${age}. Automatic scenery follows the Naches, WA area.${previewNote}`;
-    byId('scene-last-updated').textContent=liveWeather?`Weather ${weatherSource==='live'?'retrieved':'cached'} ${new Date(weatherFetchedAt).toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}.`:'';
+    const previewNote=previewActive?' A manual sky/time preview is active.':' The scene follows local daylight and available weather.';
+    byId('weather-note').textContent=`${status}${age}. Location: ${weatherLocation.name}.${previewNote} ${locationMessage}`;
+    byId('scene-last-updated').textContent=liveWeather?`Weather ${weatherSource==='live'?'retrieved':'cached'} ${new Date(weatherFetchedAt).toLocaleString('en-US',{timeZone:weatherLocation.timezone||NACHES_LOCATION.timezone,month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}.`:'No current forecast available.';
+    const local=localClock(),key=`${local.getFullYear()}-${String(local.getMonth()+1).padStart(2,'0')}-${String(local.getDate()).padStart(2,'0')}`;
+    const dayIndex=(liveWeather?.daily?.time||[]).indexOf(key);
+    const formatSolar=t=>{if(typeof t!=='string'||t.length<16)return null;const hour=Number(t.slice(11,13)),minute=t.slice(14,16);return `${hour%12||12}:${minute} ${hour>=12?'PM':'AM'}`};
+    const rise=dayIndex>=0?formatSolar(liveWeather.daily.sunrise?.[dayIndex]):null,sett=dayIndex>=0?formatSolar(liveWeather.daily.sunset?.[dayIndex]):null;
+    byId('scene-sun-times').textContent=rise&&sett?`Today in ${weatherLocation.name}: Sunrise ${rise} · Sunset ${sett} (local time)`:'Sunrise/sunset times available when live weather loads.';
+    byId('weather-chip').title=`${weatherLocation.name}: ${liveWeather?describeWeather():'Weather unavailable'}`;
+    const mini=byId('weather-alert-mini');
+    mini.hidden=!(officialAlertStatus==='ok'&&officialAlerts.length);
+    mini.textContent=officialAlerts.length?`NWS: ${officialAlerts[0].event}${officialAlerts.length>1?' +'+(officialAlerts.length-1):''}`:'';
+    const panel=byId('weather-alert-panel'),title=byId('weather-alert-title'),copy=byId('weather-alert-copy'),link=byId('weather-alert-link');
+    panel.dataset.alert=officialAlertStatus==='ok'&&officialAlerts.length?'active':officialAlertStatus;
+    title.textContent=officialAlertStatus==='ok'&&officialAlerts.length?'Official NWS alerts': 'National Weather Service alerts';
+    copy.textContent=officialAlertStatus==='checking'?'Checking official alerts…':officialAlertStatus==='unavailable'?'Unable to check alerts; open the official site to verify.':officialAlerts.length?officialAlerts.map(a=>a.event).slice(0,3).join(' · '):'No active NWS alerts returned for this location (not a safety guarantee).';
+    const pointLink=`https://api.weather.gov/alerts/active?point=${weatherLocation.latitude},${weatherLocation.longitude}`;
+    link.href=officialAlerts[0]?.url||pointLink;
+    link.textContent=officialAlerts.length?'Read official alert details':'Check NWS directly';
+  }
+  async function fetchOfficialAlerts(force=false){
+    if(!force&&Date.now()-alertsFetchedAt<15*60000)return;
+    const expectedLat=weatherLocation.latitude,expectedLon=weatherLocation.longitude;
+    officialAlertStatus='checking';officialAlerts=[];updateWeatherChip();
+    const controller=new AbortController(),abort=setTimeout(()=>controller.abort(),8000);
+    try{
+      const url=`https://api.weather.gov/alerts/active?point=${expectedLat},${expectedLon}`;
+      const res=await fetch(url,{headers:{Accept:'application/geo+json'},signal:controller.signal});
+      if(!res.ok)throw Error('NWS '+res.status);
+      const data=await res.json();
+      if(expectedLat!==weatherLocation.latitude||expectedLon!==weatherLocation.longitude)return;
+      if(!Array.isArray(data.features))throw Error('Invalid NWS response');
+      officialAlerts=data.features.slice(0,8).map(f=>({event:String(f?.properties?.event||'Weather alert'),url:typeof f?.properties?.['@id']==='string'&&f.properties['@id'].startsWith('https://api.weather.gov/')?f.properties['@id']:null}));
+      officialAlertStatus='ok';
+    }catch(e){if(expectedLat===weatherLocation.latitude&&expectedLon===weatherLocation.longitude){officialAlertStatus='unavailable';officialAlerts=[];console.info('NWS alerts unavailable:',e.message)}}
+    finally{clearTimeout(abort);if(expectedLat===weatherLocation.latitude&&expectedLon===weatherLocation.longitude){alertsFetchedAt=Date.now();updateWeatherChip()}}
   }
   function updateValley(now=nachesNow()){
     const season=valleyPrefs.season==='auto'?autoSeason(now):valleyPrefs.season;
@@ -1966,10 +2081,12 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     const holiday=valleyPrefs.holiday==='auto'?dateHoliday:valleyPrefs.holiday;
     const names={none:'',newyear:'New Year · fireworks',pokemon:'Pokémon Day · creature parade',mario:'MAR10 Day · portal adventure',starwars:'Star Wars Day · galactic scene',pacman:'PAC-MAN Birthday · retro arcade',tetris:'World Tetris Day · block stacking',sonic:'Sonic Birthday · speed and rings',stpat:'St. Patrick’s Day · rainbow and pot of gold',spring:'Spring · blossom celebration',memorial:'Memorial Day · remembrance',flagday:'Flag Day · waving flags',juneteenth:'Juneteenth · freedom and history',valentine:'Valentine’s Day · hearts in the orchard',earth:'Earth Day · celebrate nature',veterans:'Remembrance · gratitude',independence:'Independence Day · valley celebration',school:'Back to school',halloween:'Halloween · orchard lanterns',thanksgiving:'Thanksgiving · harvest season',winter:'Winter celebrations · orchard lights'};
     const holidayText=valleyPrefs.holiday==='auto'?dateHolidayText:(names[holiday]||'');
-    const night=valleyPrefs.time==='auto'?!localDaylight(now):valleyPrefs.time==='night';
+    const night=valleyPrefs.time==='auto'?!localDaylight():valleyPrefs.time==='night';
     document.body.dataset.season=season;
     document.body.dataset.sky=sky;
     document.body.dataset.time=night?'night':'day';
+    document.body.dataset.frost=(valleyPrefs.sky==='frost'||(valleyPrefs.sky==='auto'&&Number.isFinite(liveWeather?.current?.temperature_2m)&&liveWeather.current.temperature_2m<=32))?'yes':'no';
+    document.body.dataset.wind=valleyPrefs.sky==='wind'||(valleyPrefs.sky==='auto'&&Number.isFinite(liveWeather?.current?.wind_speed_10m)&&liveWeather.current.wind_speed_10m>=22)?'strong':'normal';
     document.body.dataset.wildlife=wildlife;
     document.body.dataset.holiday=holiday;
     document.body.dataset.intensity=valleyPrefs.intensity;
@@ -1998,38 +2115,65 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
     // Manual previews deliberately use a representative density for the selected scene.
     const cloudPercent=valleyPrefs.sky==='auto'&&Number.isFinite(liveWeather?.current?.cloud_cover)
       ?Math.max(0,Math.min(100,liveWeather.current.cloud_cover))
-      :({sunny:5,partly:44,cloudy:90,rain:94,snow:87,fog:91,storm:97}[sky]??42);
+      :({sunny:5,partly:44,cloudy:90,drizzle:80,rain:94,snow:87,sleet:91,freezing:93,hail:97,fog:91,storm:97,wind:52,frost:15}[sky]??42);
     document.documentElement.style.setProperty('--scene-cloud-opacity',(0.04+cloudPercent*.0089).toFixed(3));
     document.body.dataset.weatherSource=liveWeather?(weatherSource==='live'?'live':'saved'):'seasonal';
     document.body.dataset.weatherPreview=(valleyPrefs.sky!=='auto'||valleyPrefs.time!=='auto')?'yes':'no';
-    updateAstronomy(new Date());
-    byId('valley-scene-summary').textContent=`${SEASON_LABEL[season]} · ${SKY_LABEL[sky]} · ${night?'Night':'Day'}`;
+    updateAstronomy(previewInstant(new Date()));
+    byId('valley-scene-summary').textContent=`${SEASON_LABEL[season]} · ${weatherDisplay(sky,night)} · ${{dawn:'Sunrise',dusk:'Sunset',day:'Day',night:'Night'}[valleyPrefs.time]||(night?'Night':'Day')}`;
     const holidayEl=byId('valley-holiday-caption');holidayEl.hidden=holiday==='none';holidayEl.textContent=holidayText;
     updateWeatherChip();
     if(window.__festivalSync)window.__festivalSync();
   }
   async function fetchWeather(force=false){
-    if(!force && Date.now()-lastAttempt<WEATHER_TTL)return;
+    if(!force&&Date.now()-lastAttempt<WEATHER_TTL)return;
     lastAttempt=Date.now();
-    const controller=new AbortController();const abort=setTimeout(()=>controller.abort(),8500);
+    const expectedLat=weatherLocation.latitude,expectedLon=weatherLocation.longitude;
+    const controller=new AbortController(),abort=setTimeout(()=>controller.abort(),8500);
     try{
-      const response=await fetch(WEATHER_URL,{signal:controller.signal,cache:'no-store'});
+      const response=await fetch(buildWeatherUrl(),{signal:controller.signal,cache:'no-store'});
       if(!response.ok)throw new Error('Weather service returned '+response.status);
       const data=await response.json();
       if(!data?.current || !Number.isFinite(data.current.temperature_2m)||!Number.isFinite(data.current.weather_code))throw new Error('Weather response incomplete');
+      // Reject an in-flight request if the user selected a different location.
+      if(expectedLat!==weatherLocation.latitude||expectedLon!==weatherLocation.longitude)return;
       registerObservedWeather(data);
       liveWeather=data;weatherFetchedAt=Date.now();weatherSource='live';
-      try{localStorage.setItem(WEATHER_CACHE_KEY,JSON.stringify({at:weatherFetchedAt,data}))}catch{}
+      weatherLocation.timezone=data.timezone||weatherLocation.timezone;
+      if(locationMode==='naches')try{localStorage.setItem(WEATHER_CACHE_KEY,JSON.stringify({at:weatherFetchedAt,data}))}catch{}
     }catch(error){
       console.info('Live weather unavailable; keeping saved or seasonal scenery.',error?.message||error);
       if(!liveWeather)weatherSource='offline';
     }finally{clearTimeout(abort);updateValley();byId('weather-refresh').disabled=false;byId('weather-refresh').textContent='↻ Refresh weather';}
   }
   try{const cache=JSON.parse(localStorage.getItem(WEATHER_CACHE_KEY)||'null');
-    if(cache?.data?.current&&Number.isFinite(cache.data.current.temperature_2m)&&Number.isFinite(cache.data.current.weather_code)&&Date.now()-cache.at<CACHE_TTL&&cache.at<=Date.now()){
+    if(locationMode==='naches'&&cache?.data?.current&&Number.isFinite(cache.data.current.temperature_2m)&&Number.isFinite(cache.data.current.weather_code)&&Date.now()-cache.at<CACHE_TTL&&cache.at<=Date.now()){
       liveWeather=cache.data;weatherFetchedAt=cache.at;weatherSource='cached';
     }
   }catch{}
+  function setWeatherLocation(coords,mode,message){
+    weatherLocation={latitude:Math.round(coords.latitude*10000)/10000,longitude:Math.round(coords.longitude*10000)/10000,name:mode==='device'?'Your area':'Naches',timezone:mode==='device'?Intl.DateTimeFormat().resolvedOptions().timeZone||'auto':NACHES_LOCATION.timezone};
+    SKY_LAT=weatherLocation.latitude; SKY_LON=weatherLocation.longitude;
+    locationMode=mode;locationMessage=message;liveWeather=null;weatherFetchedAt=0;lastAttempt=0;alertsFetchedAt=0;officialAlerts=[];weatherSource='offline';
+    byId('weather-location').value=mode;byId('weather-location-status').textContent=message;
+    try{localStorage.setItem(LOCATION_MODE_KEY,mode)}catch{}
+    fetchWeather(true);fetchOfficialAlerts(true);updateValley();
+  }
+  function useNaches(message='Using Naches as the default weather location.'){
+    setWeatherLocation(NACHES_LOCATION,'naches',message);
+  }
+  function useDeviceLocation(){
+    if(!navigator.geolocation || !window.isSecureContext){useNaches('Device location requires a secure HTTPS page and browser permission. Showing Naches instead.');return}
+    byId('weather-location-status').textContent='Asking browser for location permission…';
+    navigator.geolocation.getCurrentPosition(position=>{
+      const {latitude,longitude}=position.coords;
+      if(!Number.isFinite(latitude)||!Number.isFinite(longitude)){useNaches('Could not read coordinates. Showing Naches instead.');return}
+      setWeatherLocation({latitude,longitude},'device','Using this computer’s approximate area. Coordinates are not stored in browser settings.');
+    },error=>useNaches('Location unavailable or permission denied. Using Naches; you can try again.'),{enableHighAccuracy:false,timeout:9000,maximumAge:30*60000});
+  }
+  byId('weather-location').value=locationMode;
+  byId('weather-location').addEventListener('change',event=>event.target.value==='device'?useDeviceLocation():useNaches());
+  byId('weather-location-request').addEventListener('click',useDeviceLocation);
   for(const [key,id] of [['season','valley-season'],['sky','valley-sky'],['wildlife','valley-wildlife'],['holiday','valley-holiday'],['time','valley-time'],['intensity','valley-intensity']]){
     const select=byId(id);select.value=[...select.options].some(option=>option.value===valleyPrefs[key])?valleyPrefs[key]:'auto';
     select.addEventListener('change',()=>{valleyPrefs[key]=select.value;if(['season','sky','time'].includes(key)){valleyPrefs.holiday='none';byId('valley-holiday').value='none';}persistValley();updateValley()});
@@ -2049,20 +2193,22 @@ body[data-card-view="compact"] .tag{font-size:.64rem}
   byId('scene-surprise').addEventListener('click',()=>{
     const pick=items=>items[Math.floor(Math.random()*items.length)];
     valleyPrefs.season=pick(['winter','thaw','blossom','green','harvest','earlyfall','latefall']);
-    valleyPrefs.sky=pick(['sunny','partly','cloudy','rain','snow','fog','storm']);
-    valleyPrefs.time=pick(['day','night']);
+    valleyPrefs.sky=pick(['sunny','partly','cloudy','drizzle','rain','snow','sleet','freezing','hail','fog','wind','frost','storm']);
+    valleyPrefs.time=pick(['dawn','day','dusk','night']);
     valleyPrefs.wildlife=pick(['none','squirrel','deer','rabbit','fox','owl','raccoon']);
     valleyPrefs.holiday='none';
     syncValleyInputs();persistValley();updateValley();
   });
-  byId('weather-refresh').addEventListener('click',()=>{byId('weather-refresh').disabled=true;byId('weather-refresh').textContent='Refreshing…';fetchWeather(true)});
-  updateValley();fetchWeather();
+  byId('weather-refresh').addEventListener('click',()=>{byId('weather-refresh').disabled=true;byId('weather-refresh').textContent='Refreshing…';fetchWeather(true);fetchOfficialAlerts(true)});
+  updateValley();
+  if(locationMode==='device')useDeviceLocation();
+  else{fetchWeather();fetchOfficialAlerts();}
   // Refresh celestial placement every minute; Earth rotation moves the Moon
   // across the local sky about 15 degrees per hour. Weather remains slower.
-  setInterval(()=>{updateAstronomy(new Date());updateSolarScene();updateDynamicEvents();},60*1000);
+  setInterval(()=>{updateAstronomy(previewInstant(new Date()));updateSolarScene();updateDynamicEvents();},60*1000);
   function updateDynamicEvents(){updateValley();}
   setInterval(()=>{updateValley();},5*60*1000);
-  setInterval(()=>{updateValley();fetchWeather();},15*60*1000);
+  setInterval(()=>{updateValley();fetchWeather();fetchOfficialAlerts();},15*60*1000);
 
 
   // Catalog v31: synchronizes with activities.json while preserving a complete

@@ -1,9 +1,9 @@
-# Publish Star Scout v2, then Learning Hub v31.31
+# Updating Naches Learning Hub to v31.33
 
-1. Create `jkramer-cloud/valley-star-scout`. Upload all website files from the **Valley Star Scout v2** ZIP into its root and enable GitHub Pages main / (root).
-2. Verify the game loads at `https://jkramer-cloud.github.io/valley-star-scout/`. On a **real phone**, test the AR Sky Finder over HTTPS after consenting to camera/motion permissions.
-3. Open your existing `jkramer-cloud.github.io` repository and **replace only its root `index.html` and `activities.json`** with the two files from this ZIP.
-4. README and changelog are optional. Do not delete other games or files.
-5. Refresh the Learning Hub; find Valley Star Scout under Science or via search.
+1. Open the existing `jkramer-cloud/jkramer-cloud.github.io` repository.
+2. Extract `Naches_Learning_Hub_v31_33_Music_Sports_Ideas_GitHub_Ready.zip`.
+3. Replace the **root `index.html` and `activities.json`** with those from this ZIP. Keep all the existing games, repositories, and other files.
+4. Commit to the currently published GitHub Pages branch.
+5. Refresh your Hub, open **In Development**, then choose **Music class** or **Sports & strategy** to see the 15 new ideas. **Music** is now also a subject filter in the top row.
 
-The Learning Hub update only changes the listing, and does not install the standalone game's source files.
+The 15 ideas are clearly marked **Coming Soon — Not Playable**. Your existing basketball Playbook and Scorekeeper games are unchanged; multi-sport entries describe future upgrades.

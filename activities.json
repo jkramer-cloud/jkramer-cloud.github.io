@@ -1008,6 +1008,842 @@
       "linkText": "Play today’s word puzzle",
       "releaseOrder": 30,
       "audience": "students"
+    },
+    {
+      "id": "worksheet-forge",
+      "title": "Worksheet Forge",
+      "category": "general",
+      "categoryLabel": "Teacher Tools · Printable Practice",
+      "type": "tool",
+      "description": "Create differentiated math, vocabulary, grammar, and review worksheets with answer keys and printable layouts.",
+      "skills": [
+        "Worksheet design",
+        "Differentiation",
+        "Answer keys"
+      ],
+      "gradeLabel": "Grades 1–12 · Teacher tool",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Teacher builds · Print or self-check",
+      "icon": "writing",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "classroom-bingo-builder",
+      "title": "Classroom Bingo Builder",
+      "category": "general",
+      "categoryLabel": "Teacher Tools · Bingo & Review",
+      "type": "tool",
+      "description": "Turn class vocabulary, math facts, historical events, or science terms into unique bingo boards for print or device play.",
+      "skills": [
+        "Vocabulary",
+        "Review games",
+        "Custom content"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Projector & print · Custom boards",
+      "icon": "quiz",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "exit-ticket-express",
+      "title": "Exit Ticket Express",
+      "category": "general",
+      "categoryLabel": "Teacher Tools · Formative Assessment",
+      "type": "tool",
+      "description": "Build a two- to five-question exit ticket with quick self-checking or printable response slips.",
+      "skills": [
+        "Formative assessment",
+        "Reflection",
+        "Quick checks"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Teacher creates · Device or print",
+      "icon": "writing",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "task-card-scoot",
+      "title": "Task Card Scoot",
+      "category": "general",
+      "categoryLabel": "Teacher Tools · Stations & Practice",
+      "type": "tool",
+      "description": "Digitize classroom task-card sets into randomized stations with timers, answer reveals, and optional printable recording sheets.",
+      "skills": [
+        "Station rotation",
+        "Practice",
+        "Feedback"
+      ],
+      "gradeLabel": "Grades 2–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Stations · Individual or pairs",
+      "icon": "quiz",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "word-puzzle-maker",
+      "title": "Word Puzzle Maker",
+      "category": "ela",
+      "categoryLabel": "ELA · Custom Word Searches & Crosswords",
+      "type": "tool",
+      "description": "Paste spelling or vocabulary lists to generate playable or printable word searches and crosswords with teacher answer keys.",
+      "skills": [
+        "Vocabulary",
+        "Spelling",
+        "Puzzle creation"
+      ],
+      "gradeLabel": "Grades 2–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Teacher builds · Digital & print",
+      "icon": "spelling",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "flashcard-match-studio",
+      "title": "Flashcard & Match Studio",
+      "category": "general",
+      "categoryLabel": "Teacher Tools · Custom Review Cards",
+      "type": "tool",
+      "description": "Build picture, definition, formula, and term cards; switch between flashcards, memory match, and sort-and-pair games.",
+      "skills": [
+        "Recall",
+        "Matching",
+        "Custom question sets"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or shared device · Custom sets",
+      "icon": "puzzle",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "classroom-randomizer",
+      "title": "Classroom Randomizer",
+      "category": "general",
+      "categoryLabel": "Teacher Tools · Routines & Organization",
+      "type": "tool",
+      "description": "Combine a classroom spinner, dice, timers, team generator, and random question picker without requiring student accounts.",
+      "skills": [
+        "Classroom routines",
+        "Groups",
+        "Decision tools"
+      ],
+      "gradeLabel": "All grades · Teacher tool",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Projected classroom utility",
+      "icon": "quiz",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "rubric-reflection-studio",
+      "title": "Rubric & Reflection Studio",
+      "category": "design",
+      "categoryLabel": "Teacher Tools · Feedback & Reflection",
+      "type": "tool",
+      "description": "Draft customizable rubrics, student checklists, and reflection prompts; save locally and print classroom-ready copies.",
+      "skills": [
+        "Rubrics",
+        "Self-assessment",
+        "Reflection"
+      ],
+      "gradeLabel": "Grades 3–12 · Teacher tool",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Teacher builder · Printable checklists",
+      "icon": "writing",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "escape-room-builder",
+      "title": "Classroom Escape Room Builder",
+      "category": "strategy",
+      "categoryLabel": "Teacher Tools · Puzzle-Based Review",
+      "type": "tool",
+      "description": "Turn teacher-written clues, codes, and subject questions into a multi-lock digital classroom escape room.",
+      "skills": [
+        "Problem solving",
+        "Collaboration",
+        "Content review"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Pairs or teams · Custom puzzles",
+      "icon": "detective",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "four-corners-debate",
+      "title": "Four Corners Challenge",
+      "category": "general",
+      "categoryLabel": "Paper-to-Digital · Discussion & Opinion",
+      "type": "game",
+      "description": "Digitize the classic Four Corners activity with projected prompts, four choices, reasons, and discussion rounds.",
+      "skills": [
+        "Discussion",
+        "Justification",
+        "Perspective taking"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Whole class · Projected prompt",
+      "icon": "quiz",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "paper",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "logic-grid-lab",
+      "title": "Logic Grid Lab",
+      "category": "strategy",
+      "categoryLabel": "Strategy · Paper Logic Puzzles",
+      "type": "game",
+      "description": "Solve original deduction grids by crossing out clues, comparing possibilities, and explaining each conclusion.",
+      "skills": [
+        "Deduction",
+        "Evidence",
+        "Logical reasoning"
+      ],
+      "gradeLabel": "Grades 4–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or pairs · Logic-grid puzzles",
+      "icon": "puzzle",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "paper",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "roll-and-write-arcade",
+      "title": "Roll & Write Arcade",
+      "category": "math",
+      "categoryLabel": "Math · Dice & Pencil Games",
+      "type": "game",
+      "description": "Play digitized dice-and-pencil favorites with number targets, score sheets, probability choices, and turn-based modes.",
+      "skills": [
+        "Number sense",
+        "Probability",
+        "Strategy"
+      ],
+      "gradeLabel": "Grades 2–8 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo or local players · Dice games",
+      "icon": "addsub",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "paper",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "tangram-table",
+      "title": "Tangram Table",
+      "category": "math",
+      "categoryLabel": "Math · Shapes & Spatial Reasoning",
+      "type": "game",
+      "description": "Drag, rotate, and flip tangram pieces to complete silhouettes and learn transformations, symmetry, and geometric reasoning.",
+      "skills": [
+        "Geometry",
+        "Transformations",
+        "Spatial reasoning"
+      ],
+      "gradeLabel": "Grades 2–8 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Puzzle boards",
+      "icon": "puzzle",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "paper",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "timeline-shuffle",
+      "title": "Timeline Shuffle",
+      "category": "socialstudies",
+      "categoryLabel": "Social Studies · Timelines & Sequencing",
+      "type": "game",
+      "description": "Put events in order, estimate dates, and connect causes with effects across historical periods and teacher-made sets.",
+      "skills": [
+        "Chronology",
+        "Historical reasoning",
+        "Cause & effect"
+      ],
+      "gradeLabel": "Grades 4–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or teams · Sequence puzzles",
+      "icon": "map",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "fraction-tiles-lab",
+      "title": "Fraction Tiles Lab",
+      "category": "math",
+      "categoryLabel": "Math · Virtual Manipulatives",
+      "type": "tool",
+      "description": "Build with fraction bars, number lines, decimal grids, and equivalent fractions before solving guided practice challenges.",
+      "skills": [
+        "Fractions",
+        "Equivalence",
+        "Visual models"
+      ],
+      "gradeLabel": "Grades 2–8 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Interactive manipulatives",
+      "icon": "mathrush",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "graph-detective",
+      "title": "Graph Detective",
+      "category": "math",
+      "categoryLabel": "Math · Data & Statistics",
+      "type": "game",
+      "description": "Turn classroom data into graphs, spot misleading scales, and practice mean, median, mode, and data interpretation.",
+      "skills": [
+        "Graphing",
+        "Statistics",
+        "Data literacy"
+      ],
+      "gradeLabel": "Grades 4–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or pairs · Data puzzles",
+      "icon": "budget",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "coordinate-pixel-art",
+      "title": "Coordinate Pixel Quest",
+      "category": "math",
+      "categoryLabel": "Math · Coordinate Grids & Pixel Art",
+      "type": "game",
+      "description": "Plot ordered pairs to reveal pixel pictures, design graphing puzzles, and practice translations, reflections, and quadrants.",
+      "skills": [
+        "Coordinates",
+        "Graphing",
+        "Transformations"
+      ],
+      "gradeLabel": "Grades 4–10 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Design & solve",
+      "icon": "illustrator",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "science-cer-notebook",
+      "title": "Science CER Notebook",
+      "category": "science",
+      "categoryLabel": "Science · Claim, Evidence & Reasoning",
+      "type": "tool",
+      "description": "Organize predictions, observations, diagrams, and claim-evidence-reasoning responses using reusable lab templates.",
+      "skills": [
+        "Scientific method",
+        "CER writing",
+        "Observations"
+      ],
+      "gradeLabel": "Grades 4–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or pairs · Export & print",
+      "icon": "science",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 1
+    },
+    {
+      "id": "checkers-academy",
+      "title": "Checkers Academy",
+      "category": "strategy",
+      "categoryLabel": "Strategy & Logic · Checkers",
+      "type": "game",
+      "description": "Learn classic checkers with legal-move hints, mandatory jumps, multi-captures, kings, computer opponents, and tactical puzzle challenges.",
+      "skills": [
+        "Strategy",
+        "Planning",
+        "Deductive reasoning"
+      ],
+      "gradeLabel": "Grades 2–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo vs. AI · Two-player local",
+      "icon": "checkers",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "sports",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "playbook-tactics-multisport",
+      "title": "Playbook Tactics: Multi-Sport Expansion",
+      "category": "pe",
+      "categoryLabel": "PE & Esports · Animated Coaching Playbooks",
+      "type": "tool",
+      "description": "Extend Basketball Playbook Tactics into volleyball rotations, baseball defenses, football formations, soccer movement, and wrestling positional sequences with animated diagrams.",
+      "skills": [
+        "Spatial strategy",
+        "Team coordination",
+        "Sport tactics"
+      ],
+      "gradeLabel": "Grades 5–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Coach & student diagram builder",
+      "icon": "playbook",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "sports",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "team-scorekeeper-multisport",
+      "title": "Team Scorekeeper: Multi-Sport Expansion",
+      "category": "pe",
+      "categoryLabel": "PE & Fitness · Live Game Scorebooks",
+      "type": "tool",
+      "description": "Extend Basketball Scorekeeper to volleyball sets and rotations, baseball innings and counts, football drives, soccer events, and wrestling periods and points.",
+      "skills": [
+        "Statistics",
+        "Rules",
+        "Sportsmanship"
+      ],
+      "gradeLabel": "Grades 5–12 · Coach tool",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Staff-controlled scores · Export/print",
+      "icon": "scorekeeper",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "sports",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "rhythm-rally",
+      "title": "Rhythm Rally",
+      "category": "music",
+      "categoryLabel": "Music · Rhythm & Beat Game",
+      "type": "game",
+      "description": "Tap or press keys to the beat while reading quarter, half, eighth, and sixteenth notes, rests, and changing time signatures.",
+      "skills": [
+        "Note values",
+        "Steady beat",
+        "Time signatures"
+      ],
+      "gradeLabel": "Grades 2–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Keyboard and touchscreen",
+      "icon": "musicnote",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "note-quest-music-reading",
+      "title": "Note Quest: Music Reading Adventure",
+      "category": "music",
+      "categoryLabel": "Music · Reading Treble & Bass Clefs",
+      "type": "game",
+      "description": "Identify notes on a musical staff to guide an explorer through levels. Add treble, bass, accidentals, intervals, and instrument-specific practice.",
+      "skills": [
+        "Staff reading",
+        "Pitch recognition",
+        "Clefs"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Progressive note-reading",
+      "icon": "musicstaff",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "virtual-instrument-studio",
+      "title": "Virtual Instrument Studio",
+      "category": "music",
+      "categoryLabel": "Music · Instruments & Sound",
+      "type": "simulation",
+      "description": "Play keyboard, xylophone, drum pads, and virtual classroom instruments while exploring pitch, volume, scales, harmony, and timbre.",
+      "skills": [
+        "Pitch",
+        "Timbre",
+        "Musical expression"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or shared keyboard · Audio on demand",
+      "icon": "keyboard",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "beat-lab-composer",
+      "title": "Beat Lab: Music Composer",
+      "category": "music",
+      "categoryLabel": "Music · Digital Composition Studio",
+      "type": "tool",
+      "description": "Create original rhythms and melodies with a step sequencer, instrument tracks, tempo controls, musical forms, and project export.",
+      "skills": [
+        "Composition",
+        "Rhythm",
+        "Creativity"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Compose · Arrange · Save locally",
+      "icon": "musicnote",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "ear-training-arcade",
+      "title": "Ear Training Arcade",
+      "category": "music",
+      "categoryLabel": "Music · Listening & Aural Skills",
+      "type": "game",
+      "description": "Listen for higher and lower pitches, match intervals, recognize rhythm patterns, and practice melodic memory with guided difficulty.",
+      "skills": [
+        "Aural discrimination",
+        "Intervals",
+        "Listening"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Listening challenges",
+      "icon": "ear",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "music-bingo-builder",
+      "title": "Music Bingo Builder",
+      "category": "music",
+      "categoryLabel": "Music · Teacher Review Game",
+      "type": "tool",
+      "description": "Make music vocabulary, instrument, symbol, rhythm, and note-name bingo boards for projector, classroom device, or printable play.",
+      "skills": [
+        "Music vocabulary",
+        "Recognition",
+        "Review"
+      ],
+      "gradeLabel": "Grades 1–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Teacher creates · Print or project",
+      "icon": "musicstaff",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "band-practice-companion",
+      "title": "Band Practice Companion",
+      "category": "music",
+      "categoryLabel": "Music · Practice & Tuning Tools",
+      "type": "tool",
+      "description": "Combine metronome, reference pitches, practice logs, and an optional microphone tuner with clear consent and no recordings sent to servers.",
+      "skills": [
+        "Tempo",
+        "Intonation",
+        "Practice habits"
+      ],
+      "gradeLabel": "Grades 4–12 · Band and orchestra",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Individual practice · Optional microphone",
+      "icon": "musicnote",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "instrument-family-explorer",
+      "title": "Instrument Family Explorer",
+      "category": "music",
+      "categoryLabel": "Music · Orchestra & World Instruments",
+      "type": "simulation",
+      "description": "Explore instrument families, listen to original sound samples, compare timbres, and complete listening detective games.",
+      "skills": [
+        "Instrument families",
+        "Timbre",
+        "Classification"
+      ],
+      "gradeLabel": "Grades 2–12 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo or whole class · Listening lab",
+      "icon": "musicnote",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "conductors-challenge",
+      "title": "Conductor’s Challenge",
+      "category": "music",
+      "categoryLabel": "Music · Meter, Tempo & Dynamics",
+      "type": "game",
+      "description": "Control a virtual ensemble using tempo, meter, rests, dynamics, and expressive cues. See and hear what changes when the conductor leads.",
+      "skills": [
+        "Beat patterns",
+        "Dynamics",
+        "Expression"
+      ],
+      "gradeLabel": "Grades 3–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Virtual ensemble",
+      "icon": "musicnote",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "sheet-music-studio",
+      "title": "Sheet Music Studio",
+      "category": "music",
+      "categoryLabel": "Music · Notation & Printing",
+      "type": "tool",
+      "description": "Build short original melodies on a staff, check note durations by measure, play them back, and export printable sheet music.",
+      "skills": [
+        "Music notation",
+        "Meter",
+        "Composition"
+      ],
+      "gradeLabel": "Grades 4–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Compose · Playback · Print",
+      "icon": "musicstaff",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "melody-memory-match",
+      "title": "Melody Memory Match",
+      "category": "music",
+      "categoryLabel": "Music · Listening & Memory",
+      "type": "game",
+      "description": "Listen to brief original melodies, repeat sequences on a virtual instrument, and recognize matching rhythm or pitch patterns.",
+      "skills": [
+        "Auditory memory",
+        "Pitch patterns",
+        "Rhythm"
+      ],
+      "gradeLabel": "Grades 2–8 · Adjustable",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · Listening and repeat",
+      "icon": "ear",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
+    },
+    {
+      "id": "music-history-remix",
+      "title": "Music History Remix",
+      "category": "music",
+      "categoryLabel": "Music · History & Culture",
+      "type": "game",
+      "description": "Explore the evolution of musical styles, instruments, and technology using historical timelines, listening comparisons, and creative prompts.",
+      "skills": [
+        "Music history",
+        "Culture",
+        "Critical listening"
+      ],
+      "gradeLabel": "Grades 5–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Explore · Compare · Reflect",
+      "icon": "musicstaff",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "music",
+      "roadmapFresh": 2
     }
   ]
 }

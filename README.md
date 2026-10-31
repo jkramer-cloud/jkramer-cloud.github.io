@@ -1,54 +1,44 @@
-# Naches Learning Hub v31.29 — Local Weather, Sunrise/Sunset & NWS Alerts
+# Naches Learning Hub v31.33 — Music & Multi-Sport Roadmap
 
-**October 30, 2026** | Incremental upgrade from v31.28
+**October 30, 2026** · Drop-in update from v31.32.
 
-This is a drop-in update for the existing Naches Learning Hub, not a new or separate game. It preserves the catalog, favorites, activity links, seasonal events, festive illustrations, and previous layouts.
+This update retains **29 playable activities**, the original **28 planned ideas**, and adds **15 new In Development concepts**, for **43 planned concepts** total. New concepts are not playable until separate apps or upgrades are published.
 
-## What's fixed
+## Newly added concepts
 
-- **Clear evenings are no longer labeled “Sunny.”** Clear weather at night is displayed as **Clear night**; partly cloudy evenings and overcast evenings have corresponding descriptions. The displayed scene follows sunrise/sunset at the selected weather location.
-- **Weather location is selectable.** Naches, WA is the default and requires no location permission. In **Customize Scene → Weather location**, you can select **This computer’s location** or click **Use computer location**. The browser requests permission before retrieving approximate coordinates. If unavailable or denied, Naches is used.
-- **Sunrise and sunset are in the Time of day selector.** Options now include Automatic, Sunrise preview, Daylight preview, Sunset preview, and Night sky preview. Selecting Sunrise/Sunset produces a golden twilight scene, and the Studio shows that day's local sunrise/sunset times when weather data is available.
-- **More weather condition scenes.** Manual scenes now include drizzle, rain, snow, sleet/icy mix, freezing rain, hail, mist/fog, windy, frosty, and thunderstorms, in addition to clear and cloudy skies. The page also maps supported WMO current-condition codes to drizzle, freezing rain, and hail when forecast data indicates them.
-- **Temperature and wind effects.** At/below 32°F, a subtle icy shimmer appears in automatic mode. Strong wind adjusts cloud animation and can bring blowing foliage. Reduced-motion and animation-off settings still disable motion.
-- **Official warnings are separate from modeled conditions.** The Scene Studio checks for **active National Weather Service watches, warnings and advisories** by weather location using the public NWS alerts endpoint. If an active alert is returned, the header and Scene Studio identify it with a link to the official source. If the alert service is unavailable, the page reports that it could not check; it does **not** claim there are no warnings.
+### Strategy and sports (3)
+- **Checkers Academy:** Classic rules, kings, forced captures, jump chains, hints, computer difficulty, local two-player mode, tactical puzzles.
+- **Playbook Tactics: Multi-Sport Expansion:** Extend existing basketball tactics with volleyball, baseball, football, soccer, and wrestling. Each sport has its own field/court/mat diagrams, player placements, roles, and animated movement.
+- **Team Scorekeeper: Multi-Sport Expansion:** Extend existing basketball scorekeeping with sport-specific scoring, period/set/inning tracking, lineup and substitution handling, and exportable summaries. Coaches must be able to select locally appropriate rule sets; do not assume one universal league rule system.
 
-## Location and privacy
+The two multi-sport listings are **roadmap notes for existing games**, not replacement apps. The existing basketball links and playability remain unchanged.
 
-- Without your permission, the default weather location remains **Naches, WA**, and no device location is requested.
-- If you elect to use your computer's location, the browser prompts for location access. Approximate coordinates are shared with Open-Meteo for weather and with the US National Weather Service for alerts to those coordinates.
-- The selected mode (Naches vs device) is saved locally in browser storage. **Device coordinates are not stored** in the Hub's browser settings or weather cache. The page requests location again on subsequent visits if the mode is saved; the browser decides whether to prompt again.
-- School-managed Chromebooks can block geolocation; the Hub falls back to Naches.
-- Geolocation follows the browser/device location and might be less precise on desktop computers. NWS alerts are US-specific.
+### Music class (12)
+1. Rhythm Rally — timed rhythm identification and tapping
+2. Note Quest: Music Reading Adventure — staff reading for treble/bass clefs
+3. Virtual Instrument Studio — keyboard, xylophone and percussion exploration
+4. Beat Lab: Music Composer — step sequencing and original composition
+5. Ear Training Arcade — pitch, interval, and rhythm discrimination
+6. Music Bingo Builder — printable / on-screen note, instrument and symbol review
+7. Band Practice Companion — metronome, reference pitch, optional microphone tuner
+8. Instrument Family Explorer — original sound samples and listening identification
+9. Conductor’s Challenge — meter, tempo, dynamics and musical expression
+10. Sheet Music Studio — notation, playback and printable student compositions
+11. Melody Memory Match — original melody sequences and recall
+12. Music History Remix — eras, musical traditions, listening and interpretation
 
-## Source data and limitations
+## Navigation improvements
 
-- Weather, sunrise/sunset and WMO codes: [Open-Meteo](https://open-meteo.com/en/docs). Current weather is model-based and can differ from conditions observed locally.
-- Official US weather alerts: [National Weather Service](https://www.weather.gov/documentation/services-web-alerts), using the active-alerts point endpoint. Alerts only appear if the service responds successfully, and availability is not guaranteed.
-- **This is educational scenery, not a safety alert system.** For urgent weather decisions, consult the official NWS site or local emergency guidance. A temperature below freezing is a **condition**, not proof that an official Freeze Warning has been issued. A simulated hail or freezing-rain scene is never an official warning.
-- Manual scenes are visual previews; they do not modify or claim to be the live forecast.
+- New **Music** subject in the main horizontal subject filter.
+- New **Music class** and **Sports & strategy** categories in the In Development roadmap.
+- All new concepts have distinct music/stadium-themed card artwork and remain nonclickable until development.
+- The In Development section remains initially limited to nine cards, with Show all to avoid an overly long homepage.
+- The built-in fallback catalog matches `activities.json` for local/offline preview.
 
-## Install on GitHub Pages
+## Classroom design notes
 
-1. Download and extract the ZIP.
-2. Open the repository `jkramer-cloud/jkramer-cloud.github.io`.
-3. Replace its root `index.html` with this version. `activities.json` is included unchanged so the package can also be uploaded as a complete set.
-4. Optionally replace `README.md`, `CHANGELOG.md`, and `UPLOAD_INSTRUCTIONS.md`.
-5. Commit and reload the site with Ctrl+Shift+R.
+These future activities should support Chromebook keyboard/mouse use, student-safe audio, volume control, and print / export when useful. Microphone access for tuning must be explicitly opt-in and should not upload recordings by default. Musical content should use original, licensed, or public-domain melodies and instrument samples.
 
-No build system, API key, package installation, or server-side code is required. Live data will be loaded by the browser from HTTPS endpoints. The Hub retains the previous seasonal/offline fallback if requests fail.
+## Publishing
 
-
-## v31.30 — New science activity: Valley Star Scout
-
-- Adds **Valley Star Scout** to the Science category, with a custom astronomy illustration and a link to its separate GitHub Pages site.
-- Adds it to both `activities.json` and the embedded fallback list so the tile survives intermittent catalog-loading problems.
-- Preserves v31.29 weather/time-of-day repairs and all previous activities.
-- **Publish the Valley Star Scout repository first** so the new tile URL is live.
-
-
-## v31.31 — Valley Star Scout v2.0
-
-- Science listing points to the revised `valley-star-scout` site, which has phone-only AR camera overlays, red mode, offline star maps, science quizzes, an observational forecast and an aurora outlook.
-- Keeps all existing Hub weather, holiday scenes, favorites, catalog items and animated card artwork.
-- Publish Star Scout v2 first. This update changes the **Hub listing only**; the standalone astronomy app lives in its own GitHub Pages repo.
+Replace the existing Learning Hub repository-root `index.html` and `activities.json` with the two files from this ZIP. Keep other game repositories unchanged. No new repo is required for these concept cards. Optional documentation is provided.

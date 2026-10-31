@@ -1,5 +1,14 @@
 # Naches Learning Hub changelog
 
+## v31.36 — October 31, 2026
+- Launched Cipher Quest: Codebreakers with accurate 30-mission description, newest release placement, original embedded artwork, and GitHub Pages link.
+- Converted the existing Cipher Quest roadmap entry from planned to available instead of adding a duplicate.
+- Kept embedded catalog in sync with `activities.json` and all existing 76 other listings.
+- Catalog totals: 32 available + 45 planned = 77.
+- Preserved v31.35 scene/weather/holiday functionality and Coordinate Pixel Quest launch.
+
+# Naches Learning Hub changelog
+
 ## v31.35 — October 31, 2026
 - Launched Coordinate Pixel Quest as a playable math/coordinate adventure tile.
 - Added custom pixel-art Hub artwork for Pixel Valley, without external image files.

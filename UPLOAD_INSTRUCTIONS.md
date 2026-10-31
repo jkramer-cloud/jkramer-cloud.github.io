@@ -1,10 +1,9 @@
-# Learning Hub v31.35: replace website files
+# Install Naches Learning Hub v31.36
 
-**Destination: EXISTING `jkramer-cloud/jkramer-cloud.github.io` repository**.
+1. Extract this ZIP.
+2. Open your existing **jkramer-cloud.github.io** GitHub repository.
+3. Replace the root **index.html** and **activities.json** with these files (README and CHANGELOG are optional).
+4. Commit; wait for the normal GitHub Pages publish.
+5. Refresh your Learning Hub site with Ctrl+Shift+R and search for **Cipher Quest**.
 
-1. Download this *Learning Hub* ZIP and extract it.
-2. Replace **`index.html`** and **`activities.json`** at the top level of the existing Hub repository.
-3. Commit. You may also upload README.md and CHANGELOG.md if you maintain repository documentation.
-4. The new Coordinate Pixel Quest tile targets `https://jkramer-cloud.github.io/coordinate-pixel-quest/`. Publish the **separate game repository** to make the tile live.
-
-Keep game files in the game repository. Do not upload the game ZIP to the Hub.
+Cipher Quest is hosted in a **separate** repository: **cipher-quest-codebreakers**. Upload and publish that game separately, or the new tile will point to an unavailable site.

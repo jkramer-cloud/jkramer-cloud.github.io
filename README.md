@@ -1,19 +1,20 @@
-# Naches Learning Hub v31.35 — Coordinate Pixel Quest Launch
+# Naches Learning Hub v31.36 — Cipher Quest Launch
 
-**October 31, 2026** — Complete Hub replacement, built on v31.34. This is not the game repository.
+**Updated October 31, 2026.** This is a **Learning Hub update** based on v31.35; it is not the Cipher Quest game repository.
 
-## What's updated
-- **Coordinate Pixel Quest** now appears as a playable Math tile. It links to `https://jkramer-cloud.github.io/coordinate-pixel-quest/` and includes custom built-in Pixel Valley card artwork.
-- Its listing accurately describes the **implemented** first chapter: 8 restorations, bottom-left cell coordinates (X,Y), bridge unlocks, map exploration, hidden stars, and XP. It does **not** promise future four-quadrant graphing or student-drawn artwork features.
-- The latest-release discovery shelf highlights Coordinate Pixel Quest; Checkers Academy Deluxe remains available.
-- The five random development-idea spotlight and **all 46 remaining roadmap ideas** remain visible (subject to filters).
-- Preserves the existing weather, astronomy, holiday decorations, scene customization, sort/search, favorites, and all previous working activity links from v31.34.
-- Total: **31 playable/available** activities + **46 planned** = **77 listings**.
+## Changes
+- Promoted the existing **Cipher Quest: Codebreakers** roadmap card into the playable **Strategy & Logic** catalog.
+- Added its game URL: https://jkramer-cloud.github.io/cipher-quest-codebreakers/
+- Accurately describes the built game: three regions, 30 transmissions, hands-on decoder tools, and local progress saves (not an unbuilt cipher creator).
+- Added original built-in pixel-inspired artwork to the Cipher Quest card and featured the new launch in the discovery rail.
+- Updated both `activities.json` and the synchronized embedded `fallbackCatalog` in `index.html`.
+- Retained the v31.35 weather, sun/moon and holiday scenes, settings, existing links, recent games, and roadmap.
+- **Catalog:** 32 available + 45 planned = 77 entries (no duplicates).
 
-## Replace in your existing Hub repository
-1. Open `jkramer-cloud/jkramer-cloud.github.io`.
-2. Extract this ZIP. Upload `index.html` and `activities.json` to repository root, replacing their old versions. The three Markdown files are optional documentation.
-3. Commit changes to the branch used by GitHub Pages.
-4. Separately publish the Coordinate Pixel Quest game in `jkramer-cloud/coordinate-pixel-quest` (its own game ZIP). After Pages is live, the Hub tile opens it.
+## Publish
+1. In **jkramer-cloud/jkramer-cloud.github.io**, replace the root `index.html` and `activities.json` with the files from this ZIP. Optionally also replace README and CHANGELOG.
+2. Commit to the branch configured in GitHub Pages.
+3. Separately upload the **Cipher Quest game** ZIP to the **cipher-quest-codebreakers** repository and enable GitHub Pages for that repo. The Hub link will not work until the game's site is published.
+4. Open https://jkramer-cloud.github.io/ and hard-refresh (`Ctrl + Shift + R`) if the old Hub is cached.
 
-No extra `hub-card` assets or folders are required: artwork is built into the Hub's HTML. The ZIP contains *only* the Learning Hub files, not the game.
+**Never upload the game's `index.html` into the Hub repository.** These are separate sites.

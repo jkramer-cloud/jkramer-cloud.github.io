@@ -1,9 +1,9 @@
-# Updating Naches Learning Hub to v31.33
+# Upload the two GitHub-ready ZIPs independently
 
-1. Open the existing `jkramer-cloud/jkramer-cloud.github.io` repository.
-2. Extract `Naches_Learning_Hub_v31_33_Music_Sports_Ideas_GitHub_Ready.zip`.
-3. Replace the **root `index.html` and `activities.json`** with those from this ZIP. Keep all the existing games, repositories, and other files.
-4. Commit to the currently published GitHub Pages branch.
-5. Refresh your Hub, open **In Development**, then choose **Music class** or **Sports & strategy** to see the 15 new ideas. **Music** is now also a subject filter in the top row.
+## GAME ZIP → `jkramer-cloud/checkers-academy` (new repository)
+Upload all six **files inside** the GAME ZIP to the **root** of the new repo, including `index.html`. GitHub Pages: `main` + `/ (root)`.
 
-The 15 ideas are clearly marked **Coming Soon — Not Playable**. Your existing basketball Playbook and Scorekeeper games are unchanged; multi-sport entries describe future upgrades.
+## HUB ZIP → `jkramer-cloud/jkramer-cloud.github.io` (existing repository)
+Replace `index.html` and `activities.json` with the two files from the HUB ZIP. They are the actual Learning Hub website. README and CHANGELOG are optional.
+
+Publish the game before using its new tile on the Hub. The tile targets `https://jkramer-cloud.github.io/checkers-academy/`.

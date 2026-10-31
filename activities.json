@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-10-30",
+  "lastUpdated": "2026-10-31",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -1467,15 +1467,15 @@
     },
     {
       "id": "checkers-academy",
-      "title": "Checkers Academy",
+      "title": "Checkers Academy Deluxe",
       "category": "strategy",
       "categoryLabel": "Strategy & Logic · Checkers",
       "type": "game",
-      "description": "Learn classic checkers with legal-move hints, mandatory jumps, multi-captures, kings, computer opponents, and tactical puzzle challenges.",
+      "description": "Play deluxe navy-and-gold checkers with four computer difficulties, two-player matches, 12 tactical puzzles, nine lessons, hints, kings, and unlockable designs.",
       "skills": [
         "Strategy",
-        "Planning",
-        "Deductive reasoning"
+        "Tactics",
+        "Logical reasoning"
       ],
       "gradeLabel": "Grades 2–12 · Adjustable",
       "gradeGroups": [
@@ -1484,12 +1484,13 @@
         "6-8",
         "9-12"
       ],
-      "mode": "Solo vs. AI · Two-player local",
+      "mode": "Solo vs. AI · 2 players · Puzzles",
       "icon": "checkers",
-      "status": "planned",
-      "featured": false,
-      "roadmapGroup": "sports",
-      "roadmapFresh": 2
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/checkers-academy/",
+      "linkText": "Play deluxe checkers",
+      "releaseOrder": 40
     },
     {
       "id": "playbook-tactics-multisport",
@@ -1844,6 +1845,131 @@
       "featured": false,
       "roadmapGroup": "music",
       "roadmapFresh": 2
+    },
+    {
+      "id": "probability-carnival",
+      "title": "Probability Carnival",
+      "category": "math",
+      "categoryLabel": "Math · Chance & Statistics",
+      "type": "simulation",
+      "description": "Run digital carnival games with dice, wheels, and mystery bags. Predict outcomes, collect experimental data, and compare with theoretical probability.",
+      "skills": [
+        "Probability",
+        "Data analysis",
+        "Fair games"
+      ],
+      "gradeLabel": "Grades 3–9 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo experiments · Whole-class comparisons",
+      "icon": "quiz",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 3
+    },
+    {
+      "id": "eco-city-architect",
+      "title": "Eco City Architect",
+      "category": "science",
+      "categoryLabel": "Science · Sustainability & Systems",
+      "type": "simulation",
+      "description": "Design a growing town, balance energy, water, green spaces, costs, and residents’ needs, then explore the effects of each planning decision.",
+      "skills": [
+        "Environmental science",
+        "Systems thinking",
+        "Trade-offs"
+      ],
+      "gradeLabel": "Grades 4–9 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo builder · Scenario challenges",
+      "icon": "science",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 3
+    },
+    {
+      "id": "cyber-safety-quest",
+      "title": "Cyber Safety Quest",
+      "category": "design",
+      "categoryLabel": "Technology · Digital Citizenship",
+      "type": "game",
+      "description": "Solve interactive stories about passwords, privacy, digital footprints, scams, and respectful communication by choosing safe responses.",
+      "skills": [
+        "Digital citizenship",
+        "Online safety",
+        "Critical thinking"
+      ],
+      "gradeLabel": "Grades 3–8 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Scenario stories · Practice decisions",
+      "icon": "reader",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "practice",
+      "roadmapFresh": 3
+    },
+    {
+      "id": "storyboard-cinema-studio",
+      "title": "Storyboard Cinema Studio",
+      "category": "ela",
+      "categoryLabel": "ELA & Art · Visual Storytelling",
+      "type": "tool",
+      "description": "Build storyboards using comic panels, camera angles, captions, and scene sequencing before writing, filming, or animating a project.",
+      "skills": [
+        "Story structure",
+        "Sequencing",
+        "Visual communication"
+      ],
+      "gradeLabel": "Grades 4–12 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Create · Save · Print storyboards",
+      "icon": "illustrator",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "teacher",
+      "roadmapFresh": 3
+    },
+    {
+      "id": "cipher-quest-codebreakers",
+      "title": "Cipher Quest: Codebreakers",
+      "category": "strategy",
+      "categoryLabel": "Strategy · Patterns & Ciphers",
+      "type": "game",
+      "description": "Crack classroom-friendly substitution and pattern ciphers, learn how encoded messages work, and design puzzles for classmates.",
+      "skills": [
+        "Pattern recognition",
+        "Logic",
+        "Encoding"
+      ],
+      "gradeLabel": "Grades 4–9 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo puzzles · Create-a-cipher mode",
+      "icon": "checkers",
+      "status": "planned",
+      "featured": false,
+      "roadmapGroup": "paper",
+      "roadmapFresh": 3
     }
-  ]
+  ],
+  "version": "31.34"
 }

@@ -1,8 +1,11 @@
-# Changelog
+# Naches Learning Hub
 
-## v31.33 — Music & Sports Roadmap (October 30, 2026)
-- Added Checkers Academy concept, and two sport-specific upgrade roadmaps for Playbook Tactics and Team Scorekeeper (volleyball, baseball, football, soccer, wrestling).
-- Added 12 music class app concepts spanning notation, beat and ear training, composition, instrument exploration, practice and music history.
-- Added Music as a subject and Music class / Sports & strategy development filters with themed concept artwork.
-- Preserved 29 playable game links, 28 previously-planned ideas, seasonal scenery, and all browser favorites.
-- Synced embedded fallback and JSON catalog: **29 playable, 43 planned**.
+## v31.34 — October 31, 2026
+- Integrated Checkers Academy Deluxe playable tile and custom navy-gold artwork.
+- Added five randomly highlighted planned ideas and manual shuffle control.
+- Removed nine-card truncation: all 47 planned ideas visible simultaneously (subject to selected filters).
+- Added five classroom-friendly roadmap concepts.
+- Preserved all older available listings, all scenery and holidays from v31.33, and embedded/offline catalog compatibility.
+
+## v31.33 — October 30, 2026
+- Music & multi-sport roadmap expansion, preserving prior games.

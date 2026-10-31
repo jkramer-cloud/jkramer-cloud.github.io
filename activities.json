@@ -1421,24 +1421,24 @@
       "category": "math",
       "categoryLabel": "Math · Coordinate Grids & Pixel Art",
       "type": "game",
-      "description": "Plot ordered pairs to reveal pixel pictures, design graphing puzzles, and practice translations, reflections, and quadrants.",
+      "description": "Explore a fading pixel world, restore eight landmarks by painting ordered-pair coordinates, rebuild the Golden Bridge, uncover hidden stars, and earn XP.",
       "skills": [
-        "Coordinates",
-        "Graphing",
-        "Transformations"
+        "Ordered pairs",
+        "X / Y coordinates",
+        "Spatial reasoning"
       ],
-      "gradeLabel": "Grades 4–10 · Adjustable",
+      "gradeLabel": "Grades 4–8 · Adjustable",
       "gradeGroups": [
         "3-5",
-        "6-8",
-        "9-12"
+        "6-8"
       ],
-      "mode": "Solo · Design & solve",
+      "mode": "Solo adventure · 8 restoration quests",
       "icon": "illustrator",
-      "status": "planned",
-      "featured": false,
-      "roadmapGroup": "practice",
-      "roadmapFresh": 1
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/coordinate-pixel-quest/",
+      "linkText": "Explore Pixel Valley",
+      "releaseOrder": 41
     },
     {
       "id": "science-cer-notebook",
@@ -1971,5 +1971,5 @@
       "roadmapFresh": 3
     }
   ],
-  "version": "31.34"
+  "version": "31.35"
 }

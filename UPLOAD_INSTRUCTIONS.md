@@ -1,9 +1,10 @@
-# Upload the two GitHub-ready ZIPs independently
+# Learning Hub v31.35: replace website files
 
-## GAME ZIP → `jkramer-cloud/checkers-academy` (new repository)
-Upload all six **files inside** the GAME ZIP to the **root** of the new repo, including `index.html`. GitHub Pages: `main` + `/ (root)`.
+**Destination: EXISTING `jkramer-cloud/jkramer-cloud.github.io` repository**.
 
-## HUB ZIP → `jkramer-cloud/jkramer-cloud.github.io` (existing repository)
-Replace `index.html` and `activities.json` with the two files from the HUB ZIP. They are the actual Learning Hub website. README and CHANGELOG are optional.
+1. Download this *Learning Hub* ZIP and extract it.
+2. Replace **`index.html`** and **`activities.json`** at the top level of the existing Hub repository.
+3. Commit. You may also upload README.md and CHANGELOG.md if you maintain repository documentation.
+4. The new Coordinate Pixel Quest tile targets `https://jkramer-cloud.github.io/coordinate-pixel-quest/`. Publish the **separate game repository** to make the tile live.
 
-Publish the game before using its new tile on the Hub. The tile targets `https://jkramer-cloud.github.io/checkers-academy/`.
+Keep game files in the game repository. Do not upload the game ZIP to the Hub.

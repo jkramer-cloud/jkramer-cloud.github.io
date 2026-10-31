@@ -1,11 +1,12 @@
-# Naches Learning Hub
+# Naches Learning Hub changelog
+
+## v31.35 — October 31, 2026
+- Launched Coordinate Pixel Quest as a playable math/coordinate adventure tile.
+- Added custom pixel-art Hub artwork for Pixel Valley, without external image files.
+- Highlighted the game in the New Releases shelf.
+- Maintained 46 planned ideas, including five randomized spotlight selections and the full visible roadmap.
+- Preserved all 30 prior playable cards and the live Naches weather/season/holiday scene system.
+- Catalog totals: 31 available + 46 planned = 77.
 
 ## v31.34 — October 31, 2026
-- Integrated Checkers Academy Deluxe playable tile and custom navy-gold artwork.
-- Added five randomly highlighted planned ideas and manual shuffle control.
-- Removed nine-card truncation: all 47 planned ideas visible simultaneously (subject to selected filters).
-- Added five classroom-friendly roadmap concepts.
-- Preserved all older available listings, all scenery and holidays from v31.33, and embedded/offline catalog compatibility.
-
-## v31.33 — October 30, 2026
-- Music & multi-sport roadmap expansion, preserving prior games.
+- Launched Checkers Academy Deluxe; showed five randomly featured upcoming concepts and the complete in-development roadmap; added five new roadmap concepts.

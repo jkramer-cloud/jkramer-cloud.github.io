@@ -37,3 +37,18 @@ This is a drop-in update for the existing Naches Learning Hub, not a new or sepa
 5. Commit and reload the site with Ctrl+Shift+R.
 
 No build system, API key, package installation, or server-side code is required. Live data will be loaded by the browser from HTTPS endpoints. The Hub retains the previous seasonal/offline fallback if requests fail.
+
+
+## v31.30 — New science activity: Valley Star Scout
+
+- Adds **Valley Star Scout** to the Science category, with a custom astronomy illustration and a link to its separate GitHub Pages site.
+- Adds it to both `activities.json` and the embedded fallback list so the tile survives intermittent catalog-loading problems.
+- Preserves v31.29 weather/time-of-day repairs and all previous activities.
+- **Publish the Valley Star Scout repository first** so the new tile URL is live.
+
+
+## v31.31 — Valley Star Scout v2.0
+
+- Science listing points to the revised `valley-star-scout` site, which has phone-only AR camera overlays, red mode, offline star maps, science quizzes, an observational forecast and an aurora outlook.
+- Keeps all existing Hub weather, holiday scenes, favorites, catalog items and animated card artwork.
+- Publish Star Scout v2 first. This update changes the **Hub listing only**; the standalone astronomy app lives in its own GitHub Pages repo.

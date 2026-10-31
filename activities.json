@@ -379,6 +379,35 @@
       "releaseOrder": 10
     },
     {
+      "id": "valley-star-scout",
+      "title": "Valley Star Scout",
+      "category": "science",
+      "categoryLabel": "Science · Astronomy & Space Weather",
+      "type": "simulation",
+      "description": "Explore tonight’s constellations with an offline star atlas, 7-night weather planning, red night vision, science challenges, and an optional phone-only camera sky finder with compass calibration.",
+      "skills": [
+        "Constellations and sky navigation",
+        "Earth rotation and seasons",
+        "Moon phases",
+        "Weather and aurora science",
+        "Field observations and sensor error"
+      ],
+      "gradeLabel": "Grades 5–12 · Astronomy & skywatching",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo • Sky Explorer, Star Hunter, Science Lab & phone AR Finder",
+      "icon": "science",
+      "status": "available",
+      "featured": true,
+      "url": "https://jkramer-cloud.github.io/valley-star-scout/",
+      "linkText": "Explore the night sky",
+      "releaseOrder": 39,
+      "audience": "students"
+    },
+    {
       "id": "science-investigation-lab",
       "title": "Science Investigation Lab",
       "category": "science",

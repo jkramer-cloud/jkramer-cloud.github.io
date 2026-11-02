@@ -1,9 +1,9 @@
-# Install Naches Learning Hub v31.36
+# Install Naches Learning Hub v31.37
 
 1. Extract this ZIP.
-2. Open your existing **jkramer-cloud.github.io** GitHub repository.
-3. Replace the root **index.html** and **activities.json** with these files (README and CHANGELOG are optional).
-4. Commit; wait for the normal GitHub Pages publish.
-5. Refresh your Learning Hub site with Ctrl+Shift+R and search for **Cipher Quest**.
+2. Open your existing GitHub repository for `jkramer-cloud.github.io` (the Learning Hub, not an individual game).
+3. Replace `index.html` and `activities.json` in the root with these files.
+4. Optionally update README.md and CHANGELOG.md, then commit your changes.
+5. Refresh https://jkramer-cloud.github.io/ with Ctrl+Shift+R.
 
-Cipher Quest is hosted in a **separate** repository: **cipher-quest-codebreakers**. Upload and publish that game separately, or the new tile will point to an unavailable site.
+The full date and 12-hour clock (including seconds and PST/PDT) appear immediately to the left of the weather. All existing games and features remain intact.

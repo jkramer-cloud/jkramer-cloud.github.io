@@ -1,5 +1,13 @@
 # Naches Learning Hub changelog
 
+## v31.37 — November 2, 2026
+- Added a full live Naches date and second-precision time display directly left of the weather card.
+- Displays Washington/Pacific time with automatic PST/PDT transitions independent of browser time-zone settings.
+- Optimized header for desktop, tablets, and phones.
+- Preserved all v31.36 games, descriptions, weather functionality, scenery, settings, and links.
+
+# Naches Learning Hub changelog
+
 ## v31.36 — October 31, 2026
 - Launched Cipher Quest: Codebreakers with accurate 30-mission description, newest release placement, original embedded artwork, and GitHub Pages link.
 - Converted the existing Cipher Quest roadmap entry from planned to available instead of adding a duplicate.

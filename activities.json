@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-10-31",
+  "lastUpdated": "2026-11-02",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -1970,7 +1970,33 @@
       "url": "https://jkramer-cloud.github.io/cipher-quest-codebreakers/",
       "linkText": "Begin codebreaking",
       "releaseOrder": 42
+    },
+    {
+      "id": "marble-summit",
+      "title": "Marble Summit",
+      "category": "strategy",
+      "categoryLabel": "Strategy & Logic · Marble Racing",
+      "type": "game",
+      "description": "Race swirled marbles on Triangle, Classic, or Summit boards. Play people or computer rivals, take risky shortcut rings, bump opponents, and learn the rules in a guided tutorial.",
+      "skills": [
+        "Strategic planning",
+        "Counting & probability",
+        "Decision-making"
+      ],
+      "gradeLabel": "Grades 5–8+ · Strategy",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "2–6 players · Human / computer",
+      "icon": "marble",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/marble-summit/",
+      "linkText": "Play Marble Summit",
+      "releaseOrder": 43
     }
   ],
-  "version": "31.37"
+  "version": "31.38"
 }

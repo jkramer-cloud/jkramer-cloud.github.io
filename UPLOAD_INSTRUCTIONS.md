@@ -1,9 +1,12 @@
-# Install Naches Learning Hub v31.37
+# Install Naches Learning Hub v31.38
 
-1. Extract this ZIP.
-2. Open your existing GitHub repository for `jkramer-cloud.github.io` (the Learning Hub, not an individual game).
-3. Replace `index.html` and `activities.json` in the root with these files.
-4. Optionally update README.md and CHANGELOG.md, then commit your changes.
-5. Refresh https://jkramer-cloud.github.io/ with Ctrl+Shift+R.
+**Publish the game first:** Create the public `marble-summit` repository on your jkramer-cloud GitHub account, upload its `index.html`, and enable Pages (main branch, root). Confirm the game loads at https://jkramer-cloud.github.io/marble-summit/.
 
-The full date and 12-hour clock (including seconds and PST/PDT) appear immediately to the left of the weather. All existing games and features remain intact.
+Then, in your **existing** Learning Hub repository (`jkramer-cloud.github.io`):
+
+1. Extract the Hub ZIP.
+2. Replace the root **index.html** and **activities.json** with the two files from this Hub ZIP.
+3. Commit the changes, then refresh https://jkramer-cloud.github.io/ (Ctrl+Shift+R).
+4. Find **Marble Summit** under **Strategy & Logic** and test its link. Verify the live clock/weather also works.
+
+README.md, CHANGELOG.md and UPLOAD_INSTRUCTIONS.md are optional repository documentation. Do not replace the Hub `index.html` with the Marble Summit game `index.html`.

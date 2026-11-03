@@ -1,18 +1,13 @@
-# Naches Learning Hub v31.38 — Marble Summit
+# Naches Learning Hub v31.39 — Marble Summit Card Artwork
 
-Updated November 2, 2026. Based on Hub v31.37, retaining the live Naches date/time clock, weather, scenery and prior activity catalog.
+Updated November 2, 2026. Builds on v31.38, retaining all 78 activities and the Pacific clock/weather header.
 
 ## What's new
 
-- Added **Marble Summit** to the Strategy & Logic games (catalog now contains 78 entries).
-- Linked to the new `marble-summit` GitHub Pages repository.
-- Added a dedicated marble icon and kept embedded fallback data in sync with `activities.json`.
-- Preserved the v31.37 clock displaying Pacific date and time down to seconds immediately left of weather.
+- Marble Summit now has its own illustrated card showing a six-player wooden board, inner rings, recessed holes, two-color swirl marbles, and die.
+- Card illustration is embedded as SVG in `index.html`, so **no image uploads or asset folders** are required.
+- The existing activity link and metadata remain unchanged.
 
-## Publishing order
+## Install
 
-1. First publish `marble-summit` as its own GitHub Pages repository.
-2. Then replace the Learning Hub repository's root `index.html` and `activities.json` with those from this ZIP.
-3. Confirm that Marble Summit opens and that the date/time and weather widgets still display.
-
-The game link assumes `https://jkramer-cloud.github.io/marble-summit/` and will not work until the new game repository is published.
+Replace the existing Learning Hub repository's `index.html` and `activities.json` files with the versions in this ZIP. Then commit and hard-refresh the Hub. The game remains in its separate `marble-summit` repository.

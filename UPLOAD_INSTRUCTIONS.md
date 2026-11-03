@@ -1,12 +1,9 @@
-# Install Naches Learning Hub v31.38
+# Naches Learning Hub v31.39 — Upload Instructions
 
-**Publish the game first:** Create the public `marble-summit` repository on your jkramer-cloud GitHub account, upload its `index.html`, and enable Pages (main branch, root). Confirm the game loads at https://jkramer-cloud.github.io/marble-summit/.
+1. Extract this ZIP.
+2. In your existing GitHub Learning Hub repository (`jkramer-cloud.github.io`), replace root **index.html** and **activities.json**.
+3. Commit changes to `main`.
+4. Refresh the Hub with Ctrl+Shift+R.
+5. Search for **Marble Summit** under Strategy & Logic. The card now has its own illustration (wooden board, colorful swirled marbles, and die).
 
-Then, in your **existing** Learning Hub repository (`jkramer-cloud.github.io`):
-
-1. Extract the Hub ZIP.
-2. Replace the root **index.html** and **activities.json** with the two files from this Hub ZIP.
-3. Commit the changes, then refresh https://jkramer-cloud.github.io/ (Ctrl+Shift+R).
-4. Find **Marble Summit** under **Strategy & Logic** and test its link. Verify the live clock/weather also works.
-
-README.md, CHANGELOG.md and UPLOAD_INSTRUCTIONS.md are optional repository documentation. Do not replace the Hub `index.html` with the Marble Summit game `index.html`.
+This updates only the Learning Hub. Do not upload it to the Marble Summit game repository. All artwork is embedded in `index.html`.

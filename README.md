@@ -1,13 +1,19 @@
-# Naches Learning Hub v31.39 — Marble Summit Card Artwork
+# Naches Learning Hub v31.40 · Line Multiplication Lab
 
-Updated November 2, 2026. Builds on v31.38, retaining all 78 activities and the Pacific clock/weather header.
+This package updates the existing **jkramer-cloud.github.io** Learning Hub without replacing any existing games or activity entries.
 
 ## What's new
+- **Line Multiplication Lab** appears as its own illustrated Math learning-tool card.
+- Card opens https://jkramer-cloud.github.io/line-multiplication-lab/
+- Mini tutorial, 25 guided practice problems, and free-work/history are described on the card.
+- Both the live JSON catalog and the HTML offline catalog have the same new entry.
+- The previous 78 Hub entries, clock, weather, navigation, artwork, filters, and development ideas are retained.
 
-- Marble Summit now has its own illustrated card showing a six-player wooden board, inner rings, recessed holes, two-color swirl marbles, and die.
-- Card illustration is embedded as SVG in `index.html`, so **no image uploads or asset folders** are required.
-- The existing activity link and metadata remain unchanged.
+## How to upload
+1. Open the **jkramer-cloud.github.io** repository, not the line-multiplication-lab repository.
+2. Replace the existing **index.html** and **activities.json** in the repository root with these two files.
+3. Commit to the GitHub Pages publishing branch (normally `main`).
+4. Refresh https://jkramer-cloud.github.io/ (Ctrl+Shift+R).
+5. Make sure GitHub Pages is enabled for **line-multiplication-lab** so its card link works.
 
-## Install
-
-Replace the existing Learning Hub repository's `index.html` and `activities.json` files with the versions in this ZIP. Then commit and hard-refresh the Hub. The game remains in its separate `marble-summit` repository.
+The additional files in this package are documentation. No image upload is needed: the card artwork is embedded directly in index.html.

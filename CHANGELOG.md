@@ -1,11 +1,6 @@
-# Naches Learning Hub Change Log
-
-## v31.39 — Marble Summit illustrated card (November 2, 2026)
-- Added a dedicated polished vector card illustration for Marble Summit.
-- Preserved the catalog entry, game URL, existing 78 activities, weather, and live clock.
-
-## v31.38 — Marble Summit
-- Added the Marble Summit game under Strategy & Logic.
-
-## v31.37 — Live Date & Time
-- Added live Pacific time with seconds immediately left of weather.
+# v31.40 (2026-11-04)
+- Added illustrated Line Multiplication Lab card.
+- New Math learning tool: 4–8 grade grouping, 25 practice challenges, mini tutorial, free-work and local history.
+- Added app URL, icon, discovery metadata, and release order 44.
+- Updated standalone JSON catalog and HTML fallback catalog identically.
+- Preserved all 78 prior cards and features from v31.39.

@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-11-02",
+  "lastUpdated": "2026-11-04",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -1996,7 +1996,32 @@
       "url": "https://jkramer-cloud.github.io/marble-summit/",
       "linkText": "Play Marble Summit",
       "releaseOrder": 43
+    },
+    {
+      "id": "line-multiplication-lab",
+      "title": "Line Multiplication Lab",
+      "category": "math",
+      "categoryLabel": "Math · Visual Multiplication & Place Value",
+      "type": "tool",
+      "description": "Learn line multiplication with a mini tutorial, 25 practice challenges, a free-work space, and recent history.",
+      "skills": [
+        "Multiplication",
+        "Place value",
+        "Visual reasoning"
+      ],
+      "gradeLabel": "Grades 4–8 · Adjustable",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · 5 levels · Saved practice history",
+      "icon": "line-math",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/line-multiplication-lab/",
+      "linkText": "Open multiplication lab",
+      "releaseOrder": 44
     }
   ],
-  "version": "31.39"
+  "version": "31.40"
 }

@@ -1,9 +1,11 @@
-# Naches Learning Hub v31.39 — Upload Instructions
+# Publish v31.40
 
-1. Extract this ZIP.
-2. In your existing GitHub Learning Hub repository (`jkramer-cloud.github.io`), replace root **index.html** and **activities.json**.
-3. Commit changes to `main`.
-4. Refresh the Hub with Ctrl+Shift+R.
-5. Search for **Marble Summit** under Strategy & Logic. The card now has its own illustration (wooden board, colorful swirled marbles, and die).
+**Repository to update:** https://github.com/jkramer-cloud/jkramer-cloud.github.io
 
-This updates only the Learning Hub. Do not upload it to the Marble Summit game repository. All artwork is embedded in `index.html`.
+Replace ONLY these two existing files at the root:
+- `index.html`
+- `activities.json`
+
+Commit changes. The new card displays under Math and in the newest-activity list, and launches `https://jkramer-cloud.github.io/line-multiplication-lab/` once that app's GitHub Pages deployment is active.
+
+Keep `line-multiplication-lab` as a separate repository. Do not upload this Hub `index.html` into the app repository.

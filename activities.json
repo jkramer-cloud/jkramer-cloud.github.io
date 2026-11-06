@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-11-04",
+  "lastUpdated": "2026-11-05",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -1975,12 +1975,13 @@
       "id": "marble-summit",
       "title": "Marble Summit",
       "category": "strategy",
-      "categoryLabel": "Strategy & Logic · Marble Racing",
+      "categoryLabel": "Strategy & Logic · 3D Marble Racing",
       "type": "game",
-      "description": "Race swirled marbles on Triangle, Classic, or Summit boards. Play people or computer rivals, take risky shortcut rings, bump opponents, and learn the rules in a guided tutorial.",
+      "description": "Race colorful marbles around a six-sided arcade board. Choose human or witty computer rivals, use star shortcuts and the center portal, and switch between 3D and 2D views.",
       "skills": [
         "Strategic planning",
         "Counting & probability",
+        "Spatial reasoning",
         "Decision-making"
       ],
       "gradeLabel": "Grades 5–8+ · Strategy",
@@ -1989,12 +1990,12 @@
         "6-8",
         "9-12"
       ],
-      "mode": "2–6 players · Human / computer",
+      "mode": "2–6 players · Human & AI · 3D / 2D",
       "icon": "marble",
       "featured": true,
       "status": "available",
       "url": "https://jkramer-cloud.github.io/marble-summit/",
-      "linkText": "Play Marble Summit",
+      "linkText": "Race marbles",
       "releaseOrder": 43
     },
     {
@@ -2021,7 +2022,35 @@
       "url": "https://jkramer-cloud.github.io/line-multiplication-lab/",
       "linkText": "Open multiplication lab",
       "releaseOrder": 44
+    },
+    {
+      "id": "grammar-kingdom-sentence-siege",
+      "title": "Grammar Kingdom: Sentence Siege",
+      "category": "ela",
+      "categoryLabel": "ELA · Grammar & Sentence Skills",
+      "type": "game",
+      "description": "Defend a medieval kingdom in a polished pixel-art tower defense! Place and upgrade defenders, defeat a giant boss, and earn extra Ink by practicing grammar, punctuation, and sentence construction.",
+      "skills": [
+        "Parts of speech",
+        "Punctuation & capitalization",
+        "Sentence construction",
+        "Editing & grammar",
+        "Strategy"
+      ],
+      "gradeLabel": "Grades 5–8 · Foundations available",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · 10-level campaign · Student playtest",
+      "icon": "castle",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/grammar-kingdom-sentence-siege/",
+      "linkText": "Defend the kingdom",
+      "releaseOrder": 45,
+      "audience": "students"
     }
   ],
-  "version": "31.40"
+  "version": "31.42"
 }

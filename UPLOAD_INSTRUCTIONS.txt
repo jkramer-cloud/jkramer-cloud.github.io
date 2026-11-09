@@ -1,0 +1,41 @@
+NACHES LEARNING HUB v31.46 — POCKET CRITTERS SECRET EGG
+
+USE GITHUB DESKTOP ON THE SCHOOL COMPUTER.
+
+IMPORTANT: Update only these parts of the EXISTING jkramer-cloud.github.io repository:
+  1) Replace index.html in the repository root.
+  2) Replace activities.json in the repository root.
+  3) Add the WHOLE pocket-critters folder, containing index.html AND assets.
+Do NOT remove other folders, games, or files already in the repository.
+Do NOT upload this ZIP itself to the repository. EXTRACT it first.
+Do NOT substitute the separate game-only ZIP for the Hub ZIP.
+
+GITHUB DESKTOP STEP-BY-STEP
+1. Open GitHub Desktop, sign in, and select the existing jkramer-cloud.github.io repo.
+2. Click Fetch origin / Pull origin to get the current version.
+3. Select Repository > Show in Explorer (Ctrl+Shift+F).
+4. Extract this ZIP to a temporary folder (not into the repository).
+5. Copy extracted index.html, activities.json, and the complete pocket-critters folder into the repository folder.
+6. Windows should prompt to replace index.html and activities.json: choose Replace.
+7. Return to GitHub Desktop; review changes. It should show the two replaced files and many new files under pocket-critters/.
+8. Commit to main with a summary such as: Add secret Pocket Critters discovery v31.46.
+9. Click Push origin. Wait for GitHub Pages to deploy, then hard refresh the Hub (Ctrl+Shift+R).
+
+WHAT THE HUB WILL DO
+- Quiet Discoveries is in the bottom In Development area all seven days, with a different position each day.
+- After a random 5–30 minutes with the Hub focused, an understated gold egg appears for ten focused minutes, then stays away until the next Pacific calendar day.
+- Clicking it unlocks the permanent launcher in that browser profile.
+- The launcher opens ./pocket-critters/index.html inside the Hub's own site.
+- Pet Passport is a manual local save transfer, not an account-based sync.
+
+SEPARATE GAME REPOSITORY (OPTIONAL)
+If you also want standalone game hosting, use the DIFFERENT file Pocket_Critters_v3_8_Pet_Passport.zip.
+Create repository pocket-critters in GitHub Desktop, extract that ZIP, and copy its index.html and full assets folder into that new repository.
+Publish repository, then enable Pages from main / (root) in the repo's Settings > Pages.
+Note: the Hub still needs its own pocket-critters folder from this ZIP.
+
+TESTING
+- First visit the Hub and check all existing activities remain present.
+- Then test egg discovery with the separate HTML preview, or the actual wait window on the Hub.
+- After unlocking, open Pocket Critters, adopt a pet, save a Pet Passport, and test restoration in a separate browser profile.
+- Classroom users sharing one browser profile also share local saves.

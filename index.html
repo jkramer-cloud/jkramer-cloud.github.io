@@ -705,7 +705,21 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
  .customize-trigger{grid-column:1/-1}
 }
 
-  </style>
+  
+/* Pocket Critters v31.46 — a very small, temporary discovery beside a roadmap card number. */
+.pc-egg{display:none;align-items:center;justify-content:center;flex:none;width:31px;height:30px;min-width:31px;border:1px solid #9d965e88;border-radius:9px;padding:3px;background:#163753;color:#dbc385;box-shadow:none;text-decoration:none;cursor:pointer;opacity:.72;transform:none}
+.pc-egg svg{display:block;width:18px;height:23px;filter:drop-shadow(0 0 1px #edc77d68)}
+.pc-egg.is-visible{display:inline-flex;animation:pc-ember 5.8s ease-in-out infinite}
+.pc-egg:hover{border-color:#c7ac76;background:#1d4360;opacity:.95}
+.pc-egg:focus-visible{outline:3px solid #ffe28c;outline-offset:2px;opacity:1}
+@keyframes pc-ember{0%,100%{opacity:.60}50%{opacity:.83}}
+@media(prefers-reduced-motion:reduce){.pc-egg.is-visible{animation:none}}
+.pc-unlocked{display:flex;align-items:center;gap:14px;margin:14px 0 20px;padding:14px 18px;background:linear-gradient(125deg,#274f56,#183945);border:2px solid #d0b879;border-radius:15px;box-shadow:0 8px 30px #07162858;color:#fff5d9;flex-wrap:wrap}
+.pc-unlocked[hidden]{display:none!important}.pc-unlocked .pc-logo{font-size:37px;line-height:1}
+.pc-unlocked .pc-copy{flex:1;min-width:190px}.pc-unlocked .pc-copy strong{font-family:Georgia,serif;font-size:20px;color:#ffebbb}.pc-unlocked .pc-copy p{margin:4px 0 0;font-size:12px;color:#cde4dd;line-height:1.5}
+.pc-unlocked .pc-play{display:inline-block;text-decoration:none;border-radius:9px;border:2px solid #f4d89d;background:#e8bc69;color:#203843;font-weight:900;padding:10px 16px}
+.pc-unlocked .pc-play:hover{background:#ffdb8e}
+</style>
 </head>
 <body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
 <div class="valley-backdrop" aria-hidden="true"><svg class="valley-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
@@ -848,6 +862,7 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
 
       </section>
       <section id="activities" aria-label="Learning activities">
+        <div id="pc-unlocked" class="pc-unlocked" hidden aria-live="polite"><span class="pc-logo" aria-hidden="true">🥚</span><div class="pc-copy"><strong>Pocket Critters</strong><p>Your secret companion game is unlocked on this browser. Hatch, care, explore, and save your Pet Passport.</p></div><a class="pc-play" href="./pocket-critters/index.html" target="_blank" rel="noopener">Play Pocket Critters</a></div>
         <div class="controls compact-controls">
           <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search activities</span><input id="search" type="search" autocomplete="off" placeholder="Find a game, topic, or skill…" aria-label="Search activities"></label>
           <button type="button" class="quick-favorites" id="favorites-only" aria-pressed="false" aria-label="Show only my favorite activities">☆ Favorites</button>
@@ -908,7 +923,7 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
       </section>
       <details class="helper"><summary>For teachers: using and updating this hub</summary><p>Each activity opens its own existing website. The hub does not change those games or their saved progress. The grade filters are suggestions, not restrictions. To add a game, tutorial, simulation, or tool later, edit <code>activities.json</code> in this hub's GitHub repository. Use <code>status: planned</code> until the activity is ready, then change to <code>available</code> and add its live URL. This site is a directory, not an account system or assignment tracker.</p><p>School filtering may require your tech department to allow each destination URL, not just this hub's address.</p></details>
     </main>
-    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.43</strong> · Seasonal Learning Arcade</span></footer>
+    <footer class="footer"><span>Classroom learning resources · Naches-inspired blue & gold</span><span>Built as a simple, expandable activity directory · <strong>Hub v31.44</strong> · Seasonal Learning Arcade</span></footer>
   </div>
 
   <script>
@@ -1888,6 +1903,18 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
   const featuredIds=new Set(state.activities.filter(a=>isAvailableActivity(a)&&a.audience!=='staff')
     .sort((a,b)=>(Number(b.releaseOrder)||1e6)-(Number(a.releaseOrder)||1e6))
     .slice(0,3).map(a=>a.id));
+  // A deliberately unlisted roadmap idea: the tiny egg is visible only during a timed window.
+  const PC_MYSTERY_ID='pocket-quiet-discoveries';
+  const pcMystery={
+    id:PC_MYSTERY_ID,title:'Quiet Discoveries',category:'design',
+    categoryLabel:'Design & Technology · Future ideas',
+    description:'Some ideas hide in plain sight. Notice the small details.',
+    skills:['Observation','Discovery','Creative thinking'],gradeLabel:'Grades 5–8',
+    gradeGroups:['3-5','6-8'],mode:'Exploration · Work in progress',
+    status:'planned',type:'game',roadmapGroup:'other',icon:'puzzle'
+  };
+  const pcKnown=()=>{try{return localStorage.getItem('naches-pocket-critters-discovered-v1')==='yes'}catch{return false}};
+  const pcWeekday=()=>{try{return new Intl.DateTimeFormat('en-US',{weekday:'long',timeZone:'America/Los_Angeles'}).format(new Date())}catch{return ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][new Date().getDay()]}};
   function createCard(item,index){
     const planned=item.status!=='available';
     const article=el('article','card');article.dataset.status=planned?'planned':'available';article.dataset.activity=item.id;
@@ -1895,6 +1922,14 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
     const utility=el('div','card-utility');
     const utilityLeft=el('div','card-utility-left');
     utilityLeft.appendChild(el('span','card-number',String(index+1).padStart(2,'0')));
+    if(item.id===PC_MYSTERY_ID){
+      const egg=el('a','pc-egg');egg.href='./pocket-critters/index.html';egg.target='_blank';egg.rel='noopener';
+      egg.setAttribute('aria-label','A small mysterious egg. Discover a hidden activity.');
+      egg.setAttribute('aria-hidden','true');egg.tabIndex=-1;egg.title='A curious little detail';
+      egg.innerHTML='<svg viewBox="0 0 24 30" aria-hidden="true"><path d="M12 2.8C6.9 2.8 3 12.1 3 19c0 6.1 3.9 8.5 9 8.5s9-2.4 9-8.5C21 12.1 17.1 2.8 12 2.8Z" fill="#dec98b" stroke="#927c58" stroke-width="1.8"/><path d="M7 19q2-2 4 0t6-1" fill="none" stroke="#b59c68" stroke-width="1.4"/><path d="m12 9 1.4 2.6-1.4 2.6-1.4-2.6Z" fill="#f5e4b5" opacity=".83"/></svg>';
+      utilityLeft.appendChild(egg);
+    }
+
     if(!planned){const star=el('button','card-favorite'+(favorites.has(item.id)?' is-saved':''),favorites.has(item.id)?'★':'☆');star.type='button';star.setAttribute('aria-label',(favorites.has(item.id)?'Remove ':'Save ')+item.title+(favorites.has(item.id)?' from':' to')+' favorites');star.setAttribute('aria-pressed',String(favorites.has(item.id)));star.title='Favorite '+item.title;star.addEventListener('click',ev=>{ev.stopPropagation();toggleFavorite(item.id,star)});utilityLeft.appendChild(star);}
     utility.appendChild(utilityLeft);
     utility.appendChild(el('span','card-flag',planned?'UPCOMING':(item.audience==='staff'?'STAFF TOOL':(featuredIds.has(item.id)?'★ FEATURED':(typeLabels[item.type]||'Activity').toUpperCase()))));
@@ -1940,9 +1975,24 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
     const roadmapOptions=planned.filter(g=>roadmapFilter==='all'||(g.roadmapGroup||'other')===roadmapFilter)
       .sort((a,b)=>(Number(b.roadmapFresh)||0)-(Number(a.roadmapFresh)||0)||a.title.localeCompare(b.title));
     const spotlight=[...roadmapOptions].sort((a,b)=>roadmapSpotlightRank(a.id)-roadmapSpotlightRank(b.id)).slice(0,5);
-    byId('cards').replaceChildren(...orderCards(ready).map(createCard));
+    const regularCards=orderCards(ready).map(createCard);
+    const plannedCards=roadmapOptions.map(createCard);
+    const pcDay=pcWeekday();
+    const pcEligible=!pcKnown() && state.category==='all' && state.grade==='all' && state.type==='all' && !state.term.trim() && !favoritesOnly;
+    // Every day, including weekends, uses the identical In Development card style.
+    // Only its position among the seven last roadmap cards changes across weekdays.
+    if(pcEligible && roadmapFilter==='all'){
+      const fromEnd={Monday:1,Tuesday:3,Wednesday:5,Thursday:2,Friday:4,Saturday:7,Sunday:6}[pcDay]||1;
+      const place=Math.max(0,plannedCards.length-fromEnd+1);
+      plannedCards.splice(place,0,createCard(pcMystery,place));
+    }
+    // Keep ordinary card numbers sequential when the secret preview is inserted.
+    regularCards.forEach((card,i)=>{const number=card.querySelector('.card-number');if(number)number.textContent=String(i+1).padStart(2,'0')});
+    plannedCards.forEach((card,i)=>{const number=card.querySelector('.card-number');if(number)number.textContent=String(i+1).padStart(2,'0')});
+    byId('cards').replaceChildren(...regularCards);
     updateShelves(ready);
-    byId('planned-cards').replaceChildren(...roadmapOptions.map(createCard));
+    byId('planned-cards').replaceChildren(...plannedCards);
+
     const miniCards=spotlight.map(item=>{
       const mini=el('article','roadmap-mini');
       mini.appendChild(el('span','roadmap-mini-kicker',item.categoryLabel||'Future classroom activity'));
@@ -1957,7 +2007,10 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
     byId('roadmap-count').textContent=`${roadmapOptions.length} ideas`;
     byId('activity-count').textContent=`${ready.length} ready · ${planned.length} planned`;byId('hero-live-count').textContent=`${state.activities.filter(g=>g.status==='available').length} activities ready to explore`;
     byId('no-results').hidden=ready.length+planned.length!==0;
+    document.dispatchEvent(new Event('pc-mystery-rendered')); // Synchronize the timed egg after cards regenerate.
+
   }
+  document.addEventListener('pc-date-rollover',render);
   document.querySelectorAll('.roadmap-chip').forEach(b=>b.addEventListener('click',()=>{
     roadmapFilter=b.dataset.roadmap;
     document.querySelectorAll('.roadmap-chip').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
@@ -2873,5 +2926,75 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
 })();
 
   </script>
+
+<script>
+/* Pocket Critters v31.46. No server, cookies or student identifier.
+   5–30 minutes of visible, focused Hub time before one 10-minute discovery window per Naches day.
+   Daily timer and lockout survive refreshes and tab closes on this browser. */
+(()=>{
+'use strict';
+const UNLOCK='naches-pocket-critters-discovered-v1';
+const DAILY='naches-pocket-critters-egg-v2';
+const WAIT_MIN=5*60*1000,WAIT_MAX=30*60*1000,WINDOW=10*60*1000;
+const launcher=document.getElementById('pc-unlocked');
+const known=()=>{try{return localStorage.getItem(UNLOCK)==='yes'}catch{return false}};
+const pacificDay=()=>{
+  try{const p=new Intl.DateTimeFormat('en-US',{year:'numeric',month:'2-digit',day:'2-digit',timeZone:'America/Los_Angeles'}).formatToParts(new Date());
+  const part=t=>p.find(v=>v.type===t).value;return `${part('year')}-${part('month')}-${part('day')}`;}
+  catch{return new Date().toLocaleDateString('en-CA')}
+};
+const randomWait=()=>WAIT_MIN+Math.floor(Math.random()*(WAIT_MAX-WAIT_MIN+1));
+function readSchedule(){
+  const day=pacificDay();
+  try{
+    const data=JSON.parse(localStorage.getItem(DAILY)||'null');
+    if(data&&data.day===day&&Number.isFinite(data.waitMs)&&Number.isFinite(data.activeMs)&&typeof data.finished==='boolean'){
+      return {day,waitMs:Math.max(WAIT_MIN,Math.min(WAIT_MAX,data.waitMs)),activeMs:Math.max(0,data.activeMs),finished:data.finished};
+    }
+  }catch{}
+  return {day,waitMs:randomWait(),activeMs:0,finished:false};
+}
+let schedule=readSchedule();
+function save(){try{localStorage.setItem(DAILY,JSON.stringify(schedule))}catch{}}
+save();
+function display(){
+  if(known())launcher.hidden=false;
+  const visible=!known() && !schedule.finished && schedule.activeMs>=schedule.waitMs && schedule.activeMs<schedule.waitMs+WINDOW;
+  document.querySelectorAll('.pc-egg').forEach(egg=>{
+    egg.classList.toggle('is-visible',visible);
+    egg.setAttribute('aria-hidden',String(!visible));egg.tabIndex=visible?0:-1;
+  });
+}
+function discover(e){
+  const egg=e.target.closest?.('.pc-egg');
+  if(!egg)return;
+  const canDiscover=!known()&&!schedule.finished&&schedule.activeMs>=schedule.waitMs&&schedule.activeMs<schedule.waitMs+WINDOW;
+  if(!canDiscover){e.preventDefault();return}
+  try{localStorage.setItem(UNLOCK,'yes')}catch{}
+  launcher.hidden=false;
+  document.querySelectorAll('[data-activity="pocket-quiet-discoveries"]').forEach(card=>card.remove());
+}
+document.addEventListener('click',discover);
+document.addEventListener('pc-mystery-rendered',display);
+let last=performance.now();
+function tick(){
+  const now=performance.now(),delta=Math.max(0,Math.min(now-last,1500));last=now;
+  const day=pacificDay();
+  if(schedule.day!==day){schedule=readSchedule();save();document.dispatchEvent(new Event('pc-date-rollover'))}
+  if(known()){display();return}
+  if(document.hidden||!document.hasFocus()){display();return}
+  if(!schedule.finished){
+    schedule.activeMs+=delta;
+    if(schedule.activeMs>=schedule.waitMs+WINDOW){schedule.activeMs=schedule.waitMs+WINDOW;schedule.finished=true}
+    save();
+  }
+  display();
+}
+window.addEventListener('focus',()=>{last=performance.now();display()});
+document.addEventListener('visibilitychange',()=>{last=performance.now();display()});
+setInterval(tick,1000);
+display();
+})();
+</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-11-05",
+  "lastUpdated": "2026-11-09",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2050,7 +2050,34 @@
       "linkText": "Defend the kingdom",
       "releaseOrder": 45,
       "audience": "students"
+    },
+    {
+      "id": "pizza-dough-lab",
+      "title": "Pizza Dough Lab",
+      "category": "math",
+      "categoryLabel": "Math · Cooking & Life Skills",
+      "type": "tool",
+      "description": "Plan pizza night with interactive sliders. Choose your pizza size, quantity, crust and fermentation time, then calculate dough ingredients by weight and explore baker’s percentages.",
+      "skills": [
+        "Ratios & percentages",
+        "Recipe scaling",
+        "Cooking & baking"
+      ],
+      "gradeLabel": "All ages · Grades 5–8+",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Interactive calculator",
+      "icon": "pizza",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/pizza-dough-lab/",
+      "linkText": "Make pizza dough",
+      "releaseOrder": 46,
+      "audience": "students"
     }
   ],
-  "version": "31.43"
+  "version": "31.47"
 }

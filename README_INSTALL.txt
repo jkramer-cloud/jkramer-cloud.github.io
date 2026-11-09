@@ -1,33 +1,28 @@
-NACHES LEARNING HUB v31.46 — POCKET CRITTERS SEPARATE-REPOSITORY EDITION
+NACHES LEARNING HUB — v31.47 · PIZZA DOUGH LAB CARD
+==================================================
 
-YOUR POCKET CRITTERS GAME IS ALREADY IN ITS OWN REPOSITORY.
-This package contains NO game artwork and NO pocket-critters folder.
+WHAT THIS UPDATE DOES
+- Adds one normal, visible Pizza Dough Lab card under Math · Cooking & Life Skills.
+- Includes original pizza-and-kitchen-scale vector artwork.
+- New card launches https://jkramer-cloud.github.io/pizza-dough-lab/
+- Retains the original 80 catalog activities, the Pocket Critters hidden discovery
+  and its timer/day rotation, the scenes and weather effects, and existing site features.
+- Synchronizes the external activities.json and the built-in offline/fallback catalog.
+- Adds no Pizza Dough Lab game files to the Hub (the calculator is its own repository).
 
-UPDATE THE EXISTING LEARNING HUB (jkramer-cloud.github.io) IN GITHUB DESKTOP:
-1. Open the existing Hub repository in GitHub Desktop. Fetch/Pull first if prompted.
-2. Choose Repository > Show in Explorer.
-3. Extract this ZIP into a temporary folder.
-4. Copy index.html and activities.json into the root of the Hub repository, replacing the existing versions.
-5. DO NOT DELETE any other files or existing game folders.
-6. In GitHub Desktop review the two modified files, Commit to main, Push origin.
-7. Check the public Hub after deployment.
+INSTALLATION — EXISTING MAIN LEARNING HUB REPOSITORY
+1. Open your existing jkramer-cloud.github.io GitHub repository.
+2. Open the extracted ZIP folder and select both index.html and activities.json.
+3. Upload those TWO files to the ROOT of your existing Learning Hub repository.
+   They REPLACE the existing files with the same names.
+4. Keep all the other existing files. Do NOT replace the Pocket Critters repository.
+5. Commit the update. After GitHub Pages finishes publishing, reload the Hub
+   with Ctrl+Shift+R (Windows/Chromebook).
+6. Clear Hub filters, find Pizza Dough Lab in New to the Hub or Math, and open it.
+7. The link will work once the pizza-dough-lab repository is published with GitHub Pages.
 
-HOW THE SECRET WORKS
-- The 'Quiet Discoveries' card stays among the bottom seven In Development cards, changing position each weekday.
-- Its subtle egg appears after 5–30 focused minutes, remains available for 10 focused minutes, then disappears until the next Pacific day.
-- Clicking the egg saves an unlock in the Hub browser and opens Pocket Critters in a new tab.
-- The permanent post-discovery Hub launcher opens the standalone Pocket Critters site:
-  https://jkramer-cloud.github.io/pocket-critters/
+NOTE: This is a production/normal public Hub update, not a teacher preview.
+      It does not intentionally reveal the Pocket Critters secret game.
+      The mystery egg's existing eligibility and appearance timing stay unchanged.
 
-IMPORTANT: GITHUB PAGES MUST BE ENABLED FOR POCKET CRITTERS.
-Open https://github.com/jkramer-cloud/pocket-critters/settings/pages
-Choose Deploy from a branch; main; / (root); Save.
-Then open https://jkramer-cloud.github.io/pocket-critters/ in a new browser tab to verify the game loads.
-The public repository alone does not automatically enable GitHub Pages.
-
-The Hub and standalone game are both served by jkramer-cloud.github.io (same browser origin).
-They can therefore share browser local storage, including the Hub unlock flag.
-Pet Passport remains useful for moving pets between devices and browser profiles.
-
-NOTE: This version was rebuilt from the v31.46 Seven Days Bottom release; it changes ONLY
-the two game links (egg and permanent launcher), leaving the existing Hub catalog intact.
+VERSION: v31.47 | November 9, 2026

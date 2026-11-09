@@ -2053,15 +2053,16 @@
     },
     {
       "id": "pizza-dough-lab",
-      "title": "Pizza Dough Lab",
+      "title": "Pizza Lab: From Dough to Oven",
       "category": "math",
       "categoryLabel": "Math · Cooking & Life Skills",
       "type": "tool",
-      "description": "Plan pizza night with interactive sliders. Choose your pizza size, quantity, crust and fermentation time, then calculate dough ingredients by weight and explore baker’s percentages.",
+      "description": "Design a pizza, calculate dough ingredients, set oven and baking timers, record each bake, and learn what to change next. Includes toppings, recipe history, and pizza-making tutorials.",
       "skills": [
         "Ratios & percentages",
         "Recipe scaling",
-        "Cooking & baking"
+        "Cooking & baking",
+        "Observe & improve"
       ],
       "gradeLabel": "All ages · Grades 5–8+",
       "gradeGroups": [
@@ -2069,15 +2070,15 @@
         "6-8",
         "9-12"
       ],
-      "mode": "Solo · Interactive calculator",
+      "mode": "Solo · Pizza-making workshop",
       "icon": "pizza",
       "featured": true,
       "status": "available",
       "url": "https://jkramer-cloud.github.io/pizza-dough-lab/",
-      "linkText": "Make pizza dough",
+      "linkText": "Open Pizza Lab",
       "releaseOrder": 46,
       "audience": "students"
     }
   ],
-  "version": "31.47"
+  "version": "31.48"
 }

@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-11-09",
+  "lastUpdated": "2026-11-10",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2078,7 +2078,36 @@
       "linkText": "Open Pizza Lab",
       "releaseOrder": 46,
       "audience": "students"
+    },
+    {
+      "id": "classtempo",
+      "title": "ClassTempo: Classroom Timer Studio",
+      "category": "general",
+      "categoryLabel": "Classroom Tools · Timers & Routines",
+      "type": "tool",
+      "description": "Run visual countdowns, saved start-of-class timers, activity routines, and stopwatch sessions. Customize the look, sounds, and fullscreen classroom display.",
+      "skills": [
+        "Time management",
+        "Classroom routines",
+        "Visual countdowns",
+        "Custom presets"
+      ],
+      "gradeLabel": "All grades · Teacher & class",
+      "gradeGroups": [
+        "1-2",
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Whole-class display · Saves to this browser",
+      "icon": "timer",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/classtempo/",
+      "linkText": "Open ClassTempo",
+      "releaseOrder": 47,
+      "audience": "students"
     }
   ],
-  "version": "31.48"
+  "version": "31.49"
 }

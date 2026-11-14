@@ -719,6 +719,102 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
 .pc-unlocked .pc-copy{flex:1;min-width:190px}.pc-unlocked .pc-copy strong{font-family:Georgia,serif;font-size:20px;color:#ffebbb}.pc-unlocked .pc-copy p{margin:4px 0 0;font-size:12px;color:#cde4dd;line-height:1.5}
 .pc-unlocked .pc-play{display:inline-block;text-decoration:none;border-radius:9px;border:2px solid #f4d89d;background:#e8bc69;color:#203843;font-weight:900;padding:10px 16px}
 .pc-unlocked .pc-play:hover{background:#ffdb8e}
+
+/* =================================================================
+   v31.51 · Illustrated Card Gallery. Cosmetic only: preserves links,
+   launches, favorite state, hidden game timing, search and metadata.
+   ================================================================= */
+.card[data-status="available"] {
+  position:relative;isolation:isolate;
+  border:1px solid #7aafd0;
+  background:
+    radial-gradient(ellipse at 13% 80%,rgba(36,130,162,.17),transparent 48%),
+    linear-gradient(160deg,#164564 0%,#0a2641 44%,#102944 100%);
+  box-shadow:0 20px 42px #000a,0 0 0 1px #112b43,
+    inset 0 0 0 1px #6ccde622;
+  transition:transform .22s ease,border-color .22s,box-shadow .22s;
+}
+.card[data-status="available"]:hover,
+.card[data-status="available"]:focus-within {
+  transform:translateY(-4px);
+  border-color:#ffe19b;
+  box-shadow:0 24px 55px #000b,0 0 0 1px #ffc64a88,0 0 24px #4ce4dd2a;
+}
+/* Small satin-gold rim with no overlays on interactive controls. */
+.card[data-status="available"]::before {
+  content:"";position:absolute;inset:2px;z-index:0;pointer-events:none;
+  border:1px solid rgba(255,213,116,.16);
+  border-radius:17px;
+}
+.card[data-status="available"]>.card-utility {
+  position:relative;z-index:3;
+  background:
+    radial-gradient(ellipse at 88% -20%,#5fd4e22c,transparent 55%),
+    linear-gradient(110deg,#123955,#0b253e);
+  border-bottom:1px solid #e7c57e83;
+}
+.card[data-status="available"] .card-art {
+  height:184px;
+  background:radial-gradient(circle at 50% 35%,#235778,#0b213a);
+  border-bottom:2px solid #e7b958;
+  box-shadow:inset 0 -1px 0 #fff3a16b,0 6px 14px #0005;
+}
+.card[data-status="available"] .card-art::before {
+  content:"";position:absolute;inset:0;z-index:2;
+  pointer-events:none;opacity:1;
+  background:linear-gradient(180deg,#ffffff14 0%,transparent 22%,transparent 78%,#0007 100%);
+}
+.card[data-status="available"] .card-art::after {
+  content:"";position:absolute;inset:7px;z-index:2;
+  border:1px solid #ffe8ae46;border-radius:8px;pointer-events:none;
+  box-shadow:inset 0 1px 0 #ffffff20,0 0 0 1px #0003;
+}
+.card[data-status="available"] .scene-holder {
+  overflow:hidden;filter:none;
+}
+.card[data-status="available"] .scene-svg {
+  max-width:100%;width:100%;height:100%;padding:0;
+  filter:drop-shadow(0 8px 10px #020d2c65);
+}
+.scene-poster {
+  display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+  user-select:none;pointer-events:none;
+}
+.card[data-status="available"] .card-body {
+  z-index:1;position:relative;
+  background:radial-gradient(ellipse 130% 45% at 30% 0%,#357d9424,transparent 80%);
+}
+.card[data-status="available"] .subject {color:#8bdcef;text-shadow:0 1px 9px #012e4b;}
+.card[data-status="available"] .card-kicker {gap:7px;}
+.card[data-status="available"] .grade-badge {
+  border-color:#8ebcd47a;background:#0a273bce;color:#eef9ff;
+}
+.card[data-status="available"] h3 {text-shadow:0 2px 7px #000a;}
+.card[data-status="available"] .tag {
+  background:#092944b8;border:1px solid #6ea5c164;
+  box-shadow:inset 0 1px 0 #ffffff0c;
+}
+.card[data-status="available"] .launch {
+  background:linear-gradient(135deg,#fff1b5,#ffca65 54%,#f6ae3d);
+  border:1px solid #ffecb9;
+  box-shadow:0 4px 0 #8c581c,0 8px 16px #0008,inset 0 1px 0 #ffffff9f;
+}
+.card[data-status="available"] .launch:hover {filter:brightness(1.08);}
+.card[data-status="available"] .card-favorite {border-color:#efc97877;}
+/* Premium art is shown in both discovery shelves and the full activity grid. */
+.shelf-art .scene-poster {width:100%;height:100%;object-fit:cover;object-position:center;}
+.shelf-art:has(.scene-poster) {background:linear-gradient(135deg,#104c70,#162b51);}
+.shelf-card:has(.scene-poster) {border-color:#7ccbd48c;}
+.shelf-card:has(.scene-poster):hover {border-color:#ffdf89;}
+/* Planned ideas still read as planned; do not imply they can be launched. */
+.card[data-status="planned"] .card-art {height:152px;}
+@media (max-width:700px) {
+  .card[data-status="available"] .card-art {height:175px;}
+}
+@media (prefers-reduced-motion:reduce) {
+  .card[data-status="available"] {transition:none;}
+}
+
 </style>
 </head>
 <body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
@@ -2039,7 +2135,12 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
 <circle cx="440" cy="83" r="4" fill="#f8c775" opacity=".82"/>
 <circle cx="425" cy="90" r="2.3" fill="#f8c775" opacity=".56"/>
 `;
-  const sceneSvg = item => `<svg class="scene-svg" viewBox="0 0 500 265" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${artScenes[item.id]||(item.status==='planned'?plannedArt(item):artScenes['science-investigation-lab'])}</svg>`;
+  // v31.51 — illustrated poster art for selected currently playable games.
+  // Other cards keep their original, individual SVG game art rather than a generic placeholder.
+  const illustratedCardPosters = {"class-compass":"assets/card-art/class-compass.webp","classtempo":"assets/card-art/classtempo.webp","pizza-dough-lab":"assets/card-art/pizza-dough-lab.webp","grammar-kingdom-sentence-siege":"assets/card-art/grammar-kingdom-sentence-siege.webp","marble-summit":"assets/card-art/marble-summit.webp","cipher-quest-codebreakers":"assets/card-art/cipher-quest-codebreakers.webp","checkers-academy":"assets/card-art/checkers-academy.webp","coordinate-pixel-art":"assets/card-art/coordinate-pixel-art.webp","valley-word-quest":"assets/card-art/valley-word-quest.webp","math-rush-endless-run":"assets/card-art/math-rush-endless-run.webp","stackline-dimensional-tic-tac-toe":"assets/card-art/stackline-dimensional-tic-tac-toe.webp","crossy-words":"assets/card-art/crossy-words.webp","ela-writing-workshop":"assets/card-art/ela-writing-workshop.webp"};
+  const sceneSvg = item => illustratedCardPosters[item.id]
+    ? `<img class="scene-poster" src="${illustratedCardPosters[item.id]}" alt="" aria-hidden="true" loading="lazy" decoding="async">`
+    : `<svg class="scene-svg" viewBox="0 0 500 265" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${artScenes[item.id]||(item.status==='planned'?plannedArt(item):artScenes['science-investigation-lab'])}</svg>`;
   function isAvailableActivity(a){return a.status==='available'&&typeof a.url==='string'&&/^https:\/\//i.test(a.url)}
   // releaseOrder is a stable per-game launch sequence. Add the next integer for each future game.
   // Missing metadata on a newly-added playable item treats it as newest.

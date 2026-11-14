@@ -1,35 +1,31 @@
-# Naches Learning Hub — Class Compass Update (v31.50)
+# Naches Learning Hub — Illustrated Cards Update (v31.51)
 
-This ZIP updates **the main Naches Learning Hub**, not the separate Class Compass planner. The update adds one student-facing tool card, Class Compass: Student Planner, and preserves all 82 previous catalog entries, existing artwork, Hub controls, animated scenery, and the hidden Pocket Critters unlock.
+This is a complete GitHub Pages replacement update for the **main Learning Hub** (`jkramer-cloud.github.io`).
 
-## Upload order
+## What changed
 
-**1. Publish the separate Class Compass app first.**
-- Create repository `class-compass` in the `jkramer-cloud` GitHub account.
-- Upload `index.html` and `README.md` from the separately provided **Class Compass v1.2** repository ZIP.
-- GitHub Settings → Pages → Deploy from branch → main → / (root).
-- Confirm the planner opens at https://jkramer-cloud.github.io/class-compass/ .
+- All available activity cards get a brighter, matching illustrated-card frame with refined gold edges, stronger imagery, improved contrast, and hover states.
+- 13 prominently displayed tools and games have new colorful illustrated art, including **Class Compass**, ClassTempo, Pizza Lab, Grammar Kingdom, Marble Summit, Cipher Quest, Checkers Academy and more.
+- The artwork also appears in the "New to the Hub" and "Recently opened" shelves because they share the card rendering helper.
+- All remaining existing activity artwork stays present, including its original individual illustration where available.
+- The catalog, existing links, game access, favorite buttons, Pocket Critters hidden discoverability, weather, carousel, search, filters, local preferences and other Learning Hub features are preserved.
 
-**2. Update the main Learning Hub repository.**
-- Open the existing repository `jkramer-cloud.github.io`.
-- Replace **only** the root `index.html` and `activities.json` with the two files in this update ZIP.
-- Leave the rest of the Hub repository unchanged. This is not an update to individual game repositories.
-- Commit and let GitHub Pages deploy. If necessary, hard-refresh with Ctrl+Shift+R.
+## Upload to GitHub
 
-## New activity card
+Upload the **contents** of this package to the **root** of `jkramer-cloud/jkramer-cloud.github.io`:
 
-- **Name:** Class Compass: Student Planner
-- **Category:** Student Tools · Planner & Organization
-- **Grades:** 5–12, customizable for middle-school quarters and high-school semesters
-- **Features:** seven-period setup, class colors, assignments and multi-week projects, project checklists, district school calendars, weekly PDF reports, yearly archives, and local backups
-- **URL:** https://jkramer-cloud.github.io/class-compass/
-- **Icon and artwork:** custom planner illustration with class checklist, progress bar, and calendar
-- **Visibility:** marked available (live link); publish the app first so students do not encounter a 404.
+- `index.html` — replaces current Hub HTML
+- `activities.json` — current catalog, preserved exactly from the files provided
+- `README.md` — this documentation
+- `assets/card-art/` — **13 WebP images** used by the new cards
 
-## Data/privacy
+Keep folder paths as they are. **Do not upload the ZIP itself** to GitHub. GitHub Pages will serve the new images from `assets/card-art/`.
 
-Class Compass does not need a Google sign-in or account. Student information stays in the browser's local storage on that device. It does **not** automatically synchronize between Chromebooks. Students must export backups and restore them when needed. Names, planner activity, and personal weekly report PDFs are generated on the device. Do not treat the activity report as independent verification of actual schoolwork.
+**Do not remove existing files or folders** in the repository; this package updates only the files listed above.
 
-## Validation
+## Notes
 
-Updated external `activities.json` and the embedded fallback catalog to match. Only Class Compass was added; the original 82 catalog entries were not altered. Existing Pocket Critters secret entry code, Surprise Me behavior, favorites, and releases were not edited.
+- Art is static and self-hosted; no added external services or accounts.
+- The site still uses its current catalog list (38 available activities and more in planning).
+- If old artwork appears immediately after publishing, hard-refresh (`Ctrl+Shift+R`).
+- `index.html` alone will not show the 13 new images until the `assets/card-art` folder is uploaded too.

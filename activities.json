@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-11-10",
+  "lastUpdated": "2026-11-13",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2107,7 +2107,35 @@
       "linkText": "Open ClassTempo",
       "releaseOrder": 47,
       "audience": "students"
+    },
+    {
+      "id": "class-compass",
+      "title": "Class Compass: Student Planner",
+      "category": "general",
+      "categoryLabel": "Student Tools · Planner & Organization",
+      "type": "tool",
+      "description": "Plan your day and week with seven saved classes, color-coded assignments, long-term project checklists, school calendars, and weekly progress reports. Works without an account.",
+      "skills": [
+        "Organization",
+        "Time management",
+        "Project planning",
+        "Self-reflection"
+      ],
+      "gradeLabel": "Grades 5–12 · Customizable",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Individual planner · Saves to this browser",
+      "icon": "planner",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/class-compass/",
+      "linkText": "Open Class Compass",
+      "releaseOrder": 48,
+      "audience": "students"
     }
   ],
-  "version": "31.49"
+  "version": "31.50"
 }

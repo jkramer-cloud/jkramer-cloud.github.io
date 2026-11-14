@@ -1,31 +1,28 @@
-# Naches Learning Hub — Illustrated Cards Update (v31.51)
+# Naches Learning Hub — Fully Illustrated Cards v31.53
 
-This is a complete GitHub Pages replacement update for the **main Learning Hub** (`jkramer-cloud.github.io`).
+A complete GitHub-ready presentation update for the **main Naches Learning Hub** at `jkramer-cloud.github.io`.
 
-## What changed
+## What's new
 
-- All available activity cards get a brighter, matching illustrated-card frame with refined gold edges, stronger imagery, improved contrast, and hover states.
-- 13 prominently displayed tools and games have new colorful illustrated art, including **Class Compass**, ClassTempo, Pizza Lab, Grammar Kingdom, Marble Summit, Cipher Quest, Checkers Academy and more.
-- The artwork also appears in the "New to the Hub" and "Recently opened" shelves because they share the card rendering helper.
-- All remaining existing activity artwork stays present, including its original individual illustration where available.
-- The catalog, existing links, game access, favorite buttons, Pocket Critters hidden discoverability, weather, carousel, search, filters, local preferences and other Learning Hub features are preserved.
+- **All 38 available activity cards** have colorful, individually themed WebP poster art.
+- The first **13 approved images remain unchanged** and were verified byte-for-byte against v31.51.
+- The nine new detailed scenes from v31.52 are retained, and the final 16 simpler SVG-based posters have been replaced with new high-detail illustrations.
+- Art is shared automatically by the full activity gallery and the New / Recently opened shelves.
+- **No games, catalog entries, URLs, hidden release rules, search, favorites, weather, or other Hub behavior was intentionally changed.**
+- No extra sign-ins, external image services, tracking or dependencies were added.
 
-## Upload to GitHub
+## Install to GitHub
 
-Upload the **contents** of this package to the **root** of `jkramer-cloud/jkramer-cloud.github.io`:
+1. Unzip `Hub_v31_53.zip` on your computer.
+2. Open the **main** `jkramer-cloud.github.io` repository (not an individual game repository).
+3. Upload and replace `index.html`, `activities.json`, and `README.md` from the unzipped package.
+4. Upload the complete `assets/card-art/` directory, preserving paths. It contains 38 compressed `.webp` images.
+5. Commit the files, and refresh the website when GitHub Pages deploys. If necessary, hard-refresh with Ctrl+Shift+R.
 
-- `index.html` — replaces current Hub HTML
-- `activities.json` — current catalog, preserved exactly from the files provided
-- `README.md` — this documentation
-- `assets/card-art/` — **13 WebP images** used by the new cards
+**Do not delete any other files or folders already in your repository.** The individual game repositories do not need changes.
 
-Keep folder paths as they are. **Do not upload the ZIP itself** to GitHub. GitHub Pages will serve the new images from `assets/card-art/`.
+## Technical notes
 
-**Do not remove existing files or folders** in the repository; this package updates only the files listed above.
-
-## Notes
-
-- Art is static and self-hosted; no added external services or accounts.
-- The site still uses its current catalog list (38 available activities and more in planning).
-- If old artwork appears immediately after publishing, hard-refresh (`Ctrl+Shift+R`).
-- `index.html` alone will not show the 13 new images until the `assets/card-art` folder is uploaded too.
+- `activities.json` is copied byte-for-byte from your uploaded latest catalogue.
+- The update changes only the poster asset files and the poster edition note in the HTML compared with v31.52.
+- Each WebP is local, and images are lazy loaded for Chromebook performance.

@@ -815,6 +815,24 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
   .card[data-status="available"] {transition:none;}
 }
 
+
+/* v31.54: visible quick subject and topic navigation; no hidden horizontal subject rail */
+.subject-navigation{position:relative;display:grid;gap:8px;padding:12px 14px;margin:0 0 12px;border:1px solid #426c89;border-radius:16px;background:linear-gradient(130deg,rgba(15,43,66,.94),rgba(14,42,68,.84));box-shadow:inset 0 1px 0 rgba(194,234,255,.10),0 7px 20px rgba(1,12,30,.12)}
+.subject-nav-row{display:flex;align-items:flex-start;gap:12px;min-width:0}
+.subject-nav-row+.subject-nav-row{border-top:1px solid #466e864d;padding-top:8px}
+.subject-nav-label{flex:0 0 97px;padding-top:10px;color:#a0d9ef;font-size:.65rem;letter-spacing:.08em;line-height:1.2;font-weight:900}
+.subject-navigation .subject-nav-filters{display:flex;align-items:center;flex:1 1 auto;min-width:0;gap:7px;margin:0;flex-wrap:wrap;overflow:visible;padding:0}
+.subject-navigation .filter{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:0 0 auto;min-height:33px;max-width:100%;border-radius:99px;border:1px solid #4a7490;background:#1a3d59;color:#e4f1fb;padding:7px 11px;font-size:.78rem;line-height:1.1;font-weight:750;white-space:nowrap;cursor:pointer;transition:background .15s,border-color .15s,transform .15s;box-shadow:inset 0 1px 0 #e0f6ff10}
+.subject-navigation .filter:hover{border-color:#99d3f0;background:#265879;transform:translateY(-1px)}
+.subject-navigation .filter[aria-pressed="true"]{border-color:#ffe0a1;background:linear-gradient(135deg,#ffe8ae,#f5be56);color:#152c43;box-shadow:0 2px 0 #a3702c}
+.subject-navigation .filter:focus-visible{outline:3px solid #a9edff;outline-offset:2px}
+.subject-navigation .filter-count{font-size:.67rem;line-height:1.2;font-weight:850;min-width:15px;padding:2px 5px;border-radius:7px;background:rgba(221,241,254,.13);color:#c5e1f4}
+.subject-navigation .filter[aria-pressed="true"] .filter-count{background:rgba(52,68,80,.14);color:#244358}
+.subject-navigation .filter-count[data-soon="true"]{font-size:.62rem;color:#ffdda2;background:rgba(247,189,96,.14)}
+.subject-navigation .filter[aria-pressed="true"] .filter-count[data-soon="true"]{color:#324158}
+@media(max-width:800px){.subject-navigation{padding:11px 12px;gap:9px}.subject-nav-row{display:block}.subject-nav-label{display:block;padding:0 0 7px}.subject-navigation .filter{font-size:.74rem;padding:7px 10px;min-height:32px}}
+@media(max-width:480px){.subject-navigation .subject-nav-filters{gap:6px}.subject-navigation .filter{font-size:.7rem;min-height:32px;padding:6px 9px}.subject-navigation .filter-count{font-size:.62rem;padding:1px 4px}}
+
 </style>
 </head>
 <body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
@@ -972,10 +990,37 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
           </label><button type="button" id="reset-filters" class="reset-filters">Clear filters</button></div>
           </details>
         </div>
-        <div class="category-shell"><button type="button" class="scroll-subject" id="subject-prev" aria-label="Scroll subjects left">‹</button>
-          <nav class="filters" aria-label="Filter activities by subject"><button type="button" class="filter" data-filter="all" aria-pressed="true">All subjects</button><button type="button" class="filter" data-filter="general" aria-pressed="false">Quiz &amp; Review</button><button type="button" class="filter" data-filter="strategy" aria-pressed="false">Strategy &amp; Logic</button><button type="button" class="filter" data-filter="math" aria-pressed="false">Math</button><button type="button" class="filter" data-filter="ela" aria-pressed="false">ELA</button><button type="button" class="filter" data-filter="reading" aria-pressed="false">Reading</button><button type="button" class="filter" data-filter="science" aria-pressed="false">Science</button><button type="button" class="filter" data-filter="music" aria-pressed="false">Music</button><button type="button" class="filter" data-filter="socialstudies" aria-pressed="false">Social Studies &amp; Geography</button><button type="button" class="filter" data-filter="design" aria-pressed="false">Design &amp; Technology</button><button type="button" class="filter" data-filter="pe" aria-pressed="false">PE &amp; Fitness</button><button type="button" class="filter" data-filter="social" aria-pressed="false">Life Skills</button></nav>
-          <button type="button" class="scroll-subject" id="subject-next" aria-label="Scroll subjects right">›</button>
-        </div>
+        <section class="subject-navigation" aria-label="Quick activity filters">
+  <div class="subject-nav-row">
+    <span class="subject-nav-label">SUBJECTS</span>
+    <nav class="filters subject-nav-filters" aria-label="Filter by school subject">
+      <button type="button" class="filter" data-filter="all" aria-pressed="true" data-label="All subjects"><span class="filter-name">All subjects</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="math" aria-pressed="false" data-label="Math"><span class="filter-name">Math</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="ela" aria-pressed="false" data-label="ELA & Writing"><span class="filter-name">ELA & Writing</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="reading" aria-pressed="false" data-label="Reading"><span class="filter-name">Reading</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="science" aria-pressed="false" data-label="Science"><span class="filter-name">Science</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="socialstudies" aria-pressed="false" data-label="Social Studies"><span class="filter-name">Social Studies</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="strategy" aria-pressed="false" data-label="Strategy & Logic"><span class="filter-name">Strategy & Logic</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:art" aria-pressed="false" data-label="Art & Design"><span class="filter-name">Art & Design</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="pe" aria-pressed="false" data-label="PE & Sports"><span class="filter-name">PE & Sports</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="social" aria-pressed="false" data-label="Life Skills"><span class="filter-name">Life Skills</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="music" aria-pressed="false" data-label="Music"><span class="filter-name">Music</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:quiz" aria-pressed="false" data-label="Quiz & Review"><span class="filter-name">Quiz & Review</span><span class="filter-count" aria-hidden="true"></span></button>
+    </nav>
+  </div>
+  <div class="subject-nav-row">
+    <span class="subject-nav-label">EXPLORE MORE</span>
+    <nav class="filters subject-nav-filters" aria-label="Filter by interest or activity type">
+      <button type="button" class="filter" data-filter="topic:typing" aria-pressed="false" data-label="Typing"><span class="filter-name">Typing</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:boards" aria-pressed="false" data-label="Chess & Board Games"><span class="filter-name">Chess & Board Games</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:puzzles" aria-pressed="false" data-label="Puzzles & Codes"><span class="filter-name">Puzzles & Codes</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:tools" aria-pressed="false" data-label="Tools & Planners"><span class="filter-name">Tools & Planners</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:cooking" aria-pressed="false" data-label="Cooking & Money"><span class="filter-name">Cooking & Money</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:geography" aria-pressed="false" data-label="Geography & Maps"><span class="filter-name">Geography & Maps</span><span class="filter-count" aria-hidden="true"></span></button>
+      <button type="button" class="filter" data-filter="topic:engineering" aria-pressed="false" data-label="Engineering"><span class="filter-name">Engineering</span><span class="filter-count" aria-hidden="true"></span></button>
+    </nav>
+  </div>
+</section>
         <div class="discovery-tabs" role="group" aria-label="Choose a discovery shelf">
           <button type="button" id="tab-new" aria-pressed="true">✦ New to the Hub</button>
           <button type="button" id="tab-recent" aria-pressed="false">↺ Recently opened</button>
@@ -2135,7 +2180,7 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
 <circle cx="440" cy="83" r="4" fill="#f8c775" opacity=".82"/>
 <circle cx="425" cy="90" r="2.3" fill="#f8c775" opacity=".56"/>
 `;
-  // v31.53 — vivid illustrated poster art for all 38 currently playable activities.
+  // v31.54 — expanded visible subject and topic quick filters; all 38 illustrated posters retained.
   // Future additions fall back to their own original SVG game art until new posters are ready.
   const illustratedCardPosters = {"class-compass":"assets/card-art/class-compass.webp","classtempo":"assets/card-art/classtempo.webp","pizza-dough-lab":"assets/card-art/pizza-dough-lab.webp","grammar-kingdom-sentence-siege":"assets/card-art/grammar-kingdom-sentence-siege.webp","marble-summit":"assets/card-art/marble-summit.webp","cipher-quest-codebreakers":"assets/card-art/cipher-quest-codebreakers.webp","checkers-academy":"assets/card-art/checkers-academy.webp","coordinate-pixel-art":"assets/card-art/coordinate-pixel-art.webp","valley-word-quest":"assets/card-art/valley-word-quest.webp","math-rush-endless-run":"assets/card-art/math-rush-endless-run.webp","stackline-dimensional-tic-tac-toe":"assets/card-art/stackline-dimensional-tic-tac-toe.webp","crossy-words":"assets/card-art/crossy-words.webp","ela-writing-workshop":"assets/card-art/ela-writing-workshop.webp","mystery-detectives":"assets/card-art/mystery-detectives.webp","addition-subtraction-battleship":"assets/card-art/addition-subtraction-battleship.webp","multiplication-battleship":"assets/card-art/multiplication-battleship.webp","periodic-table-battleship":"assets/card-art/periodic-table-battleship.webp","learning-highway":"assets/card-art/learning-highway.webp","mathjong-tile-quest":"assets/card-art/mathjong-tile-quest.webp","mathdrop-four":"assets/card-art/mathdrop-four.webp","math-maze-adventures":"assets/card-art/math-maze-adventures.webp","naches-knowledge-showdown":"assets/card-art/naches-knowledge-showdown.webp","valley-geography-quest":"assets/card-art/valley-geography-quest.webp","ascendant-reader":"assets/card-art/ascendant-reader.webp","keyquest-typing":"assets/card-art/keyquest-typing.webp","grizzly-rapids":"assets/card-art/grizzly-rapids.webp","space-type-defender":"assets/card-art/space-type-defender.webp","valley-star-scout":"assets/card-art/valley-star-scout.webp","science-investigation-lab":"assets/card-art/science-investigation-lab.webp","csi-naches":"assets/card-art/csi-naches.webp","nachesopoly":"assets/card-art/nachesopoly.webp","playbook-tactics":"assets/card-art/playbook-tactics.webp","bridge-builder-challenge":"assets/card-art/bridge-builder-challenge.webp","budget-bites":"assets/card-art/budget-bites.webp","team-scorekeeper":"assets/card-art/team-scorekeeper.webp","valley-life-journey":"assets/card-art/valley-life-journey.webp","immortal-snail-chess-3d":"assets/card-art/immortal-snail-chess-3d.webp","line-multiplication-lab":"assets/card-art/line-multiplication-lab.webp"};
   const sceneSvg = item => illustratedCardPosters[item.id]
@@ -2198,6 +2243,34 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
     }
     article.appendChild(body);return article;
   }
+  // Subject filters can include real curriculum categories or cross-curricular quick topics.
+  // Never classify a game by changing its original catalog category.
+  const quickTopicIds={
+    'topic:typing':['keyquest-typing','grizzly-rapids','space-type-defender'],
+    'topic:boards':['immortal-snail-chess-3d','stackline-dimensional-tic-tac-toe','checkers-academy','marble-summit','nachesopoly'],
+    'topic:puzzles':['cipher-quest-codebreakers','math-maze-adventures','mathjong-tile-quest','mathdrop-four','valley-word-quest','crossy-words'],
+    'topic:cooking':['pizza-dough-lab','budget-bites','valley-life-journey','nachesopoly'],
+    'topic:geography':['valley-geography-quest'],
+    'topic:engineering':['bridge-builder-challenge','eco-city-architect'],
+    'topic:quiz':['naches-knowledge-showdown']
+  };
+  function matchesSubject(item,filter){
+    if(filter==='all')return true;
+    if(filter==='topic:art')return item.category==='design'||['coordinate-pixel-art','ela-writing-workshop','storyboard-cinema-studio'].includes(item.id);
+    if(filter==='topic:tools')return item.type==='tool';
+    return (quickTopicIds[filter]||[]).includes(item.id)||item.category===filter;
+  }
+  function updateSubjectCounts(){
+    document.querySelectorAll('.subject-navigation .filter').forEach(b=>{
+      const items=state.activities.filter(g=>matchesSubject(g,b.dataset.filter));
+      const available=items.filter(g=>g.status==='available'&&typeof g.url==='string'&&/^https:\/\//i.test(g.url)).length;
+      const count=b.querySelector('.filter-count');
+      if(!count)return;
+      count.textContent=available?String(available):items.length?'Soon':'0';
+      count.dataset.soon=String(available===0&&items.length>0);
+      b.title=`${b.dataset.label}: ${available} ready${items.length-available?' · '+(items.length-available)+' planned':''}`;
+    });
+  }
   function render(){
     // Recompute Featured after the external catalog loads or changes.
     featuredIds.clear();
@@ -2206,9 +2279,10 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
       .slice(0,3).forEach(a=>featuredIds.add(a.id));
     // The four-mode Chess Academy is a featured curriculum pick, even though its launch order is older.
     if(state.activities.some(a=>a.id==='immortal-snail-chess-3d'&&isAvailableActivity(a)))featuredIds.add('immortal-snail-chess-3d');
+    updateSubjectCounts();
     const matched=state.activities.filter(g=>{
       if(favoritesOnly&&!favorites.has(g.id))return false;
-      if(state.category!=='all'&&state.category!==g.category)return false;
+      if(!matchesSubject(g,state.category))return false;
       if(state.grade!=='all'&&!(g.gradeGroups||[]).includes(state.grade))return false;
       if(state.type!=='all'&&state.type!==(g.type||'game'))return false;
       const hay=[g.title,g.description,g.categoryLabel,g.gradeLabel,g.type,...(g.skills||[])].join(' ').toLocaleLowerCase();
@@ -2296,8 +2370,6 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
   }
   byId('tab-new').addEventListener('click',()=>setRail('new'));
   byId('tab-recent').addEventListener('click',()=>setRail('recent'));
-  byId('subject-prev').addEventListener('click',()=>document.querySelector('.category-shell .filters').scrollBy({left:-320,behavior:'smooth'}));
-  byId('subject-next').addEventListener('click',()=>document.querySelector('.category-shell .filters').scrollBy({left:320,behavior:'smooth'}));
   let favoritesOnly=false;
   byId('favorites-only').addEventListener('click',()=>{
     favoritesOnly=!favoritesOnly;

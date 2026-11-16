@@ -1,6 +1,6 @@
 {
-  "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-11-15",
+  "siteTitle": "PlayForge",
+  "lastUpdated": "2026-11-16",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2164,33 +2164,32 @@
       "audience": "students"
     },
     {
-      "id": "motion-quest",
-      "title": "Motion Quest: Move with the Crew",
-      "category": "pe",
-      "categoryLabel": "PE & Wellness · Fitness & Mobility",
-      "type": "tool",
-      "description": "Move alongside anime-style animal and fantasy coaches! Warm up with stretches, try a guided nine-minute morning flow, and choose beginner-friendly strength variations. Includes timers, voice cues, focus mode, and local progress tracking.",
+      "id": "color-clash-academy",
+      "title": "Color Clash Academy",
+      "category": "general",
+      "categoryLabel": "Multi-Subject · Strategy & Card Challenges",
+      "type": "game",
+      "description": "Match vivid color and action cards, outplay three AI rivals, and power up special moves by answering questions. Play solo, compete in five subject tournaments, or share a device in Pass & Play.",
       "skills": [
-        "Mobility & stretching",
-        "Movement habits",
-        "Bodyweight strength",
-        "Self-paced fitness"
+        "Math & grammar",
+        "Science & history",
+        "Technology",
+        "Strategy & critical thinking"
       ],
-      "gradeLabel": "All ages · Grades 5–8+",
+      "gradeLabel": "Grades 5–8 · Foundations included",
       "gradeGroups": [
         "3-5",
-        "6-8",
-        "9-12"
+        "6-8"
       ],
-      "mode": "Solo · Phone or Chromebook · Saves on this device",
-      "icon": "fitness",
+      "mode": "Solo · Pass & Play · 5-stage tournament",
+      "icon": "cards",
       "featured": true,
       "status": "available",
-      "url": "https://jkramer-cloud.github.io/motion-quest/",
-      "linkText": "Start Motion Quest",
+      "url": "https://jkramer-cloud.github.io/color-clash-academy/",
+      "linkText": "Play Color Clash",
       "releaseOrder": 50,
       "audience": "students"
     }
   ],
-  "version": "31.58"
+  "version": "31.59"
 }

@@ -2162,7 +2162,35 @@
       "linkText": "Defend the realms",
       "releaseOrder": 49,
       "audience": "students"
+    },
+    {
+      "id": "motion-quest",
+      "title": "Motion Quest: Move with the Crew",
+      "category": "pe",
+      "categoryLabel": "PE & Wellness · Fitness & Mobility",
+      "type": "tool",
+      "description": "Move alongside anime-style animal and fantasy coaches! Warm up with stretches, try a guided nine-minute morning flow, and choose beginner-friendly strength variations. Includes timers, voice cues, focus mode, and local progress tracking.",
+      "skills": [
+        "Mobility & stretching",
+        "Movement habits",
+        "Bodyweight strength",
+        "Self-paced fitness"
+      ],
+      "gradeLabel": "All ages · Grades 5–8+",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Phone or Chromebook · Saves on this device",
+      "icon": "fitness",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/motion-quest/",
+      "linkText": "Start Motion Quest",
+      "releaseOrder": 50,
+      "audience": "students"
     }
   ],
-  "version": "31.57"
+  "version": "31.58"
 }

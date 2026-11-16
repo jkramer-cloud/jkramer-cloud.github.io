@@ -1,15 +1,28 @@
-# Naches Learning Hub v31.57 — Mathbound Sister-Card Artwork
+# Naches Learning Hub — v31.58
 
-## What changed
+Base: v31.57 Mathbound matching-card release. Contains all 84 original listings,
+all 39 existing art posters, plus the new Motion Quest card (85 listings total).
 
-- Replaced **only Mathbound's illustrated poster** with an original blue-and-gold knight-mage, glowing mathematical symbols, magic book, and sunlit castle landscape that visually pairs with **Grammar Kingdom**.
-- Kept the existing activity card UI: compact layout, borders, labels, badges, descriptions, skill chips, and yellow launch button.
-- Cache-busted only the Mathbound poster URL so the new image appears after deployment.
-- Kept all **84 catalog entries**, including hidden/conditional Pocket Critters behaviors and all 39 image posters.
-- Left all other images, links, filters, sorting, and site features unchanged.
+## Changes
 
-## Install
+- Motion Quest available PE & Wellness activity with anime Quest Crew poster.
+- Dynamic night stars: independent asynchronous twinkles, faint and bright stars,
+  a slow nightly sky drift, and three subtle constellation-inspired patterns.
+- Weather controls star visibility via the existing Open-Meteo cloud_cover value,
+  or the chosen manual sky preview. Overcast, precipitation and fog suppress stars.
+- Stars appear only at night and follow existing motion/reduced-motion preferences.
+- Existing astronomy, weather, scenery, filters, game cards and saved user settings remain.
 
-In the existing `jkramer-cloud.github.io` repository, replace `index.html` and `activities.json` and upload the included `assets/card-art/mathbound-siege-of-the-realms.webp` to the same path, leaving the other images unchanged. You can also upload all extracted contents of this ZIP, allowing changed files to replace matching names.
+## Upload to GitHub
 
-The separate Mathbound game repository does not need updating.
+Repository: jkramer-cloud.github.io
+
+1. Extract this ZIP on your computer.
+2. Upload **index.html** and **activities.json** to the root of that repository,
+   replacing the older copies.
+3. Upload **assets/card-art/motion-quest.webp** to the matching folder.
+4. All other artwork in the ZIP is unchanged from v31.57 and does not need to be reuploaded.
+5. Commit, allow GitHub Pages to deploy, and refresh the site.
+
+Note: The night sky is decorative/stylized, not an astronomical star chart.
+The updated Motion Quest card links to https://jkramer-cloud.github.io/motion-quest/.

@@ -1,6 +1,6 @@
 {
   "siteTitle": "Naches Learning Hub",
-  "lastUpdated": "2026-11-13",
+  "lastUpdated": "2026-11-15",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2135,7 +2135,34 @@
       "linkText": "Open Class Compass",
       "releaseOrder": 48,
       "audience": "students"
+    },
+    {
+      "id": "mathbound-siege-of-the-realms",
+      "title": "Mathbound: Siege of the Realms",
+      "category": "math",
+      "categoryLabel": "Math · Operations & Tower Defense",
+      "type": "game",
+      "description": "Defend five fantasy realms in 50 math-powered tower-defense levels! Practice addition, subtraction, multiplication, division, and mixed operations to earn Spark, place heroes, and defeat bosses.",
+      "skills": [
+        "Addition & subtraction",
+        "Multiplication & division",
+        "Mixed operations",
+        "Strategic thinking"
+      ],
+      "gradeLabel": "Grades 5–8 · Foundations available",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · 50 levels · Student playtest",
+      "icon": "multiply",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/mathbound-siege-of-the-realms/",
+      "linkText": "Defend the realms",
+      "releaseOrder": 49,
+      "audience": "students"
     }
   ],
-  "version": "31.50"
+  "version": "31.57"
 }

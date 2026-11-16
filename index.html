@@ -833,6 +833,16 @@ body[data-motion="off"] .weather-hail *,body[data-motion="off"] .weather-ice *{a
 @media(max-width:800px){.subject-navigation{padding:11px 12px;gap:9px}.subject-nav-row{display:block}.subject-nav-label{display:block;padding:0 0 7px}.subject-navigation .filter{font-size:.74rem;padding:7px 10px;min-height:32px}}
 @media(max-width:480px){.subject-navigation .subject-nav-filters{gap:6px}.subject-navigation .filter{font-size:.7rem;min-height:32px;padding:6px 9px}.subject-navigation .filter-count{font-size:.62rem;padding:1px 4px}}
 
+
+/* v31.55: Art cards display unobstructed posters. Remove the translucent
+   glass tint and the inset rectangular pane introduced in v31.53. */
+.card[data-status="available"] .card-art::before,
+.card[data-status="available"] .card-art::after {
+  content: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
 </style>
 </head>
 <body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">

@@ -1,24 +1,25 @@
-# PlayForge v31.59 — Independent branding + Color Clash Academy
+# PlayForge v31.60 — Motion Quest restored
 
-PlayForge is an independently created collection of games, learning tools, and creative experiments. It is **not an official school or school-district website**.
+This release merges the two separate v31.58 branches. It preserves the independent **PlayForge** branding and Color Clash Academy, and restores the **Motion Quest: Move with the Crew** card that was overwritten by the later branch.
 
-## What's new
+## What is included
 
-- Rebrands the public-facing website to **PlayForge** (title, navigation, hero, site metadata, description, and footer).
-- Uses a new forge-and-spark logo rather than the original school-style graduation-cap mark.
-- Keeps all **85** listed activities, their original names and destinations, search, filters, seasonal scenery, weather, and activity cards.
-- Preserves the detailed, previously approved **Color Clash Academy** poster **unchanged**. Its card links to the *existing* Color Clash Academy GitHub Pages website; no duplicate game was created.
-- Keeps the original local browser storage keys so existing saved favorites, display preferences, and scene preferences should continue to work on the same URL.
-- Keeps the regional weather defaults and Naches-themed *individual game titles* without suggesting that PlayForge belongs to a school or district.
-- Updates both `activities.json` and the built-in fallback catalog in `index.html` to the same list of 85 activities.
+- **86 catalog entries**: every one of the previous 85 PlayForge v31.59 activities, plus Motion Quest.
+- Motion Quest links to `https://jkramer-cloud.github.io/motion-quest/` and appears under PE & Wellness.
+- The **corrected stretching-crew illustration** is included as `assets/card-art/motion-quest.webp`.
+- Color Clash Academy remains playable, with its detailed original illustrated poster intact.
+- `activities.json` and the embedded backup catalog in `index.html` contain the same 86 entries.
+- The existing Hub game links, filters, seasonal visuals, user preferences, other posters, and independent branding are retained.
 
-## Upload to GitHub
+## Install on GitHub
 
-1. Download and unzip `PlayForge_v31_59_GitHub_Ready.zip`.
-2. Open the **existing Hub repository**, not the Color Clash Academy game repository.
-3. Upload everything in the ZIP, keeping `assets/card-art/` intact, and replace files of the same name.
-4. Commit and refresh your Hub GitHub Pages site. On browsers with old cached art, perform a hard refresh.
+1. Unzip this file.
+2. In the **existing PlayForge / formerly Naches Learning Hub repository**, upload the included `index.html`, `activities.json`, `README.md`, and `assets` folder, replacing files of the same name. **Do not upload to the Motion Quest or Color Clash Academy repositories.**
+3. Preserve the `assets/card-art/` folder structure.
+4. Commit changes, allow GitHub Pages to deploy, then refresh. A hard reload may help with cached artwork.
 
-**Do not rename your repository yet.** The displayed website name can change independently of your GitHub repository URL. Existing links to the Hub will continue to work.
+There is **no need to create a new repository** or change any game repository files.
 
-This update does **not** modify the Color Clash Academy game's repository or code. If its Pages URL isn't active, check Settings → Pages in that game's repository.
+## Why this update exists
+
+Two unrelated changes were each named v31.58. One added Motion Quest; the other added Color Clash Academy. The later PlayForge v31.59 was derived from the Color Clash branch and therefore did not include Motion Quest. This merged v31.60 contains both.

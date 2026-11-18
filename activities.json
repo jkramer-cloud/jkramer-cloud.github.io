@@ -1,6 +1,6 @@
 {
   "siteTitle": "PlayForge",
-  "lastUpdated": "2026-11-16",
+  "lastUpdated": "2026-11-18",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2217,7 +2217,35 @@
       "linkText": "Start Motion Quest",
       "releaseOrder": 51,
       "audience": "students"
+    },
+    {
+      "id": "fieldcraft",
+      "title": "Fieldcraft: Survival & Self-Reliance Academy",
+      "category": "social",
+      "categoryLabel": "Life Skills · Outdoor Education & STEM",
+      "type": "tool",
+      "description": "Explore wilderness survival, map and compass skills, Morse code, gardening, food preservation, emergency preparedness and practical STEM. Complete guided learning trails, interactive challenges and achievements in an offline-capable educational field handbook.",
+      "skills": [
+        "Survival & preparedness",
+        "Navigation & Morse code",
+        "Gardening & self-reliance",
+        "Applied STEM & decision-making"
+      ],
+      "gradeLabel": "Grades 5–12 · Student edition",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · 80 learning activities · Offline capable",
+      "icon": "map",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/fieldcraft/",
+      "linkText": "Explore Fieldcraft",
+      "releaseOrder": 52,
+      "audience": "students"
     }
   ],
-  "version": "31.60"
+  "version": "31.61"
 }

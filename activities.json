@@ -2245,7 +2245,34 @@
       "linkText": "Explore Fieldcraft",
       "releaseOrder": 52,
       "audience": "students"
+    },
+    {
+      "id": "throttle-quest",
+      "title": "Throttle Quest",
+      "category": "math",
+      "categoryLabel": "Math & STEM · Off-Road Hill Climb",
+      "type": "game",
+      "description": "Build your motorcycle and conquer 20 off-road courses! Choose tires and upgrades for changing terrain, earn coins, collect bikes, and answer multiplication and ELA questions as you work through your racing career and championships.",
+      "skills": [
+        "Multiplication & ELA",
+        "Traction & terrain",
+        "Engineering choices",
+        "Resource management"
+      ],
+      "gradeLabel": "Grades 5–8 · Adjustable difficulty",
+      "gradeGroups": [
+        "3-5",
+        "6-8"
+      ],
+      "mode": "Solo · 20 courses · Career & garage",
+      "icon": "circuit",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/throttle-quest/",
+      "linkText": "Start Throttle Quest",
+      "releaseOrder": 53,
+      "audience": "students"
     }
   ],
-  "version": "31.61"
+  "version": "31.62"
 }

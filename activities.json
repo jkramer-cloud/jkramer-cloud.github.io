@@ -2272,7 +2272,35 @@
       "linkText": "Start Throttle Quest",
       "releaseOrder": 53,
       "audience": "students"
+    },
+    {
+      "id": "sudoku-quest",
+      "title": "Sudoku Quest",
+      "category": "strategy",
+      "categoryLabel": "Strategy & Logic · Daily Sudoku",
+      "type": "game",
+      "description": "Choose a grade 5–12 puzzle and sharpen your reasoning with 4×4, 6×6 or 9×9 Sudoku. Use notes and helpful logic hints, track 25 achievements and daily streaks, and finish one quest each day across all grades.",
+      "skills": [
+        "Logical reasoning",
+        "Deduction",
+        "Number patterns",
+        "Problem solving"
+      ],
+      "gradeLabel": "Grades 5–12 · Daily challenge",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · One completion per day across all grades",
+      "icon": "puzzle",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/sudoku-quest/",
+      "linkText": "Solve today’s Sudoku",
+      "releaseOrder": 54,
+      "audience": "students"
     }
   ],
-  "version": "31.62"
+  "version": "31.63"
 }

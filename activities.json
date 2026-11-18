@@ -2300,7 +2300,35 @@
       "linkText": "Solve today’s Sudoku",
       "releaseOrder": 54,
       "audience": "students"
+    },
+    {
+      "id": "emergency-ready",
+      "title": "Emergency Ready",
+      "category": "pe",
+      "categoryLabel": "Health & Life Skills · First Aid & Preparedness",
+      "type": "tool",
+      "description": "Explore first-aid preparedness, guided response design, spoken instructions, training scenarios and kit checklists. Release candidate for adult review only; not medically reviewed. In a real emergency, call 911 and follow the dispatcher.",
+      "skills": [
+        "First-aid awareness",
+        "Emergency preparedness",
+        "Safety decisions",
+        "Kit organization"
+      ],
+      "gradeLabel": "Staff review · RC1",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Review preview · Educational prototype",
+      "icon": "fitness",
+      "featured": false,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/first-aid.html",
+      "linkText": "First aid resources & review",
+      "releaseOrder": 55,
+      "audience": "staff"
     }
   ],
-  "version": "31.63"
+  "version": "31.64"
 }

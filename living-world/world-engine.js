@@ -462,16 +462,39 @@ function startFoundryMotion(root,stage,picture,mq){const canvas=document.createE
 const CAVE_STYLE=`
 body[data-pf-lw] .pf-lw-underground{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:3;isolation:isolate;visibility:hidden}
 body[data-pf-lw] .pf-lw-underground[data-visible="yes"]{visibility:visible}
-body[data-pf-lw] .pf-lw-underground .pf-lw-cave-stage{position:absolute;inset:0;background:#1a1b20;transform:translate3d(0,var(--pf-lw-cave-y,100%),0);clip-path:polygon(0 1.1%,9% 2.6%,18% 1.3%,25% 3%,36% 1%,48% 2.3%,61% .6%,72% 2%,84% 1%,93% 2.3%,100% 0,100% 100%,0 100%);overflow:hidden}
+body[data-pf-lw] .pf-lw-underground .pf-lw-cave-stage{position:absolute;inset:0;background:linear-gradient(180deg,#3b739800 0%,#3f342c18 9%,#2b242270 16%,#13141bcc 29%,#0f1721 100%);transform:translate3d(0,var(--pf-lw-cave-y,100%),0);clip-path:polygon(0 1.1%,9% 2.6%,18% 1.3%,25% 3%,36% 1%,48% 2.3%,61% .6%,72% 2%,84% 1%,93% 2.3%,100% 0,100% 100%,0 100%);overflow:hidden}
 body[data-pf-lw] .pf-lw-underground[data-depth="full"] .pf-lw-cave-stage{clip-path:none}
-body[data-pf-lw] .pf-lw-cave-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%;display:block;max-width:none;filter:brightness(.90) saturate(.95)}
+body[data-pf-lw] .pf-lw-cave-layer{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:cover;pointer-events:none}
+body[data-pf-lw] .pf-lw-cave-image{object-position:50% 46%;filter:brightness(.86) saturate(.94);opacity:var(--pf-lw-foundry-opacity,1);transform:translate3d(0,var(--pf-lw-foundry-shift,0%),0) scale(1.01)}
+body[data-pf-lw] .pf-lw-cave-descent{object-position:50% 10%;filter:brightness(var(--pf-lw-descent-brightness,.96)) saturate(.9);opacity:var(--pf-lw-descent-opacity,0);transform:translate3d(0,var(--pf-lw-descent-shift,0%),0) scale(1.03)}
+body[data-pf-lw] .pf-lw-cave-roof{top:0;left:0;height:clamp(120px,31vh,340px);object-position:50% 10%;opacity:var(--pf-lw-roof-opacity,1);mask-image:linear-gradient(#000 0%,#000 19%,transparent 100%);filter:brightness(.90) saturate(.88);z-index:4}
+body[data-pf-lw] .pf-lw-cave-soil{position:absolute;inset:0;z-index:3;opacity:var(--pf-lw-soil-opacity,0);background:
+  radial-gradient(ellipse at 50% -12%,#fff1d344 0%,#f7d6a21a 28%,transparent 56%),
+  linear-gradient(180deg,#5b412d 0%,#4a372d .8%,#593f31 2.2%,#3a302d 5.6%,#281f21 10%,#16171b 18%,transparent 42%),
+  repeating-linear-gradient(180deg,transparent 0 8px,#ffffff08 8px 9px,transparent 9px 19px,#00000005 19px 20px);
+  mix-blend-mode:screen;pointer-events:none}
+body[data-pf-lw] .pf-lw-cave-roots{position:absolute;inset:0;z-index:5;opacity:var(--pf-lw-roots-opacity,0);background:
+  radial-gradient(120% 55% at 50% -10%,#ffe0a11a 0%,transparent 54%),
+  repeating-linear-gradient(101deg,transparent 0 8.8%,#0e090d 8.8% 9.25%,transparent 9.25% 16%),
+  repeating-linear-gradient(81deg,transparent 0 14%,#1d120f 14% 14.45%,transparent 14.45% 24%),
+  repeating-linear-gradient(116deg,transparent 0 20%,#2c1a12 20% 20.35%,transparent 20.35% 32%);
+  mask-image:linear-gradient(180deg,#000 0%,#000 23%,rgba(0,0,0,.45) 46%,transparent 74%);filter:blur(.35px);pointer-events:none}
+body[data-pf-lw] .pf-lw-cave-shafts{position:absolute;inset:0;z-index:6;opacity:var(--pf-lw-shaft-opacity,0);background:
+  radial-gradient(ellipse at 50% 4%,#fff5d37a 0%,#ffdca42e 14%,transparent 44%),
+  linear-gradient(105deg,transparent 37%,#fff0cc3d 42%,transparent 48%),
+  linear-gradient(78deg,transparent 58%,#f6dfb12a 63%,transparent 70%);
+  mix-blend-mode:screen;pointer-events:none}
+body[data-pf-lw] .pf-lw-cave-fog{position:absolute;left:-8%;right:-8%;bottom:-3%;height:48%;z-index:7;opacity:var(--pf-lw-fog-opacity,0);background:
+  radial-gradient(60% 38% at 18% 70%,#8bc7f126 0%,transparent 72%),
+  radial-gradient(68% 42% at 82% 72%,#89d0ff22 0%,transparent 72%),
+  linear-gradient(180deg,transparent 0%,#1934480a 28%,#1022306e 100%);
+  filter:blur(18px);pointer-events:none}
 body[data-pf-lw] .pf-lw-foundry-motion{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;filter:brightness(.90) saturate(.95)}
 body[data-pf-lw][data-motion="off"] .pf-lw-foundry-motion{display:none}
 @media(prefers-reduced-motion:reduce){body[data-pf-lw] .pf-lw-foundry-motion{display:none}}
-body[data-pf-lw] .pf-lw-cave-stage::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#090e2055 0%,#0a15202a 30%,#07132230 65%,#090f19a0 100%);pointer-events:none}
-body[data-pf-lw] .pf-lw-cave-roof{position:absolute;top:0;left:0;width:100%;height:clamp(95px,23vh,240px);object-fit:cover;object-position:50% 15%;max-width:none;display:block;opacity:var(--pf-lw-roof-opacity,1);mask-image:linear-gradient(#000 0%,#000 23%,transparent 100%);filter:brightness(.84);z-index:1}
-body[data-pf-lw] .pf-lw-cave-stage::before{content:'';position:absolute;top:0;left:0;right:0;height:14%;z-index:2;background:linear-gradient(180deg,#3b241cc2,#19141965 40%,transparent);opacity:var(--pf-lw-roof-opacity,1);pointer-events:none}
-@media(max-width:650px){body[data-pf-lw] .pf-lw-cave-image{object-position:57% 46%}}
+body[data-pf-lw] .pf-lw-cave-stage::after{content:'';position:absolute;inset:0;z-index:8;background:linear-gradient(180deg,#090e2026 0%,#0d162335 25%,#07132230 58%,#090f19b9 100%);pointer-events:none}
+body[data-pf-lw] .pf-lw-cave-stage::before{content:'';position:absolute;top:0;left:0;right:0;height:20%;z-index:8;background:linear-gradient(180deg,#3a281ebf,#241f2248 44%,transparent);opacity:var(--pf-lw-roof-opacity,1);pointer-events:none}
+@media(max-width:650px){body[data-pf-lw] .pf-lw-cave-image{object-position:57% 46%}body[data-pf-lw] .pf-lw-cave-descent{object-position:55% 10%}}
 `;
 let underground=null;
 // Enter from below as the roadmap approaches; remain underground as the roadmap is read.
@@ -495,8 +518,20 @@ function startUnderground(){
   caveRendering=p>0;const depth=full?'full':p>0?'transition':'surface';if(document.body.dataset.pfLwCave!==depth)document.body.dataset.pfLwCave=depth;document.body.style?.setProperty?.('--pf-lw-cave-cover',`${p*100}%`);root.dataset.visible=p>0?'yes':'no';root.dataset.depth=full?'full':'transition';
   if(caveOccludesSurface!==full){caveOccludesSurface=full;motion?.schedule()}
   foundryMotion?.schedule();
+  const clamp=v=>Math.max(0,Math.min(1,v));
+  const ease=t=>{t=clamp(t);return t*t*(3-2*t)};
+  const descentIn=ease((p-.03)/.34), foundryIn=ease((p-.30)/.48), deep=ease((p-.68)/.28), shafts=ease((p-.12)/.30), roots=ease((p-.02)/.20)*(1-ease((p-.56)/.22));
   stage.style.setProperty('--pf-lw-cave-y',`${(1-p)*100}%`);
-  stage.style.setProperty('--pf-lw-roof-opacity',String(Math.max(0,1-p*1.23)));
+  stage.style.setProperty('--pf-lw-roof-opacity',String(Math.max(0,1-p*1.05)));
+  stage.style.setProperty('--pf-lw-descent-opacity',String(Math.max(.10, descentIn*(1-deep*.86))));
+  stage.style.setProperty('--pf-lw-descent-shift',`${(1-p)*14 - foundryIn*3}%`);
+  stage.style.setProperty('--pf-lw-descent-brightness',String((.98 - deep*.14).toFixed(3)));
+  stage.style.setProperty('--pf-lw-foundry-opacity',String(Math.max(.14, foundryIn)));
+  stage.style.setProperty('--pf-lw-foundry-shift',`${(1-foundryIn)*14}%`);
+  stage.style.setProperty('--pf-lw-soil-opacity',String(Math.max(0, Math.min(.92, .18 + descentIn*.74 - deep*.44))));
+  stage.style.setProperty('--pf-lw-roots-opacity',String(Math.max(0, Math.min(.88, roots))));
+  stage.style.setProperty('--pf-lw-shaft-opacity',String(Math.max(0, Math.min(.72, shafts*(1-deep*.34)))));
+  stage.style.setProperty('--pf-lw-fog-opacity',String(Math.max(0, Math.min(.70, foundryIn*.55 + deep*.26))));
  }
  function requestPaint(){if(dead||!sceneMode())return;foundryMotion?.schedule();if(frame||document.hidden)return;frame=requestAnimationFrame(update)}
  function update(){frame=0;if(dead||!sceneMode())return;const {rect,height}=state();
@@ -511,9 +546,13 @@ function startUnderground(){
    style=document.createElement('style');style.id='pf-lw-cave-style';style.textContent=CAVE_STYLE;document.head.append(style);
    root=document.createElement('div');root.className='pf-lw-underground';root.setAttribute('aria-hidden','true');root.dataset.visible='no';
    stage=document.createElement('div');stage.className='pf-lw-cave-stage';root.append(stage);
-   const picture=document.createElement('img');picture.className='pf-lw-cave-image';picture.alt='';picture.draggable=false;picture.decoding='async';picture.width=1672;picture.height=941;picture.src=asset.url;stage.append(picture);
+   const picture=document.createElement('img');picture.className='pf-lw-cave-layer pf-lw-cave-image';picture.alt='';picture.draggable=false;picture.decoding='async';picture.width=1672;picture.height=941;picture.src=asset.url;stage.append(picture);
+   const soil=document.createElement('div');soil.className='pf-lw-cave-soil';stage.append(soil);
+   const fog=document.createElement('div');fog.className='pf-lw-cave-fog';stage.append(fog);
+   const shafts=document.createElement('div');shafts.className='pf-lw-cave-shafts';stage.append(shafts);
+   const roots=document.createElement('div');roots.className='pf-lw-cave-roots';stage.append(roots);
    host.append(root);foundryMotion=startFoundryMotion(root,stage,picture,mq);paint();
-   load('descent').then(a=>{if(dead||!stage)return;roof=document.createElement('img');roof.className='pf-lw-cave-roof';roof.alt='';roof.draggable=false;roof.src=a.url;stage.append(roof)}).catch(()=>{});
+   load('descent').then(a=>{if(dead||!stage)return;const descent=document.createElement('img');descent.className='pf-lw-cave-layer pf-lw-cave-descent';descent.alt='';descent.draggable=false;descent.src=a.url;stage.insertBefore(descent,soil);roof=document.createElement('img');roof.className='pf-lw-cave-layer pf-lw-cave-roof';roof.alt='';roof.draggable=false;roof.src=a.url;stage.append(roof);paint()}).catch(()=>{});
   }).catch(()=>{if(!dead){failed=true;started=false}});
  }
  // Scroll/resize are coalesced. Content changes above the roadmap may move its bounds.

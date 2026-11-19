@@ -1,0 +1,233 @@
+{
+  "version": "0.7",
+  "asset": "foundry-master.webp",
+  "size": [
+    1672,
+    941
+  ],
+  "coordinate_system": "normalized x,y, origin top-left; use full uncropped master for animations",
+  "description": "Fictional underground app-building foundry. Normalized anchors used by v0.7 canvas engine; artwork remains static when motion is disabled.",
+  "anchors": [
+    {
+      "id": "workshop-west",
+      "point": [
+        0.133,
+        0.424
+      ],
+      "description": "Glass-domed workshop, warm lights and tiny workers"
+    },
+    {
+      "id": "crane",
+      "point": [
+        0.271,
+        0.202
+      ],
+      "description": "West crane and hanging hook"
+    },
+    {
+      "id": "main-bridge",
+      "line": [
+        [
+          0.265,
+          0.397
+        ],
+        [
+          0.609,
+          0.397
+        ]
+      ],
+      "description": "Main elevated pedestrian walkway"
+    },
+    {
+      "id": "elevator",
+      "line": [
+        [
+          0.664,
+          0.21
+        ],
+        [
+          0.664,
+          0.515
+        ]
+      ],
+      "description": "Tall lift tower, two existing lit cages"
+    },
+    {
+      "id": "water-wheel",
+      "point": [
+        0.56,
+        0.329
+      ],
+      "description": "Distant large wheel beside upper bridge"
+    },
+    {
+      "id": "east-gear",
+      "point": [
+        0.823,
+        0.328
+      ],
+      "description": "Large illuminated gear beside furnace"
+    },
+    {
+      "id": "furnace",
+      "point": [
+        0.845,
+        0.14
+      ],
+      "description": "Tall molten furnace, vertical amber core"
+    },
+    {
+      "id": "east-workshop",
+      "point": [
+        0.887,
+        0.59
+      ],
+      "description": "Bright workshop with robotic arm"
+    },
+    {
+      "id": "lower-waterfall",
+      "line": [
+        [
+          0.458,
+          0.596
+        ],
+        [
+          0.458,
+          0.754
+        ]
+      ],
+      "description": "Central vertical waterfall"
+    },
+    {
+      "id": "mine-rail",
+      "line": [
+        [
+          0.34,
+          0.982
+        ],
+        [
+          0.19,
+          0.87
+        ],
+        [
+          0.09,
+          0.806
+        ],
+        [
+          0.026,
+          0.779
+        ],
+        [
+          0.055,
+          0.747
+        ]
+      ],
+      "description": "Foreground curving rail corridor"
+    },
+    {
+      "id": "crystal-east",
+      "point": [
+        0.739,
+        0.798
+      ],
+      "description": "Blue crystals on east river bank"
+    },
+    {
+      "id": "crystal-west",
+      "point": [
+        0.328,
+        0.854
+      ],
+      "description": "Blue crystals beside west river bank"
+    }
+  ],
+  "animation_notes": {
+    "gear_centers": [
+      [
+        0.562,
+        0.338
+      ],
+      [
+        0.825,
+        0.337
+      ]
+    ],
+    "service_lift_path": [
+      [
+        0.661,
+        0.258
+      ],
+      [
+        0.661,
+        0.446
+      ]
+    ],
+    "additional_cart_path": [
+      [
+        0.315,
+        0.987
+      ],
+      [
+        0.28,
+        0.948
+      ],
+      [
+        0.24,
+        0.918
+      ],
+      [
+        0.204,
+        0.889
+      ],
+      [
+        0.17,
+        0.863
+      ]
+    ],
+    "bridge_worker_paths": [
+      [
+        [
+          0.27,
+          0.399
+        ],
+        [
+          0.42,
+          0.399
+        ],
+        [
+          0.57,
+          0.399
+        ]
+      ],
+      [
+        [
+          0.55,
+          0.658
+        ],
+        [
+          0.607,
+          0.653
+        ],
+        [
+          0.615,
+          0.651
+        ]
+      ],
+      [
+        [
+          0.735,
+          0.656
+        ],
+        [
+          0.85,
+          0.657
+        ],
+        [
+          0.961,
+          0.666
+        ]
+      ]
+    ],
+    "note": "The painted carts and large lift cages remain parked, with an extra service lift and moving cart added; rotating gear faces use masked source-image patches."
+  }
+}

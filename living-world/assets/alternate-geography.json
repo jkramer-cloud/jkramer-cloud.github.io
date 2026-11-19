@@ -1,0 +1,224 @@
+{
+  "version": "0.10",
+  "calendar": {
+    "07-20": "mars",
+    "10-21": "cyber",
+    "10-31": "mystic",
+    "11-10": "clockwork",
+    "04-22": "solaria",
+    "06-08": "lost",
+    "04-07": "sakura",
+    "09-19": "corsair"
+  },
+  "coordinate_system": "normalized x/y in artwork",
+  "artwork": {
+    "cyber": {
+      "asset": "valley-cyber.webp",
+      "status": "full-size generated panorama",
+      "anchors": {
+        "summit": [
+          0.56,
+          0.22
+        ],
+        "river": [
+          0.44,
+          0.56
+        ],
+        "barn": [
+          0.9,
+          0.52
+        ],
+        "orchard": [
+          0.43,
+          0.75
+        ],
+        "western_road": [
+          0.19,
+          0.52
+        ]
+      },
+      "rail": [
+        [
+          0.6,
+          0.447
+        ],
+        [
+          0.7,
+          0.45
+        ],
+        [
+          0.81,
+          0.424
+        ],
+        [
+          0.91,
+          0.39
+        ],
+        [
+          1,
+          0.365
+        ]
+      ]
+    },
+    "mars": {
+      "asset": "valley-mars.webp",
+      "status": "provisional crop and upscale of generated landscape panel; replace with dedicated panorama and update routes before release",
+      "anchors": {
+        "summit": [
+          0.5,
+          0.12
+        ],
+        "canal": [
+          0.45,
+          0.69
+        ],
+        "greenhouses": [
+          0.72,
+          0.53
+        ],
+        "rover": [
+          0.12,
+          0.73
+        ]
+      },
+      "rover_route": [
+        [
+          0.245,
+          0.842
+        ],
+        [
+          0.278,
+          0.848
+        ],
+        [
+          0.315,
+          0.863
+        ],
+        [
+          0.354,
+          0.882
+        ],
+        [
+          0.405,
+          0.882
+        ]
+      ]
+    },
+    "mystic": {
+      "asset": "valley-mystic.webp",
+      "status": "dedicated full-size generated panorama",
+      "anchors": {
+        "summit": [
+          0.55,
+          0.22
+        ],
+        "river": [
+          0.62,
+          0.61
+        ],
+        "barn": [
+          0.9,
+          0.52
+        ],
+        "orchard": [
+          0.42,
+          0.75
+        ],
+        "western_road": [
+          0.19,
+          0.52
+        ]
+      },
+      "flight": [
+        [
+          0.36,
+          0.19
+        ],
+        [
+          0.49,
+          0.16
+        ],
+        [
+          0.65,
+          0.2
+        ],
+        [
+          0.78,
+          0.23
+        ]
+      ]
+    },
+    "clockwork": {
+      "asset": "valley-clockwork.webp",
+      "status": "dedicated full-size generated panorama",
+      "anchors": {
+        "summit": [
+          0.55,
+          0.22
+        ],
+        "river": [
+          0.62,
+          0.61
+        ],
+        "barn": [
+          0.9,
+          0.52
+        ],
+        "orchard": [
+          0.42,
+          0.75
+        ],
+        "western_road": [
+          0.19,
+          0.52
+        ]
+      },
+      "rail": [
+        [
+          0.045,
+          0.543
+        ],
+        [
+          0.11,
+          0.535
+        ],
+        [
+          0.17,
+          0.525
+        ],
+        [
+          0.21,
+          0.506
+        ],
+        [
+          0.223,
+          0.49
+        ],
+        [
+          0.212,
+          0.477
+        ]
+      ],
+      "waterwheel": [
+        0.728,
+        0.57
+      ]
+    },
+    "solaria": {
+      "asset": "valley-solaria.webp",
+      "status": "dedicated generated panorama"
+    },
+    "lost": {
+      "asset": "valley-lost.webp",
+      "status": "dedicated generated panorama"
+    },
+    "sakura": {
+      "asset": "valley-sakura.webp",
+      "status": "dedicated generated panorama"
+    },
+    "corsair": {
+      "asset": "valley-corsair.webp",
+      "status": "provisional panoramic crop; replacement needed"
+    }
+  }
+}

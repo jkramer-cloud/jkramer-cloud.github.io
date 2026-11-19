@@ -1,0 +1,175 @@
+{
+  "version": "0.4",
+  "coordinate_system": "normalized x,y, origin top-left; use the uncropped master image as the reference",
+  "asset": "valley-master.webp",
+  "size": [
+    1672,
+    941
+  ],
+  "description": "Fictionalized Naches/Yakima Valley landscape. Not a photograph or an exact map of any specific viewpoint.",
+  "anchors": [
+    {
+      "id": "summit",
+      "name": "Central snow-capped summit",
+      "point": [
+        0.548,
+        0.236
+      ],
+      "preserve": "Main peak position, distinct profile, visible surrounding ridges"
+    },
+    {
+      "id": "west-ridge",
+      "name": "Western foothill shoulder",
+      "point": [
+        0.257,
+        0.355
+      ],
+      "preserve": "Low ridge sweeping toward the central summit"
+    },
+    {
+      "id": "east-ridge",
+      "name": "Eastern dry foothills",
+      "point": [
+        0.86,
+        0.335
+      ],
+      "preserve": "Rising golden slopes above right-hand valley"
+    },
+    {
+      "id": "river-bend",
+      "name": "River S-bend",
+      "point": [
+        0.455,
+        0.522
+      ],
+      "preserve": "Waterway enters center, bends left then sweeps to lower right; may become a canal, transit line, or dry Martian channel"
+    },
+    {
+      "id": "road",
+      "name": "Western road curve",
+      "point": [
+        0.21,
+        0.519
+      ],
+      "preserve": "Curving road across left slope; may become elevated rail"
+    },
+    {
+      "id": "barn",
+      "name": "Red barn landmark",
+      "point": [
+        0.906,
+        0.523
+      ],
+      "preserve": "Small distinctive structure on right bank; may become a station, dome, guild hall or factory"
+    },
+    {
+      "id": "front-orchard",
+      "name": "Foreground orchard terraces",
+      "point": [
+        0.419,
+        0.702
+      ],
+      "preserve": "Repeating diagonals; may become vertical farms, greenhouses or enchanted trees"
+    },
+    {
+      "id": "east-orchard",
+      "name": "East orchard blocks",
+      "point": [
+        0.728,
+        0.527
+      ],
+      "preserve": "Parallel crop lines between river and eastern slopes"
+    },
+    {
+      "id": "apple-frame",
+      "name": "Foreground apple branch and harvest crate",
+      "point": [
+        0.125,
+        0.148
+      ],
+      "preserve": "Optional foreground framing; transform to suit the world"
+    }
+  ],
+  "world_rules": [
+    "Use the master artwork as a visual reference for transformations, not just a text description.",
+    "Keep the viewpoint, central peak, ridge positions, river bend and broad orchard layout recognizable.",
+    "Allow radical architectural changes around the landmarks, including high-rise skylines, domes, castles and factories.",
+    "Do not move the camera to a different valley for rare event worlds.",
+    "The master artwork depicts harvest season. Seasonal assets reuse the same viewpoint and land features.",
+    "Background artwork is decorative; retain all original interactive app content."
+  ],
+  "seasonal_assets": {
+    "winter": {
+      "file": "valley-winter.webp",
+      "provenance": "generated winter rendition of master"
+    },
+    "thaw": {
+      "file": "valley-thaw.webp",
+      "provenance": "provisional image treatment of master panorama"
+    },
+    "blossom": {
+      "file": "valley-blossom.webp",
+      "provenance": "provisional image treatment of master panorama"
+    },
+    "green": {
+      "file": "valley-green.webp",
+      "provenance": "provisional image treatment of master panorama"
+    },
+    "harvest": {
+      "file": "valley-master.webp",
+      "provenance": "original generated panorama"
+    },
+    "earlyfall": {
+      "file": "valley-earlyfall.webp",
+      "provenance": "provisional image treatment of master panorama"
+    },
+    "latefall": {
+      "file": "valley-latefall.webp",
+      "provenance": "provisional image treatment of master panorama"
+    }
+  },
+  "motion_geometry": {
+    "coordinate_system": "normalized master image",
+    "road_polyline": [
+      [
+        0.032,
+        0.548
+      ],
+      [
+        0.07,
+        0.547
+      ],
+      [
+        0.105,
+        0.545
+      ],
+      [
+        0.14,
+        0.537
+      ],
+      [
+        0.175,
+        0.53
+      ],
+      [
+        0.203,
+        0.524
+      ],
+      [
+        0.221,
+        0.516
+      ],
+      [
+        0.228,
+        0.51
+      ],
+      [
+        0.216,
+        0.502
+      ]
+    ],
+    "river_glint_corridor": "see RIVER and RIVER_GLINTS in world-engine.js",
+    "wildlife_field": "east meadow; .795\u2013.835 x, .438 y",
+    "notes": "Movement positions were chosen against the master artwork. Seasonal variations share this alignment approximately; future alternate-world assets need custom motion geometry if roads or waterways shift."
+  }
+}

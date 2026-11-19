@@ -1,4 +1,18 @@
-# PlayForge v31.64 — Emergency Ready review preview
+# PlayForge v31.65 — TechGuide integration
+
+This additive update is based on the live v31.64 repository files (both Git blob hashes verified). It retains all 90 existing entries and adds TechGuide as entry 91, with original art, a persistent blue lower-left Tech support button and a blue header shortcut. The red First Aid shortcuts remain unchanged in destination. On narrow screens both shortcuts share the header row and have compact floating buttons.
+
+## Install this update
+
+1. Create a public GitHub Pages repository named `techguide` under `jkramer-cloud`. Upload the contents of the **TechGuide v1.0 student-only ZIP** and configure Pages from main/root. Never publish the teacher-only folder. Verify `https://jkramer-cloud.github.io/techguide/` loads.
+2. In `jkramer-cloud/jkramer-cloud.github.io`, replace root `index.html`, `activities.json`, `README.md`; add `assets/card-art/techguide.webp`. Keep all other files, including your current `first-aid.html` and existing art.
+3. Commit to main, refresh after deployment, then check the blue shortcuts, TechGuide card and red First Aid shortcut. The TechGuide URL will not work until that repository is published.
+
+TechGuide is an educational troubleshooting utility, not a general AI or a substitute for IT support. The new shortcuts are independent of the game catalog/filter controls. Any future school-mode access restrictions should exempt TechGuide and First Aid.
+
+## Previous release notes (historical reference)
+
+# PlayForge v31.65 — Emergency Ready review preview
 
 PlayForge (formerly Naches Learning Hub) is an independently created collection of educational browser games, simulations, creative challenges and classroom tools. It is not affiliated with a school or school district.
 

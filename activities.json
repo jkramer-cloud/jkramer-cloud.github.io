@@ -2328,7 +2328,35 @@
       "linkText": "First aid resources & review",
       "releaseOrder": 55,
       "audience": "staff"
+    },
+    {
+      "id": "techguide",
+      "title": "TechGuide: Student Technology Help Desk",
+      "category": "general",
+      "categoryLabel": "Student Tools · Technology Support",
+      "type": "tool",
+      "description": "Troubleshoot Chromebooks, Windows computers, peripherals, Google apps, Photoshop and Illustrator with step-by-step help and interactive visual guides. English and Spanish support; no account or generative AI.",
+      "skills": [
+        "Troubleshooting",
+        "Digital literacy",
+        "Independent problem solving",
+        "Adobe & Google tools"
+      ],
+      "gradeLabel": "Grades 5–12 · Student help",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Individual help · Offline-capable · Classroom pilot",
+      "icon": "techguide",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/techguide/",
+      "linkText": "Open TechGuide",
+      "releaseOrder": 56,
+      "audience": "students"
     }
   ],
-  "version": "31.64"
+  "version": "31.65"
 }

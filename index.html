@@ -870,6 +870,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px));}
 
 
 </style>
+<script src="./living-world/secret-door.js"></script>
 </head>
 <body data-card-view="compact" data-rail-view="new" data-season="harvest" data-sky="partly" data-wildlife="none" data-holiday="none" data-time="day" data-intensity="normal">
 <div class="valley-backdrop" aria-hidden="true"><svg class="valley-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
@@ -2951,7 +2952,9 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px));}
  const colors={newyear:['#ffdc62','#f18fc8','#8de2fa','#b9f28c','#e8abff','#ffffff'],independence:['#ed4c66','#ffffff','#638eff','#c7d5ff'],juneteenth:['#f5c353','#d9474b','#2c9a69','#1d293a']};
  const palette=['#f9ce77','#f3e2a6','#d0e8f8'];
  function resize(){const r=hero.getBoundingClientRect();width=Math.max(1,r.width);height=Math.max(1,r.height);const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw(performance.now(),true)}
- function enabled(){return document.body.dataset.motion!=='off'&&!motionQuery.matches&&(holiday!=='none'||sky==='storm'||rainbow!=='none'||pumpkinEvent||jetEvent||santaEvent||flagsEvent)}
+ function enhancedActive(){return ['enhanced','ultra'].includes(document.body.dataset.pfLw)}
+ function legacySuppressed(){const ds=document.body.dataset;return enhancedActive()&&(ds.pfLwLegacyFestival==='off'||(isPage&&ds.pfLwCave==='full'))}
+ function enabled(){return !legacySuppressed()&&document.body.dataset.motion!=='off'&&!motionQuery.matches&&(holiday!=='none'||(sky==='storm'&&!enhancedActive())||rainbow!=='none'||pumpkinEvent||jetEvent||santaEvent||flagsEvent)}
  function sync(){const ds=document.body.dataset;let prior=holiday,priorEvents=[pumpkinEvent,jetEvent,santaEvent,flagsEvent].join(',');holiday=ds.holiday||'none';sky=ds.sky||'partly';intensity=ds.intensity||'normal';rainbow=ds.rainbow||'none';pumpkinEvent=ds.pumpkin==='yes';jetEvent=ds.jet==='yes';santaEvent=ds.santa==='yes';flagsEvent=ds.flags==='yes';motion=enabled();if(prior!==holiday||priorEvents!==[pumpkinEvent,jetEvent,santaEvent,flagsEvent].join(',')){shoots=[];sparks=[];tick=0;lastFire=0;if(enabled()&&(holiday==='newyear'||holiday==='independence')){for(let k=0;k<(isPage?3:2);k++)fireworkBurst(width*(.22+k*.27),height*(.20+(k%2)*.14));}}ctx.clearRect(0,0,width,height);draw(performance.now(),!motion);if(motion&&!active){active=true;requestAnimationFrame(loop)}}
  stageSync.push(sync);
  const strength=()=>intensity==='subtle'?.48:intensity==='lively'?1.48:1;
@@ -3263,12 +3266,12 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px));}
   }
  }
 
- function draw(now,staticMode=false){ctx.clearRect(0,0,width,height);if(holiday==='none'&&sky!=='storm'&&rainbow==='none'&&!pumpkinEvent&&!jetEvent&&!santaEvent&&!flagsEvent)return;
+ function draw(now,staticMode=false){ctx.clearRect(0,0,width,height);if(legacySuppressed())return;if(holiday==='none'&&sky!=='storm'&&rainbow==='none'&&!pumpkinEvent&&!jetEvent&&!santaEvent&&!flagsEvent)return;
   ctx.save();const scale=motion?1:0.7;ctx.globalAlpha=scale;
   seasonalEffects(staticMode);
   if(holiday!=='none')holidayScene(staticMode);
   // Real storm mode: short, localized lightning rather than full-screen flashes.
-  if(sky==='storm'&&holiday!=='newyear'&&holiday!=='independence'){
+  if(sky==='storm'&&!enhancedActive()&&holiday!=='newyear'&&holiday!=='independence'){
     if(motion && now>nextLightning){lightningUntil=now+170;nextLightning=now+rnd(12500,23500)}
     if(staticMode||now<lightningUntil){const x=width*.86,y=height*.06;ctx.save();ctx.shadowColor='#bdeeff';ctx.shadowBlur=17;line([[x,y],[x-13,y+27],[x+6,y+42],[x-12,y+77],[x+18,y+57],[x+8,y+44]],'#d9f3ff',2.6);line([[x+6,y+42],[x+27,y+54],[x+9,y+78]],'#c3eaff',1.6);ctx.restore()}
   }
@@ -3278,6 +3281,7 @@ body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px));}
  if(!isPage&&'ResizeObserver'in window)new ResizeObserver(resize).observe(hero);else window.addEventListener('resize',resize,{passive:true});
  document.addEventListener('visibilitychange',()=>{if(!document.hidden){last=0;sync()}});
  motionQuery.addEventListener?.('change',sync);
+ new MutationObserver(sync).observe(document.body,{attributes:true,attributeFilter:['data-pf-lw','data-pf-lw-legacy-festival','data-pf-lw-cave']});
  resize();sync();
  }
  window.__festivalSync=()=>stageSync.forEach(sync=>sync());

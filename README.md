@@ -1,63 +1,31 @@
-# PlayForge v31.65 — TechGuide integration
+# PlayForge Living World — v1.0 release candidate (v0.14 integration review)
 
-This additive update is based on the live v31.64 repository files (both Git blob hashes verified). It retains all 90 existing entries and adds TechGuide as entry 91, with original art, a persistent blue lower-left Tech support button and a blue header shortcut. The red First Aid shortcuts remain unchanged in destination. On narrow screens both shortcuts share the header row and have compact floating buttons.
+**Status: integrated, unpublished; final device and artwork acceptance pending.**
 
-## Install this update
+## Files
 
-1. Create a public GitHub Pages repository named `techguide` under `jkramer-cloud`. Upload the contents of the **TechGuide v1.0 student-only ZIP** and configure Pages from main/root. Never publish the teacher-only folder. Verify `https://jkramer-cloud.github.io/techguide/` loads.
-2. In `jkramer-cloud/jkramer-cloud.github.io`, replace root `index.html`, `activities.json`, `README.md`; add `assets/card-art/techguide.webp`. Keep all other files, including your current `first-aid.html` and existing art.
-3. Commit to main, refresh after deployment, then check the blue shortcuts, TechGuide card and red First Aid shortcut. The TechGuide URL will not work until that repository is published.
+- `index.html`: complete replacement homepage, built from the exact GitHub v31.65 source (blob `2c034bbebdc70d4a931355a2df92e476340f3544`).
+- `living-world/`: optional controller, graphics engine and 17 WebP backgrounds/transition assets plus geography reference JSON files.
+- This README is documentation; do not overwrite the existing repository README unless desired.
 
-TechGuide is an educational troubleshooting utility, not a general AI or a substitute for IT support. The new shortcuts are independent of the game catalog/filter controls. Any future school-mode access restrictions should exempt TechGuide and First Aid.
+## Install only after review and acceptance
 
-## Previous release notes (historical reference)
+Keep a backup of the current homepage. Check that the repository has not changed since the source revision above; if it has, merge the newer homepage first rather than overwrite newer changes. Upload the provided `living-world` folder intact to the repository root and replace `index.html` last. Leave all other existing files, games, card artwork, `activities.json`, First Aid and TechGuide untouched. No developer preview or test files are included in the candidate. To roll back, restore the original index; the optional folder may be removed afterward.
 
-# PlayForge v31.65 — Emergency Ready review preview
+Original mode is the default. The secret row is inside Customize Scene, during the first 15 seconds of the first page opening of a browser-local calendar day. Refresh does not restart that window. The question's answer is `Kramer` (case-insensitive). Unlock and graphics preference are stored locally; this is an Easter egg, not access control. Enhanced and Ultra use the existing seasonal/weather/motion preferences. A manually chosen season or holiday suppresses the new automatic alternate-world calendar. Return to Original at any time.
 
-PlayForge (formerly Naches Learning Hub) is an independently created collection of educational browser games, simulations, creative challenges and classroom tools. It is not affiliated with a school or school district.
+## Review results
 
-**Play online:** https://jkramer-cloud.github.io/
+- Verified current GitHub source byte-for-byte using Git blob SHA-1.
+- Existing external catalog has 91 entries (46 available, 45 planned); embedded fallback also has 91. Neither catalog was edited.
+- Ten automated test suites passed after integration review changes: secret door, world engine, landscape animation, weather, underground, foundry motion, alternate worlds, calendar, rare events, performance.
+- Standalone browser fixture passed all eight alternate worlds, holiday override, overlay suppression, underground transition and Original restoration.
+- Actual homepage offline Chromium harness compared original and merged source using identical seeded randomness and catalog fallback. Rendered activity IDs, link targets and existing select IDs matched. Unlock, Ultra activation, two landscape layers, cavern transition, Original cleanup and stored unlock/preference passed; no page errors in that run. The harness substituted in-memory assets, simulated browser storage and offline network responses; it does not verify GitHub Pages hosting or live weather/network services.
+- Production module strips manual date/world/rare selectors and preview asset hooks. JS syntax checks passed. Legacy festival renderer pauses when suppressed; duplicate automatic holidays/lightning are avoided; Original retains legacy behavior.
 
-## What's new in v31.64
+## Remaining acceptance items
 
-- Added Emergency Ready as a staff-review resource with custom WebP artwork, a header link, and a floating First aid shortcut.
-- The shortcut and card open `first-aid.html`, which prioritizes 911 and established first-aid guidance. RC1 remains an adult-review preview behind a disclosure, not an approved emergency app. The review link is not access-controlled.
-- Catalog: 90 entries (45 accessible links, including one review resource; 45 planned); all prior 89 entries and 44 artwork mappings retained. 45 artwork mappings total.
-- Expected separate review app: https://jkramer-cloud.github.io/emergency-ready/ (requires separate repository and Pages setup).
-
-## Previous update: v31.63
-
-- **Sudoku Quest** joins the Strategy & Logic category and Puzzles & Codes quick filter.
-- Grades 5–12, daily puzzles, 25 achievements, read-only calendar, reasoning hints, and one shared completion limit across all grades.
-- Artwork: `assets/card-art/sudoku-quest.webp`.
-- Launch: https://jkramer-cloud.github.io/sudoku-quest/
-- Catalog contains **89 entries: 44 available activities and 45 planned activities**. All 88 previous entries and 43 artwork mappings are preserved; 44 artwork mappings total.
-
-## Recent release history
-
-| Version | Changes |
-| --- | --- |
-| 31.64 | Emergency Ready review card and persistent first-aid resource shortcut. |
-| 31.63 | Added Sudoku Quest and its custom illustrated card. |
-| 31.62 | Added Throttle Quest and its custom illustrated card. |
-| 31.61 | Added Fieldcraft: Survival & Self-Reliance Academy and its illustrated card. |
-| 31.60 | Restored Motion Quest while retaining Color Clash Academy and PlayForge branding. |
-
-Throttle Quest, Fieldcraft, Motion Quest, Color Clash Academy, Class Compass, ClassTempo, Mathbound and all prior catalog entries remain included. The existing interface, seasonal visuals, filters, favorites and hidden discoveries are retained.
-
-## Update the existing GitHub Pages site
-
-1. Extract the ZIP. In `jkramer-cloud/jkramer-cloud.github.io`, replace `index.html`, `activities.json`, and `README.md`.
-2. Add `first-aid.html` to the root and `assets/card-art/emergency-ready.webp` to the existing artwork folder. Do not remove any existing files or artwork.
-3. Commit all five files to `main`. Keep existing GitHub Pages settings. Hard-refresh after deployment.
-4. Confirm the floating shortcut and header link open the first-aid resource page and the review link opens the separate RC1 app only after its repository is published for controlled review. If you keep RC1 private, the review link may be unavailable to other visitors; that is expected.
-
-Do not promote RC1 to students for emergency reliance before qualified medical review and device acceptance. The hub shortcut is a resource link, not a medical service; separate game repositories do not inherit the floating control. No changes to other repositories are included.
-
-## Browse and use
-
-Use search, subject and quick-topic filters, grade filters, favorites and sorting to find games and tools. Available entries launch their corresponding apps; planned entries are not playable yet. Favorites and scene preferences are saved locally in the browser. Individual apps have their own save, backup and offline behavior; the Hub itself is not a guarantee of offline access to all games.
-
-## Validation and remaining checks
-
-The original v31.63 index and activity catalog were verified against their current GitHub blob hashes (`ee549fbdf7ca5811660f7af11fbc5ee71ce4d082`, `d71f4feeac62fb68401ace1c673fbcc63c7e12b1`). All 89 entries and 44 existing artwork paths are unchanged. The synchronized fallback catalog contains 90 entries; all scripts passed JavaScript syntax checks. Browser checks with injected HTML at 320, 390 and 1366 pixels verified the review card, artwork decoding, persistent shortcut, responsive resource page, 911 telephone link, and collapsed RC1 disclosure. Existing external artwork and weather requests were not loaded for local testing. Verify the deployed GitHub Pages site and the separate RC1 URL after uploading. No clinical approval or actual emergency-system testing is implied.
+- Test on an actual school Chromebook, including normal browsing, school network filtering, battery/heat, motion disabled and low-memory behavior. No physical-device performance measurement has been made.
+- Verify on a real hosted test copy with real asset requests, weather, all links and persisted unlock across reloads. Browser administration policy prevented direct navigation in the review environment; loaded card-art placeholders and offline fallback were used.
+- Several seasonal backgrounds are derived color treatments, not all independent season-authentic landscapes. Mars and Corsair are provisional lower-detail illustrations. The cavern transition uses processed art. Legacy animal overlays are retained for the valley, but alternate realities intentionally use world-specific wildlife. These are visual polish items, not claimed fully resolved.
+- If repository changes after v31.65, reconcile before upload. No changes were committed or published by this review.

@@ -1,3 +1,31 @@
+# PlayForge v31.66 — Market Masters
+
+**Play online:** https://jkramer-cloud.github.io/
+
+PlayForge is an independently created collection of educational games and classroom tools, not affiliated with a school or district.
+
+## New in v31.66
+
+- Market Masters: Financial Adventure joins Life Skills and Cooking & Money. Grades 5–12; 148 simulated investments, banking, five time modes, financial lessons and school-year competitions. All prices are fictional; no real money, external price service or external score reporting.
+- Game: https://jkramer-cloud.github.io/market-masters/ (publish separate repository first).
+- New illustrated card: `assets/card-art/market-masters.webp`.
+- Catalog: 92 entries (47 available, 45 planned), retaining all 91 prior entries and all existing artwork mappings.
+- Base: verified GitHub homepage blob `1bdb2ce067080a36523fe1d3cfbaaf50951cbae1` and catalog blob `0cf320b9a25a085c1d3efdbfb99cbdff0e15c725`. The existing Living World module references and configuration are preserved.
+
+## Install this update
+
+1. Publish the separate `market-masters` game first and test its GitHub Pages URL.
+2. Extract this ZIP. In `jkramer-cloud/jkramer-cloud.github.io`, replace the root `index.html`, `activities.json`, and `README.md`. Add `assets/card-art/market-masters.webp` to the existing artwork folder. Do not delete or replace other artwork or the `living-world/` folder.
+3. Commit to `main`, retain existing Pages settings, and hard-refresh after deployment. Check Market Masters in Life Skills and Cooking & Money, plus existing apps and the optional Living World feature.
+
+The external catalog and embedded fallback are synchronized. All existing activity entries and poster mappings were preserved, and inline classic JavaScript syntax was checked. Hosted testing and classroom-device acceptance remain necessary. If the GitHub homepage or catalog changes after the base revision above, merge those changes before uploading this replacement. Nothing was committed by this build.
+
+---
+
+## Previous Living World release documentation (historical)
+
+The notes below refer to the earlier Living World release and its own installation/review, not the Market Masters update.
+
 # PlayForge Living World — v1.0 release candidate (v0.14 integration review)
 
 **Status: integrated, unpublished; final device and artwork acceptance pending.**

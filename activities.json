@@ -1,6 +1,6 @@
 {
   "siteTitle": "PlayForge",
-  "lastUpdated": "2026-11-18",
+  "lastUpdated": "2026-11-19",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2356,7 +2356,35 @@
       "linkText": "Open TechGuide",
       "releaseOrder": 56,
       "audience": "students"
+    },
+    {
+      "id": "market-masters",
+      "title": "Market Masters: Financial Adventure",
+      "category": "social",
+      "categoryLabel": "Life Skills · Investing & Financial Literacy",
+      "type": "simulation",
+      "description": "Start with $10,000 in virtual money. Explore 148 investments, including stocks, ETFs and cryptocurrency, save at the bank, manage debt and retirement, and advance time through a shared simulated economy. Complete financial lessons and school-year challenges, and archive or export your results. All prices are fictional.",
+      "skills": [
+        "Financial literacy",
+        "Saving & investing",
+        "Risk & diversification",
+        "Budgeting & compound interest"
+      ],
+      "gradeLabel": "Grades 5–12 · Financial simulation",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Solo · Five time modes · Local records & backups",
+      "icon": "budget",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/market-masters/",
+      "linkText": "Enter Market Masters",
+      "releaseOrder": 57,
+      "audience": "students"
     }
   ],
-  "version": "31.65"
+  "version": "31.66"
 }

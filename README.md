@@ -1,3 +1,30 @@
+# PlayForge v31.67 — Bracket Forge
+
+**Play online:** https://jkramer-cloud.github.io/
+
+PlayForge is an independently created collection of educational games and classroom tools, not affiliated with a school or district.
+
+## New in v31.67
+
+- Bracket Forge v1.0 public beta: seven competition formats, roster studio, scoreboards, event director, reporting and backups. Listed under Classroom Tools and the PE & Sports filter.
+- Launch: https://jkramer-cloud.github.io/bracket-forge/
+- New illustrated card: `assets/card-art/bracket-forge.webp`. Fit preserves the entire artwork on grid and rail cards.
+- Catalog: 93 entries (48 available, 45 planned). The release preserves the existing 92 entries, artwork mappings, and Living World references.
+- Standalone browser-local data only; no live multi-device results or Google Drive sync. Use fictional or approved data for school testing.
+
+## Install this update
+
+1. Upload the Bracket Forge v1.0 app files to the separate `bracket-forge` repository and enable Pages on `main` / root. Test its URL first.
+2. Extract this ZIP. In `jkramer-cloud/jkramer-cloud.github.io`, replace `index.html`, `activities.json`, and `README.md` in the repository root.
+3. Add `assets/card-art/bracket-forge.webp` to the existing `assets/card-art/` folder. Keep all other artwork, game repositories and the existing `living-world/` folder intact.
+4. Commit to `main`, retain existing Pages settings, and hard-refresh after deployment. Search Bracket Forge and check the Classroom Tools and PE & Sports filters.
+
+Base verified byte-for-byte against the current GitHub repository before editing: homepage `a8bb405bf5846d2dacb9c6939af7fe4a99d17ca3`, external catalog `d78f279ea6951c2a6d2742a1002e0430ae3c623a`, README `5b646d0f4c4db111ac87f004842c930e9b8550d3`. If the site changes after this base revision, reconcile before replacing files. No direct commits were made.
+
+---
+
+## Previous v31.66 release (historical)
+
 # PlayForge v31.66 — Market Masters
 
 **Play online:** https://jkramer-cloud.github.io/

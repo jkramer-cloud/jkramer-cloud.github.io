@@ -1,6 +1,6 @@
 {
   "siteTitle": "PlayForge",
-  "lastUpdated": "2026-11-19",
+  "lastUpdated": "2026-11-20",
   "activities": [
     {
       "id": "mystery-detectives",
@@ -2384,7 +2384,35 @@
       "linkText": "Enter Market Masters",
       "releaseOrder": 57,
       "audience": "students"
+    },
+    {
+      "id": "bracket-forge",
+      "title": "Bracket Forge",
+      "category": "general",
+      "categoryLabel": "Classroom Tools · Tournament Management",
+      "type": "tool",
+      "description": "Create tournaments for sports, esports, board games and classroom competitions. Build brackets, organize rosters, track match scores and standings, manage multiple divisions and stations, and project rotating spectator displays. Standalone v1.0 public beta.",
+      "skills": [
+        "Tournament organization",
+        "Team building",
+        "Scorekeeping",
+        "Event management"
+      ],
+      "gradeLabel": "Grades 5–12 · Teacher & class · Beta",
+      "gradeGroups": [
+        "3-5",
+        "6-8",
+        "9-12"
+      ],
+      "mode": "Tournament director · Local saves & backups",
+      "icon": "scorekeeper",
+      "featured": true,
+      "status": "available",
+      "url": "https://jkramer-cloud.github.io/bracket-forge/",
+      "linkText": "Open Bracket Forge",
+      "releaseOrder": 58,
+      "audience": "students"
     }
   ],
-  "version": "31.66"
+  "version": "31.67"
 }
